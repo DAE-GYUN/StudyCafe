@@ -120,6 +120,9 @@
     <Compile Include="StudyRoomTimeChargingForm.Designer.cs">
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CheckShiftSeatForm.resx">
+      <DependentUpon>CheckShiftSeatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LockersForm.resx">
       <DependentUpon>LockersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="PurchaseForm.resx">
       <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatNumberCheckForm.resx">
+      <DependentUpon>SeatNumberCheckForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeatTimeChargingForm.resx">
       <DependentUpon>SeatTimeChargingForm.cs</DependentUpon>
