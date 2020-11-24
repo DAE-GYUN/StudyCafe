@@ -185,5 +185,14 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_229-woman-gesturing-OK-2_3099350.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\메인화면.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\로그인창.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\구매화면.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

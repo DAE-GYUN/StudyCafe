@@ -89,5 +89,35 @@ namespace WindowsFormsApp1.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 구매화면 {
+            get {
+                object obj = ResourceManager.GetObject("구매화면", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 로그인창 {
+            get {
+                object obj = ResourceManager.GetObject("로그인창", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 메인화면 {
+            get {
+                object obj = ResourceManager.GetObject("메인화면", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
