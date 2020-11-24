@@ -126,6 +126,9 @@
     <EmbeddedResource Include="LockersForm.resx">
       <DependentUpon>LockersForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LockerTimeChargingForm.resx">
+      <DependentUpon>LockerTimeChargingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
