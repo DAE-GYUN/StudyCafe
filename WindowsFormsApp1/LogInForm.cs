@@ -72,5 +72,17 @@ namespace WindowsFormsApp1
             if (txbUserPhoneNumber.Text.Length >= 1)
                 txbUserPhoneNumber.Text = txbUserPhoneNumber.Text.Remove(txbUserPhoneNumber.Text.Length - 1, 1);
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            SignUpForm signUpForm = new SignUpForm();
+            signUpForm.ShowDialog();
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
     }
 }
