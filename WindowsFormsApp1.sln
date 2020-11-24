@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{C1BAB6FC-9EB1-49F4-9EA2-96F6F85C86CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.Ui", "WindowsFormsApp1\StudyCafe.Ui.csproj", "{C1BAB6FC-9EB1-49F4-9EA2-96F6F85C86CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
