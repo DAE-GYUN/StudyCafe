@@ -141,6 +141,9 @@
     <EmbeddedResource Include="SeatTimeChargingForm.resx">
       <DependentUpon>SeatTimeChargingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudyRoomTimeChargingForm.resx">
+      <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
