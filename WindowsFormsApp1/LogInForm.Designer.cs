@@ -38,10 +38,10 @@ namespace WindowsFormsApp1
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txbUserPhoneNumber = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -137,14 +137,15 @@ namespace WindowsFormsApp1
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
-            // button10
+            // btnLogIn
             // 
-            this.button10.Location = new System.Drawing.Point(175, 380);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "LogIn";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnLogIn.Location = new System.Drawing.Point(175, 380);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(75, 23);
+            this.btnLogIn.TabIndex = 0;
+            this.btnLogIn.Text = "LogIn";
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btn0
             // 
@@ -166,14 +167,14 @@ namespace WindowsFormsApp1
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // button13
+            // btnSignUp
             // 
-            this.button13.Location = new System.Drawing.Point(598, 71);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 3;
-            this.button13.Text = "회원등록";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnSignUp.Location = new System.Drawing.Point(598, 71);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(75, 23);
+            this.btnSignUp.TabIndex = 3;
+            this.btnSignUp.Text = "회원등록";
+            this.btnSignUp.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -198,13 +199,13 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txbUserPhoneNumber);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn6);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btn9);
@@ -229,10 +230,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbUserPhoneNumber;
     }
