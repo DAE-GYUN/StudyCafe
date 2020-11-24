@@ -120,6 +120,9 @@
     <Compile Include="StudyRoomTimeChargingForm.Designer.cs">
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LockersForm.resx">
+      <DependentUpon>LockersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
