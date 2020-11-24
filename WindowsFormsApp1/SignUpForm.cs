@@ -16,5 +16,22 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            if (txbUserName == null && txbUserPhoneNumber.TextLength < 11)
+                MessageBox.Show("입력칸을 다 채우세요!!");
+            else
+            {
+                LogInForm logInForm = new LogInForm();
+                logInForm.Show();
+            }
+            
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
