@@ -29,12 +29,6 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn2Hours = new System.Windows.Forms.Button();
-            this.btn5Hours = new System.Windows.Forms.Button();
-            this.btn30Hours = new System.Windows.Forms.Button();
-            this.btn12Hours = new System.Windows.Forms.Button();
-            this.btn60Hours = new System.Windows.Forms.Button();
-            this.btn100Hours = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,61 +38,15 @@ namespace WindowsFormsApp1
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
+            this.rbtn2Hours = new System.Windows.Forms.RadioButton();
+            this.rbtn5Hours = new System.Windows.Forms.RadioButton();
+            this.rbtn12Hours = new System.Windows.Forms.RadioButton();
+            this.rbtn30Hours = new System.Windows.Forms.RadioButton();
+            this.rbtn60Hours = new System.Windows.Forms.RadioButton();
+            this.rbtn100Hours = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn2Hours
-            // 
-            this.btn2Hours.Location = new System.Drawing.Point(32, 32);
-            this.btn2Hours.Name = "btn2Hours";
-            this.btn2Hours.Size = new System.Drawing.Size(75, 61);
-            this.btn2Hours.TabIndex = 0;
-            this.btn2Hours.Text = "2시간";
-            this.btn2Hours.UseVisualStyleBackColor = true;
-            // 
-            // btn5Hours
-            // 
-            this.btn5Hours.Location = new System.Drawing.Point(137, 32);
-            this.btn5Hours.Name = "btn5Hours";
-            this.btn5Hours.Size = new System.Drawing.Size(75, 61);
-            this.btn5Hours.TabIndex = 0;
-            this.btn5Hours.Text = "5시간";
-            this.btn5Hours.UseVisualStyleBackColor = true;
-            // 
-            // btn30Hours
-            // 
-            this.btn30Hours.Location = new System.Drawing.Point(137, 113);
-            this.btn30Hours.Name = "btn30Hours";
-            this.btn30Hours.Size = new System.Drawing.Size(75, 61);
-            this.btn30Hours.TabIndex = 0;
-            this.btn30Hours.Text = "30시간";
-            this.btn30Hours.UseVisualStyleBackColor = true;
-            // 
-            // btn12Hours
-            // 
-            this.btn12Hours.Location = new System.Drawing.Point(32, 113);
-            this.btn12Hours.Name = "btn12Hours";
-            this.btn12Hours.Size = new System.Drawing.Size(75, 61);
-            this.btn12Hours.TabIndex = 0;
-            this.btn12Hours.Text = "12시간";
-            this.btn12Hours.UseVisualStyleBackColor = true;
-            // 
-            // btn60Hours
-            // 
-            this.btn60Hours.Location = new System.Drawing.Point(32, 201);
-            this.btn60Hours.Name = "btn60Hours";
-            this.btn60Hours.Size = new System.Drawing.Size(75, 61);
-            this.btn60Hours.TabIndex = 0;
-            this.btn60Hours.Text = "60시간";
-            this.btn60Hours.UseVisualStyleBackColor = true;
-            // 
-            // btn100Hours
-            // 
-            this.btn100Hours.Location = new System.Drawing.Point(137, 201);
-            this.btn100Hours.Name = "btn100Hours";
-            this.btn100Hours.Size = new System.Drawing.Size(75, 61);
-            this.btn100Hours.TabIndex = 0;
-            this.btn100Hours.Text = "100시간";
-            this.btn100Hours.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -175,11 +123,93 @@ namespace WindowsFormsApp1
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = true;
             // 
+            // rbtn2Hours
+            // 
+            this.rbtn2Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn2Hours.Location = new System.Drawing.Point(6, 24);
+            this.rbtn2Hours.Name = "rbtn2Hours";
+            this.rbtn2Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn2Hours.TabIndex = 4;
+            this.rbtn2Hours.TabStop = true;
+            this.rbtn2Hours.Text = "2시간";
+            this.rbtn2Hours.UseVisualStyleBackColor = true;
+            // 
+            // rbtn5Hours
+            // 
+            this.rbtn5Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn5Hours.Location = new System.Drawing.Point(107, 24);
+            this.rbtn5Hours.Name = "rbtn5Hours";
+            this.rbtn5Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn5Hours.TabIndex = 4;
+            this.rbtn5Hours.TabStop = true;
+            this.rbtn5Hours.Text = "5시간";
+            this.rbtn5Hours.UseVisualStyleBackColor = true;
+            // 
+            // rbtn12Hours
+            // 
+            this.rbtn12Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn12Hours.Location = new System.Drawing.Point(6, 100);
+            this.rbtn12Hours.Name = "rbtn12Hours";
+            this.rbtn12Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn12Hours.TabIndex = 4;
+            this.rbtn12Hours.TabStop = true;
+            this.rbtn12Hours.Text = "12시간";
+            this.rbtn12Hours.UseVisualStyleBackColor = true;
+            // 
+            // rbtn30Hours
+            // 
+            this.rbtn30Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn30Hours.Location = new System.Drawing.Point(107, 100);
+            this.rbtn30Hours.Name = "rbtn30Hours";
+            this.rbtn30Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn30Hours.TabIndex = 4;
+            this.rbtn30Hours.TabStop = true;
+            this.rbtn30Hours.Text = "30시간";
+            this.rbtn30Hours.UseVisualStyleBackColor = true;
+            // 
+            // rbtn60Hours
+            // 
+            this.rbtn60Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn60Hours.Location = new System.Drawing.Point(6, 178);
+            this.rbtn60Hours.Name = "rbtn60Hours";
+            this.rbtn60Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn60Hours.TabIndex = 4;
+            this.rbtn60Hours.TabStop = true;
+            this.rbtn60Hours.Text = "60시간";
+            this.rbtn60Hours.UseVisualStyleBackColor = true;
+            // 
+            // rbtn100Hours
+            // 
+            this.rbtn100Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn100Hours.Location = new System.Drawing.Point(107, 178);
+            this.rbtn100Hours.Name = "rbtn100Hours";
+            this.rbtn100Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn100Hours.TabIndex = 4;
+            this.rbtn100Hours.TabStop = true;
+            this.rbtn100Hours.Text = "100시간";
+            this.rbtn100Hours.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtn2Hours);
+            this.groupBox1.Controls.Add(this.rbtn100Hours);
+            this.groupBox1.Controls.Add(this.rbtn5Hours);
+            this.groupBox1.Controls.Add(this.rbtn60Hours);
+            this.groupBox1.Controls.Add(this.rbtn12Hours);
+            this.groupBox1.Controls.Add(this.rbtn30Hours);
+            this.groupBox1.Location = new System.Drawing.Point(25, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 289);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
+            // 
             // SeatTimeChargingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.btnMainMenu);
@@ -189,27 +219,15 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn100Hours);
-            this.Controls.Add(this.btn60Hours);
-            this.Controls.Add(this.btn12Hours);
-            this.Controls.Add(this.btn30Hours);
-            this.Controls.Add(this.btn5Hours);
-            this.Controls.Add(this.btn2Hours);
             this.Name = "SeatTimeChargingForm";
             this.Text = "SeatTimeChargingForm";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn2Hours;
-        private System.Windows.Forms.Button btn5Hours;
-        private System.Windows.Forms.Button btn30Hours;
-        private System.Windows.Forms.Button btn12Hours;
-        private System.Windows.Forms.Button btn60Hours;
-        private System.Windows.Forms.Button btn100Hours;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -219,5 +237,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnPurchase;
+        private System.Windows.Forms.RadioButton rbtn2Hours;
+        private System.Windows.Forms.RadioButton rbtn5Hours;
+        private System.Windows.Forms.RadioButton rbtn12Hours;
+        private System.Windows.Forms.RadioButton rbtn30Hours;
+        private System.Windows.Forms.RadioButton rbtn60Hours;
+        private System.Windows.Forms.RadioButton rbtn100Hours;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

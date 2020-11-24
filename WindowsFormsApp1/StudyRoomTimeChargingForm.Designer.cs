@@ -29,9 +29,6 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnStudyRoom2Hours = new System.Windows.Forms.Button();
-            this.btnStudyRoom4Hours = new System.Windows.Forms.Button();
-            this.btnStudyRoom6Hours = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnMainMenu = new System.Windows.Forms.Button();
@@ -41,34 +38,12 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtn2Hours = new System.Windows.Forms.RadioButton();
+            this.rbtn4Hours = new System.Windows.Forms.RadioButton();
+            this.rbtn6Hours = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnStudyRoom2Hours
-            // 
-            this.btnStudyRoom2Hours.Location = new System.Drawing.Point(40, 29);
-            this.btnStudyRoom2Hours.Name = "btnStudyRoom2Hours";
-            this.btnStudyRoom2Hours.Size = new System.Drawing.Size(90, 71);
-            this.btnStudyRoom2Hours.TabIndex = 0;
-            this.btnStudyRoom2Hours.Text = "2시간";
-            this.btnStudyRoom2Hours.UseVisualStyleBackColor = true;
-            // 
-            // btnStudyRoom4Hours
-            // 
-            this.btnStudyRoom4Hours.Location = new System.Drawing.Point(150, 29);
-            this.btnStudyRoom4Hours.Name = "btnStudyRoom4Hours";
-            this.btnStudyRoom4Hours.Size = new System.Drawing.Size(90, 71);
-            this.btnStudyRoom4Hours.TabIndex = 0;
-            this.btnStudyRoom4Hours.Text = "4시간";
-            this.btnStudyRoom4Hours.UseVisualStyleBackColor = true;
-            // 
-            // btnStudyRoom6Hours
-            // 
-            this.btnStudyRoom6Hours.Location = new System.Drawing.Point(40, 130);
-            this.btnStudyRoom6Hours.Name = "btnStudyRoom6Hours";
-            this.btnStudyRoom6Hours.Size = new System.Drawing.Size(90, 71);
-            this.btnStudyRoom6Hours.TabIndex = 0;
-            this.btnStudyRoom6Hours.Text = "6시간";
-            this.btnStudyRoom6Hours.UseVisualStyleBackColor = true;
             // 
             // btnPurchase
             // 
@@ -145,11 +120,57 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 6;
             this.label1.Text = "이용권종류";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtn2Hours);
+            this.groupBox1.Controls.Add(this.rbtn4Hours);
+            this.groupBox1.Controls.Add(this.rbtn6Hours);
+            this.groupBox1.Location = new System.Drawing.Point(30, 22);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 289);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
+            // 
+            // rbtn2Hours
+            // 
+            this.rbtn2Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn2Hours.Location = new System.Drawing.Point(6, 24);
+            this.rbtn2Hours.Name = "rbtn2Hours";
+            this.rbtn2Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn2Hours.TabIndex = 4;
+            this.rbtn2Hours.TabStop = true;
+            this.rbtn2Hours.Text = "2시간";
+            this.rbtn2Hours.UseVisualStyleBackColor = true;
+            // 
+            // rbtn4Hours
+            // 
+            this.rbtn4Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn4Hours.Location = new System.Drawing.Point(107, 24);
+            this.rbtn4Hours.Name = "rbtn4Hours";
+            this.rbtn4Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn4Hours.TabIndex = 4;
+            this.rbtn4Hours.TabStop = true;
+            this.rbtn4Hours.Text = "4시간";
+            this.rbtn4Hours.UseVisualStyleBackColor = true;
+            // 
+            // rbtn6Hours
+            // 
+            this.rbtn6Hours.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtn6Hours.Location = new System.Drawing.Point(6, 100);
+            this.rbtn6Hours.Name = "rbtn6Hours";
+            this.rbtn6Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn6Hours.TabIndex = 4;
+            this.rbtn6Hours.TabStop = true;
+            this.rbtn6Hours.Text = "6시간";
+            this.rbtn6Hours.UseVisualStyleBackColor = true;
+            // 
             // StudyRoomTimeChargingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.btnMainMenu);
@@ -159,21 +180,15 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnStudyRoom6Hours);
-            this.Controls.Add(this.btnStudyRoom4Hours);
-            this.Controls.Add(this.btnStudyRoom2Hours);
             this.Name = "StudyRoomTimeChargingForm";
             this.Text = "StudyRoomTimeChargingForm";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnStudyRoom2Hours;
-        private System.Windows.Forms.Button btnStudyRoom4Hours;
-        private System.Windows.Forms.Button btnStudyRoom6Hours;
         private System.Windows.Forms.Button btnPurchase;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnMainMenu;
@@ -183,5 +198,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtn2Hours;
+        private System.Windows.Forms.RadioButton rbtn4Hours;
+        private System.Windows.Forms.RadioButton rbtn6Hours;
     }
 }
