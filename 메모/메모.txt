@@ -1,0 +1,12 @@
+좌석 16
+스터디룸 4개
+시간제 2시간(4000) 5시간(8000) 12시간(15000) 30시간(30000) 60시간(60000) 100시간(100000)
+사물함 12개
+
+<Form>
+LoginForm SignUpForm
+
+MainForm
+SheetNumberChekForm<-(CheckInForm ShiftSeatForm CheckOutForm PurchaseForm)->CheckInForm->CheckShiftSeatForm
+(SeatTimeChangingForm StudyRoomForm LockersForm)->CheckinForm->StudyRoomTimeChangingForm
+ LockerTimeChangingForm  PayMent Form
