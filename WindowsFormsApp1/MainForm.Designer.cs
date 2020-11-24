@@ -48,9 +48,9 @@ namespace WindowsFormsApp1
             this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckIn.Font = new System.Drawing.Font("한컴 쿨재즈 B", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btnCheckIn.Location = new System.Drawing.Point(29, 241);
+            this.btnCheckIn.Location = new System.Drawing.Point(23, 229);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(147, 65);
+            this.btnCheckIn.Size = new System.Drawing.Size(152, 91);
             this.btnCheckIn.TabIndex = 0;
             this.btnCheckIn.UseVisualStyleBackColor = false;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
@@ -99,9 +99,9 @@ namespace WindowsFormsApp1
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Location = new System.Drawing.Point(527, 414);
+            this.btnLogout.Location = new System.Drawing.Point(527, 426);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(167, 89);
+            this.btnLogout.Size = new System.Drawing.Size(167, 91);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.배경화면;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.메인화면1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(706, 529);
             this.Controls.Add(this.btnCheckIn);

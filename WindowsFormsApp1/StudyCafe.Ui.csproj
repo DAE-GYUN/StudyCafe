@@ -179,5 +179,14 @@
   <ItemGroup>
     <None Include="Resources\로그인창1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\메인화면.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\메인화면1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\구매화면.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
