@@ -145,6 +145,9 @@
     <EmbeddedResource Include="SeatTimeChargingForm.resx">
       <DependentUpon>SeatTimeChargingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudyRoomTimeChargingForm.resx">
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_229-woman-gesturing-OK-2_3099350.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
