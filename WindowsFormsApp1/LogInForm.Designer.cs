@@ -245,7 +245,7 @@ namespace WindowsFormsApp1
             this.txbUserPhoneNumber.Name = "txbUserPhoneNumber";
             this.txbUserPhoneNumber.Size = new System.Drawing.Size(339, 39);
             this.txbUserPhoneNumber.TabIndex = 5;
-            this.txbUserPhoneNumber.TextChanged += new System.EventHandler(this.txbUserPhoneNumber_TextChanged);
+            
             // 
             // LogInForm
             // 
@@ -272,7 +272,7 @@ namespace WindowsFormsApp1
             this.DoubleBuffered = true;
             this.Name = "LogInForm";
             this.Text = "LogInForm";
-            this.Load += new System.EventHandler(this.LogInForm_Load);
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 

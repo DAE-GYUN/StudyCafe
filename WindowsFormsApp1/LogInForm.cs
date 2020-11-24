@@ -73,14 +73,5 @@ namespace WindowsFormsApp1
                 txbUserPhoneNumber.Text = txbUserPhoneNumber.Text.Remove(txbUserPhoneNumber.Text.Length - 1, 1);
         }
 
-        private void LogInForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbUserPhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
