@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
             this.btnLockersCancel.TabIndex = 3;
             this.btnLockersCancel.Text = "취소";
             this.btnLockersCancel.UseVisualStyleBackColor = true;
+            this.btnLockersCancel.Click += new System.EventHandler(this.btnLockersCancel_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -91,6 +92,7 @@ namespace WindowsFormsApp1
             this.btnLocker1.TabIndex = 0;
             this.btnLocker1.Text = "1번";
             this.btnLocker1.UseVisualStyleBackColor = true;
+            this.btnLocker1.Click += new System.EventHandler(this.btnLocker1_Click);
             // 
             // btnLocker2
             // 
@@ -100,6 +102,7 @@ namespace WindowsFormsApp1
             this.btnLocker2.TabIndex = 0;
             this.btnLocker2.Text = "2번";
             this.btnLocker2.UseVisualStyleBackColor = true;
+            this.btnLocker2.Click += new System.EventHandler(this.btnLocker2_Click);
             // 
             // btnLocker3
             // 
@@ -109,6 +112,7 @@ namespace WindowsFormsApp1
             this.btnLocker3.TabIndex = 0;
             this.btnLocker3.Text = "3번";
             this.btnLocker3.UseVisualStyleBackColor = true;
+            this.btnLocker3.Click += new System.EventHandler(this.btnLocker3_Click);
             // 
             // btnLocker6
             // 
@@ -118,6 +122,7 @@ namespace WindowsFormsApp1
             this.btnLocker6.TabIndex = 0;
             this.btnLocker6.Text = "6번";
             this.btnLocker6.UseVisualStyleBackColor = true;
+            this.btnLocker6.Click += new System.EventHandler(this.btnLocker6_Click);
             // 
             // btnLocker5
             // 
@@ -127,6 +132,7 @@ namespace WindowsFormsApp1
             this.btnLocker5.TabIndex = 0;
             this.btnLocker5.Text = "5번";
             this.btnLocker5.UseVisualStyleBackColor = true;
+            this.btnLocker5.Click += new System.EventHandler(this.btnLocker5_Click);
             // 
             // btnLocker4
             // 
@@ -136,6 +142,7 @@ namespace WindowsFormsApp1
             this.btnLocker4.TabIndex = 0;
             this.btnLocker4.Text = "4번";
             this.btnLocker4.UseVisualStyleBackColor = true;
+            this.btnLocker4.Click += new System.EventHandler(this.btnLocker4_Click);
             // 
             // btnLocker7
             // 
@@ -145,6 +152,7 @@ namespace WindowsFormsApp1
             this.btnLocker7.TabIndex = 0;
             this.btnLocker7.Text = "7번";
             this.btnLocker7.UseVisualStyleBackColor = true;
+            this.btnLocker7.Click += new System.EventHandler(this.btnLocker7_Click);
             // 
             // btnLocker9
             // 
@@ -154,6 +162,7 @@ namespace WindowsFormsApp1
             this.btnLocker9.TabIndex = 0;
             this.btnLocker9.Text = "9번";
             this.btnLocker9.UseVisualStyleBackColor = true;
+            this.btnLocker9.Click += new System.EventHandler(this.btnLocker9_Click);
             // 
             // btnLocker12
             // 
@@ -163,6 +172,7 @@ namespace WindowsFormsApp1
             this.btnLocker12.TabIndex = 0;
             this.btnLocker12.Text = "12번";
             this.btnLocker12.UseVisualStyleBackColor = true;
+            this.btnLocker12.Click += new System.EventHandler(this.btnLocker12_Click);
             // 
             // btnLocker11
             // 
@@ -172,6 +182,7 @@ namespace WindowsFormsApp1
             this.btnLocker11.TabIndex = 0;
             this.btnLocker11.Text = "11번";
             this.btnLocker11.UseVisualStyleBackColor = true;
+            this.btnLocker11.Click += new System.EventHandler(this.btnLocker11_Click);
             // 
             // btnLocker10
             // 
@@ -181,6 +192,7 @@ namespace WindowsFormsApp1
             this.btnLocker10.TabIndex = 0;
             this.btnLocker10.Text = "10번";
             this.btnLocker10.UseVisualStyleBackColor = true;
+            this.btnLocker10.Click += new System.EventHandler(this.btnLocker10_Click);
             // 
             // btnLocker8
             // 
@@ -190,6 +202,7 @@ namespace WindowsFormsApp1
             this.btnLocker8.TabIndex = 0;
             this.btnLocker8.Text = "8번";
             this.btnLocker8.UseVisualStyleBackColor = true;
+            this.btnLocker8.Click += new System.EventHandler(this.btnLocker8_Click);
             // 
             // LockersForm
             // 

@@ -16,5 +16,75 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+        }
+        private void btnLocker1_Click(object sender, EventArgs e)
+        {
+            LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm();
+            lockerTimeChargingForm.ShowDialog();
+        }
+
+        private void btnLocker2_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker3_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker4_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker5_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker6_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker7_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker8_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker9_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker10_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker11_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLocker12_Click(object sender, EventArgs e)
+        {
+            btnLocker1.PerformClick();
+        }
+
+        private void btnLockersCancel_Click(object sender, EventArgs e)
+        {
+            PurchaseForm purchaseForm = new PurchaseForm();
+            purchaseForm.ShowDialog();
+        }
     }
 }
