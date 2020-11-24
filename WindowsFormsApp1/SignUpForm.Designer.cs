@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
             this.btnSignUp.TabIndex = 0;
             this.btnSignUp.Text = "등록";
             this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // btnCancel
             // 
@@ -56,6 +57,7 @@ namespace WindowsFormsApp1
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txbUserName
             // 
