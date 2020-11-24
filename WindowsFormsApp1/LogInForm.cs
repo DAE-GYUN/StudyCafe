@@ -21,5 +21,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length >= 1)
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+        }
     }
 }
