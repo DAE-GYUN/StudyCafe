@@ -130,7 +130,6 @@ namespace WindowsFormsApp1
             this.groupBox1.Size = new System.Drawing.Size(200, 289);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Visible = false;
             // 
             // rbtn2Hours
             // 

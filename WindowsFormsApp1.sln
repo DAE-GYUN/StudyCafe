@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.Ui", "WindowsFormsApp1\StudyCafe.Ui.csproj", "{C1BAB6FC-9EB1-49F4-9EA2-96F6F85C86CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.Data", "StudyCafe.Data\StudyCafe.Data.csproj", "{AD51E628-6053-4F07-B02C-6FF3C0D5577A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.UnitTest", "StudyCafe.UnitTest\StudyCafe.UnitTest.csproj", "{0DD502BE-D83B-4AF6-A456-3557D2DE766C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C1BAB6FC-9EB1-49F4-9EA2-96F6F85C86CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1BAB6FC-9EB1-49F4-9EA2-96F6F85C86CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1BAB6FC-9EB1-49F4-9EA2-96F6F85C86CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD51E628-6053-4F07-B02C-6FF3C0D5577A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD51E628-6053-4F07-B02C-6FF3C0D5577A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD51E628-6053-4F07-B02C-6FF3C0D5577A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD51E628-6053-4F07-B02C-6FF3C0D5577A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD502BE-D83B-4AF6-A456-3557D2DE766C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD502BE-D83B-4AF6-A456-3557D2DE766C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD502BE-D83B-4AF6-A456-3557D2DE766C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD502BE-D83B-4AF6-A456-3557D2DE766C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

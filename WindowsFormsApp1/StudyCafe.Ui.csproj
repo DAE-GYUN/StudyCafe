@@ -46,96 +46,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckInForm.cs">
+    <Compile Include="Select\CheckInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheckInForm.Designer.cs">
+    <Compile Include="Select\CheckInForm.Designer.cs">
       <DependentUpon>CheckInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CheckShiftSeatForm.cs">
+    <Compile Include="Popup\CheckShiftSeatForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheckShiftSeatForm.Designer.cs">
+    <Compile Include="Popup\CheckShiftSeatForm.Designer.cs">
       <DependentUpon>CheckShiftSeatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LockersForm.cs">
+    <Compile Include="Select\LockersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LockersForm.Designer.cs">
+    <Compile Include="Select\LockersForm.Designer.cs">
       <DependentUpon>LockersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LockerTimeChargingForm.cs">
+    <Compile Include="Charge\LockerTimeChargingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LockerTimeChargingForm.Designer.cs">
+    <Compile Include="Charge\LockerTimeChargingForm.Designer.cs">
       <DependentUpon>LockerTimeChargingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogInForm.cs">
+    <Compile Include="Main\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogInForm.Designer.cs">
+    <Compile Include="Main\LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentForm.cs">
+    <Compile Include="Popup\PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentForm.Designer.cs">
+    <Compile Include="Popup\PaymentForm.Designer.cs">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchaseForm.cs">
+    <Compile Include="Main\PurchaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PurchaseForm.Designer.cs">
+    <Compile Include="Main\PurchaseForm.Designer.cs">
       <DependentUpon>PurchaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SeatNumberCheckForm.cs">
+    <Compile Include="Popup\SeatNumberCheckForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SeatNumberCheckForm.Designer.cs">
+    <Compile Include="Popup\SeatNumberCheckForm.Designer.cs">
       <DependentUpon>SeatNumberCheckForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SeatTimeChargingForm.cs">
+    <Compile Include="Charge\SeatTimeChargingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SeatTimeChargingForm.Designer.cs">
+    <Compile Include="Charge\SeatTimeChargingForm.Designer.cs">
       <DependentUpon>SeatTimeChargingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUpForm.cs">
+    <Compile Include="Popup\SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUpForm.Designer.cs">
+    <Compile Include="Popup\SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudyRoomTimeChargingForm.cs">
+    <Compile Include="Charge\StudyRoomTimeChargingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudyRoomTimeChargingForm.Designer.cs">
+    <Compile Include="Charge\StudyRoomTimeChargingForm.Designer.cs">
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CheckShiftSeatForm.resx">
+    <EmbeddedResource Include="Popup\CheckShiftSeatForm.resx">
       <DependentUpon>CheckShiftSeatForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LockersForm.resx">
+    <EmbeddedResource Include="Select\LockersForm.resx">
       <DependentUpon>LockersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LockerTimeChargingForm.resx">
+    <EmbeddedResource Include="Charge\LockerTimeChargingForm.resx">
       <DependentUpon>LockerTimeChargingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogInForm.resx">
+    <EmbeddedResource Include="Main\LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaymentForm.resx">
+    <EmbeddedResource Include="Popup\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -148,19 +148,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="PurchaseForm.resx">
+    <EmbeddedResource Include="Main\PurchaseForm.resx">
       <DependentUpon>PurchaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SeatNumberCheckForm.resx">
+    <EmbeddedResource Include="Popup\SeatNumberCheckForm.resx">
       <DependentUpon>SeatNumberCheckForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SeatTimeChargingForm.resx">
+    <EmbeddedResource Include="Charge\SeatTimeChargingForm.resx">
       <DependentUpon>SeatTimeChargingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUpForm.resx">
+    <EmbeddedResource Include="Popup\SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudyRoomTimeChargingForm.resx">
+    <EmbeddedResource Include="Charge\StudyRoomTimeChargingForm.resx">
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -185,5 +185,6 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_229-woman-gesturing-OK-2_3099350.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
