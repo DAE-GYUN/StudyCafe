@@ -29,9 +29,6 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txbUserNumber = new System.Windows.Forms.TextBox();
             this.txbRemainTime = new System.Windows.Forms.TextBox();
             this.txbPrice = new System.Windows.Forms.TextBox();
@@ -48,166 +45,185 @@ namespace WindowsFormsApp1
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(308, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "잔여시간";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(308, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "회원번호";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "결제금액";
-            // 
             // txbUserNumber
             // 
-            this.txbUserNumber.Location = new System.Drawing.Point(414, 52);
+            this.txbUserNumber.Location = new System.Drawing.Point(371, 100);
+            this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
-            this.txbUserNumber.Size = new System.Drawing.Size(154, 25);
+            this.txbUserNumber.Size = new System.Drawing.Size(135, 21);
             this.txbUserNumber.TabIndex = 2;
             // 
             // txbRemainTime
             // 
-            this.txbRemainTime.Location = new System.Drawing.Point(414, 121);
+            this.txbRemainTime.Location = new System.Drawing.Point(371, 156);
+            this.txbRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbRemainTime.Name = "txbRemainTime";
-            this.txbRemainTime.Size = new System.Drawing.Size(154, 25);
+            this.txbRemainTime.Size = new System.Drawing.Size(135, 21);
             this.txbRemainTime.TabIndex = 2;
             // 
             // txbPrice
             // 
-            this.txbPrice.Location = new System.Drawing.Point(414, 172);
+            this.txbPrice.Location = new System.Drawing.Point(371, 213);
+            this.txbPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(154, 25);
+            this.txbPrice.Size = new System.Drawing.Size(135, 21);
             this.txbPrice.TabIndex = 2;
             // 
             // btnMainMenu
             // 
-            this.btnMainMenu.Location = new System.Drawing.Point(300, 278);
+            this.btnMainMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnMainMenu.FlatAppearance.BorderSize = 0;
+            this.btnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainMenu.Location = new System.Drawing.Point(201, 276);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(75, 58);
+            this.btnMainMenu.Size = new System.Drawing.Size(148, 60);
             this.btnMainMenu.TabIndex = 3;
             this.btnMainMenu.Text = "메인메뉴";
-            this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.UseVisualStyleBackColor = false;
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.Location = new System.Drawing.Point(398, 278);
+            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddToCart.FlatAppearance.BorderSize = 0;
+            this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddToCart.Location = new System.Drawing.Point(362, 276);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(75, 58);
+            this.btnAddToCart.Size = new System.Drawing.Size(154, 60);
             this.btnAddToCart.TabIndex = 3;
             this.btnAddToCart.Text = "추가선택";
-            this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.UseVisualStyleBackColor = false;
             // 
             // btnPurchase
             // 
-            this.btnPurchase.Location = new System.Drawing.Point(493, 278);
+            this.btnPurchase.BackColor = System.Drawing.Color.Transparent;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.Location = new System.Drawing.Point(531, 276);
+            this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(75, 58);
+            this.btnPurchase.Size = new System.Drawing.Size(142, 60);
             this.btnPurchase.TabIndex = 3;
             this.btnPurchase.Text = "결제";
-            this.btnPurchase.UseVisualStyleBackColor = true;
+            this.btnPurchase.UseVisualStyleBackColor = false;
             // 
             // rbtn2Hours
             // 
             this.rbtn2Hours.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtn2Hours.Location = new System.Drawing.Point(6, 24);
+            this.rbtn2Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn2Hours.FlatAppearance.BorderSize = 0;
+            this.rbtn2Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtn2Hours.Location = new System.Drawing.Point(6, 19);
+            this.rbtn2Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn2Hours.Name = "rbtn2Hours";
-            this.rbtn2Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn2Hours.Size = new System.Drawing.Size(99, 52);
             this.rbtn2Hours.TabIndex = 4;
             this.rbtn2Hours.TabStop = true;
             this.rbtn2Hours.Text = "2시간";
-            this.rbtn2Hours.UseVisualStyleBackColor = true;
+            this.rbtn2Hours.UseVisualStyleBackColor = false;
             // 
             // rbtn5Hours
             // 
             this.rbtn5Hours.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtn5Hours.Location = new System.Drawing.Point(107, 24);
+            this.rbtn5Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn5Hours.FlatAppearance.BorderSize = 0;
+            this.rbtn5Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtn5Hours.Location = new System.Drawing.Point(111, 18);
+            this.rbtn5Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn5Hours.Name = "rbtn5Hours";
-            this.rbtn5Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn5Hours.Size = new System.Drawing.Size(102, 53);
             this.rbtn5Hours.TabIndex = 4;
             this.rbtn5Hours.TabStop = true;
             this.rbtn5Hours.Text = "5시간";
-            this.rbtn5Hours.UseVisualStyleBackColor = true;
+            this.rbtn5Hours.UseVisualStyleBackColor = false;
             // 
             // rbtn12Hours
             // 
             this.rbtn12Hours.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtn12Hours.Location = new System.Drawing.Point(6, 100);
+            this.rbtn12Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn12Hours.FlatAppearance.BorderSize = 0;
+            this.rbtn12Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtn12Hours.Location = new System.Drawing.Point(6, 89);
+            this.rbtn12Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn12Hours.Name = "rbtn12Hours";
-            this.rbtn12Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn12Hours.Size = new System.Drawing.Size(99, 47);
             this.rbtn12Hours.TabIndex = 4;
             this.rbtn12Hours.TabStop = true;
             this.rbtn12Hours.Text = "12시간";
-            this.rbtn12Hours.UseVisualStyleBackColor = true;
+            this.rbtn12Hours.UseVisualStyleBackColor = false;
             // 
             // rbtn30Hours
             // 
             this.rbtn30Hours.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtn30Hours.Location = new System.Drawing.Point(107, 100);
+            this.rbtn30Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn30Hours.FlatAppearance.BorderSize = 0;
+            this.rbtn30Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtn30Hours.Location = new System.Drawing.Point(111, 89);
+            this.rbtn30Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn30Hours.Name = "rbtn30Hours";
-            this.rbtn30Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn30Hours.Size = new System.Drawing.Size(102, 49);
             this.rbtn30Hours.TabIndex = 4;
             this.rbtn30Hours.TabStop = true;
             this.rbtn30Hours.Text = "30시간";
-            this.rbtn30Hours.UseVisualStyleBackColor = true;
+            this.rbtn30Hours.UseVisualStyleBackColor = false;
             // 
             // rbtn60Hours
             // 
             this.rbtn60Hours.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtn60Hours.Location = new System.Drawing.Point(6, 178);
+            this.rbtn60Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn60Hours.FlatAppearance.BorderSize = 0;
+            this.rbtn60Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtn60Hours.Location = new System.Drawing.Point(6, 158);
+            this.rbtn60Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn60Hours.Name = "rbtn60Hours";
-            this.rbtn60Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn60Hours.Size = new System.Drawing.Size(99, 46);
             this.rbtn60Hours.TabIndex = 4;
             this.rbtn60Hours.TabStop = true;
             this.rbtn60Hours.Text = "60시간";
-            this.rbtn60Hours.UseVisualStyleBackColor = true;
+            this.rbtn60Hours.UseVisualStyleBackColor = false;
             // 
             // rbtn100Hours
             // 
             this.rbtn100Hours.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtn100Hours.Location = new System.Drawing.Point(107, 178);
+            this.rbtn100Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn100Hours.FlatAppearance.BorderSize = 0;
+            this.rbtn100Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtn100Hours.Location = new System.Drawing.Point(111, 158);
+            this.rbtn100Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn100Hours.Name = "rbtn100Hours";
-            this.rbtn100Hours.Size = new System.Drawing.Size(78, 59);
+            this.rbtn100Hours.Size = new System.Drawing.Size(102, 47);
             this.rbtn100Hours.TabIndex = 4;
             this.rbtn100Hours.TabStop = true;
             this.rbtn100Hours.Text = "100시간";
-            this.rbtn100Hours.UseVisualStyleBackColor = true;
+            this.rbtn100Hours.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.rbtn2Hours);
             this.groupBox1.Controls.Add(this.rbtn100Hours);
             this.groupBox1.Controls.Add(this.rbtn5Hours);
             this.groupBox1.Controls.Add(this.rbtn60Hours);
             this.groupBox1.Controls.Add(this.rbtn12Hours);
             this.groupBox1.Controls.Add(this.rbtn30Hours);
-            this.groupBox1.Location = new System.Drawing.Point(25, 28);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Location = new System.Drawing.Point(12, 67);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 289);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(219, 219);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
             // SeatTimeChargingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.SeatTimeChargingForm;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnAddToCart);
@@ -215,9 +231,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.txbPrice);
             this.Controls.Add(this.txbRemainTime);
             this.Controls.Add(this.txbUserNumber);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SeatTimeChargingForm";
             this.Text = "SeatTimeChargingForm";
             this.groupBox1.ResumeLayout(false);
@@ -227,9 +242,6 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbUserNumber;
         private System.Windows.Forms.TextBox txbRemainTime;
         private System.Windows.Forms.TextBox txbPrice;

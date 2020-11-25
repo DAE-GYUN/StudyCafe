@@ -35,145 +35,139 @@ namespace WindowsFormsApp1
             this.txbPrice = new System.Windows.Forms.TextBox();
             this.txbRemainTime = new System.Windows.Forms.TextBox();
             this.txbUserNumber = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn1Month = new System.Windows.Forms.Button();
             this.btn3Week = new System.Windows.Forms.Button();
             this.btn1Week = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(570, 312);
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(523, 274);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 58);
+            this.btnCancel.Size = new System.Drawing.Size(165, 61);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "취소";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.Location = new System.Drawing.Point(475, 312);
+            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddToCart.FlatAppearance.BorderSize = 0;
+            this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddToCart.Location = new System.Drawing.Point(355, 274);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(75, 58);
+            this.btnAddToCart.Size = new System.Drawing.Size(162, 61);
             this.btnAddToCart.TabIndex = 17;
             this.btnAddToCart.Text = "추가선택";
-            this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // btnPayMent
             // 
-            this.btnPayMent.Location = new System.Drawing.Point(377, 312);
+            this.btnPayMent.BackColor = System.Drawing.Color.Transparent;
+            this.btnPayMent.FlatAppearance.BorderSize = 0;
+            this.btnPayMent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayMent.Location = new System.Drawing.Point(192, 274);
+            this.btnPayMent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayMent.Name = "btnPayMent";
-            this.btnPayMent.Size = new System.Drawing.Size(75, 58);
+            this.btnPayMent.Size = new System.Drawing.Size(157, 61);
             this.btnPayMent.TabIndex = 18;
             this.btnPayMent.Text = "결제";
-            this.btnPayMent.UseVisualStyleBackColor = true;
+            this.btnPayMent.UseVisualStyleBackColor = false;
             this.btnPayMent.Click += new System.EventHandler(this.btnPayMent_Click);
             // 
             // txbPrice
             // 
-            this.txbPrice.Location = new System.Drawing.Point(491, 190);
+            this.txbPrice.Location = new System.Drawing.Point(292, 221);
+            this.txbPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(154, 25);
+            this.txbPrice.Size = new System.Drawing.Size(135, 21);
             this.txbPrice.TabIndex = 13;
+            this.txbPrice.TextChanged += new System.EventHandler(this.txbPrice_TextChanged);
             // 
             // txbRemainTime
             // 
-            this.txbRemainTime.Location = new System.Drawing.Point(491, 155);
+            this.txbRemainTime.Location = new System.Drawing.Point(292, 181);
+            this.txbRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbRemainTime.Name = "txbRemainTime";
-            this.txbRemainTime.Size = new System.Drawing.Size(154, 25);
+            this.txbRemainTime.Size = new System.Drawing.Size(135, 21);
             this.txbRemainTime.TabIndex = 14;
+            this.txbRemainTime.TextChanged += new System.EventHandler(this.txbRemainTime_TextChanged);
             // 
             // txbUserNumber
             // 
-            this.txbUserNumber.Location = new System.Drawing.Point(491, 86);
+            this.txbUserNumber.Location = new System.Drawing.Point(292, 104);
+            this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
-            this.txbUserNumber.Size = new System.Drawing.Size(154, 25);
+            this.txbUserNumber.Size = new System.Drawing.Size(135, 21);
             this.txbUserNumber.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(418, 193);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "결제금액";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(418, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "회원번호";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(433, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "이용권";
+            this.txbUserNumber.TextChanged += new System.EventHandler(this.txbUserNumber_TextChanged);
             // 
             // btn1Month
             // 
-            this.btn1Month.Location = new System.Drawing.Point(109, 147);
+            this.btn1Month.BackColor = System.Drawing.Color.Transparent;
+            this.btn1Month.FlatAppearance.BorderSize = 0;
+            this.btn1Month.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1Month.Location = new System.Drawing.Point(23, 154);
+            this.btn1Month.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Month.Name = "btn1Month";
-            this.btn1Month.Size = new System.Drawing.Size(75, 61);
+            this.btn1Month.Size = new System.Drawing.Size(102, 49);
             this.btn1Month.TabIndex = 6;
             this.btn1Month.Text = "한달";
-            this.btn1Month.UseVisualStyleBackColor = true;
+            this.btn1Month.UseVisualStyleBackColor = false;
             this.btn1Month.Click += new System.EventHandler(this.btn1Month_Click);
             // 
             // btn3Week
             // 
-            this.btn3Week.Location = new System.Drawing.Point(214, 66);
+            this.btn3Week.BackColor = System.Drawing.Color.Transparent;
+            this.btn3Week.FlatAppearance.BorderSize = 0;
+            this.btn3Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3Week.Location = new System.Drawing.Point(23, 225);
+            this.btn3Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3Week.Name = "btn3Week";
-            this.btn3Week.Size = new System.Drawing.Size(75, 61);
+            this.btn3Week.Size = new System.Drawing.Size(102, 49);
             this.btn3Week.TabIndex = 8;
             this.btn3Week.Text = "3주";
-            this.btn3Week.UseVisualStyleBackColor = true;
+            this.btn3Week.UseVisualStyleBackColor = false;
             this.btn3Week.Click += new System.EventHandler(this.btn3Week_Click);
             // 
             // btn1Week
             // 
-            this.btn1Week.Location = new System.Drawing.Point(109, 66);
+            this.btn1Week.BackColor = System.Drawing.Color.Transparent;
+            this.btn1Week.FlatAppearance.BorderSize = 0;
+            this.btn1Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1Week.Location = new System.Drawing.Point(23, 89);
+            this.btn1Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Week.Name = "btn1Week";
-            this.btn1Week.Size = new System.Drawing.Size(75, 61);
+            this.btn1Week.Size = new System.Drawing.Size(102, 49);
             this.btn1Week.TabIndex = 9;
             this.btn1Week.Text = "1주일";
-            this.btn1Week.UseVisualStyleBackColor = true;
+            this.btn1Week.UseVisualStyleBackColor = false;
             this.btn1Week.Click += new System.EventHandler(this.btn1Week_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(368, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 15);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "사물함 잔여시간";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(491, 121);
+            this.textBox1.Location = new System.Drawing.Point(292, 141);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 25);
+            this.textBox1.Size = new System.Drawing.Size(135, 21);
             this.textBox1.TabIndex = 14;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // LockerTimeChargingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockerTimeChargingForm1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.btnPayMent);
@@ -181,13 +175,11 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txbRemainTime);
             this.Controls.Add(this.txbUserNumber);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn1Month);
             this.Controls.Add(this.btn3Week);
             this.Controls.Add(this.btn1Week);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LockerTimeChargingForm";
             this.Text = "LockerTimeChargingForm";
             this.ResumeLayout(false);
@@ -203,13 +195,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbPrice;
         private System.Windows.Forms.TextBox txbRemainTime;
         private System.Windows.Forms.TextBox txbUserNumber;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn1Month;
         private System.Windows.Forms.Button btn3Week;
         private System.Windows.Forms.Button btn1Week;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

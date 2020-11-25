@@ -53,5 +53,25 @@ namespace WindowsFormsApp1
             LockersForm lockersForm = new LockersForm();
             lockersForm.ShowDialog();
         }
+
+        private void txbUserNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbRemainTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
