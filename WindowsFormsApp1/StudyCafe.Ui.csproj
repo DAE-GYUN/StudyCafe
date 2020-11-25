@@ -123,6 +123,9 @@
     <EmbeddedResource Include="Popup\CheckShiftSeatForm.resx">
       <DependentUpon>CheckShiftSeatForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Select\CheckInForm.resx">
+      <DependentUpon>CheckInForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Select\LockersForm.resx">
       <DependentUpon>LockersForm.cs</DependentUpon>
     </EmbeddedResource>
