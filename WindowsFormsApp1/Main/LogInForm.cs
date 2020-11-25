@@ -39,18 +39,16 @@ namespace WindowsFormsApp1
         {
             User user = Dao.User.GetByPhoneNumber(txbUserPhoneNumber.Text);
 
-            try
+            if (user != null)
             {
-                if (user !=  null)
-                {
-                    Credential.Instance.User = user;
+                Credential.Instance.User = user;
 
-                    MainForm mainForm = new MainForm();
-                    mainForm.ShowDialog();
-                    txbUserPhoneNumber.Text = "";
-                }
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+                txbUserPhoneNumber.Text = "";
             }
-            catch
+
+            else
             {
                 MessageBox.Show("존재하지않는 회원입니다");
             }

@@ -17,15 +17,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            DateTime from = DateTime.Today.AddDays(-7);
             
-            List<Invoice> invoices = Dao.Invoice.GetFordDate(from, null);
+            // 기간안의 데이터 가져오기
+            //DateTime from = DateTime.Today.AddDays(-7);
 
-            foreach (var invoice in invoices)
-            {
-                invoice.InvoiceDatetime = DateTime.Today;
-                Dao.Invoice.Update(invoice);
-            }
+            //List<Invoice> invoices = Dao.Invoice.GetFordDate(from, null);
+
+            //foreach (var invoice in invoices)
+            //{
+            //    invoice.InvoiceDatetime = DateTime.Today;
+            //    Dao.Invoice.Update(invoice);
+            //}
+            
 
 
         }
