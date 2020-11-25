@@ -23,8 +23,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("입력칸을 다 채우세요!!");
             else
             {
-                LogInForm logInForm = new LogInForm();
-                logInForm.Show();
+                Close();
             }
             
         }
