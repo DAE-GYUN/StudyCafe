@@ -80,6 +80,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\Dao.cs" />
+    <Compile Include="EFLibrary\BaseDao.cs" />
+    <Compile Include="EFLibrary\DbContextCreator.cs" />
+    <Compile Include="EFLibrary\DualKeyDao.cs" />
+    <Compile Include="EFLibrary\QuadKeyDao.cs" />
+    <Compile Include="EFLibrary\SingleKeyDao.cs" />
+    <Compile Include="EFLibrary\TripleKeyDao.cs" />
     <Compile Include="Invoice.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
@@ -120,26 +127,24 @@
     <Compile Include="StudyRoom.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
-    <Compile Include="UEF\Dao\InvoiceDao.cs" />
-    <Compile Include="UEF\Dao\InvoiceLineDao.cs" />
-    <Compile Include="UEF\Dao\ItemDao.cs" />
-    <Compile Include="UEF\Dao\LockerDao.cs" />
-    <Compile Include="UEF\Dao\LogDao.cs" />
-    <Compile Include="UEF\Dao\ReportDao.cs" />
-    <Compile Include="UEF\Dao\SeatDao.cs" />
-    <Compile Include="UEF\Dao\StudyRoomDao.cs" />
-    <Compile Include="UEF\Dao\UserDao.cs" />
-    <Compile Include="UEF\DbContextFactory.cs" />
-    <Compile Include="UEF\Entities\Invoice.cs" />
-    <Compile Include="UEF\Entities\InvoiceLine.cs" />
-    <Compile Include="UEF\Entities\Item.cs" />
-    <Compile Include="UEF\Entities\Locker.cs" />
-    <Compile Include="UEF\Entities\Log.cs" />
-    <Compile Include="UEF\Entities\Report.cs" />
-    <Compile Include="UEF\Entities\Seat.cs" />
-    <Compile Include="UEF\Entities\StudyRoom.cs" />
-    <Compile Include="UEF\Entities\User.cs" />
-    <Compile Include="UEF\GeneratedByMP.cs" />
+    <Compile Include="Dao\InvoiceDao.cs" />
+    <Compile Include="Dao\InvoiceLineDao.cs" />
+    <Compile Include="Dao\ItemDao.cs" />
+    <Compile Include="Dao\LockerDao.cs" />
+    <Compile Include="Dao\LogDao.cs" />
+    <Compile Include="Dao\ReportDao.cs" />
+    <Compile Include="Dao\SeatDao.cs" />
+    <Compile Include="Dao\StudyRoomDao.cs" />
+    <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\InvoiceLine.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Locker.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\Report.cs" />
+    <Compile Include="Entities\Seat.cs" />
+    <Compile Include="Entities\StudyRoom.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="User.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
@@ -168,7 +173,6 @@
       <DependentUpon>KoreanStudyCafe.edmx</DependentUpon>
       <LastGenOutput>KoreanStudyCafe.cs</LastGenOutput>
     </Content>
-    <Content Include="UEF\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

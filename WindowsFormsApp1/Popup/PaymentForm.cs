@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudyCafe.Data;
 
 namespace WindowsFormsApp1
 {
@@ -15,6 +16,18 @@ namespace WindowsFormsApp1
         public PaymentForm()
         {
             InitializeComponent();
+
+            DateTime from = DateTime.Today.AddDays(-7);
+            
+            List<Invoice> invoices = Dao.Invoice.GetFordDate(from, null);
+
+            foreach (var invoice in invoices)
+            {
+                invoice.InvoiceDatetime = DateTime.Today;
+                Dao.Invoice.Update(invoice);
+            }
+
+
         }
     }
 }

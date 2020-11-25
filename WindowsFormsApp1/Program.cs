@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EFLibrary;
+using StudyCafe.Data;
 
 namespace WindowsFormsApp1
 {
@@ -16,6 +18,9 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            DbContextCreator.Context = () => new KoreanStudyCafeEntities();
+
             Application.Run(new LogInForm());
         }
     }

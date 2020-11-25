@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Credential.cs" />
     <Compile Include="Select\CheckInForm.cs">
       <SubType>Form</SubType>
     </Compile>

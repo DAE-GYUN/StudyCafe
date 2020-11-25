@@ -19,23 +19,14 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public MainForm(string userId) : this()
-        {
-            _userId = userId;
-        }
-
-        private string _userId;
-
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
 
-            CodeGenerator.Generate(new KoreanStudyCafeEntities(),
-                @"C:\Users\kccistc\Desktop\KDJ\Git_StudyCafe\StudyCafe.Data");
+            
 
-            txbUserNumber.Text = _userId;
-            User user = Dao.User.GetByPhoneNumber(_userId);
-            txbRemainTime.Text = user.RemainSeatTime.ToString();
+            txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
+            txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

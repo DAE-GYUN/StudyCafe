@@ -41,9 +41,11 @@ namespace WindowsFormsApp1
 
             try
             {
-                if (user.PhoneNumber.Equals(txbUserPhoneNumber.Text))
+                if (user !=  null)
                 {
-                    MainForm mainForm = new MainForm(txbUserPhoneNumber.Text);
+                    Credential.Instance.User = user;
+
+                    MainForm mainForm = new MainForm();
                     mainForm.ShowDialog();
                     txbUserPhoneNumber.Text = "";
                 }
