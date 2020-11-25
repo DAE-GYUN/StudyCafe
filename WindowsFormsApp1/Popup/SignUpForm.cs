@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudyCafe.Data;
+using EFLibrary;
 
 namespace WindowsFormsApp1
 {
@@ -23,14 +25,23 @@ namespace WindowsFormsApp1
                 MessageBox.Show("입력칸을 다 채우세요!!");
             else
             {
+
+                User user = new User
+                {
+                    Name = txbUserName.Text,
+                    PhoneNumber = txbUserPhoneNumber.Text
+                };
+
+                Dao.User.Insert(user);
+                MessageBox.Show("가입완료");
                 Close();
             }
-            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

@@ -20,6 +20,12 @@ namespace StudyCafe.Data
             return x => x.InvoiceID == key;
         }
 
+        /// <summary>
+        /// 정해진 기간의 데이터
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <returns></returns>
         public List<Invoice> GetFordDate(DateTime? from, DateTime? to)
         {
             using (var context = new KoreanStudyCafeEntities())
@@ -36,6 +42,7 @@ namespace StudyCafe.Data
                 return query.ToList();
             }
         }
+        
 
         public List<DateTime> SelectFordDate(DateTime? from, DateTime? to)
         {
