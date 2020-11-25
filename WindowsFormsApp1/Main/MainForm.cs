@@ -19,6 +19,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public MainForm(string userId)
+        {
+            _userId = userId;
+        }
+
+        private string _userId;
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -26,8 +33,8 @@ namespace WindowsFormsApp1
             CodeGenerator.Generate(new KoreanStudyCafeEntities(),
                 @"C:\Users\kccistc\Desktop\KDJ\Git_StudyCafe\StudyCafe.Data");
 
-            User user = Dao.User.GetByKey(2);
-            MessageBox.Show(user.PhoneNumber.ToString());
+            //User user = Dao.User.
+            //txbUserNumber.Text = user.PhoneNumber;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
