@@ -18,7 +18,8 @@ namespace WindowsFormsApp1
         }
         private void btnNumber_Click(object sender, EventArgs e)
         {
-            txbUserPhoneNumber.Text += ((Button)sender).Text.ToString();
+            if(txbUserPhoneNumber.TextLength < 11)
+                txbUserPhoneNumber.Text += ((Button)sender).Text.ToString();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -37,6 +38,8 @@ namespace WindowsFormsApp1
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();
+
+            txbUserPhoneNumber.Text = "";
         }
     }
 }
