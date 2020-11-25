@@ -232,5 +232,11 @@
       <Name>StudyCafe.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeatTimeChargingForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudyRoomTimeChargingForm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
