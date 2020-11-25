@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudyCafe.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,10 +37,15 @@ namespace WindowsFormsApp1
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            User user = Dao.User.GetByPhoneNumber(txbUserPhoneNumber.Text);
 
-            txbUserPhoneNumber.Text = "";
+            if (user.PhoneNumber.Equals(txbUserPhoneNumber.Text))
+            {
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+                txbUserPhoneNumber.Text = "";
+            }
+            
         }
     }
 }
