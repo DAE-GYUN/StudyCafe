@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         }
         private void btnNumber_Click(object sender, EventArgs e)
         {
-            if(txbUserPhoneNumber.TextLength < 11)
+            if (txbUserPhoneNumber.TextLength < 11)
                 txbUserPhoneNumber.Text += ((Button)sender).Text.ToString();
         }
 
@@ -39,18 +39,20 @@ namespace WindowsFormsApp1
         {
             User user = Dao.User.GetByPhoneNumber(txbUserPhoneNumber.Text);
 
-            if (user.PhoneNumber.Equals(txbUserPhoneNumber.Text))
+            try
             {
-                MainForm mainForm = new MainForm();
-                mainForm.ShowDialog();
-                txbUserPhoneNumber.Text = "";
+                if (user.PhoneNumber.Equals(txbUserPhoneNumber.Text))
+                {
+                    MainForm mainForm = new MainForm();
+                    mainForm.ShowDialog();
+                    txbUserPhoneNumber.Text = "";
+                }
             }
-
-            else
+            catch
             {
                 MessageBox.Show("존재하지않는 회원입니다");
             }
-            
+
         }
     }
 }
