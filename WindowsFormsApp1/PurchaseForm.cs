@@ -23,14 +23,14 @@ namespace WindowsFormsApp1
 
         private void btnSeetTimeCharnging_Click(object sender, EventArgs e)
         {
-            SeetTimeCharngingForm seetTimeCharngingForm = new SeetTimeCharngingForm();
-            seetTimeCharngingForm.ShowDialog();
+            SeatTimeChargingForm seatTimeChargingForm = new SeatTimeChargingForm();
+            seatTimeChargingForm.ShowDialog();
         }
 
         private void btnStudyRoom_Click(object sender, EventArgs e)
         {
-            StudyRoomForm studyRoomForm = new StudyRoomForm();
-            studyRoomForm.ShowDialog();
+            CheckInForm checkInForm = new CheckInForm();
+            checkInForm.ShowDialog();
         }
 
         private void btnLockers_Click(object sender, EventArgs e)

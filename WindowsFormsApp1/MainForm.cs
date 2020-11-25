@@ -35,19 +35,25 @@ namespace WindowsFormsApp1
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            CheckOutForm checkOutForm = new CheckOutForm();
-            checkOutForm.ShowDialog();
+            if (MessageBox.Show("퇴실하시겠습니까?", "퇴실Or취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("좌석 해제");
+            }
+            else
+            {
+                MessageBox.Show("메인으로");
+            }
         }
 
         private void btnShiftSeat_Click(object sender, EventArgs e)
         {
-            ShiftSeatForm shiftSeatForm = new ShiftSeatForm();
-            shiftSeatForm.ShowDialog();
+            CheckInForm checkInForm = new CheckInForm();
+            checkInForm.ShowDialog();
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-            PuchaseForm puchaseForm = new PuchaseForm();
+            PurchaseForm puchaseForm = new PurchaseForm();
             puchaseForm.ShowDialog();
         }
     }
