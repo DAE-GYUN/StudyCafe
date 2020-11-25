@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            CheckInForm checkInForm = new CheckInForm();
+            CheckInForm checkInForm = new CheckInForm("CheckIn");
             checkInForm.ShowDialog();
         }
 

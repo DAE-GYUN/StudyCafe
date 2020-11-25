@@ -16,5 +16,26 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        public CheckInForm(string select) : this()
+        {
+            _select = select;
+        }
+
+        private string _select;
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            if (_select == "StudyRoom")
+                groupBox3.Enabled = false;
+            else if (_select == "CheckIn")
+                groupBox2.Enabled = false;
+
+        }
     }
+
+   
+
 }

@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
 
         private void btnStudyRoom_Click(object sender, EventArgs e)
         {
-            CheckInForm checkInForm = new CheckInForm();
+            CheckInForm checkInForm = new CheckInForm("StudyRoom");
             checkInForm.ShowDialog();
         }
 
