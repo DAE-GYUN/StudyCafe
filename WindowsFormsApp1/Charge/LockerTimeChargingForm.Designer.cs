@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
             this.btn1Month = new System.Windows.Forms.Button();
             this.btn3Week = new System.Windows.Forms.Button();
             this.btn1Week = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbLockerRemainTime = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -46,10 +46,10 @@ namespace WindowsFormsApp1
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(523, 274);
+            this.btnCancel.Location = new System.Drawing.Point(598, 342);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(165, 61);
+            this.btnCancel.Size = new System.Drawing.Size(189, 76);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -60,10 +60,10 @@ namespace WindowsFormsApp1
             this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(355, 274);
+            this.btnAddToCart.Location = new System.Drawing.Point(406, 342);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(162, 61);
+            this.btnAddToCart.Size = new System.Drawing.Size(185, 76);
             this.btnAddToCart.TabIndex = 17;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -74,10 +74,10 @@ namespace WindowsFormsApp1
             this.btnPayMent.BackColor = System.Drawing.Color.Transparent;
             this.btnPayMent.FlatAppearance.BorderSize = 0;
             this.btnPayMent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayMent.Location = new System.Drawing.Point(192, 274);
+            this.btnPayMent.Location = new System.Drawing.Point(219, 342);
             this.btnPayMent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayMent.Name = "btnPayMent";
-            this.btnPayMent.Size = new System.Drawing.Size(157, 61);
+            this.btnPayMent.Size = new System.Drawing.Size(179, 76);
             this.btnPayMent.TabIndex = 18;
             this.btnPayMent.Text = "결제";
             this.btnPayMent.UseVisualStyleBackColor = false;
@@ -85,40 +85,37 @@ namespace WindowsFormsApp1
             // 
             // txbPrice
             // 
-            this.txbPrice.Location = new System.Drawing.Point(292, 221);
+            this.txbPrice.Location = new System.Drawing.Point(334, 276);
             this.txbPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(135, 21);
+            this.txbPrice.Size = new System.Drawing.Size(154, 25);
             this.txbPrice.TabIndex = 13;
-            this.txbPrice.TextChanged += new System.EventHandler(this.txbPrice_TextChanged);
             // 
             // txbRemainTime
             // 
-            this.txbRemainTime.Location = new System.Drawing.Point(292, 181);
+            this.txbRemainTime.Location = new System.Drawing.Point(334, 226);
             this.txbRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbRemainTime.Name = "txbRemainTime";
-            this.txbRemainTime.Size = new System.Drawing.Size(135, 21);
+            this.txbRemainTime.Size = new System.Drawing.Size(154, 25);
             this.txbRemainTime.TabIndex = 14;
-            this.txbRemainTime.TextChanged += new System.EventHandler(this.txbRemainTime_TextChanged);
             // 
             // txbUserNumber
             // 
-            this.txbUserNumber.Location = new System.Drawing.Point(292, 104);
+            this.txbUserNumber.Location = new System.Drawing.Point(334, 130);
             this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
-            this.txbUserNumber.Size = new System.Drawing.Size(135, 21);
+            this.txbUserNumber.Size = new System.Drawing.Size(154, 25);
             this.txbUserNumber.TabIndex = 15;
-            this.txbUserNumber.TextChanged += new System.EventHandler(this.txbUserNumber_TextChanged);
             // 
             // btn1Month
             // 
             this.btn1Month.BackColor = System.Drawing.Color.Transparent;
             this.btn1Month.FlatAppearance.BorderSize = 0;
             this.btn1Month.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1Month.Location = new System.Drawing.Point(23, 154);
+            this.btn1Month.Location = new System.Drawing.Point(26, 192);
             this.btn1Month.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Month.Name = "btn1Month";
-            this.btn1Month.Size = new System.Drawing.Size(102, 49);
+            this.btn1Month.Size = new System.Drawing.Size(117, 61);
             this.btn1Month.TabIndex = 6;
             this.btn1Month.Text = "한달";
             this.btn1Month.UseVisualStyleBackColor = false;
@@ -129,10 +126,10 @@ namespace WindowsFormsApp1
             this.btn3Week.BackColor = System.Drawing.Color.Transparent;
             this.btn3Week.FlatAppearance.BorderSize = 0;
             this.btn3Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3Week.Location = new System.Drawing.Point(23, 225);
+            this.btn3Week.Location = new System.Drawing.Point(26, 281);
             this.btn3Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3Week.Name = "btn3Week";
-            this.btn3Week.Size = new System.Drawing.Size(102, 49);
+            this.btn3Week.Size = new System.Drawing.Size(117, 61);
             this.btn3Week.TabIndex = 8;
             this.btn3Week.Text = "3주";
             this.btn3Week.UseVisualStyleBackColor = false;
@@ -143,36 +140,35 @@ namespace WindowsFormsApp1
             this.btn1Week.BackColor = System.Drawing.Color.Transparent;
             this.btn1Week.FlatAppearance.BorderSize = 0;
             this.btn1Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1Week.Location = new System.Drawing.Point(23, 89);
+            this.btn1Week.Location = new System.Drawing.Point(26, 111);
             this.btn1Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Week.Name = "btn1Week";
-            this.btn1Week.Size = new System.Drawing.Size(102, 49);
+            this.btn1Week.Size = new System.Drawing.Size(117, 61);
             this.btn1Week.TabIndex = 9;
             this.btn1Week.Text = "1주일";
             this.btn1Week.UseVisualStyleBackColor = false;
             this.btn1Week.Click += new System.EventHandler(this.btn1Week_Click);
             // 
-            // textBox1
+            // txbLockerRemainTime
             // 
-            this.textBox1.Location = new System.Drawing.Point(292, 141);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 21);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txbLockerRemainTime.Location = new System.Drawing.Point(334, 176);
+            this.txbLockerRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbLockerRemainTime.Name = "txbLockerRemainTime";
+            this.txbLockerRemainTime.Size = new System.Drawing.Size(154, 25);
+            this.txbLockerRemainTime.TabIndex = 14;
             // 
             // LockerTimeChargingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockerTimeChargingForm1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.btnPayMent);
             this.Controls.Add(this.txbPrice);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbLockerRemainTime);
             this.Controls.Add(this.txbRemainTime);
             this.Controls.Add(this.txbUserNumber);
             this.Controls.Add(this.btn1Month);
@@ -198,6 +194,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btn1Month;
         private System.Windows.Forms.Button btn3Week;
         private System.Windows.Forms.Button btn1Week;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbLockerRemainTime;
     }
 }

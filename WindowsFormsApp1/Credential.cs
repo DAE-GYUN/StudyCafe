@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
         }
 
         public User User { get; set; }
+        
 
     }
 }

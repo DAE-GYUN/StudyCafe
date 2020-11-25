@@ -11,5 +11,12 @@ namespace StudyCafe.Data
         public static InvoiceDao Invoice = new InvoiceDao();
 
         public static UserDao User = new UserDao();
+
+        public static ItemDao Item = new ItemDao();
+
+
+
+
+       
     }
 }
