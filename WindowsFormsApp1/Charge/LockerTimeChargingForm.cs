@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudyCafe.Data;
 
 namespace WindowsFormsApp1
 {
@@ -16,24 +17,38 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+       
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+
+            txbUserNumber.Text = Credential.Instance.PhoneNumber;
+            txbLockerRemainTime.Text = Credential.Instance.User.RemainLockerTime.ToString();
+            txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
+          
+
         }
 
         private void btn1Week_Click(object sender, EventArgs e)
         {
-            txbPrice.Text = "4000";
+
+            Item item = Dao.Item.GetByKey(10);
+            txbPrice.Text = item.Price.ToString();
+         
         }
 
         private void btn3Week_Click(object sender, EventArgs e)
         {
-            txbPrice.Text = "8000";
+            Item item = Dao.Item.GetByKey(11);
+            txbPrice.Text = item.Price.ToString();
         }
 
         private void btn1Month_Click(object sender, EventArgs e)
         {
-            txbPrice.Text = "11500";
+            Item item = Dao.Item.GetByKey(12);
+            txbPrice.Text = item.Price.ToString();
         }
 
         private void btnPayMent_Click(object sender, EventArgs e)
@@ -54,24 +69,12 @@ namespace WindowsFormsApp1
             lockersForm.ShowDialog();
         }
 
-        private void txbUserNumber_TextChanged(object sender, EventArgs e)
-        {
+     
 
-        }
+    
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
 
-        private void txbRemainTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
