@@ -238,5 +238,8 @@
   <ItemGroup>
     <None Include="Resources\StudyRoomTimeChargingForm.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchaseform.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
