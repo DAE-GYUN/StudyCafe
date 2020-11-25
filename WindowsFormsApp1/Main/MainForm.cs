@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Lovanpis.UsingEntityFramework;
+using StudyCafe.Data;
 
 namespace WindowsFormsApp1
 {
@@ -20,6 +22,12 @@ namespace WindowsFormsApp1
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+
+            CodeGenerator.Generate(new KoreanStudyCafeEntities(),
+                @"C:\Users\kccistc\Desktop\KDJ\Git_StudyCafe\StudyCafe.Data");
+
+            User user = Dao.User.GetByKey(2);
+            MessageBox.Show(user.PhoneNumber.ToString());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
