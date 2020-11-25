@@ -221,7 +221,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.SeatTimeChargingForm;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.SeatTimeChargingForm1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.groupBox1);
