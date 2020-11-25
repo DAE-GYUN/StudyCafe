@@ -45,6 +45,11 @@ namespace WindowsFormsApp1
                 mainForm.ShowDialog();
                 txbUserPhoneNumber.Text = "";
             }
+
+            else
+            {
+                MessageBox.Show("존재하지않는 회원입니다");
+            }
             
         }
     }
