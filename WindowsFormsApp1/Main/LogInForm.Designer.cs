@@ -175,6 +175,7 @@ namespace WindowsFormsApp1
             this.btnSignUp.TabIndex = 3;
             this.btnSignUp.Text = "회원등록";
             this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // label1
             // 
@@ -188,6 +189,7 @@ namespace WindowsFormsApp1
             // txbUserPhoneNumber
             // 
             this.txbUserPhoneNumber.Location = new System.Drawing.Point(246, 72);
+            this.txbUserPhoneNumber.MaxLength = 11;
             this.txbUserPhoneNumber.Name = "txbUserPhoneNumber";
             this.txbUserPhoneNumber.Size = new System.Drawing.Size(309, 25);
             this.txbUserPhoneNumber.TabIndex = 5;

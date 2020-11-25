@@ -69,6 +69,7 @@ namespace WindowsFormsApp1
             // txbUserPhoneNumber
             // 
             this.txbUserPhoneNumber.Location = new System.Drawing.Point(433, 155);
+            this.txbUserPhoneNumber.MaxLength = 11;
             this.txbUserPhoneNumber.Name = "txbUserPhoneNumber";
             this.txbUserPhoneNumber.Size = new System.Drawing.Size(167, 25);
             this.txbUserPhoneNumber.TabIndex = 3;

@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (txbUserName == null && txbUserPhoneNumber.TextLength < 11)
+            if (txbUserName.TextLength < 1 || txbUserPhoneNumber.TextLength < 11)
                 MessageBox.Show("입력칸을 다 채우세요!!");
             else
             {
