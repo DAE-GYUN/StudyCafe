@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public MainForm(string userId)
+        public MainForm(string userId) : this()
         {
             _userId = userId;
         }
@@ -33,8 +33,9 @@ namespace WindowsFormsApp1
             CodeGenerator.Generate(new KoreanStudyCafeEntities(),
                 @"C:\Users\kccistc\Desktop\KDJ\Git_StudyCafe\StudyCafe.Data");
 
-            //User user = Dao.User.
-            //txbUserNumber.Text = user.PhoneNumber;
+            txbUserNumber.Text = _userId;
+            User user = Dao.User.GetByPhoneNumber(_userId);
+            txbRemainTime.Text = user.RemainSeatTime.ToString();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

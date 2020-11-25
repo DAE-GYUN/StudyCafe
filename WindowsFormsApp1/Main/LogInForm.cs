@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             {
                 if (user.PhoneNumber.Equals(txbUserPhoneNumber.Text))
                 {
-                    MainForm mainForm = new MainForm();
+                    MainForm mainForm = new MainForm(txbUserPhoneNumber.Text);
                     mainForm.ShowDialog();
                     txbUserPhoneNumber.Text = "";
                 }

@@ -70,6 +70,7 @@ namespace WindowsFormsApp1
             // 
             this.txbUserNumber.Location = new System.Drawing.Point(294, 357);
             this.txbUserNumber.Name = "txbUserNumber";
+            this.txbUserNumber.ReadOnly = true;
             this.txbUserNumber.Size = new System.Drawing.Size(159, 25);
             this.txbUserNumber.TabIndex = 2;
             // 
@@ -89,6 +90,7 @@ namespace WindowsFormsApp1
             // 
             this.txbRemainTime.Location = new System.Drawing.Point(294, 433);
             this.txbRemainTime.Name = "txbRemainTime";
+            this.txbRemainTime.ReadOnly = true;
             this.txbRemainTime.Size = new System.Drawing.Size(159, 25);
             this.txbRemainTime.TabIndex = 2;
             // 
