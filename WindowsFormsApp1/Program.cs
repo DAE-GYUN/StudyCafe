@@ -19,7 +19,6 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            DbContextCreator.Context = () => new KoreanStudyCafeEntities();
 
             Application.Run(new LogInForm());
         }
