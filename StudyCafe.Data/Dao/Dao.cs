@@ -16,9 +16,7 @@ namespace StudyCafe.Data
 
         public static SeatDao Seat = new SeatDao();
 
-
-
-
+        public static PictureDao Picture = new PictureDao();
 
 
        
