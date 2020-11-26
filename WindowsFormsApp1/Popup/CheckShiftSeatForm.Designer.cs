@@ -35,33 +35,34 @@ namespace WindowsFormsApp1
             this.txbMovedSeatNumber = new System.Windows.Forms.TextBox();
             this.txbNowSeatNumber = new System.Windows.Forms.TextBox();
             this.txbUserNumber = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(392, 273);
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(599, 352);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(91, 42);
+            this.btnCancel.Size = new System.Drawing.Size(144, 74);
             this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "취소";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnCheckIn
             // 
-            this.btnCheckIn.Location = new System.Drawing.Point(199, 273);
+            this.btnCheckIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckIn.FlatAppearance.BorderSize = 0;
+            this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckIn.Location = new System.Drawing.Point(445, 352);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(87, 42);
+            this.btnCheckIn.Size = new System.Drawing.Size(148, 74);
             this.btnCheckIn.TabIndex = 12;
-            this.btnCheckIn.Text = "입실";
-            this.btnCheckIn.UseVisualStyleBackColor = true;
+            this.btnCheckIn.UseVisualStyleBackColor = false;
             // 
             // txbRemainTime
             // 
-            this.txbRemainTime.Location = new System.Drawing.Point(306, 208);
+            this.txbRemainTime.BackColor = System.Drawing.Color.White;
+            this.txbRemainTime.Location = new System.Drawing.Point(306, 249);
             this.txbRemainTime.Name = "txbRemainTime";
             this.txbRemainTime.ReadOnly = true;
             this.txbRemainTime.Size = new System.Drawing.Size(177, 25);
@@ -69,7 +70,8 @@ namespace WindowsFormsApp1
             // 
             // txbMovedSeatNumber
             // 
-            this.txbMovedSeatNumber.Location = new System.Drawing.Point(306, 162);
+            this.txbMovedSeatNumber.BackColor = System.Drawing.Color.White;
+            this.txbMovedSeatNumber.Location = new System.Drawing.Point(306, 203);
             this.txbMovedSeatNumber.Name = "txbMovedSeatNumber";
             this.txbMovedSeatNumber.ReadOnly = true;
             this.txbMovedSeatNumber.Size = new System.Drawing.Size(177, 25);
@@ -77,7 +79,8 @@ namespace WindowsFormsApp1
             // 
             // txbNowSeatNumber
             // 
-            this.txbNowSeatNumber.Location = new System.Drawing.Point(306, 106);
+            this.txbNowSeatNumber.BackColor = System.Drawing.Color.White;
+            this.txbNowSeatNumber.Location = new System.Drawing.Point(306, 157);
             this.txbNowSeatNumber.Name = "txbNowSeatNumber";
             this.txbNowSeatNumber.ReadOnly = true;
             this.txbNowSeatNumber.Size = new System.Drawing.Size(177, 25);
@@ -85,52 +88,19 @@ namespace WindowsFormsApp1
             // 
             // txbUserNumber
             // 
-            this.txbUserNumber.Location = new System.Drawing.Point(306, 43);
+            this.txbUserNumber.BackColor = System.Drawing.Color.White;
+            this.txbUserNumber.Location = new System.Drawing.Point(306, 112);
             this.txbUserNumber.Name = "txbUserNumber";
             this.txbUserNumber.ReadOnly = true;
             this.txbUserNumber.Size = new System.Drawing.Size(177, 25);
             this.txbUserNumber.TabIndex = 10;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(219, 211);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "잔여시간";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(199, 165);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "이동할 좌석";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(219, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "현재좌석";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(219, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "회원번호";
-            // 
             // CheckShiftSeatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.CheckShiftSeatForm;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCheckIn);
@@ -138,10 +108,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.txbMovedSeatNumber);
             this.Controls.Add(this.txbNowSeatNumber);
             this.Controls.Add(this.txbUserNumber);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "CheckShiftSeatForm";
             this.Text = "CheckShiftSeatForm";
             this.ResumeLayout(false);
@@ -157,9 +124,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbMovedSeatNumber;
         private System.Windows.Forms.TextBox txbNowSeatNumber;
         private System.Windows.Forms.TextBox txbUserNumber;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }

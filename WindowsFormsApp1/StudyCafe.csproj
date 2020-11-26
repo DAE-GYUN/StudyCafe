@@ -242,5 +242,26 @@
   <ItemGroup>
     <None Include="Resources\purchaseform.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\그림6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckShiftSeatForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentForm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeatNumberCheckForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeatNumberCheckForm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignUp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
