@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudyCafe.Data;
 
 namespace WindowsFormsApp1
 {
@@ -34,6 +35,31 @@ namespace WindowsFormsApp1
                 groupBox2.Enabled = false;
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+        private void btnCheckIn_Click(object sender, EventArgs e)
+        {
+                SeatNumberCheckForm seatNumberCheck = new SeatNumberCheckForm();
+                seatNumberCheck.ShowDialog();
+        }
+
+        private void txbSeatNumber_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button_click(object sender, EventArgs e)
+        {
+            txbSeatNumber.Text = Dao.Seat.GetByKey(1).Name.ToString();
+        }
+        
+
     }
 
    

@@ -62,6 +62,7 @@ namespace WindowsFormsApp1
             this.rbtnSeat25 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbtnSeat9 = new System.Windows.Forms.RadioButton();
+            this.txbSeatNumber = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +97,7 @@ namespace WindowsFormsApp1
             this.btnCancel.TabIndex = 37;
             this.btnCancel.Text = "뒤로가기";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCheckIn
             // 
@@ -105,6 +107,7 @@ namespace WindowsFormsApp1
             this.btnCheckIn.TabIndex = 38;
             this.btnCheckIn.Text = "좌석선택";
             this.btnCheckIn.UseVisualStyleBackColor = true;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // rbtnStudyRoom2
             // 
@@ -150,6 +153,7 @@ namespace WindowsFormsApp1
             this.rbtnSeat3.TabStop = true;
             this.rbtnSeat3.Text = "3번 좌석";
             this.rbtnSeat3.UseVisualStyleBackColor = true;
+            this.rbtnSeat3.Click += new System.EventHandler(this.Button_click);
             // 
             // rbtnSeat1
             // 
@@ -161,6 +165,7 @@ namespace WindowsFormsApp1
             this.rbtnSeat1.TabStop = true;
             this.rbtnSeat1.Text = "1번 좌석";
             this.rbtnSeat1.UseVisualStyleBackColor = true;
+            this.rbtnSeat1.Click += new System.EventHandler(this.Button_click);
             // 
             // rbtnSeat19
             // 
@@ -372,6 +377,7 @@ namespace WindowsFormsApp1
             this.rbtnSeat2.TabStop = true;
             this.rbtnSeat2.Text = "2번  좌석";
             this.rbtnSeat2.UseVisualStyleBackColor = true;
+            this.rbtnSeat2.Click += new System.EventHandler(this.Button_click);
             // 
             // rbtnSeat23
             // 
@@ -450,11 +456,20 @@ namespace WindowsFormsApp1
             this.rbtnSeat9.Text = "9번 좌석";
             this.rbtnSeat9.UseVisualStyleBackColor = true;
             // 
+            // txbSeatNumber
+            // 
+            this.txbSeatNumber.Location = new System.Drawing.Point(783, 516);
+            this.txbSeatNumber.Name = "txbSeatNumber";
+            this.txbSeatNumber.Size = new System.Drawing.Size(100, 25);
+            this.txbSeatNumber.TabIndex = 41;
+            this.txbSeatNumber.TextChanged += new System.EventHandler(this.txbSeatNumber_TextChanged);
+            // 
             // CheckInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 551);
+            this.Controls.Add(this.txbSeatNumber);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCheckIn);
             this.Controls.Add(this.groupBox2);
@@ -464,6 +479,7 @@ namespace WindowsFormsApp1
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -502,5 +518,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.RadioButton rbtnSeat25;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rbtnSeat9;
+        private System.Windows.Forms.TextBox txbSeatNumber;
     }
 }
