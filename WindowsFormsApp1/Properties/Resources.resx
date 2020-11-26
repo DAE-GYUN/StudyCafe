@@ -121,25 +121,31 @@
   <data name="SeatTimeChargingForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SeatTimeChargingForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconfinder_229-woman-gesturing-OK-2_3099350" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_229-woman-gesturing-OK-2_3099350.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LockerTimeChargingForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LockerTimeChargingForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="StudyRoomTimeChargingForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StudyRoomTimeChargingForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LockerTimeChargingForm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LockerTimeChargingForm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DR-zcGqV4AAOLUN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DR-zcGqV4AAOLUN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StudyRoomTimeChargingForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StudyRoomTimeChargingForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockerTimeChargingForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockerTimeChargingForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="purchaseform" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\purchaseform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DR-zcGqV4AAOLUN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DR-zcGqV4AAOLUN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

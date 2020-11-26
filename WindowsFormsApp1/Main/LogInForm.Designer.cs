@@ -42,165 +42,197 @@ namespace WindowsFormsApp1
             this.btn0 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txbUserPhoneNumber = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(175, 182);
+            this.btn7.BackColor = System.Drawing.Color.Transparent;
+            this.btn7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7.Location = new System.Drawing.Point(245, 239);
+            this.btn7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(75, 23);
+            this.btn7.Size = new System.Drawing.Size(61, 44);
             this.btn7.TabIndex = 0;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(331, 182);
+            this.btn8.BackColor = System.Drawing.Color.Transparent;
+            this.btn8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn8.Location = new System.Drawing.Point(317, 239);
+            this.btn8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(75, 23);
+            this.btn8.Size = new System.Drawing.Size(61, 44);
             this.btn8.TabIndex = 1;
-            this.btn8.Text = "8";
-            this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.UseVisualStyleBackColor = false;
             this.btn8.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(496, 182);
+            this.btn9.BackColor = System.Drawing.Color.Transparent;
+            this.btn9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn9.Location = new System.Drawing.Point(389, 239);
+            this.btn9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(75, 23);
+            this.btn9.Size = new System.Drawing.Size(61, 44);
             this.btn9.TabIndex = 2;
-            this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.UseVisualStyleBackColor = false;
             this.btn9.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(175, 246);
+            this.btn4.BackColor = System.Drawing.Color.Transparent;
+            this.btn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Location = new System.Drawing.Point(245, 187);
+            this.btn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(75, 23);
+            this.btn4.Size = new System.Drawing.Size(61, 44);
             this.btn4.TabIndex = 0;
-            this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(331, 246);
+            this.btn5.BackColor = System.Drawing.Color.Transparent;
+            this.btn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Location = new System.Drawing.Point(317, 187);
+            this.btn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(75, 23);
+            this.btn5.Size = new System.Drawing.Size(61, 44);
             this.btn5.TabIndex = 1;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.UseVisualStyleBackColor = false;
             this.btn5.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(496, 246);
+            this.btn6.BackColor = System.Drawing.Color.Transparent;
+            this.btn6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Location = new System.Drawing.Point(389, 187);
+            this.btn6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn6.Name = "btn6";
             this.btn6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn6.Size = new System.Drawing.Size(75, 23);
+            this.btn6.Size = new System.Drawing.Size(61, 44);
             this.btn6.TabIndex = 2;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(175, 311);
+            this.btn1.BackColor = System.Drawing.Color.Transparent;
+            this.btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Location = new System.Drawing.Point(245, 136);
+            this.btn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(75, 23);
+            this.btn1.Size = new System.Drawing.Size(61, 44);
             this.btn1.TabIndex = 0;
-            this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(331, 311);
+            this.btn2.BackColor = System.Drawing.Color.Transparent;
+            this.btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Location = new System.Drawing.Point(317, 136);
+            this.btn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(75, 23);
+            this.btn2.Size = new System.Drawing.Size(61, 44);
             this.btn2.TabIndex = 1;
-            this.btn2.Text = "2";
-            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.UseVisualStyleBackColor = false;
             this.btn2.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(496, 311);
+            this.btn3.BackColor = System.Drawing.Color.Transparent;
+            this.btn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.Location = new System.Drawing.Point(389, 136);
+            this.btn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(75, 23);
+            this.btn3.Size = new System.Drawing.Size(61, 44);
             this.btn3.TabIndex = 2;
-            this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.UseVisualStyleBackColor = false;
             this.btn3.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnLogIn
             // 
-            this.btnLogIn.Location = new System.Drawing.Point(175, 380);
+            this.btnLogIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogIn.Location = new System.Drawing.Point(244, 291);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(75, 23);
+            this.btnLogIn.Size = new System.Drawing.Size(61, 44);
             this.btnLogIn.TabIndex = 0;
-            this.btnLogIn.Text = "LogIn";
-            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btn0
             // 
-            this.btn0.Location = new System.Drawing.Point(331, 380);
+            this.btn0.BackColor = System.Drawing.Color.Transparent;
+            this.btn0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn0.Location = new System.Drawing.Point(319, 291);
+            this.btn0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(75, 23);
+            this.btn0.Size = new System.Drawing.Size(61, 44);
             this.btn0.TabIndex = 1;
-            this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.UseVisualStyleBackColor = false;
             this.btn0.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(496, 380);
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(393, 292);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(88, 23);
+            this.btnBack.Size = new System.Drawing.Size(57, 44);
             this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "backSpace";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSignUp
             // 
-            this.btnSignUp.Location = new System.Drawing.Point(598, 71);
+            this.btnSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Location = new System.Drawing.Point(474, 71);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(75, 23);
+            this.btnSignUp.Size = new System.Drawing.Size(92, 38);
             this.btnSignUp.TabIndex = 3;
-            this.btnSignUp.Text = "회원등록";
-            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "연락처";
             // 
             // txbUserPhoneNumber
             // 
-            this.txbUserPhoneNumber.Location = new System.Drawing.Point(246, 72);
+            this.txbUserPhoneNumber.Location = new System.Drawing.Point(249, 79);
+            this.txbUserPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserPhoneNumber.MaxLength = 11;
             this.txbUserPhoneNumber.Name = "txbUserPhoneNumber";
-            this.txbUserPhoneNumber.Size = new System.Drawing.Size(309, 25);
+            this.txbUserPhoneNumber.Size = new System.Drawing.Size(196, 21);
             this.txbUserPhoneNumber.TabIndex = 5;
             // 
             // LogInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LoginForm;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.txbUserPhoneNumber);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btn0);
@@ -214,6 +246,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LogInForm";
             this.Text = "LogInForm";
             this.ResumeLayout(false);
@@ -236,7 +270,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSignUp;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbUserPhoneNumber;
     }
 }

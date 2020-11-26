@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.btnCheckIn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txbUserNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txbRemainTime = new System.Windows.Forms.TextBox();
@@ -43,127 +42,127 @@ namespace WindowsFormsApp1
             // 
             // btnCheckIn
             // 
-            this.btnCheckIn.BackColor = System.Drawing.Color.Black;
+            this.btnCheckIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckIn.FlatAppearance.BorderSize = 0;
+            this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCheckIn.ForeColor = System.Drawing.Color.Yellow;
-            this.btnCheckIn.Location = new System.Drawing.Point(94, 229);
+            this.btnCheckIn.Location = new System.Drawing.Point(14, 182);
+            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(100, 80);
+            this.btnCheckIn.Size = new System.Drawing.Size(143, 74);
             this.btnCheckIn.TabIndex = 0;
-            this.btnCheckIn.Text = "좌석";
             this.btnCheckIn.UseVisualStyleBackColor = false;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(167, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(492, 78);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "이성혁 법률사무소";
-            // 
             // txbUserNumber
             // 
-            this.txbUserNumber.Location = new System.Drawing.Point(294, 357);
+            this.txbUserNumber.Location = new System.Drawing.Point(257, 286);
+            this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
             this.txbUserNumber.ReadOnly = true;
-            this.txbUserNumber.Size = new System.Drawing.Size(159, 25);
+            this.txbUserNumber.Size = new System.Drawing.Size(140, 21);
             this.txbUserNumber.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Gulim", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(134, 357);
+            this.label2.Location = new System.Drawing.Point(117, 286);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 28);
+            this.label2.Size = new System.Drawing.Size(102, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "회원번호";
             // 
             // txbRemainTime
             // 
-            this.txbRemainTime.Location = new System.Drawing.Point(294, 433);
+            this.txbRemainTime.Location = new System.Drawing.Point(257, 346);
+            this.txbRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbRemainTime.Name = "txbRemainTime";
             this.txbRemainTime.ReadOnly = true;
-            this.txbRemainTime.Size = new System.Drawing.Size(159, 25);
+            this.txbRemainTime.Size = new System.Drawing.Size(140, 21);
             this.txbRemainTime.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("Gulim", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(134, 426);
+            this.label3.Location = new System.Drawing.Point(117, 341);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 28);
+            this.label3.Size = new System.Drawing.Size(102, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "잔여시간";
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Black;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.Yellow;
-            this.btnLogout.Location = new System.Drawing.Point(503, 420);
+            this.btnLogout.Location = new System.Drawing.Point(451, 337);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(101, 47);
+            this.btnLogout.Size = new System.Drawing.Size(146, 75);
             this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "로그아웃";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.BackColor = System.Drawing.Color.Black;
+            this.btnCheckOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckOut.FlatAppearance.BorderSize = 0;
+            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.Yellow;
-            this.btnCheckOut.Location = new System.Drawing.Point(244, 229);
+            this.btnCheckOut.Location = new System.Drawing.Point(163, 183);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(100, 80);
+            this.btnCheckOut.Size = new System.Drawing.Size(147, 73);
             this.btnCheckOut.TabIndex = 5;
-            this.btnCheckOut.Text = "퇴실";
             this.btnCheckOut.UseVisualStyleBackColor = false;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // btnShiftSeat
             // 
-            this.btnShiftSeat.BackColor = System.Drawing.Color.Black;
+            this.btnShiftSeat.BackColor = System.Drawing.Color.Transparent;
+            this.btnShiftSeat.FlatAppearance.BorderSize = 0;
+            this.btnShiftSeat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShiftSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnShiftSeat.ForeColor = System.Drawing.Color.Yellow;
-            this.btnShiftSeat.Location = new System.Drawing.Point(400, 229);
+            this.btnShiftSeat.Location = new System.Drawing.Point(316, 183);
+            this.btnShiftSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShiftSeat.Name = "btnShiftSeat";
-            this.btnShiftSeat.Size = new System.Drawing.Size(100, 80);
+            this.btnShiftSeat.Size = new System.Drawing.Size(138, 73);
             this.btnShiftSeat.TabIndex = 6;
-            this.btnShiftSeat.Text = "자리이동";
             this.btnShiftSeat.UseVisualStyleBackColor = false;
             this.btnShiftSeat.Click += new System.EventHandler(this.btnShiftSeat_Click);
             // 
             // btnPurchase
             // 
-            this.btnPurchase.BackColor = System.Drawing.Color.Black;
+            this.btnPurchase.BackColor = System.Drawing.Color.Transparent;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPurchase.ForeColor = System.Drawing.Color.Yellow;
-            this.btnPurchase.Location = new System.Drawing.Point(553, 229);
+            this.btnPurchase.Location = new System.Drawing.Point(460, 183);
+            this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(100, 80);
+            this.btnPurchase.Size = new System.Drawing.Size(146, 73);
             this.btnPurchase.TabIndex = 7;
-            this.btnPurchase.Text = "구매";
             this.btnPurchase.UseVisualStyleBackColor = false;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.unnamed;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(706, 529);
+            this.ClientSize = new System.Drawing.Size(618, 423);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnShiftSeat);
             this.Controls.Add(this.btnCheckOut);
@@ -172,8 +171,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbRemainTime);
             this.Controls.Add(this.txbUserNumber);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckIn);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
@@ -184,7 +184,6 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Button btnCheckIn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbUserNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbRemainTime;
