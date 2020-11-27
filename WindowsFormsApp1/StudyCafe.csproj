@@ -84,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Credential.cs" />
+    <Compile Include="UserControl\PaymentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\PaymentControl.Designer.cs">
+      <DependentUpon>PaymentControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Select\CheckInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ShowSeatName.cs" />
+    <EmbeddedResource Include="UserControl\PaymentControl.resx">
+      <DependentUpon>PaymentControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Popup\CheckShiftSeatForm.resx">
       <DependentUpon>CheckShiftSeatForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +215,7 @@
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\StudyCafe.Data.Item.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

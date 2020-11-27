@@ -53,8 +53,9 @@ namespace WindowsFormsApp1
 
         private void btnPayMent_Click(object sender, EventArgs e)
         {
-            PaymentForm paymentForm = new PaymentForm();
-            paymentForm.ShowDialog();
+            Item item = Dao.Item.GetByKey(12);
+
+         
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
@@ -69,12 +70,9 @@ namespace WindowsFormsApp1
             lockersForm.ShowDialog();
         }
 
-     
+        private void paymentControl1_Load(object sender, EventArgs e)
+        {
 
-    
-
-       
-
-
+        }
     }
 }
