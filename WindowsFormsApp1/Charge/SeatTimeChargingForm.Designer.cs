@@ -123,9 +123,10 @@ namespace WindowsFormsApp1
             this.rbtn2Hours.Size = new System.Drawing.Size(113, 65);
             this.rbtn2Hours.TabIndex = 4;
             this.rbtn2Hours.TabStop = true;
+            this.rbtn2Hours.Tag = "4000";
             this.rbtn2Hours.Text = "2시간";
             this.rbtn2Hours.UseVisualStyleBackColor = false;
-            this.rbtn2Hours.CheckedChanged += new System.EventHandler(this.rbtn2Hours_CheckedChanged);
+            this.rbtn2Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
             // 
             // rbtn5Hours
             // 
@@ -139,9 +140,10 @@ namespace WindowsFormsApp1
             this.rbtn5Hours.Size = new System.Drawing.Size(117, 66);
             this.rbtn5Hours.TabIndex = 4;
             this.rbtn5Hours.TabStop = true;
+            this.rbtn5Hours.Tag = "8000";
             this.rbtn5Hours.Text = "5시간";
             this.rbtn5Hours.UseVisualStyleBackColor = false;
-            this.rbtn5Hours.CheckedChanged += new System.EventHandler(this.rbtn5Hours_CheckedChanged);
+            this.rbtn5Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
             // 
             // rbtn12Hours
             // 
@@ -155,9 +157,10 @@ namespace WindowsFormsApp1
             this.rbtn12Hours.Size = new System.Drawing.Size(113, 59);
             this.rbtn12Hours.TabIndex = 4;
             this.rbtn12Hours.TabStop = true;
+            this.rbtn12Hours.Tag = "15000";
             this.rbtn12Hours.Text = "12시간";
             this.rbtn12Hours.UseVisualStyleBackColor = false;
-            this.rbtn12Hours.CheckedChanged += new System.EventHandler(this.rbtn12Hours_CheckedChanged);
+            this.rbtn12Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
             // 
             // rbtn30Hours
             // 
@@ -171,9 +174,10 @@ namespace WindowsFormsApp1
             this.rbtn30Hours.Size = new System.Drawing.Size(117, 61);
             this.rbtn30Hours.TabIndex = 4;
             this.rbtn30Hours.TabStop = true;
+            this.rbtn30Hours.Tag = "60000";
             this.rbtn30Hours.Text = "30시간";
             this.rbtn30Hours.UseVisualStyleBackColor = false;
-            this.rbtn30Hours.CheckedChanged += new System.EventHandler(this.rbtn30Hours_CheckedChanged);
+            this.rbtn30Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
             // 
             // rbtn60Hours
             // 
@@ -187,9 +191,10 @@ namespace WindowsFormsApp1
             this.rbtn60Hours.Size = new System.Drawing.Size(113, 58);
             this.rbtn60Hours.TabIndex = 4;
             this.rbtn60Hours.TabStop = true;
+            this.rbtn60Hours.Tag = "80000";
             this.rbtn60Hours.Text = "60시간";
             this.rbtn60Hours.UseVisualStyleBackColor = false;
-            this.rbtn60Hours.CheckedChanged += new System.EventHandler(this.rbtn60Hours_CheckedChanged);
+            this.rbtn60Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
             // 
             // rbtn100Hours
             // 
@@ -203,9 +208,10 @@ namespace WindowsFormsApp1
             this.rbtn100Hours.Size = new System.Drawing.Size(117, 59);
             this.rbtn100Hours.TabIndex = 4;
             this.rbtn100Hours.TabStop = true;
+            this.rbtn100Hours.Tag = "100000";
             this.rbtn100Hours.Text = "100시간";
             this.rbtn100Hours.UseVisualStyleBackColor = false;
-            this.rbtn100Hours.CheckedChanged += new System.EventHandler(this.rbtn100Hours_CheckedChanged);
+            this.rbtn100Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
             // 
             // groupBox1
             // 
