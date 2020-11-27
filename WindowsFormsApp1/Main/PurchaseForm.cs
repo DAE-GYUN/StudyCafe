@@ -52,5 +52,10 @@ namespace WindowsFormsApp1
         {
             Close();
         }
+
+        private void paymentControl1_Load(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

@@ -122,6 +122,7 @@ namespace WindowsFormsApp1
             this.btn1Month.Name = "btn1Month";
             this.btn1Month.Size = new System.Drawing.Size(117, 61);
             this.btn1Month.TabIndex = 6;
+            this.btn1Month.Tag = "11";
             this.btn1Month.Text = "한달";
             this.btn1Month.UseVisualStyleBackColor = false;
             this.btn1Month.Click += new System.EventHandler(this.btn1Month_Click);
@@ -136,6 +137,7 @@ namespace WindowsFormsApp1
             this.btn3Week.Name = "btn3Week";
             this.btn3Week.Size = new System.Drawing.Size(117, 61);
             this.btn3Week.TabIndex = 8;
+            this.btn3Week.Tag = "12";
             this.btn3Week.Text = "3주";
             this.btn3Week.UseVisualStyleBackColor = false;
             this.btn3Week.Click += new System.EventHandler(this.btn3Week_Click);
@@ -150,6 +152,7 @@ namespace WindowsFormsApp1
             this.btn1Week.Name = "btn1Week";
             this.btn1Week.Size = new System.Drawing.Size(117, 61);
             this.btn1Week.TabIndex = 9;
+            this.btn1Week.Tag = "10";
             this.btn1Week.Text = "1주일";
             this.btn1Week.UseVisualStyleBackColor = false;
             this.btn1Week.Click += new System.EventHandler(this.btn1Week_Click);

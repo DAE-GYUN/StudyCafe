@@ -30,35 +30,60 @@ namespace WindowsFormsApp1
           
 
         }
-
+        
         private void btn1Week_Click(object sender, EventArgs e)
         {
 
-            Item item = Dao.Item.GetByKey(10);
+            Item item = Dao.Item.GetByPK(10);
+           // uscItem.AddItem(item);
             txbPrice.Text = item.Price.ToString();
          
         }
 
         private void btn3Week_Click(object sender, EventArgs e)
         {
-            Item item = Dao.Item.GetByKey(11);
+            Item item = Dao.Item.GetByPK(11);
+            //uscItem.AddItem(item);
             txbPrice.Text = item.Price.ToString();
         }
 
         private void btn1Month_Click(object sender, EventArgs e)
         {
-            Item item = Dao.Item.GetByKey(12);
+            Item item = Dao.Item.GetByPK(12);
+            //uscItem.AddItem(item);
             txbPrice.Text = item.Price.ToString();
         }
 
+
         private void btnPayMent_Click(object sender, EventArgs e)
         {
-            Item item = Dao.Item.GetByKey(10);
-            uscItem.AddItem(item);
-            txbPrice.Text = null;
+            //string item = ((Button)sender).Tag.ToString();
+            //Item _item = Dao.Item.GetByPK(int.Parse(item));
+            //uscItem.AddItem(_item);
+            //Item k = _item.ItemID;
 
-         
-         
+            //uscItem.AddItem(k);
+
+            if (txbPrice.Text=="4000")
+            {
+                Item item = Dao.Item.GetByPK(10);
+                uscItem.AddItem(item);
+            }
+
+            if (txbPrice.Text == "8000")
+            {
+                Item item = Dao.Item.GetByPK(11);
+                uscItem.AddItem(item);
+            }
+
+            if (txbPrice.Text == "11500")
+            {
+                Item item = Dao.Item.GetByPK(12);
+                uscItem.AddItem(item);
+            }
+
+
+
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
