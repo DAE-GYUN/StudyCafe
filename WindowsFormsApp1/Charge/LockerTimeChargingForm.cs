@@ -53,8 +53,11 @@ namespace WindowsFormsApp1
 
         private void btnPayMent_Click(object sender, EventArgs e)
         {
-            Item item = Dao.Item.GetByKey(12);
+            Item item = Dao.Item.GetByKey(10);
+            paymentControl1.AddItem(item);
+            txbPrice.Text = null;
 
+         
          
         }
 
