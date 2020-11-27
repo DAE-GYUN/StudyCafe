@@ -25,6 +25,8 @@
         <AssociationConnector Association="KoreanStudyCafeModel.FK_User_Seats" ManuallyRouted="false" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_StudyRoom_User" ManuallyRouted="false" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_User_StudyRoom" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="KoreanStudyCafeModel.Picture" Width="1.5" PointX="0.75" PointY="4.625" />
+        <AssociationConnector Association="KoreanStudyCafeModel.FK_User_Image" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
