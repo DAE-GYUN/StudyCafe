@@ -51,6 +51,11 @@ namespace WindowsFormsApp1
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            if (pbUserImage.Image != null)
+            {
+                int maxKey = Dao.Picture.GetMaxKey();
+                Dao.Picture.DeleteByPK(maxKey);
+            }
             Close();
         }
 
