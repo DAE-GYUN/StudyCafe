@@ -34,24 +34,24 @@ namespace WindowsFormsApp1
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            if (Credential.Instance.User.SeatsID == null)
-            {
+            //if (Credential.Instance.User.SeatID == null)
+            //{
                 CheckInForm checkInForm = new CheckInForm("CheckIn");
                 checkInForm.ShowDialog();
-            }
+            //}
 
-            else
-            {
-                MessageBox.Show("이미 사용중인 자리가 있습니다");
-                btnCheckIn.Enabled = false;
-            }
+            //else
+            //{
+            //    MessageBox.Show("이미 사용중인 자리가 있습니다");
+            //    btnCheckIn.Enabled = false;
+            //}
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("퇴실하시겠습니까?", "퇴실Or취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("좌석 해제");
+                DialogResult = DialogResult.Cancel;
             }
             else
             {

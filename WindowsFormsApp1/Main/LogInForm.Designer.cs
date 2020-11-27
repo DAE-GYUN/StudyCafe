@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@ namespace WindowsFormsApp1
             this.btnSignUp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txbUserPhoneNumber = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btn7
@@ -194,7 +196,11 @@ namespace WindowsFormsApp1
             this.txbUserPhoneNumber.Size = new System.Drawing.Size(309, 25);
             this.txbUserPhoneNumber.TabIndex = 5;
             this.txbUserPhoneNumber.Text = "010";
-            this.txbUserPhoneNumber.TextChanged += new System.EventHandler(this.S);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // LogInForm
             // 
@@ -240,5 +246,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbUserPhoneNumber;
+        private System.Windows.Forms.Timer timer1;
     }
 }

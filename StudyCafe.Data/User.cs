@@ -32,9 +32,6 @@ namespace StudyCafe.Data
         public int RemainStudyRoomTime { get; set; }
         public int RemainSeatTime { get; set; }
         public bool Admin { get; set; }
-        public Nullable<int> SeatsID { get; set; }
-        public Nullable<int> LockerID { get; set; }
-        public Nullable<int> StudyRoomID { get; set; }
         public bool LoginStatus { get; set; }
         public Nullable<int> PictureID { get; set; }
     
@@ -42,17 +39,14 @@ namespace StudyCafe.Data
         public virtual ICollection<Invoice> Invoices { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Locker> Lockers { get; set; }
-        public virtual Locker Locker { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Log> Logs { get; set; }
+        public virtual Picture Picture { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Report> Reports { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Seat> Seats { get; set; }
-        public virtual Seat Seat { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudyRoom> StudyRooms { get; set; }
-        public virtual StudyRoom StudyRoom { get; set; }
-        public virtual Picture Picture { get; set; }
     }
 }

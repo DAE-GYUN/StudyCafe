@@ -32,9 +32,9 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Time" Type="int" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
-          <Property Name="Kinds" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Kind" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="Lockers">
+        <EntityType Name="Locker">
           <Key>
             <PropertyRef Name="LockerID" />
           </Key>
@@ -67,11 +67,11 @@
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Contents" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
-        <EntityType Name="Seats">
+        <EntityType Name="Seat">
           <Key>
-            <PropertyRef Name="SeatsID" />
+            <PropertyRef Name="SeatID" />
           </Key>
-          <Property Name="SeatsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SeatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserID" Type="int" />
         </EntityType>
@@ -94,334 +94,8 @@
           <Property Name="RemainStudyRoomTime" Type="int" Nullable="false" />
           <Property Name="RemainSeatTime" Type="int" Nullable="false" />
           <Property Name="Admin" Type="bit" Nullable="false" />
-          <Property Name="SeatsID" Type="int" />
-          <Property Name="LockerID" Type="int" />
-          <Property Name="StudyRoomID" Type="int" />
           <Property Name="LoginStatus" Type="bit" Nullable="false" />
           <Property Name="PictureID" Type="int" />
-        </EntityType>
-        <Association Name="FK_Invoice_User">
-          <End Role="User" Type="Self.User" Multiplicity="1" />
-          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="Invoice">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_InvoiceLine_Invoice">
-          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="InvoiceLine" Type="Self.InvoiceLine" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Invoice">
-              <PropertyRef Name="InvoiceID" />
-            </Principal>
-            <Dependent Role="InvoiceLine">
-              <PropertyRef Name="InvoiceID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_InvoiceLine_Item">
-          <End Role="Item" Type="Self.Item" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="InvoiceLine" Type="Self.InvoiceLine" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Item">
-              <PropertyRef Name="ItemID" />
-            </Principal>
-            <Dependent Role="InvoiceLine">
-              <PropertyRef Name="ItemID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Lockers_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Lockers" Type="Self.Lockers" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="Lockers">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Log_User">
-          <End Role="User" Type="Self.User" Multiplicity="1" />
-          <End Role="Log" Type="Self.Log" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="Log">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Report_User">
-          <End Role="User" Type="Self.User" Multiplicity="1" />
-          <End Role="Report" Type="Self.Report" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="Report">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Seats_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Seats" Type="Self.Seats" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="Seats">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_StudyRoom_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="StudyRoom" Type="Self.StudyRoom" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="StudyRoom">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_User_Image">
-          <End Role="Picture" Type="Self.Picture" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Picture">
-              <PropertyRef Name="PictureID" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="PictureID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_User_Lockers">
-          <End Role="Lockers" Type="Self.Lockers" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Lockers">
-              <PropertyRef Name="LockerID" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="LockerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_User_Seats">
-          <End Role="Seats" Type="Self.Seats" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Seats">
-              <PropertyRef Name="SeatsID" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="SeatsID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_User_StudyRoom">
-          <End Role="StudyRoom" Type="Self.StudyRoom" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="StudyRoom">
-              <PropertyRef Name="StudyRoomID" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="StudyRoomID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="KoreanStudyCafeModelStoreContainer">
-          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="InvoiceLine" EntityType="Self.InvoiceLine" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Lockers" EntityType="Self.Lockers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Picture" EntityType="Self.Picture" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Seats" EntityType="Self.Seats" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="StudyRoom" EntityType="Self.StudyRoom" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Invoice_User" Association="Self.FK_Invoice_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="Invoice" EntitySet="Invoice" />
-          </AssociationSet>
-          <AssociationSet Name="FK_InvoiceLine_Invoice" Association="Self.FK_InvoiceLine_Invoice">
-            <End Role="Invoice" EntitySet="Invoice" />
-            <End Role="InvoiceLine" EntitySet="InvoiceLine" />
-          </AssociationSet>
-          <AssociationSet Name="FK_InvoiceLine_Item" Association="Self.FK_InvoiceLine_Item">
-            <End Role="Item" EntitySet="Item" />
-            <End Role="InvoiceLine" EntitySet="InvoiceLine" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Lockers_User" Association="Self.FK_Lockers_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="Lockers" EntitySet="Lockers" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Log_User" Association="Self.FK_Log_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="Log" EntitySet="Log" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Report_User" Association="Self.FK_Report_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="Report" EntitySet="Report" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Seats_User" Association="Self.FK_Seats_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="Seats" EntitySet="Seats" />
-          </AssociationSet>
-          <AssociationSet Name="FK_StudyRoom_User" Association="Self.FK_StudyRoom_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="StudyRoom" EntitySet="StudyRoom" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Image" Association="Self.FK_User_Image">
-            <End Role="Picture" EntitySet="Picture" />
-            <End Role="User" EntitySet="User" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Lockers" Association="Self.FK_User_Lockers">
-            <End Role="Lockers" EntitySet="Lockers" />
-            <End Role="User" EntitySet="User" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Seats" Association="Self.FK_User_Seats">
-            <End Role="Seats" EntitySet="Seats" />
-            <End Role="User" EntitySet="User" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_StudyRoom" Association="Self.FK_User_StudyRoom">
-            <End Role="StudyRoom" EntitySet="StudyRoom" />
-            <End Role="User" EntitySet="User" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="KoreanStudyCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Invoice">
-          <Key>
-            <PropertyRef Name="InvoiceID" />
-          </Key>
-          <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="InvoiceDatetime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="InvoicePlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Invoice_User" FromRole="Invoice" ToRole="User" />
-          <NavigationProperty Name="InvoiceLines" Relationship="Self.FK_InvoiceLine_Invoice" FromRole="Invoice" ToRole="InvoiceLine" />
-        </EntityType>
-        <EntityType Name="InvoiceLine">
-          <Key>
-            <PropertyRef Name="InvoiceID" />
-            <PropertyRef Name="ItemID" />
-          </Key>
-          <Property Name="InvoiceID" Type="Int32" Nullable="false" />
-          <Property Name="ItemID" Type="Int32" Nullable="false" />
-          <Property Name="ItemPrice" Type="Int32" Nullable="false" />
-          <Property Name="NumberOfItem" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Invoice" Relationship="Self.FK_InvoiceLine_Invoice" FromRole="InvoiceLine" ToRole="Invoice" />
-          <NavigationProperty Name="Item" Relationship="Self.FK_InvoiceLine_Item" FromRole="InvoiceLine" ToRole="Item" />
-        </EntityType>
-        <EntityType Name="Item">
-          <Key>
-            <PropertyRef Name="ItemID" />
-          </Key>
-          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Time" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Int32" Nullable="false" />
-          <Property Name="Kinds" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="InvoiceLines" Relationship="Self.FK_InvoiceLine_Item" FromRole="Item" ToRole="InvoiceLine" />
-        </EntityType>
-        <EntityType Name="Locker">
-          <Key>
-            <PropertyRef Name="LockerID" />
-          </Key>
-          <Property Name="LockerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserID" Type="Int32" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Lockers_User" FromRole="Lockers" ToRole="User" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_User_Lockers" FromRole="Lockers" ToRole="User" />
-        </EntityType>
-        <EntityType Name="Log">
-          <Key>
-            <PropertyRef Name="LogID" />
-          </Key>
-          <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Log_User" FromRole="Log" ToRole="User" />
-        </EntityType>
-        <EntityType Name="Report">
-          <Key>
-            <PropertyRef Name="ReportID" />
-          </Key>
-          <Property Name="ReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserID" Type="Int32" Nullable="false" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Report_User" FromRole="Report" ToRole="User" />
-        </EntityType>
-        <EntityType Name="Seat">
-          <Key>
-            <PropertyRef Name="SeatsID" />
-          </Key>
-          <Property Name="SeatsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserID" Type="Int32" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Seats_User" FromRole="Seats" ToRole="User" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_User_Seats" FromRole="Seats" ToRole="User" />
-        </EntityType>
-        <EntityType Name="StudyRoom">
-          <Key>
-            <PropertyRef Name="StudyRoomID" />
-          </Key>
-          <Property Name="StudyRoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserID" Type="Int32" />
-          <NavigationProperty Name="User" Relationship="Self.FK_StudyRoom_User" FromRole="StudyRoom" ToRole="User" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_User_StudyRoom" FromRole="StudyRoom" ToRole="User" />
-        </EntityType>
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="UserID" />
-          </Key>
-          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="RemainLockerTime" Type="Int32" Nullable="false" />
-          <Property Name="RemainStudyRoomTime" Type="Int32" Nullable="false" />
-          <Property Name="RemainSeatTime" Type="Int32" Nullable="false" />
-          <Property Name="Admin" Type="Boolean" Nullable="false" />
-          <Property Name="SeatsID" Type="Int32" />
-          <Property Name="LockerID" Type="Int32" />
-          <Property Name="StudyRoomID" Type="Int32" />
-          <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoice_User" FromRole="User" ToRole="Invoice" />
-          <NavigationProperty Name="Lockers" Relationship="Self.FK_Lockers_User" FromRole="User" ToRole="Lockers" />
-          <NavigationProperty Name="Locker" Relationship="Self.FK_User_Lockers" FromRole="User" ToRole="Lockers" />
-          <NavigationProperty Name="Logs" Relationship="Self.FK_Log_User" FromRole="User" ToRole="Log" />
-          <NavigationProperty Name="Reports" Relationship="Self.FK_Report_User" FromRole="User" ToRole="Report" />
-          <NavigationProperty Name="Seats" Relationship="Self.FK_Seats_User" FromRole="User" ToRole="Seats" />
-          <NavigationProperty Name="Seat" Relationship="Self.FK_User_Seats" FromRole="User" ToRole="Seats" />
-          <NavigationProperty Name="StudyRooms" Relationship="Self.FK_StudyRoom_User" FromRole="User" ToRole="StudyRoom" />
-          <NavigationProperty Name="StudyRoom" Relationship="Self.FK_User_StudyRoom" FromRole="User" ToRole="StudyRoom" />
-          <Property Name="LoginStatus" Type="Boolean" Nullable="false" />
-          <Property Name="PictureID" Type="Int32" />
-          <NavigationProperty Name="Picture" Relationship="KoreanStudyCafeModel.FK_User_Image" FromRole="User" ToRole="Picture" />
         </EntityType>
         <Association Name="FK_Invoice_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -467,25 +141,13 @@
           <End Role="User" Type="Self.User" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Lockers" Type="Self.Locker" Multiplicity="*" />
+          <End Role="Locker" Type="Self.Locker" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserID" />
             </Principal>
-            <Dependent Role="Lockers">
+            <Dependent Role="Locker">
               <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_User_Lockers">
-          <End Role="Lockers" Type="Self.Locker" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Lockers">
-              <PropertyRef Name="LockerID" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="LockerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -513,32 +175,24 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Seats_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Seats" Type="Self.Seat" Multiplicity="*" />
+        <Association Name="FK_Seat_User1">
+          <End Role="User" Type="Self.User" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Seat" Type="Self.Seat" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserID" />
             </Principal>
-            <Dependent Role="Seats">
+            <Dependent Role="Seat">
               <PropertyRef Name="UserID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_User_Seats">
-          <End Role="Seats" Type="Self.Seat" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Seats">
-              <PropertyRef Name="SeatsID" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="SeatsID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_StudyRoom_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="StudyRoom" Type="Self.StudyRoom" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
@@ -549,78 +203,171 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_User_StudyRoom">
-          <End Role="StudyRoom" Type="Self.StudyRoom" Multiplicity="0..1" />
+        <Association Name="FK_User_Image">
+          <End Role="Picture" Type="Self.Picture" Multiplicity="0..1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="StudyRoom">
-              <PropertyRef Name="StudyRoomID" />
+            <Principal Role="Picture">
+              <PropertyRef Name="PictureID" />
             </Principal>
             <Dependent Role="User">
-              <PropertyRef Name="StudyRoomID" />
+              <PropertyRef Name="PictureID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="KoreanStudyCafeEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Invoices" EntityType="Self.Invoice" />
-          <EntitySet Name="InvoiceLines" EntityType="Self.InvoiceLine" />
-          <EntitySet Name="Items" EntityType="Self.Item" />
-          <EntitySet Name="Lockers" EntityType="Self.Locker" />
-          <EntitySet Name="Logs" EntityType="Self.Log" />
-          <EntitySet Name="Reports" EntityType="Self.Report" />
-          <EntitySet Name="Seats" EntityType="Self.Seat" />
-          <EntitySet Name="StudyRooms" EntityType="Self.StudyRoom" />
-          <EntitySet Name="Users" EntityType="Self.User" />
+        <EntityContainer Name="KoreanStudyCafeModelStoreContainer">
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvoiceLine" EntityType="Self.InvoiceLine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Locker" EntityType="Self.Locker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Picture" EntityType="Self.Picture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seat" EntityType="Self.Seat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudyRoom" EntityType="Self.StudyRoom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Invoice_User" Association="Self.FK_Invoice_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Invoice" EntitySet="Invoice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvoiceLine_Invoice" Association="Self.FK_InvoiceLine_Invoice">
+            <End Role="Invoice" EntitySet="Invoice" />
+            <End Role="InvoiceLine" EntitySet="InvoiceLine" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvoiceLine_Item" Association="Self.FK_InvoiceLine_Item">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="InvoiceLine" EntitySet="InvoiceLine" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lockers_User" Association="Self.FK_Lockers_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Locker" EntitySet="Locker" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Log_User" Association="Self.FK_Log_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Log" EntitySet="Log" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_User" Association="Self.FK_Report_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Report" EntitySet="Report" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Seat_User1" Association="Self.FK_Seat_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="Seat" EntitySet="Seat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudyRoom_User" Association="Self.FK_StudyRoom_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="StudyRoom" EntitySet="StudyRoom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Image" Association="Self.FK_User_Image">
+            <End Role="Picture" EntitySet="Picture" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KoreanStudyCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="InvoiceLine">
+          <Key>
+            <PropertyRef Name="InvoiceID" />
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+          <Property Name="ItemID" Type="Int32" Nullable="false" />
+          <Property Name="ItemPrice" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfItem" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Invoice" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="InvoiceLine" ToRole="Invoice" />
+          <NavigationProperty Name="Item" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Item" FromRole="InvoiceLine" ToRole="Item" />
+          </EntityType>
+        <EntityContainer Name="KoreanStudyCafeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="InvoiceLines" EntityType="Self.InvoiceLine" />
+          <EntitySet Name="Invoices" EntityType="KoreanStudyCafeModel.Invoice" />
+          <EntitySet Name="Items" EntityType="KoreanStudyCafeModel.Item" />
+          <EntitySet Name="Lockers" EntityType="KoreanStudyCafeModel.Locker" />
+          <EntitySet Name="Logs" EntityType="KoreanStudyCafeModel.Log" />
+          <EntitySet Name="Pictures" EntityType="KoreanStudyCafeModel.Picture" />
+          <EntitySet Name="Reports" EntityType="KoreanStudyCafeModel.Report" />
+          <EntitySet Name="Seats" EntityType="KoreanStudyCafeModel.Seat" />
+          <EntitySet Name="StudyRooms" EntityType="KoreanStudyCafeModel.StudyRoom" />
+          <EntitySet Name="Users" EntityType="KoreanStudyCafeModel.User" />
+          <AssociationSet Name="FK_Invoice_User" Association="KoreanStudyCafeModel.FK_Invoice_User">
             <End Role="User" EntitySet="Users" />
             <End Role="Invoice" EntitySet="Invoices" />
           </AssociationSet>
-          <AssociationSet Name="FK_InvoiceLine_Invoice" Association="Self.FK_InvoiceLine_Invoice">
+          <AssociationSet Name="FK_InvoiceLine_Invoice" Association="KoreanStudyCafeModel.FK_InvoiceLine_Invoice">
             <End Role="Invoice" EntitySet="Invoices" />
             <End Role="InvoiceLine" EntitySet="InvoiceLines" />
           </AssociationSet>
-          <AssociationSet Name="FK_InvoiceLine_Item" Association="Self.FK_InvoiceLine_Item">
+          <AssociationSet Name="FK_InvoiceLine_Item" Association="KoreanStudyCafeModel.FK_InvoiceLine_Item">
             <End Role="Item" EntitySet="Items" />
             <End Role="InvoiceLine" EntitySet="InvoiceLines" />
           </AssociationSet>
-          <AssociationSet Name="FK_Lockers_User" Association="Self.FK_Lockers_User">
+          <AssociationSet Name="FK_Lockers_User" Association="KoreanStudyCafeModel.FK_Lockers_User">
             <End Role="User" EntitySet="Users" />
-            <End Role="Lockers" EntitySet="Lockers" />
+            <End Role="Locker" EntitySet="Lockers" />
           </AssociationSet>
-          <AssociationSet Name="FK_User_Lockers" Association="Self.FK_User_Lockers">
-            <End Role="Lockers" EntitySet="Lockers" />
-            <End Role="User" EntitySet="Users" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Log_User" Association="Self.FK_Log_User">
+          <AssociationSet Name="FK_Log_User" Association="KoreanStudyCafeModel.FK_Log_User">
             <End Role="User" EntitySet="Users" />
             <End Role="Log" EntitySet="Logs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Report_User" Association="Self.FK_Report_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Report" EntitySet="Reports" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Seats_User" Association="Self.FK_Seats_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Seats" EntitySet="Seats" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Seats" Association="Self.FK_User_Seats">
-            <End Role="Seats" EntitySet="Seats" />
-            <End Role="User" EntitySet="Users" />
-          </AssociationSet>
-          <AssociationSet Name="FK_StudyRoom_User" Association="Self.FK_StudyRoom_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="StudyRoom" EntitySet="StudyRooms" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_StudyRoom" Association="Self.FK_User_StudyRoom">
-            <End Role="StudyRoom" EntitySet="StudyRooms" />
-            <End Role="User" EntitySet="Users" />
-          </AssociationSet>
-          <EntitySet Name="Pictures" EntityType="KoreanStudyCafeModel.Picture" />
           <AssociationSet Name="FK_User_Image" Association="KoreanStudyCafeModel.FK_User_Image">
             <End Role="Picture" EntitySet="Pictures" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
-        </EntityContainer>
+          <AssociationSet Name="FK_Report_User" Association="KoreanStudyCafeModel.FK_Report_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Report" EntitySet="Reports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Seat_User1" Association="KoreanStudyCafeModel.FK_Seat_User1">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Seat" EntitySet="Seats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudyRoom_User" Association="KoreanStudyCafeModel.FK_StudyRoom_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="StudyRoom" EntitySet="StudyRooms" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceID" />
+          </Key>
+          <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceDatetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="InvoicePlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Invoice_User" FromRole="Invoice" ToRole="User" />
+          <NavigationProperty Name="InvoiceLines" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="Invoice" ToRole="InvoiceLine" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Kind" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="InvoiceLines" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Item" FromRole="Item" ToRole="InvoiceLine" />
+        </EntityType>
+        <EntityType Name="Locker">
+          <Key>
+            <PropertyRef Name="LockerID" />
+          </Key>
+          <Property Name="LockerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Lockers_User" FromRole="Locker" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Contents" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Log_User" FromRole="Log" ToRole="User" />
+        </EntityType>
         <EntityType Name="Picture">
           <Key>
             <PropertyRef Name="PictureID" />
@@ -629,6 +376,121 @@
           <Property Name="value" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Users" Relationship="KoreanStudyCafeModel.FK_User_Image" FromRole="Picture" ToRole="User" />
         </EntityType>
+        <EntityType Name="Report">
+          <Key>
+            <PropertyRef Name="ReportID" />
+          </Key>
+          <Property Name="ReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Contents" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Report_User" FromRole="Report" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Seat">
+          <Key>
+            <PropertyRef Name="SeatID" />
+          </Key>
+          <Property Name="SeatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Seat_User1" FromRole="Seat" ToRole="User" />
+        </EntityType>
+        <EntityType Name="StudyRoom">
+          <Key>
+            <PropertyRef Name="StudyRoomID" />
+          </Key>
+          <Property Name="StudyRoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_StudyRoom_User" FromRole="StudyRoom" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RemainLockerTime" Type="Int32" Nullable="false" />
+          <Property Name="RemainStudyRoomTime" Type="Int32" Nullable="false" />
+          <Property Name="RemainSeatTime" Type="Int32" Nullable="false" />
+          <Property Name="Admin" Type="Boolean" Nullable="false" />
+          <Property Name="LoginStatus" Type="Boolean" Nullable="false" />
+          <Property Name="PictureID" Type="Int32" />
+          <NavigationProperty Name="Invoices" Relationship="KoreanStudyCafeModel.FK_Invoice_User" FromRole="User" ToRole="Invoice" />
+          <NavigationProperty Name="Lockers" Relationship="KoreanStudyCafeModel.FK_Lockers_User" FromRole="User" ToRole="Locker" />
+          <NavigationProperty Name="Logs" Relationship="KoreanStudyCafeModel.FK_Log_User" FromRole="User" ToRole="Log" />
+          <NavigationProperty Name="Picture" Relationship="KoreanStudyCafeModel.FK_User_Image" FromRole="User" ToRole="Picture" />
+          <NavigationProperty Name="Reports" Relationship="KoreanStudyCafeModel.FK_Report_User" FromRole="User" ToRole="Report" />
+          <NavigationProperty Name="Seats" Relationship="KoreanStudyCafeModel.FK_Seat_User1" FromRole="User" ToRole="Seat" />
+          <NavigationProperty Name="StudyRooms" Relationship="KoreanStudyCafeModel.FK_StudyRoom_User" FromRole="User" ToRole="StudyRoom" />
+        </EntityType>
+        <Association Name="FK_Invoice_User">
+          <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="1" />
+          <End Type="KoreanStudyCafeModel.Invoice" Role="Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoiceLine_Invoice">
+          <End Type="KoreanStudyCafeModel.Invoice" Role="Invoice" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KoreanStudyCafeModel.InvoiceLine" Role="InvoiceLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="InvoiceID" />
+            </Principal>
+            <Dependent Role="InvoiceLine">
+              <PropertyRef Name="InvoiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoiceLine_Item">
+          <End Type="KoreanStudyCafeModel.Item" Role="Item" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KoreanStudyCafeModel.InvoiceLine" Role="InvoiceLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemID" />
+            </Principal>
+            <Dependent Role="InvoiceLine">
+              <PropertyRef Name="ItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lockers_User">
+          <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KoreanStudyCafeModel.Locker" Role="Locker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Locker">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Log_User">
+          <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="1" />
+          <End Type="KoreanStudyCafeModel.Log" Role="Log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Log">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_User_Image">
           <End Type="KoreanStudyCafeModel.Picture" Role="Picture" Multiplicity="0..1" />
           <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="*" />
@@ -641,22 +503,52 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="FK_Report_User">
+          <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="1" />
+          <End Type="KoreanStudyCafeModel.Report" Role="Report" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Report">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Seat_User1">
+          <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KoreanStudyCafeModel.Seat" Role="Seat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Seat">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudyRoom_User">
+          <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KoreanStudyCafeModel.StudyRoom" Role="StudyRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="StudyRoom">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="KoreanStudyCafeModelStoreContainer" CdmEntityContainer="KoreanStudyCafeEntities">
-          <EntitySetMapping Name="Invoices">
-            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Invoice">
-              <MappingFragment StoreEntitySet="Invoice">
-                <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
-                <ScalarProperty Name="InvoiceDatetime" ColumnName="InvoiceDatetime" />
-                <ScalarProperty Name="InvoicePlace" ColumnName="InvoicePlace" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="InvoiceLines">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.InvoiceLine">
               <MappingFragment StoreEntitySet="InvoiceLine">
@@ -667,79 +559,43 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InvoicePlace" ColumnName="InvoicePlace" />
+                <ScalarProperty Name="InvoiceDatetime" ColumnName="InvoiceDatetime" />
+                <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Items">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.Item">
               <MappingFragment StoreEntitySet="Item">
-                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Kind" ColumnName="Kind" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Kinds" ColumnName="Kinds" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Lockers">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.Locker">
-              <MappingFragment StoreEntitySet="Lockers">
-                <ScalarProperty Name="LockerID" ColumnName="LockerID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
+              <MappingFragment StoreEntitySet="Locker">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LockerID" ColumnName="LockerID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Logs">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.Log">
               <MappingFragment StoreEntitySet="Log">
-                <ScalarProperty Name="LogID" ColumnName="LogID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
                 <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="Contents" ColumnName="Contents" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Reports">
-            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Report">
-              <MappingFragment StoreEntitySet="Report">
-                <ScalarProperty Name="ReportID" ColumnName="ReportID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Contents" ColumnName="Contents" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Seats">
-            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Seat">
-              <MappingFragment StoreEntitySet="Seats">
-                <ScalarProperty Name="SeatsID" ColumnName="SeatsID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="StudyRooms">
-            <EntityTypeMapping TypeName="KoreanStudyCafeModel.StudyRoom">
-              <MappingFragment StoreEntitySet="StudyRoom">
-                <ScalarProperty Name="StudyRoomID" ColumnName="StudyRoomID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="KoreanStudyCafeModel.User">
-              <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="PictureID" ColumnName="PictureID" />
-                <ScalarProperty Name="LoginStatus" ColumnName="LoginStatus" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="RemainLockerTime" ColumnName="RemainLockerTime" />
-                <ScalarProperty Name="RemainStudyRoomTime" ColumnName="RemainStudyRoomTime" />
-                <ScalarProperty Name="RemainSeatTime" ColumnName="RemainSeatTime" />
-                <ScalarProperty Name="Admin" ColumnName="Admin" />
-                <ScalarProperty Name="SeatsID" ColumnName="SeatsID" />
-                <ScalarProperty Name="LockerID" ColumnName="LockerID" />
-                <ScalarProperty Name="StudyRoomID" ColumnName="StudyRoomID" />
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -748,6 +604,49 @@
               <MappingFragment StoreEntitySet="Picture">
                 <ScalarProperty Name="value" ColumnName="value" />
                 <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reports">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Report">
+              <MappingFragment StoreEntitySet="Report">
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seats">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Seat">
+              <MappingFragment StoreEntitySet="Seat">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SeatID" ColumnName="SeatID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudyRooms">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.StudyRoom">
+              <MappingFragment StoreEntitySet="StudyRoom">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StudyRoomID" ColumnName="StudyRoomID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+                <ScalarProperty Name="LoginStatus" ColumnName="LoginStatus" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="RemainSeatTime" ColumnName="RemainSeatTime" />
+                <ScalarProperty Name="RemainStudyRoomTime" ColumnName="RemainStudyRoomTime" />
+                <ScalarProperty Name="RemainLockerTime" ColumnName="RemainLockerTime" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

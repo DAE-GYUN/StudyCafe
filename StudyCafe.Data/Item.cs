@@ -24,7 +24,7 @@ namespace StudyCafe.Data
         public string Name { get; set; }
         public int Time { get; set; }
         public int Price { get; set; }
-        public string Kinds { get; set; }
+        public string Kind { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InvoiceLine> InvoiceLines { get; set; }

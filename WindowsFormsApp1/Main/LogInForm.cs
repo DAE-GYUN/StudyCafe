@@ -17,6 +17,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+        }
         private void btnNumber_Click(object sender, EventArgs e)
         {
             if (txbUserPhoneNumber.TextLength < 11)
@@ -48,6 +53,23 @@ namespace WindowsFormsApp1
 
                 if(mainForm.DialogResult == DialogResult.OK)
                 {
+                    
+                    while (true)
+                    {
+                        if (mainForm.DialogResult == DialogResult.Cancel)
+                        {
+                            User thisUser = new User()
+                            {
+                                RemainSeatTime = user.RemainSeatTime
+                            };
+                            Dao.User.Update(thisUser);
+                            break;
+                        }
+                        else
+                        {
+                            user.RemainSeatTime -= 1;
+                        }
+                    }
                 }
 
                 txbUserPhoneNumber.Text = "010";
@@ -60,9 +82,9 @@ namespace WindowsFormsApp1
 
         }
 
-        private void S(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
