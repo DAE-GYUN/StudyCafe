@@ -13,6 +13,17 @@ namespace StudyCafe.Data
     {
         protected override Expression<Func<User, int>> KeySelector => x => x.UserID;
 
+        public List<User> GetByLoginStatus(bool staus)
+        {
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                var query = from x in context.Users
+                            where x.LoginStatus == staus
+                            select x;
+                return query.ToList();
+            }
+        }
+
         protected override Expression<Func<User, bool>> IsKey(int key)
         {
             return x => x.UserID == key;
