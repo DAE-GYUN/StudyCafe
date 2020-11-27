@@ -104,9 +104,10 @@ namespace WindowsFormsApp1
             this.btnStudyRoom4.Name = "btnStudyRoom4";
             this.btnStudyRoom4.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom4.TabIndex = 0;
-            this.btnStudyRoom4.Text = "스터디룸3 (6인)";
+            this.btnStudyRoom4.Tag = "4";
+            this.btnStudyRoom4.Text = "스터디룸4 (6인)";
             this.btnStudyRoom4.UseVisualStyleBackColor = true;
-            this.btnStudyRoom4.Click += new System.EventHandler(this.btnStudyRoom4_Click);
+            this.btnStudyRoom4.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnStudyRoom3
             // 
@@ -114,9 +115,10 @@ namespace WindowsFormsApp1
             this.btnStudyRoom3.Name = "btnStudyRoom3";
             this.btnStudyRoom3.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom3.TabIndex = 0;
+            this.btnStudyRoom3.Tag = "3";
             this.btnStudyRoom3.Text = "스터디룸3 (6인)";
             this.btnStudyRoom3.UseVisualStyleBackColor = true;
-            this.btnStudyRoom3.Click += new System.EventHandler(this.btnStudyRoom3_Click);
+            this.btnStudyRoom3.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnStudyRoom2
             // 
@@ -124,9 +126,10 @@ namespace WindowsFormsApp1
             this.btnStudyRoom2.Name = "btnStudyRoom2";
             this.btnStudyRoom2.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom2.TabIndex = 0;
+            this.btnStudyRoom2.Tag = "2";
             this.btnStudyRoom2.Text = "스터디룸2 (4인)";
             this.btnStudyRoom2.UseVisualStyleBackColor = true;
-            this.btnStudyRoom2.Click += new System.EventHandler(this.btnStudyRoom2_Click);
+            this.btnStudyRoom2.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnStudyRoom1
             // 
@@ -134,9 +137,10 @@ namespace WindowsFormsApp1
             this.btnStudyRoom1.Name = "btnStudyRoom1";
             this.btnStudyRoom1.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom1.TabIndex = 0;
+            this.btnStudyRoom1.Tag = "1";
             this.btnStudyRoom1.Text = "스터디룸1 (4인)";
             this.btnStudyRoom1.UseVisualStyleBackColor = true;
-            this.btnStudyRoom1.Click += new System.EventHandler(this.btnStudyRoom1_Click);
+            this.btnStudyRoom1.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // groupBox3
             // 
@@ -176,9 +180,10 @@ namespace WindowsFormsApp1
             this.btnSeat18.Name = "btnSeat18";
             this.btnSeat18.Size = new System.Drawing.Size(88, 40);
             this.btnSeat18.TabIndex = 0;
+            this.btnSeat18.Tag = "18";
             this.btnSeat18.Text = "18번 좌석";
             this.btnSeat18.UseVisualStyleBackColor = true;
-            this.btnSeat18.Click += new System.EventHandler(this.btnSeat18_Click);
+            this.btnSeat18.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat17
             // 
@@ -186,9 +191,10 @@ namespace WindowsFormsApp1
             this.btnSeat17.Name = "btnSeat17";
             this.btnSeat17.Size = new System.Drawing.Size(88, 40);
             this.btnSeat17.TabIndex = 0;
+            this.btnSeat17.Tag = "17";
             this.btnSeat17.Text = "17번 좌석";
             this.btnSeat17.UseVisualStyleBackColor = true;
-            this.btnSeat17.Click += new System.EventHandler(this.btnSeat17_Click);
+            this.btnSeat17.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat16
             // 
@@ -196,9 +202,10 @@ namespace WindowsFormsApp1
             this.btnSeat16.Name = "btnSeat16";
             this.btnSeat16.Size = new System.Drawing.Size(88, 40);
             this.btnSeat16.TabIndex = 0;
+            this.btnSeat16.Tag = "16";
             this.btnSeat16.Text = "16번 좌석";
             this.btnSeat16.UseVisualStyleBackColor = true;
-            this.btnSeat16.Click += new System.EventHandler(this.btnSeat16_Click);
+            this.btnSeat16.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat15
             // 
@@ -206,9 +213,10 @@ namespace WindowsFormsApp1
             this.btnSeat15.Name = "btnSeat15";
             this.btnSeat15.Size = new System.Drawing.Size(88, 40);
             this.btnSeat15.TabIndex = 0;
+            this.btnSeat15.Tag = "15";
             this.btnSeat15.Text = "15번 좌석";
             this.btnSeat15.UseVisualStyleBackColor = true;
-            this.btnSeat15.Click += new System.EventHandler(this.btnSeat15_Click);
+            this.btnSeat15.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat8
             // 
@@ -216,9 +224,10 @@ namespace WindowsFormsApp1
             this.btnSeat8.Name = "btnSeat8";
             this.btnSeat8.Size = new System.Drawing.Size(88, 40);
             this.btnSeat8.TabIndex = 0;
+            this.btnSeat8.Tag = "8";
             this.btnSeat8.Text = "8번 좌석";
             this.btnSeat8.UseVisualStyleBackColor = true;
-            this.btnSeat8.Click += new System.EventHandler(this.btnSeat8_Click);
+            this.btnSeat8.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat7
             // 
@@ -226,9 +235,10 @@ namespace WindowsFormsApp1
             this.btnSeat7.Name = "btnSeat7";
             this.btnSeat7.Size = new System.Drawing.Size(88, 40);
             this.btnSeat7.TabIndex = 0;
+            this.btnSeat7.Tag = "7";
             this.btnSeat7.Text = "7번 좌석";
             this.btnSeat7.UseVisualStyleBackColor = true;
-            this.btnSeat7.Click += new System.EventHandler(this.btnSeat7_Click);
+            this.btnSeat7.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat24
             // 
@@ -236,9 +246,10 @@ namespace WindowsFormsApp1
             this.btnSeat24.Name = "btnSeat24";
             this.btnSeat24.Size = new System.Drawing.Size(88, 40);
             this.btnSeat24.TabIndex = 0;
+            this.btnSeat24.Tag = "24";
             this.btnSeat24.Text = "24번 좌석";
             this.btnSeat24.UseVisualStyleBackColor = true;
-            this.btnSeat24.Click += new System.EventHandler(this.btnSeat24_Click);
+            this.btnSeat24.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat23
             // 
@@ -246,9 +257,10 @@ namespace WindowsFormsApp1
             this.btnSeat23.Name = "btnSeat23";
             this.btnSeat23.Size = new System.Drawing.Size(88, 40);
             this.btnSeat23.TabIndex = 0;
+            this.btnSeat23.Tag = "23";
             this.btnSeat23.Text = "23번 좌석";
             this.btnSeat23.UseVisualStyleBackColor = true;
-            this.btnSeat23.Click += new System.EventHandler(this.btnSeat23_Click);
+            this.btnSeat23.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat14
             // 
@@ -256,9 +268,10 @@ namespace WindowsFormsApp1
             this.btnSeat14.Name = "btnSeat14";
             this.btnSeat14.Size = new System.Drawing.Size(88, 40);
             this.btnSeat14.TabIndex = 0;
+            this.btnSeat14.Tag = "14";
             this.btnSeat14.Text = "14번 좌석";
             this.btnSeat14.UseVisualStyleBackColor = true;
-            this.btnSeat14.Click += new System.EventHandler(this.btnSeat14_Click);
+            this.btnSeat14.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat6
             // 
@@ -266,9 +279,10 @@ namespace WindowsFormsApp1
             this.btnSeat6.Name = "btnSeat6";
             this.btnSeat6.Size = new System.Drawing.Size(88, 40);
             this.btnSeat6.TabIndex = 0;
+            this.btnSeat6.Tag = "6";
             this.btnSeat6.Text = "6번 좌석";
             this.btnSeat6.UseVisualStyleBackColor = true;
-            this.btnSeat6.Click += new System.EventHandler(this.btnSeat6_Click);
+            this.btnSeat6.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat20
             // 
@@ -276,9 +290,10 @@ namespace WindowsFormsApp1
             this.btnSeat20.Name = "btnSeat20";
             this.btnSeat20.Size = new System.Drawing.Size(88, 40);
             this.btnSeat20.TabIndex = 0;
+            this.btnSeat20.Tag = "20";
             this.btnSeat20.Text = "20번 좌석";
             this.btnSeat20.UseVisualStyleBackColor = true;
-            this.btnSeat20.Click += new System.EventHandler(this.btnSeat20_Click);
+            this.btnSeat20.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat19
             // 
@@ -286,9 +301,10 @@ namespace WindowsFormsApp1
             this.btnSeat19.Name = "btnSeat19";
             this.btnSeat19.Size = new System.Drawing.Size(88, 40);
             this.btnSeat19.TabIndex = 0;
+            this.btnSeat19.Tag = "19";
             this.btnSeat19.Text = "19번 좌석";
             this.btnSeat19.UseVisualStyleBackColor = true;
-            this.btnSeat19.Click += new System.EventHandler(this.btnSeat19_Click);
+            this.btnSeat19.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat22
             // 
@@ -296,9 +312,10 @@ namespace WindowsFormsApp1
             this.btnSeat22.Name = "btnSeat22";
             this.btnSeat22.Size = new System.Drawing.Size(88, 40);
             this.btnSeat22.TabIndex = 0;
+            this.btnSeat22.Tag = "22";
             this.btnSeat22.Text = "22번 좌석";
             this.btnSeat22.UseVisualStyleBackColor = true;
-            this.btnSeat22.Click += new System.EventHandler(this.btnSeat22_Click);
+            this.btnSeat22.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat21
             // 
@@ -306,9 +323,10 @@ namespace WindowsFormsApp1
             this.btnSeat21.Name = "btnSeat21";
             this.btnSeat21.Size = new System.Drawing.Size(88, 40);
             this.btnSeat21.TabIndex = 0;
+            this.btnSeat21.Tag = "21";
             this.btnSeat21.Text = "21번 좌석";
             this.btnSeat21.UseVisualStyleBackColor = true;
-            this.btnSeat21.Click += new System.EventHandler(this.btnSeat21_Click);
+            this.btnSeat21.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat13
             // 
@@ -316,9 +334,10 @@ namespace WindowsFormsApp1
             this.btnSeat13.Name = "btnSeat13";
             this.btnSeat13.Size = new System.Drawing.Size(88, 40);
             this.btnSeat13.TabIndex = 0;
+            this.btnSeat13.Tag = "13";
             this.btnSeat13.Text = "13번 좌석";
             this.btnSeat13.UseVisualStyleBackColor = true;
-            this.btnSeat13.Click += new System.EventHandler(this.btnSeat13_Click);
+            this.btnSeat13.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat5
             // 
@@ -326,9 +345,10 @@ namespace WindowsFormsApp1
             this.btnSeat5.Name = "btnSeat5";
             this.btnSeat5.Size = new System.Drawing.Size(88, 40);
             this.btnSeat5.TabIndex = 0;
+            this.btnSeat5.Tag = "5";
             this.btnSeat5.Text = "5번 좌석";
             this.btnSeat5.UseVisualStyleBackColor = true;
-            this.btnSeat5.Click += new System.EventHandler(this.btnSeat5_Click);
+            this.btnSeat5.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat12
             // 
@@ -336,9 +356,10 @@ namespace WindowsFormsApp1
             this.btnSeat12.Name = "btnSeat12";
             this.btnSeat12.Size = new System.Drawing.Size(88, 40);
             this.btnSeat12.TabIndex = 0;
+            this.btnSeat12.Tag = "12";
             this.btnSeat12.Text = "12번 좌석";
             this.btnSeat12.UseVisualStyleBackColor = true;
-            this.btnSeat12.Click += new System.EventHandler(this.btnSeat12_Click);
+            this.btnSeat12.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat4
             // 
@@ -346,9 +367,10 @@ namespace WindowsFormsApp1
             this.btnSeat4.Name = "btnSeat4";
             this.btnSeat4.Size = new System.Drawing.Size(88, 40);
             this.btnSeat4.TabIndex = 0;
+            this.btnSeat4.Tag = "4";
             this.btnSeat4.Text = "4번 좌석";
             this.btnSeat4.UseVisualStyleBackColor = true;
-            this.btnSeat4.Click += new System.EventHandler(this.btnSeat4_Click);
+            this.btnSeat4.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat11
             // 
@@ -356,9 +378,10 @@ namespace WindowsFormsApp1
             this.btnSeat11.Name = "btnSeat11";
             this.btnSeat11.Size = new System.Drawing.Size(88, 40);
             this.btnSeat11.TabIndex = 0;
+            this.btnSeat11.Tag = "11";
             this.btnSeat11.Text = "11번 좌석";
             this.btnSeat11.UseVisualStyleBackColor = true;
-            this.btnSeat11.Click += new System.EventHandler(this.btnSeat11_Click);
+            this.btnSeat11.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat3
             // 
@@ -366,9 +389,10 @@ namespace WindowsFormsApp1
             this.btnSeat3.Name = "btnSeat3";
             this.btnSeat3.Size = new System.Drawing.Size(88, 40);
             this.btnSeat3.TabIndex = 0;
+            this.btnSeat3.Tag = "3";
             this.btnSeat3.Text = "3번 좌석";
             this.btnSeat3.UseVisualStyleBackColor = true;
-            this.btnSeat3.Click += new System.EventHandler(this.btnSeat3_Click);
+            this.btnSeat3.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat10
             // 
@@ -376,9 +400,10 @@ namespace WindowsFormsApp1
             this.btnSeat10.Name = "btnSeat10";
             this.btnSeat10.Size = new System.Drawing.Size(88, 40);
             this.btnSeat10.TabIndex = 0;
+            this.btnSeat10.Tag = "10";
             this.btnSeat10.Text = "10번 좌석";
             this.btnSeat10.UseVisualStyleBackColor = true;
-            this.btnSeat10.Click += new System.EventHandler(this.btnSeat10_Click);
+            this.btnSeat10.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat2
             // 
@@ -386,9 +411,10 @@ namespace WindowsFormsApp1
             this.btnSeat2.Name = "btnSeat2";
             this.btnSeat2.Size = new System.Drawing.Size(88, 40);
             this.btnSeat2.TabIndex = 0;
+            this.btnSeat2.Tag = "2";
             this.btnSeat2.Text = "2번 좌석";
             this.btnSeat2.UseVisualStyleBackColor = true;
-            this.btnSeat2.Click += new System.EventHandler(this.btnSeat2_Click);
+            this.btnSeat2.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat9
             // 
@@ -396,9 +422,10 @@ namespace WindowsFormsApp1
             this.btnSeat9.Name = "btnSeat9";
             this.btnSeat9.Size = new System.Drawing.Size(88, 40);
             this.btnSeat9.TabIndex = 0;
+            this.btnSeat9.Tag = "9";
             this.btnSeat9.Text = "9번 좌석";
             this.btnSeat9.UseVisualStyleBackColor = true;
-            this.btnSeat9.Click += new System.EventHandler(this.btnSeat9_Click);
+            this.btnSeat9.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnSeat1
             // 
@@ -406,9 +433,10 @@ namespace WindowsFormsApp1
             this.btnSeat1.Name = "btnSeat1";
             this.btnSeat1.Size = new System.Drawing.Size(88, 40);
             this.btnSeat1.TabIndex = 0;
+            this.btnSeat1.Tag = "1";
             this.btnSeat1.Text = "1번 좌석";
             this.btnSeat1.UseVisualStyleBackColor = true;
-            this.btnSeat1.Click += new System.EventHandler(this.btnSeat1_Click);
+            this.btnSeat1.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // txbSeatNumber
             // 

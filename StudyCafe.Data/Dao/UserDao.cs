@@ -34,6 +34,16 @@ namespace StudyCafe.Data
             }
         }
 
-        
+        public int GetByUserKey(int userId)
+        {
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                var query = from x in context.Users
+                            where x.UserID == userId
+                            select x.UserID;
+
+                return query.FirstOrDefault();
+            }
+        }
     }
 }
