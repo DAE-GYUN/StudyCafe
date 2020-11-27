@@ -72,6 +72,8 @@ namespace WindowsFormsApp1
                 Image userImage = ByteArrayToImage(userByteImage);
 
                 pbUserImage.Image = userImage;
+
+                btnSnapshot.Enabled = false;
             }
         }
 

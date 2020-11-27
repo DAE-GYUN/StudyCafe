@@ -51,27 +51,6 @@ namespace WindowsFormsApp1
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
 
-                if(mainForm.DialogResult == DialogResult.OK)
-                {
-                    
-                    while (true)
-                    {
-                        if (mainForm.DialogResult == DialogResult.Cancel)
-                        {
-                            User thisUser = new User()
-                            {
-                                RemainSeatTime = user.RemainSeatTime
-                            };
-                            Dao.User.Update(thisUser);
-                            break;
-                        }
-                        else
-                        {
-                            user.RemainSeatTime -= 1;
-                        }
-                    }
-                }
-
                 txbUserPhoneNumber.Text = "010";
             }
 
@@ -79,16 +58,6 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("존재하지않는 회원입니다");
             }
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }
