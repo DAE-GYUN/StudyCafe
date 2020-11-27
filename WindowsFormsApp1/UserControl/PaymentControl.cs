@@ -30,12 +30,16 @@ namespace WindowsFormsApp1
             
             _items.Add(item);
 
-          bdsItem.DataSource = _items;
+            bdsItem.ResetBindings(false);
+          //bdsItem.DataSource = _items;
             // 다시 바인딩
             txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
         }
 
-       
+        private void bdsItem_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

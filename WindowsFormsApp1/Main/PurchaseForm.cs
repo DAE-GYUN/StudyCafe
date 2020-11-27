@@ -12,10 +12,18 @@ namespace WindowsFormsApp1
 {
     public partial class PurchaseForm : Form
     {
+        LockerTimeChargingForm lockerTimeChargingForm;
         public PurchaseForm()
         {
             InitializeComponent();
+            
         }
+   
+        public PurchaseForm(LockerTimeChargingForm form):this()
+        {
+            lockerTimeChargingForm = form;
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

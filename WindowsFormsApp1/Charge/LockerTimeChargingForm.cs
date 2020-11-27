@@ -63,8 +63,8 @@ namespace WindowsFormsApp1
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
+            PurchaseForm purchaseForm = new PurchaseForm(this);
+            purchaseForm.ShowDialog();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
