@@ -136,7 +136,7 @@ namespace WindowsFormsApp1
             this.rbtn2Hours.TabStop = true;
             this.rbtn2Hours.Text = "2시간";
             this.rbtn2Hours.UseVisualStyleBackColor = false;
-            this.rbtn2Hours.CheckedChanged += new System.EventHandler(this.rbtn2Hours_CheckedChanged);
+            this.rbtn2Hours.Click += new System.EventHandler(this.btnSelectItem_Click);
             // 
             // rbtn4Hours
             // 
@@ -152,7 +152,7 @@ namespace WindowsFormsApp1
             this.rbtn4Hours.TabStop = true;
             this.rbtn4Hours.Text = "4시간";
             this.rbtn4Hours.UseVisualStyleBackColor = false;
-            this.rbtn4Hours.CheckedChanged += new System.EventHandler(this.rbtn4Hours_CheckedChanged);
+            this.rbtn4Hours.Click += new System.EventHandler(this.btnSelectItem_Click);
             // 
             // rbtn6Hours
             // 
@@ -168,7 +168,7 @@ namespace WindowsFormsApp1
             this.rbtn6Hours.TabStop = true;
             this.rbtn6Hours.Text = "6시간";
             this.rbtn6Hours.UseVisualStyleBackColor = false;
-            this.rbtn6Hours.CheckedChanged += new System.EventHandler(this.rbtn6Hours_CheckedChanged);
+            this.rbtn6Hours.Click += new System.EventHandler(this.btnSelectItem_Click);
             // 
             // StudyRoomTimeChargingForm
             // 

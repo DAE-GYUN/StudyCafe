@@ -34,5 +34,6 @@ namespace StudyCafe.Data
         public virtual DbSet<Seat> Seats { get; set; }
         public virtual DbSet<StudyRoom> StudyRooms { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Picture> Pictures { get; set; }
     }
 }

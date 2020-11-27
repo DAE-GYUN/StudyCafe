@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="KoreanStudyCafeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="KoreanStudyCafeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="InvoiceID" />
@@ -48,8 +48,15 @@
           </Key>
           <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="date" Type="datetime" Nullable="false" />
-          <Property Name="Contents" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contents" Type="nvarchar(max)" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Picture">
+          <Key>
+            <PropertyRef Name="PictureID" />
+          </Key>
+          <Property Name="PictureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="value" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Report">
           <Key>
@@ -57,8 +64,8 @@
           </Key>
           <Property Name="ReportID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
-          <Property Name="Title" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Contents" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contents" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Seats">
           <Key>
@@ -90,6 +97,8 @@
           <Property Name="SeatsID" Type="int" />
           <Property Name="LockerID" Type="int" />
           <Property Name="StudyRoomID" Type="int" />
+          <Property Name="LoginStatus" Type="bit" Nullable="false" />
+          <Property Name="PictureID" Type="int" />
         </EntityType>
         <Association Name="FK_Invoice_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -132,9 +141,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Lockers_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="Lockers" Type="Self.Lockers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
@@ -193,6 +200,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_User_Image">
+          <End Role="Picture" Type="Self.Picture" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Picture">
+              <PropertyRef Name="PictureID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="PictureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_User_Lockers">
           <End Role="Lockers" Type="Self.Lockers" Multiplicity="0..1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
@@ -235,6 +254,7 @@
           <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Lockers" EntityType="Self.Lockers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Picture" EntityType="Self.Picture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Seats" EntityType="Self.Seats" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudyRoom" EntityType="Self.StudyRoom" Schema="dbo" store:Type="Tables" />
@@ -271,6 +291,10 @@
             <End Role="User" EntitySet="User" />
             <End Role="StudyRoom" EntitySet="StudyRoom" />
           </AssociationSet>
+          <AssociationSet Name="FK_User_Image" Association="Self.FK_User_Image">
+            <End Role="Picture" EntitySet="Picture" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
           <AssociationSet Name="FK_User_Lockers" Association="Self.FK_User_Lockers">
             <End Role="Lockers" EntitySet="Lockers" />
             <End Role="User" EntitySet="User" />
@@ -284,8 +308,7 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KoreanStudyCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -339,7 +362,7 @@
           </Key>
           <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Contents" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="User" Relationship="Self.FK_Log_User" FromRole="Log" ToRole="User" />
         </EntityType>
@@ -349,8 +372,8 @@
           </Key>
           <Property Name="ReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
-          <Property Name="Title" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Contents" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="User" Relationship="Self.FK_Report_User" FromRole="Report" ToRole="User" />
         </EntityType>
         <EntityType Name="Seat">
@@ -396,6 +419,9 @@
           <NavigationProperty Name="Seat" Relationship="Self.FK_User_Seats" FromRole="User" ToRole="Seats" />
           <NavigationProperty Name="StudyRooms" Relationship="Self.FK_StudyRoom_User" FromRole="User" ToRole="StudyRoom" />
           <NavigationProperty Name="StudyRoom" Relationship="Self.FK_User_StudyRoom" FromRole="User" ToRole="StudyRoom" />
+          <Property Name="LoginStatus" Type="Boolean" Nullable="false" />
+          <Property Name="PictureID" Type="Int32" />
+          <NavigationProperty Name="Picture" Relationship="KoreanStudyCafeModel.FK_User_Image" FromRole="User" ToRole="Picture" />
         </EntityType>
         <Association Name="FK_Invoice_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -589,7 +615,32 @@
             <End Role="StudyRoom" EntitySet="StudyRooms" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="Pictures" EntityType="KoreanStudyCafeModel.Picture" />
+          <AssociationSet Name="FK_User_Image" Association="KoreanStudyCafeModel.FK_User_Image">
+            <End Role="Picture" EntitySet="Pictures" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Picture">
+          <Key>
+            <PropertyRef Name="PictureID" />
+          </Key>
+          <Property Name="PictureID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="value" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Users" Relationship="KoreanStudyCafeModel.FK_User_Image" FromRole="Picture" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_User_Image">
+          <End Type="KoreanStudyCafeModel.Picture" Role="Picture" Multiplicity="0..1" />
+          <End Type="KoreanStudyCafeModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Picture">
+              <PropertyRef Name="PictureID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="PictureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -677,6 +728,8 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+                <ScalarProperty Name="LoginStatus" ColumnName="LoginStatus" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -687,6 +740,14 @@
                 <ScalarProperty Name="SeatsID" ColumnName="SeatsID" />
                 <ScalarProperty Name="LockerID" ColumnName="LockerID" />
                 <ScalarProperty Name="StudyRoomID" ColumnName="StudyRoomID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pictures">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Picture">
+              <MappingFragment StoreEntitySet="Picture">
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="PictureID" ColumnName="PictureID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -27,6 +27,8 @@ namespace WindowsFormsApp1
 
         }
 
+        private string _str;
+
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
             PurchaseForm purchaseForm = new PurchaseForm();
@@ -39,25 +41,11 @@ namespace WindowsFormsApp1
             paymentForm.ShowDialog();
         }
 
-        private void rbtn2Hours_CheckedChanged(object sender, EventArgs e)
-        {
-            Item item = Dao.Item.GetByKey(7);
-            txbChargingTime.Text = item.Name.ToString();
-            txbPrice.Text = item.Price.ToString();
-        }
 
-        private void rbtn6Hours_CheckedChanged(object sender, EventArgs e)
+        private void btnSelectItem_Click(object sender, EventArgs e)
         {
-            Item item = Dao.Item.GetByKey(8);
-            txbChargingTime.Text = item.Name.ToString();
-            txbPrice.Text = item.Price.ToString();
-        }
-
-        private void rbtn4Hours_CheckedChanged(object sender, EventArgs e)
-        {
-            Item item = Dao.Item.GetByKey(9);
-            txbChargingTime.Text = item.Name.ToString();
-            txbPrice.Text = item.Price.ToString();
+            txbChargingTime.Text = ((Button)sender).Text.ToString();
+            _str = ((Button)sender).Tag.ToString();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
