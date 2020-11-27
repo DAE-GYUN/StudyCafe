@@ -31,6 +31,8 @@ namespace WindowsFormsApp1
         {
             if (txbUserName.TextLength < 1 || txbUserPhoneNumber.TextLength < 11)
                 MessageBox.Show("입력칸을 다 채우세요!!");
+            else if(pbUserImage.Image == null)
+                MessageBox.Show("사진을 등록해 주세요");
             else
             {
                 User user = new User

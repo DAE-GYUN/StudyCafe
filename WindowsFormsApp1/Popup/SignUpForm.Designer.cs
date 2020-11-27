@@ -68,7 +68,6 @@ namespace WindowsFormsApp1
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.Size = new System.Drawing.Size(167, 25);
             this.txbUserName.TabIndex = 3;
-            this.txbUserName.Text = "010";
             // 
             // txbUserPhoneNumber
             // 
@@ -77,10 +76,10 @@ namespace WindowsFormsApp1
             this.txbUserPhoneNumber.Name = "txbUserPhoneNumber";
             this.txbUserPhoneNumber.Size = new System.Drawing.Size(167, 25);
             this.txbUserPhoneNumber.TabIndex = 3;
+            this.txbUserPhoneNumber.Text = "010";
             // 
             // pbUserImage
             // 
-            this.pbUserImage.Image = global::WindowsFormsApp1.Properties.Resources.iconfinder_229_woman_gesturing_OK_2_3099350;
             this.pbUserImage.Location = new System.Drawing.Point(57, 136);
             this.pbUserImage.Name = "pbUserImage";
             this.pbUserImage.Size = new System.Drawing.Size(164, 152);
