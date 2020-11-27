@@ -67,6 +67,7 @@ namespace WindowsFormsApp1
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.Size = new System.Drawing.Size(167, 25);
             this.txbUserName.TabIndex = 3;
+            this.txbUserName.Text = "010";
             // 
             // txbUserPhoneNumber
             // 

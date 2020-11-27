@@ -193,6 +193,8 @@ namespace WindowsFormsApp1
             this.txbUserPhoneNumber.Name = "txbUserPhoneNumber";
             this.txbUserPhoneNumber.Size = new System.Drawing.Size(309, 25);
             this.txbUserPhoneNumber.TabIndex = 5;
+            this.txbUserPhoneNumber.Text = "010";
+            this.txbUserPhoneNumber.TextChanged += new System.EventHandler(this.S);
             // 
             // LogInForm
             // 

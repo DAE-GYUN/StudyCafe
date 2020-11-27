@@ -23,8 +23,6 @@ namespace WindowsFormsApp1
         {
             base.OnLoad(e);
 
-            
-
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
             txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
         }
@@ -36,8 +34,17 @@ namespace WindowsFormsApp1
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            CheckInForm checkInForm = new CheckInForm("CheckIn");
-            checkInForm.ShowDialog();
+            if (Credential.Instance.User.SeatsID == null)
+            {
+                CheckInForm checkInForm = new CheckInForm("CheckIn");
+                checkInForm.ShowDialog();
+            }
+
+            else
+            {
+                MessageBox.Show("이미 사용중인 자리가 있습니다");
+                btnCheckIn.Enabled = false;
+            }
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)

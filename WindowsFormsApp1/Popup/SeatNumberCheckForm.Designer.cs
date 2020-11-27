@@ -46,6 +46,7 @@ namespace WindowsFormsApp1
             this.btnCancel.Size = new System.Drawing.Size(150, 74);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCheckIn
             // 
@@ -57,11 +58,12 @@ namespace WindowsFormsApp1
             this.btnCheckIn.Size = new System.Drawing.Size(144, 74);
             this.btnCheckIn.TabIndex = 22;
             this.btnCheckIn.UseVisualStyleBackColor = false;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // txbRemainTime
             // 
             this.txbRemainTime.BackColor = System.Drawing.Color.White;
-            this.txbRemainTime.Location = new System.Drawing.Point(303, 200);
+            this.txbRemainTime.Location = new System.Drawing.Point(303, 156);
             this.txbRemainTime.Name = "txbRemainTime";
             this.txbRemainTime.ReadOnly = true;
             this.txbRemainTime.Size = new System.Drawing.Size(177, 25);
@@ -70,7 +72,7 @@ namespace WindowsFormsApp1
             // txbSelectSeatNumber
             // 
             this.txbSelectSeatNumber.BackColor = System.Drawing.Color.White;
-            this.txbSelectSeatNumber.Location = new System.Drawing.Point(303, 156);
+            this.txbSelectSeatNumber.Location = new System.Drawing.Point(303, 201);
             this.txbSelectSeatNumber.Name = "txbSelectSeatNumber";
             this.txbSelectSeatNumber.ReadOnly = true;
             this.txbSelectSeatNumber.Size = new System.Drawing.Size(177, 25);

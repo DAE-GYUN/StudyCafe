@@ -41,8 +41,7 @@ namespace WindowsFormsApp1
 
         private void btnMain_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
+            Close();
         }
     }
 }

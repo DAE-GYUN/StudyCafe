@@ -45,13 +45,23 @@ namespace WindowsFormsApp1
 
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
-                txbUserPhoneNumber.Text = "";
+
+                if(mainForm.DialogResult == DialogResult.OK)
+                {
+                }
+
+                txbUserPhoneNumber.Text = "010";
             }
 
             else
             {
                 MessageBox.Show("존재하지않는 회원입니다");
             }
+
+        }
+
+        private void S(object sender, EventArgs e)
+        {
 
         }
     }
