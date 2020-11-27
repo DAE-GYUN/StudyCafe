@@ -35,9 +35,10 @@ namespace WindowsFormsApp1
                 User user = new User
                 {
                     Name = txbUserName.Text,
-                    PhoneNumber = txbUserPhoneNumber.Text
+                    PhoneNumber = txbUserPhoneNumber.Text,
+                    PictureID = Dao.Picture.GetMaxKey()
                 };
-
+                
                 Dao.User.Insert(user);
                 MessageBox.Show("가입완료");
                 Close();
