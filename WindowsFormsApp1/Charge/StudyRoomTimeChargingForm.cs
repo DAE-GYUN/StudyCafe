@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private string _str;
+
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
@@ -41,11 +41,10 @@ namespace WindowsFormsApp1
             paymentForm.ShowDialog();
         }
 
-
         private void btnSelectItem_Click(object sender, EventArgs e)
         {
-            txbChargingTime.Text = ((Button)sender).Text.ToString();
-            _str = ((Button)sender).Tag.ToString();
+            txbChargingTime.Text = ((RadioButton)sender).Text.ToString();
+            txbPrice.Text = ((RadioButton)sender).Tag.ToString();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -134,6 +134,7 @@ namespace WindowsFormsApp1
             this.rbtn2Hours.Size = new System.Drawing.Size(112, 59);
             this.rbtn2Hours.TabIndex = 4;
             this.rbtn2Hours.TabStop = true;
+            this.rbtn2Hours.Tag = "15000";
             this.rbtn2Hours.Text = "2시간";
             this.rbtn2Hours.UseVisualStyleBackColor = false;
             this.rbtn2Hours.Click += new System.EventHandler(this.btnSelectItem_Click);
@@ -150,6 +151,7 @@ namespace WindowsFormsApp1
             this.rbtn4Hours.Size = new System.Drawing.Size(112, 59);
             this.rbtn4Hours.TabIndex = 4;
             this.rbtn4Hours.TabStop = true;
+            this.rbtn4Hours.Tag = "50000";
             this.rbtn4Hours.Text = "4시간";
             this.rbtn4Hours.UseVisualStyleBackColor = false;
             this.rbtn4Hours.Click += new System.EventHandler(this.btnSelectItem_Click);
@@ -166,6 +168,7 @@ namespace WindowsFormsApp1
             this.rbtn6Hours.Size = new System.Drawing.Size(112, 59);
             this.rbtn6Hours.TabIndex = 4;
             this.rbtn6Hours.TabStop = true;
+            this.rbtn6Hours.Tag = "30000";
             this.rbtn6Hours.Text = "6시간";
             this.rbtn6Hours.UseVisualStyleBackColor = false;
             this.rbtn6Hours.Click += new System.EventHandler(this.btnSelectItem_Click);
