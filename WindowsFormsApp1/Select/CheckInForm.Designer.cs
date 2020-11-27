@@ -104,7 +104,7 @@ namespace WindowsFormsApp1
             this.btnStudyRoom4.Name = "btnStudyRoom4";
             this.btnStudyRoom4.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom4.TabIndex = 0;
-            this.btnStudyRoom4.Tag = "28";
+            this.btnStudyRoom4.Tag = "4";
             this.btnStudyRoom4.Text = "스터디룸4 (6인)";
             this.btnStudyRoom4.UseVisualStyleBackColor = true;
             this.btnStudyRoom4.Click += new System.EventHandler(this.btnSelectSeat_Click);
@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
             this.btnStudyRoom3.Name = "btnStudyRoom3";
             this.btnStudyRoom3.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom3.TabIndex = 0;
-            this.btnStudyRoom3.Tag = "27";
+            this.btnStudyRoom3.Tag = "3";
             this.btnStudyRoom3.Text = "스터디룸3 (6인)";
             this.btnStudyRoom3.UseVisualStyleBackColor = true;
             this.btnStudyRoom3.Click += new System.EventHandler(this.btnSelectSeat_Click);
@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.btnStudyRoom2.Name = "btnStudyRoom2";
             this.btnStudyRoom2.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom2.TabIndex = 0;
-            this.btnStudyRoom2.Tag = "26";
+            this.btnStudyRoom2.Tag = "2";
             this.btnStudyRoom2.Text = "스터디룸2 (4인)";
             this.btnStudyRoom2.UseVisualStyleBackColor = true;
             this.btnStudyRoom2.Click += new System.EventHandler(this.btnSelectSeat_Click);
@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
             this.btnStudyRoom1.Name = "btnStudyRoom1";
             this.btnStudyRoom1.Size = new System.Drawing.Size(138, 93);
             this.btnStudyRoom1.TabIndex = 0;
-            this.btnStudyRoom1.Tag = "25";
+            this.btnStudyRoom1.Tag = "1";
             this.btnStudyRoom1.Text = "스터디룸1 (4인)";
             this.btnStudyRoom1.UseVisualStyleBackColor = true;
             this.btnStudyRoom1.Click += new System.EventHandler(this.btnSelectSeat_Click);

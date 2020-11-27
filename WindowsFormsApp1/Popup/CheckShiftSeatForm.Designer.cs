@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
             this.btnCancel.Size = new System.Drawing.Size(144, 74);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCheckIn
             // 
@@ -58,11 +59,12 @@ namespace WindowsFormsApp1
             this.btnCheckIn.Size = new System.Drawing.Size(148, 74);
             this.btnCheckIn.TabIndex = 12;
             this.btnCheckIn.UseVisualStyleBackColor = false;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // txbRemainTime
             // 
             this.txbRemainTime.BackColor = System.Drawing.Color.White;
-            this.txbRemainTime.Location = new System.Drawing.Point(306, 249);
+            this.txbRemainTime.Location = new System.Drawing.Point(306, 161);
             this.txbRemainTime.Name = "txbRemainTime";
             this.txbRemainTime.ReadOnly = true;
             this.txbRemainTime.Size = new System.Drawing.Size(177, 25);
@@ -71,7 +73,7 @@ namespace WindowsFormsApp1
             // txbMovedSeatNumber
             // 
             this.txbMovedSeatNumber.BackColor = System.Drawing.Color.White;
-            this.txbMovedSeatNumber.Location = new System.Drawing.Point(306, 203);
+            this.txbMovedSeatNumber.Location = new System.Drawing.Point(306, 252);
             this.txbMovedSeatNumber.Name = "txbMovedSeatNumber";
             this.txbMovedSeatNumber.ReadOnly = true;
             this.txbMovedSeatNumber.Size = new System.Drawing.Size(177, 25);
@@ -80,7 +82,7 @@ namespace WindowsFormsApp1
             // txbNowSeatNumber
             // 
             this.txbNowSeatNumber.BackColor = System.Drawing.Color.White;
-            this.txbNowSeatNumber.Location = new System.Drawing.Point(306, 157);
+            this.txbNowSeatNumber.Location = new System.Drawing.Point(306, 201);
             this.txbNowSeatNumber.Name = "txbNowSeatNumber";
             this.txbNowSeatNumber.ReadOnly = true;
             this.txbNowSeatNumber.Size = new System.Drawing.Size(177, 25);

@@ -19,15 +19,19 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public StudyRoomTimeChargingForm(string str) : this()
+        {
+            _str = str;
+        }
+        private string _str;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
 
+            txbRoomNumber.Text = _str;
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
 
         }
-
-
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
