@@ -33,8 +33,9 @@ namespace WindowsFormsApp1
             this.btnCancel = new System.Windows.Forms.Button();
             this.txbUserName = new System.Windows.Forms.TextBox();
             this.txbUserPhoneNumber = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbUserImage = new System.Windows.Forms.PictureBox();
+            this.btnSnapshot = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserImage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSignUp
@@ -77,15 +78,25 @@ namespace WindowsFormsApp1
             this.txbUserPhoneNumber.Size = new System.Drawing.Size(167, 25);
             this.txbUserPhoneNumber.TabIndex = 3;
             // 
-            // pictureBox1
+            // pbUserImage
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.iconfinder_229_woman_gesturing_OK_2_3099350;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 136);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbUserImage.Image = global::WindowsFormsApp1.Properties.Resources.iconfinder_229_woman_gesturing_OK_2_3099350;
+            this.pbUserImage.Location = new System.Drawing.Point(57, 136);
+            this.pbUserImage.Name = "pbUserImage";
+            this.pbUserImage.Size = new System.Drawing.Size(164, 152);
+            this.pbUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUserImage.TabIndex = 2;
+            this.pbUserImage.TabStop = false;
+            // 
+            // btnSnapshot
+            // 
+            this.btnSnapshot.Location = new System.Drawing.Point(57, 310);
+            this.btnSnapshot.Name = "btnSnapshot";
+            this.btnSnapshot.Size = new System.Drawing.Size(164, 37);
+            this.btnSnapshot.TabIndex = 4;
+            this.btnSnapshot.Text = "사진촬영";
+            this.btnSnapshot.UseVisualStyleBackColor = true;
+            this.btnSnapshot.Click += new System.EventHandler(this.btnSnapshot_Click);
             // 
             // SignUpForm
             // 
@@ -94,15 +105,16 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.SignUp;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSnapshot);
             this.Controls.Add(this.txbUserPhoneNumber);
             this.Controls.Add(this.txbUserName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbUserImage);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSignUp);
             this.DoubleBuffered = true;
             this.Name = "SignUpForm";
             this.Text = "SignUpForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,8 +124,9 @@ namespace WindowsFormsApp1
 
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbUserImage;
         private System.Windows.Forms.TextBox txbUserName;
         private System.Windows.Forms.TextBox txbUserPhoneNumber;
+        private System.Windows.Forms.Button btnSnapshot;
     }
 }
