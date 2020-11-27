@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
         {
             CheckInForm checkInForm = new CheckInForm("StudyRoom");
             checkInForm.ShowDialog();
+            
         }
 
         private void btnLockers_Click(object sender, EventArgs e)
