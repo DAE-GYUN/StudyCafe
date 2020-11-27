@@ -298,6 +298,39 @@
   <ItemGroup>
     <None Include="Resources\SignUp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\Button Style1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\Button Style2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\Button Style3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\GroupBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\Label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\Paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\PictureFrame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\PopupBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIimages\TitleMini.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
