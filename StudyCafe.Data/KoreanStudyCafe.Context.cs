@@ -25,15 +25,15 @@ namespace StudyCafe.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<InvoiceLine> InvoiceLines { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Locker> Lockers { get; set; }
         public virtual DbSet<Log> Logs { get; set; }
+        public virtual DbSet<Picture> Pictures { get; set; }
         public virtual DbSet<Report> Reports { get; set; }
         public virtual DbSet<Seat> Seats { get; set; }
         public virtual DbSet<StudyRoom> StudyRooms { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Picture> Pictures { get; set; }
     }
 }
