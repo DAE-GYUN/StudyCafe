@@ -21,19 +21,18 @@ namespace WindowsFormsApp1
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            dgvItem.DataSource = _items;
-  
-            
+            bdsItem.DataSource = _items;
         }
         private List<Item> _items = new List<Item>();
-
+        
         public void AddItem(Item item)
         {
-       
+            
             _items.Add(item);
 
+          bdsItem.DataSource = _items;
             // 다시 바인딩
-
+            txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
         }
 
        
