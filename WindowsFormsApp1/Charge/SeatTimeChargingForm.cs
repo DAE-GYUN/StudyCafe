@@ -70,7 +70,19 @@ namespace WindowsFormsApp1
 
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
+            Close();
+        }
 
+        private void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            PurchaseForm purchaseForm = new PurchaseForm();
+            purchaseForm.ShowDialog();
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            PaymentForm paymentForm = new PaymentForm();
+            paymentForm.ShowDialog();
         }
     }
 }

@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
             this.txbUserNumber = new System.Windows.Forms.TextBox();
             this.txbItemName = new System.Windows.Forms.TextBox();
             this.txbPrice = new System.Windows.Forms.TextBox();
-            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
             this.rbtn2Hours = new System.Windows.Forms.RadioButton();
@@ -69,19 +69,19 @@ namespace WindowsFormsApp1
             this.txbPrice.Size = new System.Drawing.Size(154, 25);
             this.txbPrice.TabIndex = 2;
             // 
-            // btnMainMenu
+            // btnBack
             // 
-            this.btnMainMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnMainMenu.FlatAppearance.BorderSize = 0;
-            this.btnMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMainMenu.Location = new System.Drawing.Point(230, 345);
-            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(169, 75);
-            this.btnMainMenu.TabIndex = 3;
-            this.btnMainMenu.Text = "메인메뉴";
-            this.btnMainMenu.UseVisualStyleBackColor = false;
-            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(230, 345);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(169, 75);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "뒤로가기";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
             // btnAddToCart
             // 
@@ -95,6 +95,7 @@ namespace WindowsFormsApp1
             this.btnAddToCart.TabIndex = 3;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // btnPurchase
             // 
@@ -108,6 +109,7 @@ namespace WindowsFormsApp1
             this.btnPurchase.TabIndex = 3;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = false;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // rbtn2Hours
             // 
@@ -234,7 +236,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnAddToCart);
-            this.Controls.Add(this.btnMainMenu);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txbPrice);
             this.Controls.Add(this.txbItemName);
             this.Controls.Add(this.txbUserNumber);
@@ -252,7 +254,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbUserNumber;
         private System.Windows.Forms.TextBox txbItemName;
         private System.Windows.Forms.TextBox txbPrice;
-        private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnPurchase;
         private System.Windows.Forms.RadioButton rbtn2Hours;
