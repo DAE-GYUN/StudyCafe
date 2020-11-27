@@ -67,5 +67,10 @@ namespace WindowsFormsApp1
             PurchaseForm puchaseForm = new PurchaseForm();
             puchaseForm.ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
