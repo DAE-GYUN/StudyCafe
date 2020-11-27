@@ -41,7 +41,6 @@ namespace WindowsFormsApp1
             this.Kinds = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceLines = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
@@ -101,8 +100,7 @@ namespace WindowsFormsApp1
             this.nameDataGridViewTextBoxColumn,
             this.Kinds,
             this.timeDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.InvoiceLines});
+            this.priceDataGridViewTextBoxColumn});
             this.dgvItem.DataSource = this.bdsItem;
             this.dgvItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvItem.Location = new System.Drawing.Point(3, 3);
@@ -151,13 +149,6 @@ namespace WindowsFormsApp1
             this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             // 
-            // InvoiceLines
-            // 
-            this.InvoiceLines.DataPropertyName = "InvoiceLines";
-            this.InvoiceLines.HeaderText = "InvoiceLines";
-            this.InvoiceLines.MinimumWidth = 6;
-            this.InvoiceLines.Name = "InvoiceLines";
-            // 
             // PaymentControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -181,12 +172,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbTotalPrice;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.DataGridView dgvItem;
-        private System.Windows.Forms.BindingSource bdsItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kinds;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceLines;
+        private System.Windows.Forms.BindingSource bdsItem;
     }
 }

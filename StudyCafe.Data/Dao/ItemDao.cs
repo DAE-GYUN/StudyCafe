@@ -18,16 +18,7 @@ namespace StudyCafe.Data
             return x=> x.ItemID==key;
         }
 
-        public Item GetByKey(int itemId)
-        {
-            using (var context = new KoreanStudyCafeEntities())
-            {
-                var query = from x in context.Items
-                            where x.ItemID == itemId
-                            select x;
-
-                return query.First();
-            }
-        }
+      
+        
     }
 }
