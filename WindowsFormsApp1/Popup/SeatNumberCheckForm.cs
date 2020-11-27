@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
 
             txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
             txbSelectSeatNumber.Text = _seatNumber;
+
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
         }
 

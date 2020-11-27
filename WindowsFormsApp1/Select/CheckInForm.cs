@@ -31,8 +31,9 @@ namespace WindowsFormsApp1
 
             if (_select == "StudyRoom")
                 groupBox3.Enabled = false;
-            else if (_select == "CheckIn")
+            else
                 groupBox2.Enabled = false;
+
 
         }
 
@@ -43,24 +44,43 @@ namespace WindowsFormsApp1
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            
-            SeatNumberCheckForm seatNumberCheck = new SeatNumberCheckForm(_str);
-            seatNumberCheck.ShowDialog();
+            if (_select == "Shift")
+            {
+                CheckShiftSeatForm checkShiftSeatForm = new CheckShiftSeatForm(_str);
+                checkShiftSeatForm.ShowDialog();
+                if (checkShiftSeatForm.DialogResult == DialogResult.OK)
+                {
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+            }
+            else if (_select == "StudyRoom")
+            {
+                StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm(_str);
+                studyRoomTimeCharging.ShowDialog();
+                if (studyRoomTimeCharging.DialogResult == DialogResult.OK)
+                {
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+            }
+            else
+            {
+                SeatNumberCheckForm seatNumberCheck = new SeatNumberCheckForm(_str);
+                seatNumberCheck.ShowDialog();
+                if (seatNumberCheck.DialogResult == DialogResult.OK)
+                {
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+            }
 
-            if (seatNumberCheck.DialogResult == DialogResult.OK)
-                Close();
         }
 
         private void btnSelectSeat_Click(object sender, EventArgs e)
         {
             txbSeatNumber.Text = ((Button)sender).Text.ToString();
             _str = ((Button)sender).Tag.ToString();
-
-            if(int.Parse(_str) > 24)
-            {
-                StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm();
-                studyRoomTimeCharging.ShowDialog();
-            }
         }
     }
 }

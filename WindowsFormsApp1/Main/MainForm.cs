@@ -34,17 +34,11 @@ namespace WindowsFormsApp1
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            //if (Credential.Instance.User.SeatID == null)
-            //{
-                CheckInForm checkInForm = new CheckInForm("CheckIn");
-                checkInForm.ShowDialog();
-            //}
+            CheckInForm checkInForm = new CheckInForm("CheckIn");
+            checkInForm.ShowDialog();
 
-            //else
-            //{
-            //    MessageBox.Show("이미 사용중인 자리가 있습니다");
-            //    btnCheckIn.Enabled = false;
-            //}
+            if (checkInForm.DialogResult == DialogResult.OK)
+                Close();
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -61,8 +55,11 @@ namespace WindowsFormsApp1
 
         private void btnShiftSeat_Click(object sender, EventArgs e)
         {
-            CheckInForm checkInForm = new CheckInForm();
+            CheckInForm checkInForm = new CheckInForm("Shift");
             checkInForm.ShowDialog();
+
+            if (checkInForm.DialogResult == DialogResult.OK)
+                Close();
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)

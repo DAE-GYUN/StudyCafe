@@ -39,6 +39,8 @@ namespace WindowsFormsApp1
             this.rbtn2Hours = new System.Windows.Forms.RadioButton();
             this.rbtn4Hours = new System.Windows.Forms.RadioButton();
             this.rbtn6Hours = new System.Windows.Forms.RadioButton();
+            this.txbRoomNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,6 +175,22 @@ namespace WindowsFormsApp1
             this.rbtn6Hours.UseVisualStyleBackColor = false;
             this.rbtn6Hours.Click += new System.EventHandler(this.btnSelectItem_Click);
             // 
+            // txbRoomNumber
+            // 
+            this.txbRoomNumber.Location = new System.Drawing.Point(341, 157);
+            this.txbRoomNumber.Name = "txbRoomNumber";
+            this.txbRoomNumber.Size = new System.Drawing.Size(154, 25);
+            this.txbRoomNumber.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(218, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "스터디룸번호";
+            // 
             // StudyRoomTimeChargingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -180,6 +198,8 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.StudyRoomTimeChargingForm;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbRoomNumber);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.btnAddToCart);
@@ -208,5 +228,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.RadioButton rbtn2Hours;
         private System.Windows.Forms.RadioButton rbtn4Hours;
         private System.Windows.Forms.RadioButton rbtn6Hours;
+        private System.Windows.Forms.TextBox txbRoomNumber;
+        private System.Windows.Forms.Label label1;
     }
 }
