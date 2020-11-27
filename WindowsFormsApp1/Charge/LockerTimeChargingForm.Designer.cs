@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
             this.txbLockerRemainTime = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.paymentControl1 = new WindowsFormsApp1.PaymentControl();
+            this.uscItem = new WindowsFormsApp1.PaymentControl();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -187,7 +187,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.paymentControl1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.uscItem, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -197,13 +197,13 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
-            // paymentControl1
+            // uscItem
             // 
-            this.paymentControl1.Location = new System.Drawing.Point(3, 327);
-            this.paymentControl1.Name = "paymentControl1";
-            this.paymentControl1.Size = new System.Drawing.Size(794, 120);
-            this.paymentControl1.TabIndex = 20;
-            this.paymentControl1.Load += new System.EventHandler(this.paymentControl1_Load);
+            this.uscItem.Location = new System.Drawing.Point(3, 327);
+            this.uscItem.Name = "uscItem";
+            this.uscItem.Size = new System.Drawing.Size(794, 120);
+            this.uscItem.TabIndex = 20;
+            this.uscItem.Load += new System.EventHandler(this.paymentControl1_Load);
             // 
             // LockerTimeChargingForm
             // 
@@ -237,6 +237,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbLockerRemainTime;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private PaymentControl paymentControl1;
+        private PaymentControl uscItem;
     }
 }
