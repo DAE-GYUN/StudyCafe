@@ -18,11 +18,7 @@ namespace StudyCafe.Data
 
         public static StudyRoomDao StudyRoom = new StudyRoomDao();
 
-
-
-
-
-
+        public static PictureDao Picture = new PictureDao();
        
     }
 }
