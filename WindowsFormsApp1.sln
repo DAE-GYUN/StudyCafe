@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.Data", "StudyCafe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.UnitTest", "StudyCafe.UnitTest\StudyCafe.UnitTest.csproj", "{0DD502BE-D83B-4AF6-A456-3557D2DE766C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.TimeChecker", "StudyCafe.TimeChecker\StudyCafe.TimeChecker.csproj", "{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0DD502BE-D83B-4AF6-A456-3557D2DE766C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DD502BE-D83B-4AF6-A456-3557D2DE766C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DD502BE-D83B-4AF6-A456-3557D2DE766C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
