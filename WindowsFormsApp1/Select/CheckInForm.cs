@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
+            
             SeatNumberCheckForm seatNumberCheck = new SeatNumberCheckForm(_str);
             seatNumberCheck.ShowDialog();
 
@@ -54,6 +55,12 @@ namespace WindowsFormsApp1
         {
             txbSeatNumber.Text = ((Button)sender).Text.ToString();
             _str = ((Button)sender).Tag.ToString();
+
+            if(int.Parse(_str) > 24)
+            {
+                StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm();
+                studyRoomTimeCharging.ShowDialog();
+            }
         }
     }
 }
