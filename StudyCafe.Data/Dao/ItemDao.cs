@@ -26,7 +26,7 @@ namespace StudyCafe.Data
                             where x.ItemID == itemId
                             select x;
 
-                return query.FirstOrDefault();
+                return query.First();
             }
         }
     }
