@@ -25,8 +25,8 @@ namespace StudyCafe.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<InvoiceLine> InvoiceLines { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<InvoiceLine> InvoiceLines { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Locker> Lockers { get; set; }
         public virtual DbSet<Log> Logs { get; set; }
