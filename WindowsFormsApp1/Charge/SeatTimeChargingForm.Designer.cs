@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatTimeChargingForm));
             this.txbUserNumber = new System.Windows.Forms.TextBox();
             this.txbItemName = new System.Windows.Forms.TextBox();
             this.txbPrice = new System.Windows.Forms.TextBox();
@@ -41,43 +42,56 @@ namespace WindowsFormsApp1
             this.rbtn30Hours = new System.Windows.Forms.RadioButton();
             this.rbtn60Hours = new System.Windows.Forms.RadioButton();
             this.rbtn100Hours = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // txbUserNumber
             // 
-            this.txbUserNumber.Location = new System.Drawing.Point(424, 125);
+            this.txbUserNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbUserNumber.Location = new System.Drawing.Point(131, 10);
             this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
-            this.txbUserNumber.Size = new System.Drawing.Size(154, 25);
+            this.txbUserNumber.Size = new System.Drawing.Size(153, 21);
             this.txbUserNumber.TabIndex = 2;
             // 
             // txbItemName
             // 
-            this.txbItemName.Location = new System.Drawing.Point(424, 195);
+            this.txbItemName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbItemName.Location = new System.Drawing.Point(131, 67);
             this.txbItemName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbItemName.Name = "txbItemName";
-            this.txbItemName.Size = new System.Drawing.Size(154, 25);
+            this.txbItemName.Size = new System.Drawing.Size(153, 21);
             this.txbItemName.TabIndex = 2;
             // 
             // txbPrice
             // 
-            this.txbPrice.Location = new System.Drawing.Point(424, 266);
+            this.txbPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbPrice.Location = new System.Drawing.Point(131, 124);
             this.txbPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(154, 25);
+            this.txbPrice.Size = new System.Drawing.Size(153, 21);
             this.txbPrice.TabIndex = 2;
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(230, 345);
+            this.btnBack.Location = new System.Drawing.Point(195, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(169, 75);
+            this.btnBack.Size = new System.Drawing.Size(151, 47);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -86,12 +100,14 @@ namespace WindowsFormsApp1
             // btnAddToCart
             // 
             this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddToCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.BackgroundImage")));
+            this.btnAddToCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(414, 345);
+            this.btnAddToCart.Location = new System.Drawing.Point(362, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(176, 75);
+            this.btnAddToCart.Size = new System.Drawing.Size(147, 47);
             this.btnAddToCart.TabIndex = 3;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -100,12 +116,14 @@ namespace WindowsFormsApp1
             // btnPurchase
             // 
             this.btnPurchase.BackColor = System.Drawing.Color.Transparent;
+            this.btnPurchase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPurchase.BackgroundImage")));
+            this.btnPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPurchase.FlatAppearance.BorderSize = 0;
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Location = new System.Drawing.Point(607, 345);
+            this.btnPurchase.Location = new System.Drawing.Point(525, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(162, 75);
+            this.btnPurchase.Size = new System.Drawing.Size(141, 47);
             this.btnPurchase.TabIndex = 3;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = false;
@@ -115,12 +133,16 @@ namespace WindowsFormsApp1
             // 
             this.rbtn2Hours.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbtn2Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn2Hours.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbtn2Hours.BackgroundImage")));
+            this.rbtn2Hours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rbtn2Hours.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn2Hours.FlatAppearance.BorderSize = 0;
             this.rbtn2Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtn2Hours.Location = new System.Drawing.Point(7, 24);
+            this.rbtn2Hours.ForeColor = System.Drawing.Color.Black;
+            this.rbtn2Hours.Location = new System.Drawing.Point(3, 2);
             this.rbtn2Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn2Hours.Name = "rbtn2Hours";
-            this.rbtn2Hours.Size = new System.Drawing.Size(113, 65);
+            this.rbtn2Hours.Size = new System.Drawing.Size(108, 58);
             this.rbtn2Hours.TabIndex = 4;
             this.rbtn2Hours.TabStop = true;
             this.rbtn2Hours.Tag = "4000";
@@ -132,12 +154,16 @@ namespace WindowsFormsApp1
             // 
             this.rbtn5Hours.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbtn5Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn5Hours.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbtn5Hours.BackgroundImage")));
+            this.rbtn5Hours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rbtn5Hours.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn5Hours.FlatAppearance.BorderSize = 0;
             this.rbtn5Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtn5Hours.Location = new System.Drawing.Point(127, 22);
+            this.rbtn5Hours.ForeColor = System.Drawing.Color.Black;
+            this.rbtn5Hours.Location = new System.Drawing.Point(117, 2);
             this.rbtn5Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn5Hours.Name = "rbtn5Hours";
-            this.rbtn5Hours.Size = new System.Drawing.Size(117, 66);
+            this.rbtn5Hours.Size = new System.Drawing.Size(105, 58);
             this.rbtn5Hours.TabIndex = 4;
             this.rbtn5Hours.TabStop = true;
             this.rbtn5Hours.Tag = "8000";
@@ -149,12 +175,16 @@ namespace WindowsFormsApp1
             // 
             this.rbtn12Hours.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbtn12Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn12Hours.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbtn12Hours.BackgroundImage")));
+            this.rbtn12Hours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rbtn12Hours.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn12Hours.FlatAppearance.BorderSize = 0;
             this.rbtn12Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtn12Hours.Location = new System.Drawing.Point(7, 111);
+            this.rbtn12Hours.ForeColor = System.Drawing.Color.Black;
+            this.rbtn12Hours.Location = new System.Drawing.Point(3, 64);
             this.rbtn12Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn12Hours.Name = "rbtn12Hours";
-            this.rbtn12Hours.Size = new System.Drawing.Size(113, 59);
+            this.rbtn12Hours.Size = new System.Drawing.Size(108, 58);
             this.rbtn12Hours.TabIndex = 4;
             this.rbtn12Hours.TabStop = true;
             this.rbtn12Hours.Tag = "15000";
@@ -166,12 +196,16 @@ namespace WindowsFormsApp1
             // 
             this.rbtn30Hours.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbtn30Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn30Hours.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbtn30Hours.BackgroundImage")));
+            this.rbtn30Hours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rbtn30Hours.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn30Hours.FlatAppearance.BorderSize = 0;
             this.rbtn30Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtn30Hours.Location = new System.Drawing.Point(127, 111);
+            this.rbtn30Hours.ForeColor = System.Drawing.Color.Black;
+            this.rbtn30Hours.Location = new System.Drawing.Point(117, 64);
             this.rbtn30Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn30Hours.Name = "rbtn30Hours";
-            this.rbtn30Hours.Size = new System.Drawing.Size(117, 61);
+            this.rbtn30Hours.Size = new System.Drawing.Size(105, 58);
             this.rbtn30Hours.TabIndex = 4;
             this.rbtn30Hours.TabStop = true;
             this.rbtn30Hours.Tag = "60000";
@@ -183,12 +217,16 @@ namespace WindowsFormsApp1
             // 
             this.rbtn60Hours.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbtn60Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn60Hours.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbtn60Hours.BackgroundImage")));
+            this.rbtn60Hours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rbtn60Hours.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn60Hours.FlatAppearance.BorderSize = 0;
             this.rbtn60Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtn60Hours.Location = new System.Drawing.Point(7, 198);
+            this.rbtn60Hours.ForeColor = System.Drawing.Color.Black;
+            this.rbtn60Hours.Location = new System.Drawing.Point(3, 126);
             this.rbtn60Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn60Hours.Name = "rbtn60Hours";
-            this.rbtn60Hours.Size = new System.Drawing.Size(113, 58);
+            this.rbtn60Hours.Size = new System.Drawing.Size(108, 60);
             this.rbtn60Hours.TabIndex = 4;
             this.rbtn60Hours.TabStop = true;
             this.rbtn60Hours.Tag = "80000";
@@ -200,12 +238,16 @@ namespace WindowsFormsApp1
             // 
             this.rbtn100Hours.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbtn100Hours.BackColor = System.Drawing.Color.Transparent;
+            this.rbtn100Hours.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbtn100Hours.BackgroundImage")));
+            this.rbtn100Hours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rbtn100Hours.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn100Hours.FlatAppearance.BorderSize = 0;
             this.rbtn100Hours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtn100Hours.Location = new System.Drawing.Point(127, 198);
+            this.rbtn100Hours.ForeColor = System.Drawing.Color.Black;
+            this.rbtn100Hours.Location = new System.Drawing.Point(117, 126);
             this.rbtn100Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn100Hours.Name = "rbtn100Hours";
-            this.rbtn100Hours.Size = new System.Drawing.Size(117, 59);
+            this.rbtn100Hours.Size = new System.Drawing.Size(105, 60);
             this.rbtn100Hours.TabIndex = 4;
             this.rbtn100Hours.TabStop = true;
             this.rbtn100Hours.Tag = "100000";
@@ -213,46 +255,127 @@ namespace WindowsFormsApp1
             this.rbtn100Hours.UseVisualStyleBackColor = false;
             this.rbtn100Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
             // 
-            // groupBox1
+            // tableLayoutPanel1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.rbtn2Hours);
-            this.groupBox1.Controls.Add(this.rbtn100Hours);
-            this.groupBox1.Controls.Add(this.rbtn5Hours);
-            this.groupBox1.Controls.Add(this.rbtn60Hours);
-            this.groupBox1.Controls.Add(this.rbtn12Hours);
-            this.groupBox1.Controls.Add(this.rbtn30Hours);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(12, 78);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(250, 274);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.611111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.61111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.83333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.111111F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 360);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 8;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.08069F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.585014F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.62248F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.440922F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.04611F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.440922F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.18156F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.478261F));
+            this.tableLayoutPanel2.Controls.Add(this.btnPurchase, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAddToCart, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnBack, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 283);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(694, 51);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.42939F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.5706F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 83);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(694, 194);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.91743F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.08257F));
+            this.tableLayoutPanel4.Controls.Add(this.rbtn100Hours, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn30Hours, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn12Hours, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn5Hours, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn2Hours, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn60Hours, 0, 2);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 188);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.22757F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.01094F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.76149F));
+            this.tableLayoutPanel5.Controls.Add(this.txbUserNumber, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txbPrice, 1, 5);
+            this.tableLayoutPanel5.Controls.Add(this.txbItemName, 1, 3);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(234, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 8;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.255319F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.42553F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.89362F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.42553F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.89362F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.42553F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.978724F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.6383F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(457, 188);
+            this.tableLayoutPanel5.TabIndex = 1;
             // 
             // SeatTimeChargingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.SeatTimeChargingForm;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnPurchase);
-            this.Controls.Add(this.btnAddToCart);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txbPrice);
-            this.Controls.Add(this.txbItemName);
-            this.Controls.Add(this.txbUserNumber);
+            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SeatTimeChargingForm";
             this.Text = "SeatTimeChargingForm";
-            this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -269,6 +392,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.RadioButton rbtn30Hours;
         private System.Windows.Forms.RadioButton rbtn60Hours;
         private System.Windows.Forms.RadioButton rbtn100Hours;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }

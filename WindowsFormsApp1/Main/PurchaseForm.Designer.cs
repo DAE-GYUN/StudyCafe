@@ -135,6 +135,7 @@ namespace WindowsFormsApp1
             // 
             // paymentControl1
             // 
+            this.paymentControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paymentControl1.Location = new System.Drawing.Point(3, 271);
             this.paymentControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paymentControl1.Name = "paymentControl1";
@@ -193,7 +194,7 @@ namespace WindowsFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
