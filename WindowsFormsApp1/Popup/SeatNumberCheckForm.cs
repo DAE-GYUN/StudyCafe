@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             int userId = Dao.User.GetByUserKey(userCredential);
 
             User user = Dao.User.GetByPK(userId);
-            user.LoginStatus = true;
+            user.CheckInStatus = true;
             Dao.User.Update(user);
 
             Seat seat = Dao.Seat.GetByPK(int.Parse(_seatNumber));

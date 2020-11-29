@@ -38,6 +38,7 @@ namespace WindowsFormsApp1
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             int userCredential = Credential.Instance.User.UserID;
+          
 
             Seat nowSeat = Dao.Seat.GetByKey(int.Parse(txbNowSeatNumber.Text));
             nowSeat.UserID = null;

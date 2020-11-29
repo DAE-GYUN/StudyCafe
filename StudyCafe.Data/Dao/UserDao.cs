@@ -18,7 +18,7 @@ namespace StudyCafe.Data
             using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.Users
-                            where x.LoginStatus == staus
+                            where x.CheckInStatus == staus
                             select x;
                 return query.ToList();
             }
