@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Lovanpis.UsingEntityFramework;
 using StudyCafe.Data;
 
 namespace WindowsFormsApp1

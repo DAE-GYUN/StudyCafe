@@ -267,21 +267,9 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KoreanStudyCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="InvoiceLine">
-          <Key>
-            <PropertyRef Name="InvoiceID" />
-            <PropertyRef Name="ItemID" />
-          </Key>
-          <Property Name="InvoiceID" Type="Int32" Nullable="false" />
-          <Property Name="ItemID" Type="Int32" Nullable="false" />
-          <Property Name="ItemPrice" Type="Int32" Nullable="false" />
-          <Property Name="NumberOfItem" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Invoice" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="InvoiceLine" ToRole="Invoice" />
-          <NavigationProperty Name="Item" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Item" FromRole="InvoiceLine" ToRole="Item" />
-          </EntityType>
         <EntityContainer Name="KoreanStudyCafeEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="InvoiceLines" EntityType="Self.InvoiceLine" />
           <EntitySet Name="Invoices" EntityType="KoreanStudyCafeModel.Invoice" />
+          <EntitySet Name="InvoiceLines" EntityType="KoreanStudyCafeModel.InvoiceLine" />
           <EntitySet Name="Items" EntityType="KoreanStudyCafeModel.Item" />
           <EntitySet Name="Lockers" EntityType="KoreanStudyCafeModel.Locker" />
           <EntitySet Name="Logs" EntityType="KoreanStudyCafeModel.Log" />
@@ -326,7 +314,7 @@
             <End Role="User" EntitySet="Users" />
             <End Role="StudyRoom" EntitySet="StudyRooms" />
           </AssociationSet>
-          </EntityContainer>
+        </EntityContainer>
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="InvoiceID" />
@@ -337,6 +325,18 @@
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Invoice_User" FromRole="Invoice" ToRole="User" />
           <NavigationProperty Name="InvoiceLines" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="Invoice" ToRole="InvoiceLine" />
+        </EntityType>
+        <EntityType Name="InvoiceLine">
+          <Key>
+            <PropertyRef Name="InvoiceID" />
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+          <Property Name="ItemID" Type="Int32" Nullable="false" />
+          <Property Name="ItemPrice" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfItem" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Invoice" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="InvoiceLine" ToRole="Invoice" />
+          <NavigationProperty Name="Item" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Item" FromRole="InvoiceLine" ToRole="Item" />
         </EntityType>
         <EntityType Name="Item">
           <Key>
@@ -549,22 +549,22 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="KoreanStudyCafeModelStoreContainer" CdmEntityContainer="KoreanStudyCafeEntities">
-          <EntitySetMapping Name="InvoiceLines">
-            <EntityTypeMapping TypeName="KoreanStudyCafeModel.InvoiceLine">
-              <MappingFragment StoreEntitySet="InvoiceLine">
-                <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
-                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
-                <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
-                <ScalarProperty Name="NumberOfItem" ColumnName="NumberOfItem" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Invoices">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="InvoicePlace" ColumnName="InvoicePlace" />
                 <ScalarProperty Name="InvoiceDatetime" ColumnName="InvoiceDatetime" />
+                <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvoiceLines">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.InvoiceLine">
+              <MappingFragment StoreEntitySet="InvoiceLine">
+                <ScalarProperty Name="NumberOfItem" ColumnName="NumberOfItem" />
+                <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
                 <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
               </MappingFragment>
             </EntityTypeMapping>
