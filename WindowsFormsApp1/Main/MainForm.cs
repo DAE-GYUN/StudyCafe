@@ -69,21 +69,6 @@ namespace WindowsFormsApp1
             }
             else
                 MessageBox.Show("현재 사용중인 좌석이 없습니다");
-
-            if(Credential.Instance.User.RemainStudyRoomTime!=0)
-            {
-                int userCredential = Credential.Instance.User.UserID;
-                int userKey = Dao.User.GetByUserKey(userCredential);
-
-
-                int lockerTime = Credential.Instance.User.RemainStudyRoomTime =0;
-
-                User user = Dao.User.GetByPK(userKey);
-                user.RemainStudyRoomTime = lockerTime;
-                Dao.User.Update(user);
-
-                DialogResult = DialogResult.Cancel;
-            }
         }
 
         private void btnShiftSeat_Click(object sender, EventArgs e)
