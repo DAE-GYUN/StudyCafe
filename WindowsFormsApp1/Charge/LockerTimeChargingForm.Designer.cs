@@ -54,10 +54,10 @@ namespace WindowsFormsApp1
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(500, 185);
+            this.btnCancel.Location = new System.Drawing.Point(571, 231);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(165, 61);
+            this.btnCancel.Size = new System.Drawing.Size(189, 76);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -70,10 +70,10 @@ namespace WindowsFormsApp1
             this.btnAddToCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(333, 185);
+            this.btnAddToCart.Location = new System.Drawing.Point(381, 231);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(162, 61);
+            this.btnAddToCart.Size = new System.Drawing.Size(185, 76);
             this.btnAddToCart.TabIndex = 17;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -86,10 +86,10 @@ namespace WindowsFormsApp1
             this.btnPayMent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPayMent.FlatAppearance.BorderSize = 0;
             this.btnPayMent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayMent.Location = new System.Drawing.Point(169, 185);
+            this.btnPayMent.Location = new System.Drawing.Point(193, 231);
             this.btnPayMent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayMent.Name = "btnPayMent";
-            this.btnPayMent.Size = new System.Drawing.Size(157, 61);
+            this.btnPayMent.Size = new System.Drawing.Size(179, 76);
             this.btnPayMent.TabIndex = 18;
             this.btnPayMent.Text = "결제";
             this.btnPayMent.UseVisualStyleBackColor = false;
@@ -97,26 +97,26 @@ namespace WindowsFormsApp1
             // 
             // txbPrice
             // 
-            this.txbPrice.Location = new System.Drawing.Point(283, 147);
+            this.txbPrice.Location = new System.Drawing.Point(323, 184);
             this.txbPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(135, 21);
+            this.txbPrice.Size = new System.Drawing.Size(154, 25);
             this.txbPrice.TabIndex = 13;
             // 
             // txbRemainTime
             // 
-            this.txbRemainTime.Location = new System.Drawing.Point(283, 105);
+            this.txbRemainTime.Location = new System.Drawing.Point(323, 131);
             this.txbRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbRemainTime.Name = "txbRemainTime";
-            this.txbRemainTime.Size = new System.Drawing.Size(135, 21);
+            this.txbRemainTime.Size = new System.Drawing.Size(154, 25);
             this.txbRemainTime.TabIndex = 14;
             // 
             // txbUserNumber
             // 
-            this.txbUserNumber.Location = new System.Drawing.Point(283, 34);
+            this.txbUserNumber.Location = new System.Drawing.Point(323, 42);
             this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
-            this.txbUserNumber.Size = new System.Drawing.Size(135, 21);
+            this.txbUserNumber.Size = new System.Drawing.Size(154, 25);
             this.txbUserNumber.TabIndex = 15;
             // 
             // btn1Month
@@ -126,10 +126,10 @@ namespace WindowsFormsApp1
             this.btn1Month.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn1Month.FlatAppearance.BorderSize = 0;
             this.btn1Month.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1Month.Location = new System.Drawing.Point(13, 82);
+            this.btn1Month.Location = new System.Drawing.Point(15, 102);
             this.btn1Month.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Month.Name = "btn1Month";
-            this.btn1Month.Size = new System.Drawing.Size(102, 49);
+            this.btn1Month.Size = new System.Drawing.Size(117, 61);
             this.btn1Month.TabIndex = 6;
             this.btn1Month.Tag = "11";
             this.btn1Month.Text = "한달";
@@ -143,10 +143,10 @@ namespace WindowsFormsApp1
             this.btn3Week.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn3Week.FlatAppearance.BorderSize = 0;
             this.btn3Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3Week.Location = new System.Drawing.Point(13, 153);
+            this.btn3Week.Location = new System.Drawing.Point(15, 191);
             this.btn3Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3Week.Name = "btn3Week";
-            this.btn3Week.Size = new System.Drawing.Size(102, 49);
+            this.btn3Week.Size = new System.Drawing.Size(117, 61);
             this.btn3Week.TabIndex = 8;
             this.btn3Week.Tag = "12";
             this.btn3Week.Text = "3주";
@@ -160,10 +160,10 @@ namespace WindowsFormsApp1
             this.btn1Week.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn1Week.FlatAppearance.BorderSize = 0;
             this.btn1Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1Week.Location = new System.Drawing.Point(13, 17);
+            this.btn1Week.Location = new System.Drawing.Point(15, 21);
             this.btn1Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Week.Name = "btn1Week";
-            this.btn1Week.Size = new System.Drawing.Size(102, 49);
+            this.btn1Week.Size = new System.Drawing.Size(117, 61);
             this.btn1Week.TabIndex = 9;
             this.btn1Week.Tag = "10";
             this.btn1Week.Text = "1주일";
@@ -172,10 +172,10 @@ namespace WindowsFormsApp1
             // 
             // txbLockerRemainTime
             // 
-            this.txbLockerRemainTime.Location = new System.Drawing.Point(283, 68);
+            this.txbLockerRemainTime.Location = new System.Drawing.Point(323, 85);
             this.txbLockerRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbLockerRemainTime.Name = "txbLockerRemainTime";
-            this.txbLockerRemainTime.Size = new System.Drawing.Size(135, 21);
+            this.txbLockerRemainTime.Size = new System.Drawing.Size(154, 25);
             this.txbLockerRemainTime.TabIndex = 14;
             // 
             // groupBox1
@@ -196,7 +196,7 @@ namespace WindowsFormsApp1
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(694, 255);
+            this.groupBox1.Size = new System.Drawing.Size(794, 320);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -214,31 +214,32 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 360);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // uscItem
             // 
-            this.uscItem.Location = new System.Drawing.Point(3, 261);
+            this.uscItem.Location = new System.Drawing.Point(3, 326);
             this.uscItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscItem.Name = "uscItem";
-            this.uscItem.Size = new System.Drawing.Size(694, 96);
+            this.uscItem.Size = new System.Drawing.Size(793, 120);
             this.uscItem.TabIndex = 20;
             this.uscItem.Load += new System.EventHandler(this.paymentControl1_Load);
             // 
             // LockerTimeChargingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockerTimeCharge;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LockerTimeChargingForm";
             this.Text = "LockerTimeChargingForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

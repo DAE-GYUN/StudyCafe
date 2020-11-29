@@ -32,10 +32,10 @@ namespace WindowsFormsApp1
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCheckIn = new System.Windows.Forms.Button();
             this.gbStudyRoomNumber = new System.Windows.Forms.GroupBox();
-            this.btnStudyRoom4 = new System.Windows.Forms.Button();
-            this.btnStudyRoom3 = new System.Windows.Forms.Button();
-            this.btnStudyRoom2 = new System.Windows.Forms.Button();
             this.btnStudyRoom1 = new System.Windows.Forms.Button();
+            this.btnStudyRoom2 = new System.Windows.Forms.Button();
+            this.btnStudyRoom3 = new System.Windows.Forms.Button();
+            this.btnStudyRoom4 = new System.Windows.Forms.Button();
             this.gbSeatNumber = new System.Windows.Forms.GroupBox();
             this.btnSeat1 = new System.Windows.Forms.Button();
             this.btnSeat2 = new System.Windows.Forms.Button();
@@ -98,27 +98,16 @@ namespace WindowsFormsApp1
             this.gbStudyRoomNumber.TabIndex = 40;
             this.gbStudyRoomNumber.TabStop = false;
             // 
-            // btnStudyRoom4
+            // btnStudyRoom1
             // 
-            this.btnStudyRoom4.Location = new System.Drawing.Point(28, 324);
-            this.btnStudyRoom4.Name = "btnStudyRoom4";
-            this.btnStudyRoom4.Size = new System.Drawing.Size(138, 93);
-            this.btnStudyRoom4.TabIndex = 0;
-            this.btnStudyRoom4.Tag = "4";
-            this.btnStudyRoom4.Text = "스터디룸4 (6인)";
-            this.btnStudyRoom4.UseVisualStyleBackColor = true;
-            this.btnStudyRoom4.Click += new System.EventHandler(this.btnSelectSeat_Click);
-            // 
-            // btnStudyRoom3
-            // 
-            this.btnStudyRoom3.Location = new System.Drawing.Point(28, 225);
-            this.btnStudyRoom3.Name = "btnStudyRoom3";
-            this.btnStudyRoom3.Size = new System.Drawing.Size(138, 93);
-            this.btnStudyRoom3.TabIndex = 0;
-            this.btnStudyRoom3.Tag = "3";
-            this.btnStudyRoom3.Text = "스터디룸3 (6인)";
-            this.btnStudyRoom3.UseVisualStyleBackColor = true;
-            this.btnStudyRoom3.Click += new System.EventHandler(this.btnSelectSeat_Click);
+            this.btnStudyRoom1.Location = new System.Drawing.Point(28, 24);
+            this.btnStudyRoom1.Name = "btnStudyRoom1";
+            this.btnStudyRoom1.Size = new System.Drawing.Size(138, 93);
+            this.btnStudyRoom1.TabIndex = 0;
+            this.btnStudyRoom1.Tag = "1";
+            this.btnStudyRoom1.Text = "스터디룸1 (4인)";
+            this.btnStudyRoom1.UseVisualStyleBackColor = true;
+            this.btnStudyRoom1.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnStudyRoom2
             // 
@@ -131,16 +120,27 @@ namespace WindowsFormsApp1
             this.btnStudyRoom2.UseVisualStyleBackColor = true;
             this.btnStudyRoom2.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
-            // btnStudyRoom1
+            // btnStudyRoom3
             // 
-            this.btnStudyRoom1.Location = new System.Drawing.Point(28, 24);
-            this.btnStudyRoom1.Name = "btnStudyRoom1";
-            this.btnStudyRoom1.Size = new System.Drawing.Size(138, 93);
-            this.btnStudyRoom1.TabIndex = 0;
-            this.btnStudyRoom1.Tag = "1";
-            this.btnStudyRoom1.Text = "스터디룸1 (4인)";
-            this.btnStudyRoom1.UseVisualStyleBackColor = true;
-            this.btnStudyRoom1.Click += new System.EventHandler(this.btnSelectSeat_Click);
+            this.btnStudyRoom3.Location = new System.Drawing.Point(28, 225);
+            this.btnStudyRoom3.Name = "btnStudyRoom3";
+            this.btnStudyRoom3.Size = new System.Drawing.Size(138, 93);
+            this.btnStudyRoom3.TabIndex = 0;
+            this.btnStudyRoom3.Tag = "3";
+            this.btnStudyRoom3.Text = "스터디룸3 (6인)";
+            this.btnStudyRoom3.UseVisualStyleBackColor = true;
+            this.btnStudyRoom3.Click += new System.EventHandler(this.btnSelectSeat_Click);
+            // 
+            // btnStudyRoom4
+            // 
+            this.btnStudyRoom4.Location = new System.Drawing.Point(28, 324);
+            this.btnStudyRoom4.Name = "btnStudyRoom4";
+            this.btnStudyRoom4.Size = new System.Drawing.Size(138, 93);
+            this.btnStudyRoom4.TabIndex = 0;
+            this.btnStudyRoom4.Tag = "4";
+            this.btnStudyRoom4.Text = "스터디룸4 (6인)";
+            this.btnStudyRoom4.UseVisualStyleBackColor = true;
+            this.btnStudyRoom4.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // gbSeatNumber
             // 
@@ -457,6 +457,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.gbSeatNumber);
             this.Name = "CheckInForm";
             this.Text = "스터디룸4 (6인)";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.gbStudyRoomNumber.ResumeLayout(false);
             this.gbSeatNumber.ResumeLayout(false);
             this.ResumeLayout(false);
