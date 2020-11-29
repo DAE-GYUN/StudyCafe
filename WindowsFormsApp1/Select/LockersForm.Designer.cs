@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
             this.btnLocker11 = new System.Windows.Forms.Button();
             this.btnLocker10 = new System.Windows.Forms.Button();
             this.btnLocker8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnLocker4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +81,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Controls.Add(this.btnLocker11, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnLocker10, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnLocker8, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(140, 53);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -169,22 +171,7 @@ namespace WindowsFormsApp1
             this.btnLocker5.Tag = "5";
             this.btnLocker5.Text = "5번";
             this.btnLocker5.UseVisualStyleBackColor = true;
-            this.btnLocker5.Click += new System.EventHandler(this.btnLocker5_Click);
-            // 
-            // btnLocker4
-            // 
-            this.btnLocker4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLocker4.BackgroundImage")));
-            this.btnLocker4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLocker4.FlatAppearance.BorderSize = 0;
-            this.btnLocker4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker4.Location = new System.Drawing.Point(3, 61);
-            this.btnLocker4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLocker4.Name = "btnLocker4";
-            this.btnLocker4.Size = new System.Drawing.Size(66, 18);
-            this.btnLocker4.TabIndex = 0;
-            this.btnLocker4.Text = "4번";
-            this.btnLocker4.UseVisualStyleBackColor = true;
-            this.btnLocker4.Click += new System.EventHandler(this.btnLocker4_Click);
+            this.btnLocker5.Click += new System.EventHandler(this.btnLocker1_Click);
             // 
             // btnLocker7
             // 
@@ -282,9 +269,30 @@ namespace WindowsFormsApp1
             this.btnLocker8.UseVisualStyleBackColor = true;
             this.btnLocker8.Click += new System.EventHandler(this.btnLocker1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(3, 61);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(66, 18);
+            this.button1.TabIndex = 0;
+            this.button1.Tag = "4";
+            this.button1.Text = "4번";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnLocker1_Click);
+            // 
             // btnLocker4
             // 
+            this.btnLocker4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLocker4.BackgroundImage")));
+            this.btnLocker4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLocker4.FlatAppearance.BorderSize = 0;
+            this.btnLocker4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocker4.Location = new System.Drawing.Point(3, 77);
+            this.btnLocker4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker4.Name = "btnLocker4";
             this.btnLocker4.Size = new System.Drawing.Size(75, 23);
             this.btnLocker4.TabIndex = 0;
@@ -328,5 +336,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnLocker11;
         private System.Windows.Forms.Button btnLocker10;
         private System.Windows.Forms.Button btnLocker8;
+        private System.Windows.Forms.Button button1;
     }
 }
