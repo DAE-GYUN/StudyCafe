@@ -37,8 +37,13 @@ namespace WindowsFormsApp1
 
         private void btnStudyRoom_Click(object sender, EventArgs e)
         {
-            CheckInForm checkInForm = new CheckInForm("StudyRoom");
-            checkInForm.ShowDialog();
+            if (Credential.Instance.User.CheckInStatus == true)
+                MessageBox.Show("좌석이용중인 고객은 스터디룸을 예약할 수 없습니다.");
+            else
+            {
+                CheckInForm checkInForm = new CheckInForm("StudyRoom");
+                checkInForm.ShowDialog();
+            }
             
         }
 
@@ -51,6 +56,7 @@ namespace WindowsFormsApp1
 
         private void btnMain_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
             Close();
         }
 

@@ -95,6 +95,7 @@ namespace WindowsFormsApp1
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(149, 33);
+
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -110,6 +111,7 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Location = new System.Drawing.Point(356, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
+
             this.btnAddToCart.Size = new System.Drawing.Size(145, 33);
             this.btnAddToCart.TabIndex = 3;
             this.btnAddToCart.Text = "추가선택";
@@ -396,6 +398,7 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SeatTimeChargingForm";
             this.Text = "SeatTimeChargingForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);

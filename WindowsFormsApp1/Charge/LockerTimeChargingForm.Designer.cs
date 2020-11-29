@@ -55,6 +55,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
+
             // btnAddToCart
             // 
             this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
@@ -63,6 +64,7 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+
             this.btnAddToCart.Location = new System.Drawing.Point(181, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
@@ -80,10 +82,12 @@ namespace WindowsFormsApp1
             this.btnPayMent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPayMent.FlatAppearance.BorderSize = 0;
             this.btnPayMent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+
             this.btnPayMent.Location = new System.Drawing.Point(3, 2);
             this.btnPayMent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayMent.Name = "btnPayMent";
             this.btnPayMent.Size = new System.Drawing.Size(172, 62);
+
             this.btnPayMent.TabIndex = 18;
             this.btnPayMent.Text = "결제";
             this.btnPayMent.UseVisualStyleBackColor = false;
@@ -105,6 +109,7 @@ namespace WindowsFormsApp1
             this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
             this.txbUserNumber.Size = new System.Drawing.Size(97, 21);
+
             this.txbUserNumber.TabIndex = 15;
             // 
             // btn1Month
@@ -119,6 +124,7 @@ namespace WindowsFormsApp1
             this.btn1Month.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Month.Name = "btn1Month";
             this.btn1Month.Size = new System.Drawing.Size(125, 79);
+
             this.btn1Month.TabIndex = 6;
             this.btn1Month.Tag = "11";
             this.btn1Month.Text = "한달";
@@ -137,6 +143,7 @@ namespace WindowsFormsApp1
             this.btn3Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3Week.Name = "btn3Week";
             this.btn3Week.Size = new System.Drawing.Size(125, 78);
+
             this.btn3Week.TabIndex = 8;
             this.btn3Week.Tag = "12";
             this.btn3Week.Text = "3주";
@@ -155,12 +162,13 @@ namespace WindowsFormsApp1
             this.btn1Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Week.Name = "btn1Week";
             this.btn1Week.Size = new System.Drawing.Size(125, 78);
+
             this.btn1Week.TabIndex = 9;
             this.btn1Week.Tag = "10";
             this.btn1Week.Text = "1주일";
             this.btn1Week.UseVisualStyleBackColor = false;
             this.btn1Week.Click += new System.EventHandler(this.btn1Week_Click);
-            // 
+            //
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -174,8 +182,8 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 360);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // tableLayoutPanel2
@@ -317,16 +325,17 @@ namespace WindowsFormsApp1
             // 
             // LockerTimeChargingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockerTimeCharge__2_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LockerTimeChargingForm";
             this.Text = "LockerTimeChargingForm";
+
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);

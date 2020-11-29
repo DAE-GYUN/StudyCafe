@@ -162,6 +162,7 @@ namespace WindowsFormsApp1
             this.btnStudyRoom3.Tag = "3";
             this.btnStudyRoom3.Text = "스터디룸3 (6인)";
             this.btnStudyRoom3.UseVisualStyleBackColor = false;
+
             this.btnStudyRoom3.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // btnStudyRoom4
@@ -179,6 +180,7 @@ namespace WindowsFormsApp1
             this.btnStudyRoom4.Tag = "4";
             this.btnStudyRoom4.Text = "스터디룸4 (6인)";
             this.btnStudyRoom4.UseVisualStyleBackColor = false;
+
             this.btnStudyRoom4.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // gbSeatNumber
@@ -645,6 +647,7 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CheckInForm";
             this.Text = "스터디룸4 (6인)";
+
             this.Load += new System.EventHandler(this.CheckInForm_Load);
             this.gbStudyRoomNumber.ResumeLayout(false);
             this.gbSeatNumber.ResumeLayout(false);

@@ -285,6 +285,7 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LockersForm";
             this.Text = "LockersForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
