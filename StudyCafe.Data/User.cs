@@ -32,8 +32,6 @@ namespace StudyCafe.Data
         public int RemainStudyRoomTime { get; set; }
         public int RemainSeatTime { get; set; }
         public bool Admin { get; set; }
-        public bool StudyRoomStatus { get; set; }
-        public bool LockerStatus { get; set; }
         public bool CheckInStatus { get; set; }
         public Nullable<int> PictureID { get; set; }
     

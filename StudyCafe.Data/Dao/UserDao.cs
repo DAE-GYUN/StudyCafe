@@ -13,39 +13,6 @@ namespace StudyCafe.Data
     {
         protected override Expression<Func<User, int>> KeySelector => x => x.UserID;
 
-        public List<User> GetByCheckInStatus(bool staus)
-        {
-            using (var context = new KoreanStudyCafeEntities())
-            {
-                var query = from x in context.Users
-                            where x.CheckInStatus == staus
-                            select x;
-                return query.ToList();
-            }
-        }
-
-        public List<User> GetByLockerStatus(bool status)
-        {
-            using (var context = new KoreanStudyCafeEntities())
-            {
-                var query = from x in context.Users
-                            where x.LockerStatus == status
-                            select x;
-                return query.ToList();
-            }
-        }
-
-        public List<User> GetByStudyRoomStatus(bool status)
-        {
-            using (var context = new KoreanStudyCafeEntities())
-            {
-                var query = from x in context.Users
-                            where x.StudyRoomStatus == status
-                            select x;
-                return query.ToList();
-            }
-        }
-
         protected override Expression<Func<User, bool>> IsKey(int key)
         {
             return x => x.UserID == key;
