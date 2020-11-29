@@ -99,11 +99,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void CheckInForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSelectSeat_Click(object sender, EventArgs e)
         {
             txbSeatNumber.Text = ((Button)sender).Text.ToString();

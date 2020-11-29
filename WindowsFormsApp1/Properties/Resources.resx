@@ -142,12 +142,6 @@
   <data name="iconfinder_229-woman-gesturing-OK-2_3099350" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_229-woman-gesturing-OK-2_3099350.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LockerTimeCharge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LockerTimeCharge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LockerTimeCharge (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LockerTimeCharge (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LockerTimeChargingForm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LockerTimeChargingForm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,16 +199,13 @@
   <data name="PictureFrame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UIimages\PictureFrame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LockerTimeCharge (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LockerTimeCharge (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="StudyRoomCharge1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StudyRoomCharge1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PaymentForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PaymentForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LockerTimeCharge (2)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LockerTimeCharge (2)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LockerTimeCharge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockerTimeCharge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
