@@ -46,6 +46,7 @@ namespace WindowsFormsApp1
         {
             LockersForm lockersForm = new LockersForm();
             lockersForm.ShowDialog();
+
         }
 
         private void btnMain_Click(object sender, EventArgs e)

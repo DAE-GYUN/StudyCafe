@@ -143,14 +143,14 @@ namespace WindowsFormsApp1
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            PurchaseForm purchaseForm = new PurchaseForm(this);
-            purchaseForm.ShowDialog();
+            
+            Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            LockersForm lockersForm = new LockersForm();
-            lockersForm.ShowDialog();
+            Close();
+
         }
 
         private void paymentControl1_Load(object sender, EventArgs e)
