@@ -30,7 +30,9 @@ namespace WindowsFormsApp1
         {
             base.OnLoad(e);
 
-            txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
+            int credentialUser = Credential.Instance.User.UserID;
+            txbRemainTime.Text = $"{Dao.User.GetByPK(credentialUser).RemainSeatTime / 60}시간 {Dao.User.GetByPK(credentialUser).RemainSeatTime % 60 }분 ";
+
             txbSelectSeatNumber.Text = _seatNumber;
 
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;

@@ -27,7 +27,8 @@ namespace WindowsFormsApp1
             txbNowSeatNumber.Text = presentSeatNumber;
             txbMovedSeatNumber.Text = _seatNumber;
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
-            txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
+            int credentialUser = Credential.Instance.User.UserID;
+            txbRemainTime.Text = $"{Dao.User.GetByPK(credentialUser).RemainSeatTime / 60}시간 {Dao.User.GetByPK(credentialUser).RemainSeatTime % 60 }분 ";
         }
 
         public CheckShiftSeatForm(string setNumber) : this()
@@ -56,6 +57,11 @@ namespace WindowsFormsApp1
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txbRemainTime_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

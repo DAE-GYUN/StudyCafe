@@ -39,6 +39,10 @@ namespace WindowsFormsApp1
         {
             if (Credential.Instance.User.CheckInStatus == true)
                 MessageBox.Show("좌석이용중인 고객은 스터디룸을 예약할 수 없습니다.");
+
+            else if(Credential.Instance.User.RemainStudyRoomTime != 0)
+                MessageBox.Show("스터디룸은 중복으로 사용할수 없습니다.");
+            
             else
             {
                 CheckInForm checkInForm = new CheckInForm("StudyRoom");
