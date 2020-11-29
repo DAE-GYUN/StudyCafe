@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
         {
             LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm();
             lockerTimeChargingForm.ShowDialog();
+            Close();
         }
 
         private void btnLocker2_Click(object sender, EventArgs e)
@@ -83,8 +84,7 @@ namespace WindowsFormsApp1
 
         private void btnLockersCancel_Click(object sender, EventArgs e)
         {
-            PurchaseForm purchaseForm = new PurchaseForm();
-            purchaseForm.ShowDialog();
+            Close();
         }
     }
 }
