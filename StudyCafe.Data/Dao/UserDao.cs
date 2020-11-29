@@ -24,7 +24,27 @@ namespace StudyCafe.Data
             }
         }
 
-        
+        public List<User> GetByLockerStatus(bool status)
+        {
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                var query = from x in context.Users
+                            where x.LockerStatus == status
+                            select x;
+                return query.ToList();
+            }
+        }
+
+        public List<User> GetByStudyRoomStatus(bool status)
+        {
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                var query = from x in context.Users
+                            where x.StudyRoomStatus == status
+                            select x;
+                return query.ToList();
+            }
+        }
 
         protected override Expression<Func<User, bool>> IsKey(int key)
         {
@@ -41,7 +61,7 @@ namespace StudyCafe.Data
 
         public bool Exists(string text)
         {
-            using (var contexrt  = new KoreanStudyCafeEntities())
+            using (var contexrt = new KoreanStudyCafeEntities())
             {
                 return contexrt.Users.Any(x => x.PhoneNumber == text);
             }

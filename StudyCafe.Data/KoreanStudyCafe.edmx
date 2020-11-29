@@ -94,6 +94,8 @@
           <Property Name="RemainStudyRoomTime" Type="int" Nullable="false" />
           <Property Name="RemainSeatTime" Type="int" Nullable="false" />
           <Property Name="Admin" Type="bit" Nullable="false" />
+          <Property Name="StudyRoomStatus" Type="bit" Nullable="false" />
+          <Property Name="LockerStatus" Type="bit" Nullable="false" />
           <Property Name="CheckInStatus" Type="bit" Nullable="false" />
           <Property Name="PictureID" Type="int" />
         </EntityType>
@@ -443,6 +445,8 @@
           <Property Name="RemainStudyRoomTime" Type="Int32" Nullable="false" />
           <Property Name="RemainSeatTime" Type="Int32" Nullable="false" />
           <Property Name="Admin" Type="Boolean" Nullable="false" />
+          <Property Name="StudyRoomStatus" Type="Boolean" Nullable="false" />
+          <Property Name="LockerStatus" Type="Boolean" Nullable="false" />
           <Property Name="CheckInStatus" Type="Boolean" Nullable="false" />
           <Property Name="PictureID" Type="Int32" />
           <NavigationProperty Name="Invoices" Relationship="KoreanStudyCafeModel.FK_Invoice_User" FromRole="User" ToRole="Invoice" />
@@ -640,6 +644,8 @@
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="PictureID" ColumnName="PictureID" />
                 <ScalarProperty Name="CheckInStatus" ColumnName="CheckInStatus" />
+                <ScalarProperty Name="LockerStatus" ColumnName="LockerStatus" />
+                <ScalarProperty Name="StudyRoomStatus" ColumnName="StudyRoomStatus" />
                 <ScalarProperty Name="Admin" ColumnName="Admin" />
                 <ScalarProperty Name="RemainSeatTime" ColumnName="RemainSeatTime" />
                 <ScalarProperty Name="RemainStudyRoomTime" ColumnName="RemainStudyRoomTime" />
