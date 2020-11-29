@@ -338,11 +338,11 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.69344F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.04442F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.789286F));
-            this.tableLayoutPanel1.Controls.Add(this.btnSignUp, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txbUserPhoneNumber, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnSignUp, 3, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
