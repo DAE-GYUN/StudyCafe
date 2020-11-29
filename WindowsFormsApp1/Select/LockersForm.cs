@@ -20,12 +20,6 @@ namespace WindowsFormsApp1
        
         }
 
-
-
-
-
-
-
         public string lockerNumber { get; set; }
         protected override void OnLoad(EventArgs e)
         {
@@ -37,21 +31,13 @@ namespace WindowsFormsApp1
             //    if(lockers.
             //}
             List<Locker> lockers = Dao.Locker.GetAll();
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 12; i++)
             {
                 if (lockers[i].UserID != null)
                 {
-                    Locker locker = Dao.Locker.GetByPK((int)lockers[i].UserID);
+                    Locker locker = Dao.Locker.GetByUserId((int)lockers[i].UserID);
 
-
-                    if (locker.LockerID == int.Parse(lockerNumber))
-                    {
-                       
-
-
-                    }
-
-
+                    tlpLockerNumber.Controls[locker.LockerID - 1].Enabled = false;
                 }
             }
         }
