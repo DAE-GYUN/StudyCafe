@@ -25,8 +25,8 @@ namespace StudyCafe.Data
         public string InvoicePlace { get; set; }
         public int UserID { get; set; }
     
-        public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InvoiceLine> InvoiceLines { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -13,12 +13,12 @@ namespace StudyCafe.Data
     {
         protected override Expression<Func<User, int>> KeySelector => x => x.UserID;
 
-        public List<User> GetByLoginStatus(bool staus)
+        public List<User> GetByCheckInStatus(bool staus)
         {
             using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.Users
-                            where x.LoginStatus == staus
+                            where x.CheckInStatus == staus
                             select x;
                 return query.ToList();
             }
