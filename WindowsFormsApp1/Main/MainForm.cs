@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
             
             txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
+        
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

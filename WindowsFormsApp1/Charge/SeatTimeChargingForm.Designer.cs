@@ -113,6 +113,7 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Name = "btnAddToCart";
 
             this.btnAddToCart.Size = new System.Drawing.Size(145, 33);
+
             this.btnAddToCart.TabIndex = 3;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -128,7 +129,9 @@ namespace WindowsFormsApp1
             this.btnPurchase.Location = new System.Drawing.Point(516, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
+
             this.btnPurchase.Size = new System.Drawing.Size(139, 33);
+
             this.btnPurchase.TabIndex = 3;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = false;
@@ -276,6 +279,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.88235F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.83333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.111111F));
+
             this.tableLayoutPanel1.Size = new System.Drawing.Size(694, 272);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
@@ -299,6 +303,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(688, 37);
+
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -380,8 +385,10 @@ namespace WindowsFormsApp1
             // 
             // uscItem
             // 
+
             this.uscItem.Location = new System.Drawing.Point(3, 280);
             this.uscItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.uscItem.Name = "uscItem";
             this.uscItem.Size = new System.Drawing.Size(694, 77);
             this.uscItem.TabIndex = 7;

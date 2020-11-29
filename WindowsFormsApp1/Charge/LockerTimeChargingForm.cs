@@ -17,8 +17,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        public LockerTimeChargingForm(string lockerNumber) : this()
+        {
 
-       
+
+            _lockerNumber = lockerNumber;
+        }
+
+
+        public string _lockerNumber { get; set; }
 
         protected override void OnLoad(EventArgs e)
         {
@@ -78,14 +85,25 @@ namespace WindowsFormsApp1
                     int lockerTime = Credential.Instance.User.RemainLockerTime += 10080;
 
                     User user = Dao.User.GetByPK(userKey);
+                    
                     user.RemainLockerTime = lockerTime;
+                    
                     Dao.User.Update(user);
 
-                    DialogResult = DialogResult.Cancel;
+
+                    Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+
+                    locker.UserID = userCredential;
+                    Dao.Locker.Update(locker);
+                    
+
+                    Close();
+
+                    
                 }
                 else
                 {
-                    DialogResult = DialogResult.Cancel;
+                    Close();
                 }
             }
 
@@ -105,6 +123,10 @@ namespace WindowsFormsApp1
                     User user = Dao.User.GetByPK(userKey);
                     user.RemainLockerTime = lockerTime;
                     Dao.User.Update(user);
+
+                    Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    locker.UserID = userCredential;
+                    Dao.Locker.Update(locker);
 
                     DialogResult = DialogResult.Cancel;
                 }
@@ -129,6 +151,10 @@ namespace WindowsFormsApp1
                     User user = Dao.User.GetByPK(userKey);
                     user.RemainLockerTime = lockerTime;
                     Dao.User.Update(user);
+
+                    Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    locker.UserID = userCredential;
+                    Dao.Locker.Update(locker);
                     DialogResult = DialogResult.Cancel;
                 }
                 else

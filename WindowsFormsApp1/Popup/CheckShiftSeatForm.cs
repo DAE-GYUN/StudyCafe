@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
 
             txbNowSeatNumber.Text = presentSeatNumber;
             txbMovedSeatNumber.Text = _seatNumber;
+            txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
+            txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
         }
 
         public CheckShiftSeatForm(string setNumber) : this()
