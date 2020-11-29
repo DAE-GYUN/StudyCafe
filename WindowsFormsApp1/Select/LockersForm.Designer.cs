@@ -31,7 +31,6 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LockersForm));
             this.btnLockersCancel = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnLocker1 = new System.Windows.Forms.Button();
             this.btnLocker2 = new System.Windows.Forms.Button();
             this.btnLocker3 = new System.Windows.Forms.Button();
@@ -45,7 +44,8 @@ namespace WindowsFormsApp1
             this.btnLocker8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnLocker4 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.gbLockerNumber = new System.Windows.Forms.GroupBox();
+            this.gbLockerNumber.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLockersCancel
@@ -64,42 +64,13 @@ namespace WindowsFormsApp1
             this.btnLockersCancel.UseVisualStyleBackColor = false;
             this.btnLockersCancel.Click += new System.EventHandler(this.btnLockersCancel_Click);
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker6, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker5, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker7, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker9, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker12, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker11, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker10, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnLocker8, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(140, 53);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(421, 237);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
             // btnLocker1
             // 
             this.btnLocker1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLocker1.BackgroundImage")));
             this.btnLocker1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker1.FlatAppearance.BorderSize = 0;
             this.btnLocker1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker1.Location = new System.Drawing.Point(3, 2);
+            this.btnLocker1.Location = new System.Drawing.Point(21, 37);
             this.btnLocker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker1.Name = "btnLocker1";
             this.btnLocker1.Size = new System.Drawing.Size(66, 18);
@@ -115,7 +86,7 @@ namespace WindowsFormsApp1
             this.btnLocker2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker2.FlatAppearance.BorderSize = 0;
             this.btnLocker2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker2.Location = new System.Drawing.Point(143, 2);
+            this.btnLocker2.Location = new System.Drawing.Point(147, 37);
             this.btnLocker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker2.Name = "btnLocker2";
             this.btnLocker2.Size = new System.Drawing.Size(66, 18);
@@ -131,7 +102,7 @@ namespace WindowsFormsApp1
             this.btnLocker3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker3.FlatAppearance.BorderSize = 0;
             this.btnLocker3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker3.Location = new System.Drawing.Point(283, 2);
+            this.btnLocker3.Location = new System.Drawing.Point(256, 37);
             this.btnLocker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker3.Name = "btnLocker3";
             this.btnLocker3.Size = new System.Drawing.Size(66, 18);
@@ -147,7 +118,7 @@ namespace WindowsFormsApp1
             this.btnLocker6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker6.FlatAppearance.BorderSize = 0;
             this.btnLocker6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker6.Location = new System.Drawing.Point(283, 61);
+            this.btnLocker6.Location = new System.Drawing.Point(256, 79);
             this.btnLocker6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker6.Name = "btnLocker6";
             this.btnLocker6.Size = new System.Drawing.Size(66, 18);
@@ -163,7 +134,7 @@ namespace WindowsFormsApp1
             this.btnLocker5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker5.FlatAppearance.BorderSize = 0;
             this.btnLocker5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker5.Location = new System.Drawing.Point(143, 61);
+            this.btnLocker5.Location = new System.Drawing.Point(147, 79);
             this.btnLocker5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker5.Name = "btnLocker5";
             this.btnLocker5.Size = new System.Drawing.Size(66, 18);
@@ -179,7 +150,7 @@ namespace WindowsFormsApp1
             this.btnLocker7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker7.FlatAppearance.BorderSize = 0;
             this.btnLocker7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker7.Location = new System.Drawing.Point(3, 120);
+            this.btnLocker7.Location = new System.Drawing.Point(21, 122);
             this.btnLocker7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker7.Name = "btnLocker7";
             this.btnLocker7.Size = new System.Drawing.Size(66, 18);
@@ -195,7 +166,7 @@ namespace WindowsFormsApp1
             this.btnLocker9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker9.FlatAppearance.BorderSize = 0;
             this.btnLocker9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker9.Location = new System.Drawing.Point(283, 120);
+            this.btnLocker9.Location = new System.Drawing.Point(256, 122);
             this.btnLocker9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker9.Name = "btnLocker9";
             this.btnLocker9.Size = new System.Drawing.Size(66, 18);
@@ -211,7 +182,7 @@ namespace WindowsFormsApp1
             this.btnLocker12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker12.FlatAppearance.BorderSize = 0;
             this.btnLocker12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker12.Location = new System.Drawing.Point(283, 179);
+            this.btnLocker12.Location = new System.Drawing.Point(256, 160);
             this.btnLocker12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker12.Name = "btnLocker12";
             this.btnLocker12.Size = new System.Drawing.Size(66, 18);
@@ -227,7 +198,7 @@ namespace WindowsFormsApp1
             this.btnLocker11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker11.FlatAppearance.BorderSize = 0;
             this.btnLocker11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker11.Location = new System.Drawing.Point(143, 179);
+            this.btnLocker11.Location = new System.Drawing.Point(147, 160);
             this.btnLocker11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker11.Name = "btnLocker11";
             this.btnLocker11.Size = new System.Drawing.Size(66, 18);
@@ -243,7 +214,7 @@ namespace WindowsFormsApp1
             this.btnLocker10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker10.FlatAppearance.BorderSize = 0;
             this.btnLocker10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker10.Location = new System.Drawing.Point(3, 179);
+            this.btnLocker10.Location = new System.Drawing.Point(21, 160);
             this.btnLocker10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker10.Name = "btnLocker10";
             this.btnLocker10.Size = new System.Drawing.Size(66, 18);
@@ -259,7 +230,7 @@ namespace WindowsFormsApp1
             this.btnLocker8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLocker8.FlatAppearance.BorderSize = 0;
             this.btnLocker8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocker8.Location = new System.Drawing.Point(143, 120);
+            this.btnLocker8.Location = new System.Drawing.Point(147, 122);
             this.btnLocker8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocker8.Name = "btnLocker8";
             this.btnLocker8.Size = new System.Drawing.Size(66, 18);
@@ -275,7 +246,7 @@ namespace WindowsFormsApp1
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 61);
+            this.button1.Location = new System.Drawing.Point(21, 79);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 18);
@@ -301,6 +272,27 @@ namespace WindowsFormsApp1
             this.btnLocker4.UseVisualStyleBackColor = true;
             this.btnLocker4.Click += new System.EventHandler(this.btnLocker1_Click);
             // 
+            // gbLockerNumber
+            // 
+            this.gbLockerNumber.Controls.Add(this.btnLocker12);
+            this.gbLockerNumber.Controls.Add(this.btnLocker9);
+            this.gbLockerNumber.Controls.Add(this.btnLocker6);
+            this.gbLockerNumber.Controls.Add(this.btnLocker3);
+            this.gbLockerNumber.Controls.Add(this.btnLocker5);
+            this.gbLockerNumber.Controls.Add(this.btnLocker2);
+            this.gbLockerNumber.Controls.Add(this.btnLocker11);
+            this.gbLockerNumber.Controls.Add(this.btnLocker1);
+            this.gbLockerNumber.Controls.Add(this.btnLocker8);
+            this.gbLockerNumber.Controls.Add(this.button1);
+            this.gbLockerNumber.Controls.Add(this.btnLocker7);
+            this.gbLockerNumber.Controls.Add(this.btnLocker10);
+            this.gbLockerNumber.Location = new System.Drawing.Point(74, 41);
+            this.gbLockerNumber.Name = "gbLockerNumber";
+            this.gbLockerNumber.Size = new System.Drawing.Size(383, 249);
+            this.gbLockerNumber.TabIndex = 4;
+            this.gbLockerNumber.TabStop = false;
+            this.gbLockerNumber.Text = "groupBox1";
+            // 
             // LockersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -308,14 +300,14 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.GroupBox;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 360);
+            this.Controls.Add(this.gbLockerNumber);
             this.Controls.Add(this.btnLockersCancel);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LockersForm";
             this.Text = "LockersForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.gbLockerNumber.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -323,7 +315,6 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Button btnLockersCancel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnLocker1;
         private System.Windows.Forms.Button btnLocker2;
         private System.Windows.Forms.Button btnLocker3;
@@ -337,5 +328,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnLocker10;
         private System.Windows.Forms.Button btnLocker8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox gbLockerNumber;
     }
 }

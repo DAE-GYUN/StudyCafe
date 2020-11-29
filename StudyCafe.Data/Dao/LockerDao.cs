@@ -17,5 +17,27 @@ namespace StudyCafe.Data
         {
             return x => x.LockerID == key;
         }
+
+
+        public Locker GetByKey(int LockserId)
+        {
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                var query = from x in context.Lockers
+                            where x.LockerID == LockserId
+                            select x;
+
+                return query.FirstOrDefault();
+
+            }
+        }
+
+        public Locker GetByUserID(int userID)
+        {
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                return context.Lockers.FirstOrDefault(x => x.UserID == userID);
+            }
+        }
     }
 }

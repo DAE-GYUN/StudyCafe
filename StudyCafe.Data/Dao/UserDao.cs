@@ -29,7 +29,7 @@ namespace StudyCafe.Data
             using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.Users
-                            where x.LockerStatus == status
+                            where x.CheckInStatus == status
                             select x;
                 return query.ToList();
             }
@@ -40,7 +40,7 @@ namespace StudyCafe.Data
             using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.Users
-                            where x.StudyRoomStatus == status
+                            where x.CheckInStatus == status
                             select x;
                 return query.ToList();
             }

@@ -27,39 +27,32 @@ namespace WindowsFormsApp1
 
 
         public string lockerNumber { get; set; }
+       
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            //List<Locker> lockers = new List<Locker>();
-            //lockers.AddRange(Dao.Locker.GetAll());
-            //foreach (var lockcer in lockers)
+
+            //List<Locker> lockers = Dao.Locker.GetAll();
+            //for (int i = 0; i < 13; i++)
             //{
-            //    if(lockers.
+            //    if (lockers[i].UserID != null)
+            //    {
+            //        Locker locker = Dao.Locker.GetByUserID((int)(lockers[i].UserID));
+
+            //        gbLockerNumber.Controls[int.Parse(locker.Name) -1 ].Enabled = false;
+            //    }
             //}
-            List<Locker> lockers = Dao.Locker.GetAll();
-            for (int i = 0; i < 13; i++)
-            {
-                if (lockers[i].UserID != null)
-                {
-                    Locker locker = Dao.Locker.GetByPK((int)lockers[i].UserID);
 
 
-                    if (locker.LockerID == int.Parse(lockerNumber))
-                    {
-                       
 
-
-                    }
-
-
-                }
-            }
         }
 
         private void btnLocker1_Click(object sender, EventArgs e)
         {
 
             lockerNumber = ((Button)sender).Tag.ToString();
+         
+
             LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(lockerNumber);
             lockerTimeChargingForm.ShowDialog();
             Close();
