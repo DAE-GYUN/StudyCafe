@@ -16,7 +16,7 @@
         <EntityTypeShape EntityType="KoreanStudyCafeModel.StudyRoom" Width="1.5" PointX="5.25" PointY="1.625" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_InvoiceLine_Item" />
-        <EntityTypeShape EntityType="KoreanStudyCafeModel.User" Width="1.5" PointX="3" PointY="6.875" />
+        <EntityTypeShape EntityType="KoreanStudyCafeModel.User" Width="1.5" PointX="3" PointY="7.125" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_Invoice_User" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_Lockers_User" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_Log_User" />

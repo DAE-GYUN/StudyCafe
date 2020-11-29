@@ -22,10 +22,11 @@ namespace WindowsFormsApp1
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
-            txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
-            
-            txbRemainTime.Text = Credential.Instance.User.RemainSeatTime.ToString();
+            int phoneNumber = int.Parse(Credential.Instance.User.PhoneNumber);
+            string firstNumber = String.Format("{0:D3}", phoneNumber / 100000000);
+            string secondNumber = String.Format("{0:D4}", (phoneNumber % 100000000)/10000);
+            string thirdNumber = String.Format("{0:D4}", phoneNumber % 1000);
+            txbUserNumber.Text = $"{firstNumber}-{secondNumber}-{thirdNumber}";
         
         }
 
@@ -98,21 +99,6 @@ namespace WindowsFormsApp1
             }
             else
                 MessageBox.Show("현재 사용중인 좌석이 없습니다");
-
-            if(Credential.Instance.User.RemainStudyRoomTime!=0)
-            {
-                int userCredential = Credential.Instance.User.UserID;
-                int userKey = Dao.User.GetByUserKey(userCredential);
-
-
-                int lockerTime = Credential.Instance.User.RemainStudyRoomTime =0;
-
-                User user = Dao.User.GetByPK(userKey);
-                user.RemainStudyRoomTime = lockerTime;
-                Dao.User.Update(user);
-
-                DialogResult = DialogResult.Cancel;
-            }
         }
 
         private void btnShiftSeat_Click(object sender, EventArgs e)
@@ -145,7 +131,7 @@ namespace WindowsFormsApp1
         private void timer1_Tick(object sender, EventArgs e)
         {
             int credentialUser = Credential.Instance.User.UserID;
-            txbRemainTime.Text = Dao.User.GetByPK(credentialUser).RemainSeatTime.ToString();
+            txbRemainTime.Text = $"{Dao.User.GetByPK(credentialUser).RemainSeatTime / 60}시간 {Dao.User.GetByPK(credentialUser).RemainSeatTime % 60}분";
         }
     }
 }
