@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
             {
                 StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm(_str);
                 studyRoomTimeCharging.ShowDialog();
-                if (studyRoomTimeCharging.DialogResult == DialogResult.OK)
+                if (studyRoomTimeCharging.DialogResult == DialogResult.Yes)
                 {
                     DialogResult = DialogResult.OK;
                     Close();
