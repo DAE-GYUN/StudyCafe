@@ -33,32 +33,56 @@ namespace WindowsFormsApp1
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            CheckInForm checkInForm = new CheckInForm("CheckIn");
-            checkInForm.ShowDialog();
+            if (Credential.Instance.User.CheckInStatus == true)
+            {
+                MessageBox.Show("현재 사용중인 좌석이 있습니다");
+            }
 
-            if (checkInForm.DialogResult == DialogResult.OK)
-                Close();
+            else
+            {
+                CheckInForm checkInForm = new CheckInForm("CheckIn");
+                checkInForm.ShowDialog();
+
+                if (checkInForm.DialogResult == DialogResult.OK)
+                    Close();
+            }
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("퇴실하시겠습니까?", "퇴실Or취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (Credential.Instance.User.CheckInStatus == true)
             {
-                DialogResult = DialogResult.Cancel;
+                if (MessageBox.Show("퇴실하시겠습니까?", "퇴실Or취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Credential.Instance.User.CheckInStatus = false;
+                    //Dao.Seat.GetByKey((Dao.Seat.GetByUserID(Credential.Instance.User.UserID))).UserID;
+                    //Seat seat = 
+                }
+                else
+                {
+                    MessageBox.Show("메인으로");
+                }
             }
             else
-            {
-                MessageBox.Show("메인으로");
-            }
+                MessageBox.Show("현재 사용중인 좌석이 없습니다");
         }
 
         private void btnShiftSeat_Click(object sender, EventArgs e)
         {
-            CheckInForm checkInForm = new CheckInForm("Shift");
-            checkInForm.ShowDialog();
+            if (Credential.Instance.User.CheckInStatus == true)
+            {
+                CheckInForm checkInForm = new CheckInForm("Shift");
+                checkInForm.ShowDialog();
 
-            if (checkInForm.DialogResult == DialogResult.OK)
-                Close();
+                if (checkInForm.DialogResult == DialogResult.OK)
+                    Close();
+            }
+
+            else
+            {
+                MessageBox.Show("현재 사용중인 좌석이 없습니다");
+            }
+
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)

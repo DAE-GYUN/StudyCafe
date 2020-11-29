@@ -32,7 +32,7 @@ namespace StudyCafe.Data
         public int RemainStudyRoomTime { get; set; }
         public int RemainSeatTime { get; set; }
         public bool Admin { get; set; }
-        public bool LoginStatus { get; set; }
+        public bool CheckInStatus { get; set; }
         public Nullable<int> PictureID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

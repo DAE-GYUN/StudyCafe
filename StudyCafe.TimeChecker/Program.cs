@@ -15,9 +15,9 @@ namespace StudyCafe.TimeChecker
         {
             DbContextCreator.Context = () => new KoreanStudyCafeEntities();
 
-            List<User> loginedUsers = Dao.User.GetByLoginStatus(true);
+            List<User> CheckInStatus = Dao.User.GetByCheckInStatus(true);
 
-            foreach (var user in loginedUsers)
+            foreach (var user in CheckInStatus)
             {
                 if (user.RemainSeatTime != 0)
                 {
