@@ -63,23 +63,78 @@ namespace WindowsFormsApp1
             //Item k = _item.ItemID;
 
             //uscItem.AddItem(k);
-
-            if (txbPrice.Text=="4000")
+            if (txbPrice.Text == "4000")
             {
                 Item item = Dao.Item.GetByPK(10);
                 uscItem.AddItem(item);
+
+                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+                    int userCredential = Credential.Instance.User.UserID;
+                    int userKey = Dao.User.GetByUserKey(userCredential);
+
+
+                    int lockerTime = Credential.Instance.User.RemainLockerTime += 10080;
+
+                    User user = Dao.User.GetByPK(userKey);
+                    user.RemainLockerTime = lockerTime;
+                    Dao.User.Update(user);
+
+                    DialogResult = DialogResult.Cancel;
+                }
+                else
+                {
+                    DialogResult = DialogResult.Cancel;
+                }
             }
 
             if (txbPrice.Text == "8000")
             {
                 Item item = Dao.Item.GetByPK(11);
                 uscItem.AddItem(item);
+                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+                    int userCredential = Credential.Instance.User.UserID;
+                    int userKey = Dao.User.GetByUserKey(userCredential);
+
+
+                    int lockerTime = Credential.Instance.User.RemainLockerTime += 30240;
+
+                    User user = Dao.User.GetByPK(userKey);
+                    user.RemainLockerTime = lockerTime;
+                    Dao.User.Update(user);
+
+                    DialogResult = DialogResult.Cancel;
+                }
+                else
+                {
+                    DialogResult = DialogResult.Cancel;
+                }
             }
 
             if (txbPrice.Text == "11500")
             {
                 Item item = Dao.Item.GetByPK(12);
                 uscItem.AddItem(item);
+                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int userCredential = Credential.Instance.User.UserID;
+                    int userKey = Dao.User.GetByUserKey(userCredential);
+
+
+                    int lockerTime = Credential.Instance.User.RemainLockerTime += 50040;
+
+                    User user = Dao.User.GetByPK(userKey);
+                    user.RemainLockerTime = lockerTime;
+                    Dao.User.Update(user);
+                    DialogResult = DialogResult.Cancel;
+                }
+                else
+                {
+                    DialogResult = DialogResult.Cancel;
+                }
             }
 
 
