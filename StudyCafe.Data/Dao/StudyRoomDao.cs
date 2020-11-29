@@ -30,5 +30,13 @@ namespace StudyCafe.Data
 
             }
         }
+
+        public StudyRoom GetByUserID(int userID)
+        {
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                return context.StudyRooms.FirstOrDefault(x => x.UserID == userID);
+            }
+        }
     }
 }

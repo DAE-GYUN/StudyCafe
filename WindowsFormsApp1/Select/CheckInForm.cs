@@ -30,9 +30,31 @@ namespace WindowsFormsApp1
             base.OnLoad(e);
 
             if (_select == "StudyRoom")
-                groupBox3.Enabled = false;
+                gbSeatNumber.Enabled = false;
             else
-                groupBox2.Enabled = false;
+                gbStudyRoomNumber.Enabled = false;
+
+            List<Seat> seats = Dao.Seat.GetAll();
+            for (int i = 0; i < 24; i++)
+            {
+                if (seats[i].UserID != null)
+                {
+                    Seat seat = Dao.Seat.GetByUserID((int)(seats[i].UserID));
+
+                    gbSeatNumber.Controls[int.Parse(seat.Name)-1].Enabled = false;
+                }
+            }
+
+            List<StudyRoom> studyRooms = Dao.StudyRoom.GetAll();
+            for (int i = 0; i < 4; i++)
+            {
+                if(studyRooms[i].UserID != null)
+                {
+                    StudyRoom studyRoom = Dao.StudyRoom.GetByUserID((int)(studyRooms[i].UserID));
+
+                    gbStudyRoomNumber.Controls[int.Parse(studyRoom.Name) - 1].Enabled = false;
+                }
+            }
 
 
         }
