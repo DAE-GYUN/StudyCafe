@@ -24,6 +24,8 @@ namespace StudyCafe.Data
             }
         }
 
+        
+
         protected override Expression<Func<User, bool>> IsKey(int key)
         {
             return x => x.UserID == key;

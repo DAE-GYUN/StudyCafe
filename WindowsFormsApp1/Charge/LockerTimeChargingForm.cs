@@ -183,5 +183,10 @@ namespace WindowsFormsApp1
         {
            
         }
+
+        private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
