@@ -42,15 +42,11 @@ namespace StudyCafe.Data
             }
         }
 
-        public int GetByUserID(int userId)
+        public Seat GetByUserID(int userID)
         {
             using (var context = new KoreanStudyCafeEntities())
             {
-                var query = from x in context.Seats
-                            where x.UserID == userId
-                            select x.SeatID;
-
-                return query.FirstOrDefault();
+                return context.Seats.FirstOrDefault(x => x.UserID == userID);
             }
         }
     }
