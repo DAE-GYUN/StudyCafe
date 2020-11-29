@@ -41,19 +41,19 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn6Hour = new System.Windows.Forms.Button();
+            this.btn4Hour = new System.Windows.Forms.Button();
+            this.btn2Hour = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn2Hour = new System.Windows.Forms.Button();
-            this.btn4Hour = new System.Windows.Forms.Button();
-            this.btn6Hour = new System.Windows.Forms.Button();
             this.uscItem = new WindowsFormsApp1.PaymentControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPurchase
@@ -64,10 +64,10 @@ namespace WindowsFormsApp1
             this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPurchase.FlatAppearance.BorderSize = 0;
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Location = new System.Drawing.Point(583, 2);
+            this.btnPurchase.Location = new System.Drawing.Point(582, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(180, 46);
+            this.btnPurchase.Size = new System.Drawing.Size(179, 46);
             this.btnPurchase.TabIndex = 10;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = false;
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(396, 2);
+            this.btnAddToCart.Location = new System.Drawing.Point(395, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(181, 46);
@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
             this.btnBack.Location = new System.Drawing.Point(210, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(180, 46);
+            this.btnBack.Size = new System.Drawing.Size(179, 46);
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -217,6 +217,51 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel4.Size = new System.Drawing.Size(154, 218);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn6Hour);
+            this.groupBox1.Controls.Add(this.btn4Hour);
+            this.groupBox1.Controls.Add(this.btn2Hour);
+            this.groupBox1.Location = new System.Drawing.Point(31, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(102, 173);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // btn6Hour
+            // 
+            this.btn6Hour.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn6Hour.Location = new System.Drawing.Point(6, 135);
+            this.btn6Hour.Name = "btn6Hour";
+            this.btn6Hour.Size = new System.Drawing.Size(75, 23);
+            this.btn6Hour.TabIndex = 0;
+            this.btn6Hour.Text = "6시간";
+            this.btn6Hour.UseVisualStyleBackColor = true;
+            this.btn6Hour.Click += new System.EventHandler(this.btn6Hour_Click);
+            // 
+            // btn4Hour
+            // 
+            this.btn4Hour.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn4Hour.Location = new System.Drawing.Point(6, 81);
+            this.btn4Hour.Name = "btn4Hour";
+            this.btn4Hour.Size = new System.Drawing.Size(75, 23);
+            this.btn4Hour.TabIndex = 0;
+            this.btn4Hour.Text = "4시간";
+            this.btn4Hour.UseVisualStyleBackColor = true;
+            this.btn4Hour.Click += new System.EventHandler(this.btn4Hour_Click);
+            // 
+            // btn2Hour
+            // 
+            this.btn2Hour.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn2Hour.Location = new System.Drawing.Point(6, 36);
+            this.btn2Hour.Name = "btn2Hour";
+            this.btn2Hour.Size = new System.Drawing.Size(75, 23);
+            this.btn2Hour.TabIndex = 0;
+            this.btn2Hour.Text = "2시간";
+            this.btn2Hour.UseVisualStyleBackColor = true;
+            this.btn2Hour.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 5;
@@ -224,7 +269,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.41521F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel5.Controls.Add(this.btnBack, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnPurchase, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAddToCart, 2, 0);
@@ -252,51 +297,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel6.TabIndex = 17;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btn6Hour);
-            this.groupBox1.Controls.Add(this.btn4Hour);
-            this.groupBox1.Controls.Add(this.btn2Hour);
-            this.groupBox1.Location = new System.Drawing.Point(31, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(102, 173);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // btn2Hour
-            // 
-            this.btn2Hour.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn2Hour.Location = new System.Drawing.Point(6, 36);
-            this.btn2Hour.Name = "btn2Hour";
-            this.btn2Hour.Size = new System.Drawing.Size(75, 23);
-            this.btn2Hour.TabIndex = 0;
-            this.btn2Hour.Text = "2시간";
-            this.btn2Hour.UseVisualStyleBackColor = true;
-            this.btn2Hour.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn4Hour
-            // 
-            this.btn4Hour.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn4Hour.Location = new System.Drawing.Point(6, 81);
-            this.btn4Hour.Name = "btn4Hour";
-            this.btn4Hour.Size = new System.Drawing.Size(75, 23);
-            this.btn4Hour.TabIndex = 0;
-            this.btn4Hour.Text = "4시간";
-            this.btn4Hour.UseVisualStyleBackColor = true;
-            this.btn4Hour.Click += new System.EventHandler(this.btn4Hour_Click);
-            // 
-            // btn6Hour
-            // 
-            this.btn6Hour.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn6Hour.Location = new System.Drawing.Point(6, 135);
-            this.btn6Hour.Name = "btn6Hour";
-            this.btn6Hour.Size = new System.Drawing.Size(75, 23);
-            this.btn6Hour.TabIndex = 0;
-            this.btn6Hour.Text = "6시간";
-            this.btn6Hour.UseVisualStyleBackColor = true;
-            this.btn6Hour.Click += new System.EventHandler(this.btn6Hour_Click);
-            // 
             // uscItem
             // 
             this.uscItem.Location = new System.Drawing.Point(3, 340);
@@ -321,9 +321,9 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,16 +15,22 @@ namespace WindowsFormsApp1
         public LockersForm()
         {
             InitializeComponent();
+            
         }
+    
+        public string lockerNumber { get; set; }
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
         }
         private void btnLocker1_Click(object sender, EventArgs e)
         {
-            LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm();
+
+            lockerNumber = ((Button)sender).Tag.ToString();
+            LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(lockerNumber);
             lockerTimeChargingForm.ShowDialog();
             Close();
+            
         }
 
         private void btnLocker2_Click(object sender, EventArgs e)

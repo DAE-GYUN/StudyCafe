@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
             this.btnBack.Location = new System.Drawing.Point(220, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(172, 42);
+            this.btnBack.Size = new System.Drawing.Size(172, 41);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Location = new System.Drawing.Point(409, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(167, 42);
+            this.btnAddToCart.Size = new System.Drawing.Size(167, 41);
             this.btnAddToCart.TabIndex = 3;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.btnPurchase.Location = new System.Drawing.Point(593, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(161, 42);
+            this.btnPurchase.Size = new System.Drawing.Size(161, 41);
             this.btnPurchase.TabIndex = 3;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = false;
@@ -275,7 +275,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.88235F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.83333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.111111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 340);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 339);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // tableLayoutPanel2
@@ -298,7 +298,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 46);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 45);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -382,7 +382,7 @@ namespace WindowsFormsApp1
             // 
             // uscItem
             // 
-            this.uscItem.Location = new System.Drawing.Point(3, 351);
+            this.uscItem.Location = new System.Drawing.Point(3, 350);
             this.uscItem.Name = "uscItem";
             this.uscItem.Size = new System.Drawing.Size(794, 96);
             this.uscItem.TabIndex = 7;
