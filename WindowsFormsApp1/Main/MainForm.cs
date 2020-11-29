@@ -54,13 +54,17 @@ namespace WindowsFormsApp1
             {
                 if (MessageBox.Show("퇴실하시겠습니까?", "퇴실Or취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Credential.Instance.User.CheckInStatus = false;
-                    //Dao.Seat.GetByKey((Dao.Seat.GetByUserID(Credential.Instance.User.UserID))).UserID;
-                    //Seat seat = 
-                }
-                else
-                {
-                    MessageBox.Show("메인으로");
+                    int userCredential = Credential.Instance.User.UserID;
+                    int userId = Dao.User.GetByUserKey(userCredential);
+
+                    Seat seat = Dao.Seat.GetByUserID(userCredential);
+                    seat.UserID = null;
+                    Dao.Seat.Update(seat);
+
+                    User user = Dao.User.GetByPK(userId);
+                    user.CheckInStatus = false;
+                    Dao.User.Update(user);
+                    Close();
                 }
             }
             else
