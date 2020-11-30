@@ -50,11 +50,11 @@
 
 ## ■ **프로그램** **윈폼** 진행도
 
-<img src="./Documents/MarkDown/프로그램 진행도.png" style="zoom:50%;" />
+<img src="./Documents/MarkDown/ProgramProgressDiagram.png" style="zoom:50%;" />
 
 
 
-## ■ **프로그램** **윈폼** 진행도
+## ■ 데이터베이스 드래프트
 
 ![](.\Documents\MarkDown\DatabaseDraft.png)
 
@@ -66,9 +66,9 @@
 
 ## ■ UI 다이어그램
 
-<img src="./Documents/MarkDown/UI개발과정.png" style="zoom: 67%;" />
+<img src="./Documents/MarkDown/UIDevelop.png" style="zoom: 67%;" />
 
-## ■ UI 다이어그램
+## ■ 클래스 다이어그램
 
 ## <img src=".\Documents\MarkDown\ClassDiagram.png" style="zoom:67%;" />
 
