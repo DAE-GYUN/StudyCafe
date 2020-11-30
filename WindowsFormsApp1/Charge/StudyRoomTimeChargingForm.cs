@@ -166,5 +166,10 @@ namespace WindowsFormsApp1
             txbPrice.Text = item.Price.ToString();
             txbChargingTime.Text = item.Name.ToString();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

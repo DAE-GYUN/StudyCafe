@@ -277,6 +277,11 @@
           <EntitySet Name="Reports" EntityType="KoreanStudyCafeModel.Report" />
           <EntitySet Name="Seats" EntityType="KoreanStudyCafeModel.Seat" />
           <EntitySet Name="StudyRooms" EntityType="KoreanStudyCafeModel.StudyRoom" />
+          <EntitySet Name="Users" EntityType="KoreanStudyCafeModel.User" />
+          <AssociationSet Name="FK_Invoice_User" Association="KoreanStudyCafeModel.FK_Invoice_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
           <AssociationSet Name="FK_InvoiceLine_Invoice" Association="KoreanStudyCafeModel.FK_InvoiceLine_Invoice">
             <End Role="Invoice" EntitySet="Invoices" />
             <End Role="InvoiceLine" EntitySet="InvoiceLines" />
@@ -284,11 +289,6 @@
           <AssociationSet Name="FK_InvoiceLine_Item" Association="KoreanStudyCafeModel.FK_InvoiceLine_Item">
             <End Role="Item" EntitySet="Items" />
             <End Role="InvoiceLine" EntitySet="InvoiceLines" />
-          </AssociationSet>
-          <EntitySet Name="Users" EntityType="KoreanStudyCafeModel.User" />
-          <AssociationSet Name="FK_Invoice_User" Association="KoreanStudyCafeModel.FK_Invoice_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Invoice" EntitySet="Invoices" />
           </AssociationSet>
           <AssociationSet Name="FK_Lockers_User" Association="KoreanStudyCafeModel.FK_Lockers_User">
             <End Role="User" EntitySet="Users" />
@@ -314,7 +314,7 @@
             <End Role="User" EntitySet="Users" />
             <End Role="StudyRoom" EntitySet="StudyRooms" />
           </AssociationSet>
-          </EntityContainer>
+        </EntityContainer>
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="InvoiceID" />
@@ -323,8 +323,8 @@
           <Property Name="InvoiceDatetime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="InvoicePlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="InvoiceLines" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="Invoice" ToRole="InvoiceLine" />
           <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Invoice_User" FromRole="Invoice" ToRole="User" />
+          <NavigationProperty Name="InvoiceLines" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="Invoice" ToRole="InvoiceLine" />
         </EntityType>
         <EntityType Name="InvoiceLine">
           <Key>
@@ -404,34 +404,6 @@
           <Property Name="UserID" Type="Int32" />
           <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_StudyRoom_User" FromRole="StudyRoom" ToRole="User" />
         </EntityType>
-        <Association Name="FK_InvoiceLine_Invoice">
-          <End Type="KoreanStudyCafeModel.Invoice" Role="Invoice" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="KoreanStudyCafeModel.InvoiceLine" Role="InvoiceLine" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Invoice">
-              <PropertyRef Name="InvoiceID" />
-            </Principal>
-            <Dependent Role="InvoiceLine">
-              <PropertyRef Name="InvoiceID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_InvoiceLine_Item">
-          <End Type="KoreanStudyCafeModel.Item" Role="Item" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="KoreanStudyCafeModel.InvoiceLine" Role="InvoiceLine" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Item">
-              <PropertyRef Name="ItemID" />
-            </Principal>
-            <Dependent Role="InvoiceLine">
-              <PropertyRef Name="ItemID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
@@ -462,6 +434,34 @@
             </Principal>
             <Dependent Role="Invoice">
               <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoiceLine_Invoice">
+          <End Type="KoreanStudyCafeModel.Invoice" Role="Invoice" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KoreanStudyCafeModel.InvoiceLine" Role="InvoiceLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="InvoiceID" />
+            </Principal>
+            <Dependent Role="InvoiceLine">
+              <PropertyRef Name="InvoiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoiceLine_Item">
+          <End Type="KoreanStudyCafeModel.Item" Role="Item" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KoreanStudyCafeModel.InvoiceLine" Role="InvoiceLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemID" />
+            </Principal>
+            <Dependent Role="InvoiceLine">
+              <PropertyRef Name="ItemID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
