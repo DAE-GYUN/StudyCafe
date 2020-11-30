@@ -3,6 +3,10 @@
 
 《2020-11-23 ~ 2020-11-29》
 
+____
+
+
+
 ## ■ 참여인원
 
 >### 구성원
@@ -45,11 +49,11 @@
 
 ## ■ 프로그램 드래프트 
 
-<img src="C:\Users\학생\Desktop\Down\Oven.png" style="zoom:50%;" />
+<img src="./MarkDown/Oven.png" style="zoom:50%;" />
 
 ## ■ **프로그램** **윈폼** 진행도
 
-<img src="C:\Users\학생\Desktop\Down\프로그램 진행도.png" style="zoom:50%;" />
+<img src="./MarkDown/프로그램 진행도.png" style="zoom:50%;" />
 
 >
 
@@ -57,19 +61,19 @@
 
 ## ■ **프로그램** **윈폼** 진행도
 
-![](C:\Users\학생\Desktop\Down\데이터베이스 드래프트.png)
+![데이터베이스 드래프트](./MarkDown/데이터베이스 드래프트.png)
 
 
 
 ## ■ 데이터베이스 다이어그램
 
-'![](C:\Users\학생\Desktop\Down\데이터베이스 개발과정.png)
+'![](./MarkDown/데이터베이스 개발과정.png)
 
 > '
 
 ## ■ UI 다이어그램
 
-<img src="C:\Users\학생\Desktop\Down\UI개발과정.png" style="zoom: 67%;" />
+<img src="./MarkDown/UI개발과정.png" style="zoom: 67%;" />
 
 ## ■ 코드개발과정
 
@@ -157,3 +161,18 @@
 
 - 구성관리자에서 x64 플랫폼으로 수정후 실행하는 방법으로 사용하다가 Nuget 패키지에서 AnyCPU 버전으로 다운받아 사용함
 - 버전을 바꾼 후 실행은 가능하나 플랫폼 차이를 정확하게 이해하지는 못함 
+
+
+
+
+
+# sql창에 이미지를 넣었을때 크기 변화가 안되는 문제
+
+### 증상
+- #### 창을 늘렸을때 sql창에 넣었던 이미지가 커지지않음
+
+### 원인
+- 각 이미지에다가 도킹을 하지않아 이미지의 변화가 없다고 판단했다
+
+### 결과
+- #### 각 이미지에 TableLayouPanel을 이용해 창의 크기에 맞게 설정이 되었다
