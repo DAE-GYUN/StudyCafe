@@ -186,7 +186,6 @@ namespace WindowsFormsApp1
             this.uscItem.Name = "uscItem";
             this.uscItem.Size = new System.Drawing.Size(694, 97);
             this.uscItem.TabIndex = 20;
-            this.uscItem.Load += new System.EventHandler(this.paymentControl1_Load);
             // 
             // tableLayoutPanel2
             // 

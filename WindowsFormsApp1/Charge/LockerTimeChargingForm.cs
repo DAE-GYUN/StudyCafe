@@ -80,26 +80,25 @@ namespace WindowsFormsApp1
 
                     int userCredential = Credential.Instance.User.UserID;
                     int userKey = Dao.User.GetByUserKey(userCredential);
-
-
                     int lockerTime = Credential.Instance.User.RemainLockerTime += 10080;
 
                     User user = Dao.User.GetByPK(userKey);
-                    
                     user.RemainLockerTime = lockerTime;
-                    
                     Dao.User.Update(user);
 
-
-                    Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
-
-                    locker.UserID = userCredential;
-                    Dao.Locker.Update(locker);
                     
+                    Locker oldLocker= Dao.Locker.GetByUserId(userCredential);
+                    if (oldLocker != null)
+                    {
+                        oldLocker.UserID = null;
+                        Dao.Locker.Update(oldLocker);
+                    }
 
+                    Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    newLocker.UserID = userCredential;
+                    Dao.Locker.Update(newLocker);
+                    
                     Close();
-
-                    
                 }
                 else
                 {
@@ -124,15 +123,22 @@ namespace WindowsFormsApp1
                     user.RemainLockerTime = lockerTime;
                     Dao.User.Update(user);
 
-                    Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
-                    locker.UserID = userCredential;
-                    Dao.Locker.Update(locker);
+                    Locker oldLocker = Dao.Locker.GetByUserId(userCredential);
+                    if (oldLocker != null)
+                    {
+                        oldLocker.UserID = null;
+                        Dao.Locker.Update(oldLocker);
+                    }
 
-                    DialogResult = DialogResult.Cancel;
+                    Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    newLocker.UserID = userCredential;
+                    Dao.Locker.Update(newLocker);
+
+                    Close();
                 }
                 else
                 {
-                    DialogResult = DialogResult.Cancel;
+                    Close();
                 }
             }
 
@@ -152,19 +158,24 @@ namespace WindowsFormsApp1
                     user.RemainLockerTime = lockerTime;
                     Dao.User.Update(user);
 
-                    Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
-                    locker.UserID = userCredential;
-                    Dao.Locker.Update(locker);
-                    DialogResult = DialogResult.Cancel;
+                    Locker oldLocker = Dao.Locker.GetByUserId(userCredential);
+                    if (oldLocker != null)
+                    {
+                        oldLocker.UserID = null;
+                        Dao.Locker.Update(oldLocker);
+                    }
+
+                    Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    newLocker.UserID = userCredential;
+                    Dao.Locker.Update(newLocker);
+
+                    Close();
                 }
                 else
                 {
-                    DialogResult = DialogResult.Cancel;
+                    Close();
                 }
             }
-
-
-
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
@@ -176,16 +187,6 @@ namespace WindowsFormsApp1
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
-
-        }
-
-        private void paymentControl1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }
