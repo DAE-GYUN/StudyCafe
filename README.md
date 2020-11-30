@@ -29,47 +29,44 @@
 
 
 
->| 언어/프로그램               | 목적                        |
->| --------------------------- | --------------------------- |
->| C# 8.0(WinForm) | 구현 언어                   |
->| .Net FrameWork 4.8         |  프레임워크                      |
->|  EntitiyFrameWork 6.2        |         프레임워크               |
->| Visual Studio Community 2019 v16.8 | IDE                         |
->| GitHub, GithubDesktop       | 팀간 프로젝트 공유          |
->| MS-SSMS v18.6                       | 데이터 베이스               |
->| KaKaoOven                   | UI 드래프트 제작            |
->| Drawing.io                  | 알고리즘, 데이터베이스 도식 |
->| PowerPoint                  | UI 이미지 제작              |
->| OpenCV             | 영상처리 라이브러리              |
+>| 언어/프로그램         | 목적                        |
+>| --------------------- | --------------------------- |
+>| C#(WinForm)           | 구현 언어                   |
+>| .Net FrameWork 4.8    | 프레임워크                  |
+>| .EntityFrameWork 6.2  | 프레임워크                  |
+>| OpenCV                | 영상처리 라이브러리         |
+>| Visual Studio 2019    | IDE                         |
+>| GitHub, GithubDesktop | 팀간 프로젝트 공유          |
+>| SSMS                  | 데이터 베이스               |
+>| KaKaoOven             | UI 드래프트 제작            |
+>| Drawing.io            | 알고리즘, 데이터베이스 도식 |
+>| PowerPoint            | UI 이미지 제작              |
+
 
 
 ## ■ 프로그램 드래프트 
 
-<img src="C:\Users\학생\Desktop\Down\Oven.png" style="zoom:50%;" />
+<img src="./Documents/MarkDown/Oven.png" style="zoom:50%;" />
 
 ## ■ **프로그램** **윈폼** 진행도
 
-<img src="C:\Users\학생\Desktop\Down\프로그램 진행도.png" style="zoom:50%;" />
-
->
+<img src="./Documents/MarkDown/프로그램 진행도.png" style="zoom:50%;" />
 
 
 
 ## ■ **프로그램** **윈폼** 진행도
 
-![](C:\Users\학생\Desktop\Down\데이터베이스 드래프트.png)
+![](./Documents/MarkDown/데이터베이스 드래프트.png)
 
 
 
 ## ■ 데이터베이스 다이어그램
 
-'![](C:\Users\학생\Desktop\Down\데이터베이스 개발과정.png)
-
-> '
+'![](./Documents/MarkDown/데이터베이스 개발과정.png)
 
 ## ■ UI 다이어그램
 
-<img src="C:\Users\학생\Desktop\Down\UI개발과정.png" style="zoom: 67%;" />
+<img src="./Documents/MarkDown/UI개발과정.png" style="zoom: 67%;" />
 
 ## ■ 코드개발과정
 
@@ -157,3 +154,19 @@
 
 - 구성관리자에서 x64 플랫폼으로 수정후 실행하는 방법으로 사용하다가 Nuget 패키지에서 AnyCPU 버전으로 다운받아 사용함
 - 버전을 바꾼 후 실행은 가능하나 플랫폼 차이를 정확하게 이해하지는 못함 
+
+
+
+# sql창에 이미지를 넣었을때 크기 변화가 안되는 문제증상
+
+
+
+- 창을 늘렸을때 sql창에 넣었던 이미지가 커지지않음
+
+### 원인
+
+- 각 이미지에다가 도킹을 하지않아 이미지의 변화가 없다고 판단했다
+
+### 결과
+
+- 각 이미지에 TableLayouPanel을 이용해 창의 크기에 맞게 설정이 되었다
