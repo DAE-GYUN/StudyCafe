@@ -56,13 +56,13 @@
 
 ## ■ **프로그램** **윈폼** 진행도
 
-![](./Documents/MarkDown/데이터베이스 드래프트.png)
+![](.\Documents\MarkDown\DatabaseDraft.png)
 
 
 
 ## ■ 데이터베이스 다이어그램
 
-'![](./Documents/MarkDown/데이터베이스 개발과정.png)
+'![](./Documents/MarkDown/DatabaseDiagram.png)
 
 ## ■ UI 다이어그램
 
