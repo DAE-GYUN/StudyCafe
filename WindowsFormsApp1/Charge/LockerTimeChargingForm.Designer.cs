@@ -47,6 +47,10 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.txbRemainTime = new System.Windows.Forms.TextBox();
             this.txbLockerRemainTime = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -285,6 +289,10 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.Controls.Add(this.txbRemainTime, 1, 5);
             this.tableLayoutPanel6.Controls.Add(this.txbLockerRemainTime, 1, 3);
             this.tableLayoutPanel6.Controls.Add(this.txbUserNumber, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label2, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.label3, 0, 5);
+            this.tableLayoutPanel6.Controls.Add(this.label4, 0, 7);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 2);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -319,11 +327,46 @@ namespace WindowsFormsApp1
             this.txbLockerRemainTime.Size = new System.Drawing.Size(97, 21);
             this.txbLockerRemainTime.TabIndex = 16;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 12);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "UserNumber";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 12);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "LockerRemainTime";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 12);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "RemainTime";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 12);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Price";
+            // 
             // LockerTimeChargingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.LockerTimeCharge__2_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -360,5 +403,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TextBox txbRemainTime;
         private System.Windows.Forms.TextBox txbLockerRemainTime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
