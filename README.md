@@ -43,12 +43,11 @@
 
 ### 라이브러리
 - OpenCV (영상 처리 라이브러리)
-'![OpenCv](./Documents/MarkDown/OpenCv.jpg)
 
 ## ■ 데이터베이스 다이어그램
 
 '![DatabaseDiagram](./Documents/MarkDown/DatabaseDiagram.png)
-## ■ 유즈캐이스 다이어그램
+## ■ 유즈케이스 다이어그램
 '![UseCaseDiagram](./Documents/MarkDown/UseCaseDiagram.png)
 ## ■ 시퀀스 다이어그램
 '![SequenceDiagram](./Documents/MarkDown/SequenceDiagram.jpg)
@@ -72,9 +71,9 @@
 
 - TimeChecker라는 콘솔 프로젝트를 새로 만들어서 디버그 후 .exe파일을 작업 스케줄러를 사용해 1분간격으로 실행시킴
 - 1분마다 콘솔창이 화면에 나타나는 불편함이 있지만 아직 해결하진 못함
-  #### [작업스케줄러 사진]
+  ####
   
-  '![WorkSchedular](./Documents/MarkDown/WorkSchedular.jpg)
+  ![WorkSchedular](./Documents/MarkDown/WorkSchedular.jpg)
 
 
 
@@ -142,7 +141,7 @@
 
 - 구성관리자에서 x64 플랫폼으로 수정후 실행하는 방법으로 사용하다가 Nuget 패키지에서 AnyCPU 버전으로 다운받아 사용함
 - 버전을 바꾼 후 실행은 가능하나 플랫폼 차이를 정확하게 이해하지는 못함 
-
+'![OpenCv](./Documents/MarkDown/OpenCv.jpg)
 
 
 ### sql창에 이미지를 넣었을때 크기 변화가 안되는 문제증상
@@ -160,7 +159,7 @@
 - 각 이미지에 TableLayouPanel을 이용해 창의 크기에 맞게 설정이 되었음
 
 ---
-#### 좌석버튼을 눌렸을때 데이터가 다음 폼으로 전달이 안되는 현상 
+### 좌석버튼을 눌렸을때 데이터가 다음 폼으로 전달이 안되는 현상 
 
 #### 증상
 - 좌석 버튼을 눌르고 입실버튼을 누르면 좌석확인폼, 스터디룸좌석 확인폼, 사물함번호 확인폼
