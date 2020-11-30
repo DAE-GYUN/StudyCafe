@@ -19,61 +19,43 @@
 
 ## ■ 개요
 
-국가기술컨소시움 교육간 배운 기술을 실습하고자교육생 5명이 팀을 이뤄 미니 프로젝트를 진행함. 한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
+ 한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
 
 
 
 
 
-## ■ 사용언어 및 프로그램 
+## ■ 사용 기술 
 
+### 언어
+- C# 8.0
 
+### 프레임워크
+- .Net FrameWork 4.8
+- Entitiy FrameWork 6.2
+- WinForm
 
->| 언어/프로그램         | 목적                        |
->| --------------------- | --------------------------- |
->| C#(WinForm)           | 구현 언어                   |
->| .Net FrameWork 4.8    | 프레임워크                  |
->| .EntityFrameWork 6.2  | 프레임워크                  |
->| OpenCV                | 영상처리 라이브러리         |
->| Visual Studio 2019    | IDE                         |
->| GitHub, GithubDesktop | 팀간 프로젝트 공유          |
->| SSMS                  | 데이터 베이스               |
->| KaKaoOven             | UI 드래프트 제작            |
->| Drawing.io            | 알고리즘, 데이터베이스 도식 |
->| PowerPoint            | UI 이미지 제작              |
+### 데이터베이스
+- MSSQL Server 2019
 
+### 기타 개발환경
+- Microsoft Visual Studio Community 2019 v16.8
 
-
-## ■ 프로그램 드래프트 
-
-<img src="./Documents/MarkDown/Oven.png" style="zoom:50%;" />
-
-## ■ **프로그램** **윈폼** 진행도
-
-<img src="./Documents/MarkDown/ProgramProgressDiagram.png" style="zoom:50%;" />
-
-
-
-## ■ 데이터베이스 드래프트
-
-![](.\Documents\MarkDown\DatabaseDraft.png)
-
-
+### 라이브러리
+- OpenCV (영상 처리 라이브러리)
+'![OpenCv](./Documents/MarkDown/OpenCv.jpg)
 
 ## ■ 데이터베이스 다이어그램
 
-'![](./Documents/MarkDown/DatabaseDiagram.png)
-
-## ■ UI 다이어그램
-
-<img src="./Documents/MarkDown/UIDevelop.png" style="zoom: 67%;" />
-
+'![DatabaseDiagram](./Documents/MarkDown/DatabaseDiagram.png)
+## ■ 유즈캐이스 다이어그램
+'![UseCaseDiagram](./Documents/MarkDown/UseCaseDiagram.png)
+## ■ 시퀀스 다이어그램
+'![SequenceDiagram](./Documents/MarkDown/SequenceDiagram.jpg)
 ## ■ 클래스 다이어그램
+'![ClassDiagram](./Documents/MarkDown/ClassDiagram.png)
 
-## <img src=".\Documents\MarkDown\ClassDiagram.png" style="zoom:67%;" />
-
-## ■ 코드개발과정
-
+## ■ 코드 문제점 해결
 
 
 ### 타이머를 놓았을때 먹통이되는 문제
@@ -90,7 +72,9 @@
 
 - TimeChecker라는 콘솔 프로젝트를 새로 만들어서 디버그 후 .exe파일을 작업 스케줄러를 사용해 1분간격으로 실행시킴
 - 1분마다 콘솔창이 화면에 나타나는 불편함이 있지만 아직 해결하진 못함
-  [작업스케줄러 사진]
+  #### [작업스케줄러 사진]
+  
+  '![WorkSchedular](./Documents/MarkDown/WorkSchedular.jpg)
 
 
 
@@ -161,16 +145,104 @@
 
 
 
-# sql창에 이미지를 넣었을때 크기 변화가 안되는 문제증상
+### sql창에 이미지를 넣었을때 크기 변화가 안되는 문제증상
 
 
 
 - 창을 늘렸을때 sql창에 넣었던 이미지가 커지지않음
 
-### 원인
+#### 원인
 
-- 각 이미지에다가 도킹을 하지않아 이미지의 변화가 없다고 판단했다
+- 각 이미지에다가 도킹을 하지않아 이미지의 변화가 없다고 판단했음
 
-### 결과
+#### 결과
 
-- 각 이미지에 TableLayouPanel을 이용해 창의 크기에 맞게 설정이 되었다
+- 각 이미지에 TableLayouPanel을 이용해 창의 크기에 맞게 설정이 되었음
+
+---
+#### 좌석버튼을 눌렸을때 데이터가 다음 폼으로 전달이 안되는 현상 
+
+#### 증상
+- 좌석 버튼을 눌르고 입실버튼을 누르면 좌석확인폼, 스터디룸좌석 확인폼, 사물함번호 확인폼
+등에 User에 대한 데이터가 넘어가지 않음.
+
+#### 원인
+
+-  Singleton으로 만든 Credencial의 UserId 만으로 User가 현재 좌석이 있는지 확인할수가 없었음.
+
+
+#### 결과 
+- UserForm에 CheckInStatus 를 bool 타입으로 만들어 현재 좌석이 있는지 없는지를 확인했고
+  현재가지고 있는 좌석이 없다면 SeatForm 에 UserId를 업데이트 하게 했음.
+---
+```csharp
+        private void btnCheckIn_Click(object sender, EventArgs e)
+        {
+            int userCredential = Credential.Instance.User.UserID;
+            int userId = Dao.User.GetByUserKey(userCredential);
+
+            User user = Dao.User.GetByPK(userId);
+            user.CheckInStatus = true;
+            Dao.User.Update(user);
+
+            Seat seat = Dao.Seat.GetByPK(int.Parse(_seatNumber));
+            seat.UserID = userCredential;
+            Dao.Seat.Update(seat);
+
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+```
+
+---
+### 데이터베이스에서 SeatForm에 UserId를 UserForm에 SeatId 를 집어고 서로가 Primary Key의 관계가 지어졌을때 데이터 오류가 남
+    
+#### 증상
+- 프로그램을 돌렸을때 데이터의 무한순환이 발생함
+#### 원인
+- 서로 다른 Form에 Primary Key 가 들어있는 관계가 지어졌었음
+
+#### 결과
+- SeatForm 에만 UserId를 집어넣어 무한순환을 끊어 버림. 각각의 Form에 필요한 데이터라고 생각했지만 데이터가 한곳에만 있어도 서로 작동 하는것도 문제가 없음. 
+
+---
+### PaymentControl이 들어간 Form에서 DateGridVew에 데이터 삽입이 안되는 문제
+
+#### 증상
+- 디버깅시 UserControl에 데이터는 들어가지만 DateGridVew에 표시가 되지 않음. 
+
+#### 원인
+- UserControl에 있는 Add 함수에 ResetBindings()를 해주지 않아 데이터를 출력하지 못함. 
+
+#### 결과
+- PaymentControl에 Add 함수안에 ResetBindings(false)를 추가해 출력함.
+---
+```csharp
+    public partial class PaymentControl : UserControl
+    {
+        public PaymentControl()
+        {
+            InitializeComponent();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            bdsItem.DataSource = _items;
+        }
+        private List<Item> _items = new List<Item>();
+        
+        public void AddItem(Item item)
+        {
+            
+            _items.Add(item);
+
+            bdsItem.ResetBindings(false);
+         
+            txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
+        }
+
+    }
+
+---
+
