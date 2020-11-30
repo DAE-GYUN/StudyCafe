@@ -50,6 +50,8 @@ namespace WindowsFormsApp1
             movedSeat.UserID = Credential.Instance.User.UserID;
             Dao.Seat.Update(movedSeat);
 
+            MessageBox.Show($"{movedSeat.Name}번 자리로 이동되었습니다");
+
             DialogResult = DialogResult.OK;
             Close();
         }
