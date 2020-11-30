@@ -142,7 +142,7 @@
 - 구성관리자에서 x64 플랫폼으로 수정후 실행하는 방법으로 사용하다가 Nuget 패키지에서 AnyCPU 버전으로 다운받아 사용함
 - 버전을 바꾼 후 실행은 가능하나 플랫폼 차이를 정확하게 이해하지는 못함 
 ![OpenCv](./Documents/MarkDown/OpenCv.jpg)
-
+![Platform](./Documents/MarkDown/Platform.jpg)
 
 ### sql창에 이미지를 넣었을때 크기 변화가 안되는 문제증상
 
