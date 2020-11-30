@@ -46,13 +46,13 @@
 
 ## ■ 데이터베이스 다이어그램
 
-'![DatabaseDiagram](./Documents/MarkDown/DatabaseDiagram.png)
+![DatabaseDiagram](./Documents/MarkDown/DatabaseDiagram.png)
 ## ■ 유즈케이스 다이어그램
-'![UseCaseDiagram](./Documents/MarkDown/UseCaseDiagram.png)
+![UseCaseDiagram](./Documents/MarkDown/UseCaseDiagram.png)
 ## ■ 시퀀스 다이어그램
-'![SequenceDiagram](./Documents/MarkDown/SequenceDiagram.jpg)
+![SequenceDiagram](./Documents/MarkDown/SequenceDiagram.jpg)
 ## ■ 클래스 다이어그램
-'![ClassDiagram](./Documents/MarkDown/ClassDiagram.png)
+![ClassDiagram](./Documents/MarkDown/ClassDiagram.png)
 
 ## ■ 코드 문제점 해결
 
@@ -141,7 +141,7 @@
 
 - 구성관리자에서 x64 플랫폼으로 수정후 실행하는 방법으로 사용하다가 Nuget 패키지에서 AnyCPU 버전으로 다운받아 사용함
 - 버전을 바꾼 후 실행은 가능하나 플랫폼 차이를 정확하게 이해하지는 못함 
-'![OpenCv](./Documents/MarkDown/OpenCv.jpg)
+![OpenCv](./Documents/MarkDown/OpenCv.jpg)
 
 
 ### sql창에 이미지를 넣었을때 크기 변화가 안되는 문제증상
@@ -242,6 +242,5 @@
         }
 
     }
-
----
+ ```
 
