@@ -83,5 +83,49 @@ namespace WindowsFormsApp1
             Image recImg = Image.FromStream(ms);
             return recImg;
         }
+
+        private void btnPhoneNumberCheck_Click(object sender, EventArgs e)
+        {
+            if(txbUserPhoneNumber.Text.Length < 11)
+            {
+                MessageBox.Show("올바르게 입력하세요");
+            }
+
+            else
+            {
+                Cursor = Cursors.WaitCursor;
+                bgwDuplicateCheck.RunWorkerAsync();
+            }   
+        }
+
+        
+
+        private void bgwDuplicateCheck_DoWork(object sender, DoWorkEventArgs e)
+        {
+            User user = Dao.User.GetByPhoneNumber(txbUserPhoneNumber.Text);
+
+            e.Result = user;
+        }
+
+        private void bgwDuplicateCheck_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+            User user = (User)e.Result;
+
+            if (user != null)
+            {
+                MessageBox.Show("이미 존재하는 번호입니다");
+            }
+
+            else
+            {
+                if (MessageBox.Show("가입 가능한 번호입니다. 사용하시겠습니까?",
+                    "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    btnSignUp.Enabled = true;
+                    txbUserPhoneNumber.ReadOnly = true;
+                }
+            }
+        }
     }
 }

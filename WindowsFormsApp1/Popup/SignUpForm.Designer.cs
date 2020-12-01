@@ -35,12 +35,15 @@ namespace WindowsFormsApp1
             this.txbUserPhoneNumber = new System.Windows.Forms.TextBox();
             this.pbUserImage = new System.Windows.Forms.PictureBox();
             this.btnSnapshot = new System.Windows.Forms.Button();
+            this.btnPhoneNumberCheck = new System.Windows.Forms.Button();
+            this.bgwDuplicateCheck = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserImage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSignUp
             // 
             this.btnSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignUp.Enabled = false;
             this.btnSignUp.FlatAppearance.BorderSize = 0;
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Location = new System.Drawing.Point(446, 350);
@@ -53,6 +56,7 @@ namespace WindowsFormsApp1
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Location = new System.Drawing.Point(600, 350);
@@ -97,6 +101,21 @@ namespace WindowsFormsApp1
             this.btnSnapshot.UseVisualStyleBackColor = true;
             this.btnSnapshot.Click += new System.EventHandler(this.btnSnapshot_Click);
             // 
+            // btnPhoneNumberCheck
+            // 
+            this.btnPhoneNumberCheck.Location = new System.Drawing.Point(600, 232);
+            this.btnPhoneNumberCheck.Name = "btnPhoneNumberCheck";
+            this.btnPhoneNumberCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnPhoneNumberCheck.TabIndex = 5;
+            this.btnPhoneNumberCheck.Text = "중복확인";
+            this.btnPhoneNumberCheck.UseVisualStyleBackColor = true;
+            this.btnPhoneNumberCheck.Click += new System.EventHandler(this.btnPhoneNumberCheck_Click);
+            // 
+            // bgwDuplicateCheck
+            // 
+            this.bgwDuplicateCheck.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwDuplicateCheck_DoWork);
+            this.bgwDuplicateCheck.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwDuplicateCheck_RunWorkerCompleted);
+            // 
             // SignUpForm
             // 
             this.AcceptButton = this.btnSignUp;
@@ -106,6 +125,7 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPhoneNumberCheck);
             this.Controls.Add(this.btnSnapshot);
             this.Controls.Add(this.txbUserPhoneNumber);
             this.Controls.Add(this.txbUserName);
@@ -129,5 +149,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbUserName;
         private System.Windows.Forms.TextBox txbUserPhoneNumber;
         private System.Windows.Forms.Button btnSnapshot;
+        private System.Windows.Forms.Button btnPhoneNumberCheck;
+        private System.ComponentModel.BackgroundWorker bgwDuplicateCheck;
     }
 }

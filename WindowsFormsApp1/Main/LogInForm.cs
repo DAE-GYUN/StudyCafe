@@ -43,6 +43,8 @@ namespace WindowsFormsApp1
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
+    
             bgwLogin.RunWorkerAsync();
         }
 
@@ -60,6 +62,7 @@ namespace WindowsFormsApp1
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            Cursor = Cursors.Arrow;
             User user = (User)e.Result;
 
             if (user != null)
