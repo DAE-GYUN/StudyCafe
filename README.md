@@ -256,3 +256,60 @@
     }
  ```
 
+### 로그인 버튼을 눌렀을때 잠깐의 멈춤현상 발생 문제
+
+#### 증상 
+- 약간의 멈춤 현상은 발생하지만 시간이 지났을때 정상적으로 작동됌
+
+#### 원인
+- 많은 유저들이 등록 되어있고 로그인 할 때 로그인 할 번호를 데이터 에서 
+ 하나하나 비교를 하기 때문에 
+ 데이터 정보를 가져오는 작업에 시간이 걸려 해당 폼에서는 멈춤현상이 발생함
+
+#### 결과
+- backgroundWork를 사용하여 Thread를 작동시킴 따라서 데이터 정보를 가져오는 작업 중에도  해당폼은 멈춤현상 없이 작동이 됌
+- 마우스 커서에 동작버튼을 집어넣어 데이터를 불러 오고 있다는 표시를 했음
+- 다른 폼에서도 데이터를 불러오는 메서드는 모두 backgroundWork로 수정함
+
+
+---
+```csharp
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+    
+            bgwLogin.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            User user = Dao.User.GetByPhoneNumber(txbUserPhoneNumber.Text);
+
+            if (user != null)
+            {
+                Credential.Instance.User = user;
+            }
+
+            e.Result = user;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+            User user = (User)e.Result;
+
+            if (user != null)
+            {
+                MainForm mainform = new MainForm();
+                mainform.ShowDialog();
+                txbUserPhoneNumber.Text = "010";
+            }
+
+            else
+            {
+                txbUserPhoneNumber.Text = "010";
+                MessageBox.Show("존재하지않는 회원입니다");
+            }
+        }
+```
+
