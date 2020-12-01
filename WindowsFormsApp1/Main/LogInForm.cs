@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
         {
             base.OnLoad(e);
         }
+
         private void btnNumber_Click(object sender, EventArgs e)
         {
             if (txbUserPhoneNumber.TextLength < 11)
@@ -42,28 +43,37 @@ namespace WindowsFormsApp1
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            bgwLogin.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
             User user = Dao.User.GetByPhoneNumber(txbUserPhoneNumber.Text);
 
             if (user != null)
             {
                 Credential.Instance.User = user;
+            }
 
-                MainForm mainForm = new MainForm();
-                mainForm.ShowDialog();
+            e.Result = user;
+        }
 
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            User user = (User)e.Result;
+
+            if (user != null)
+            {
+                MainForm mainform = new MainForm();
+                mainform.ShowDialog();
                 txbUserPhoneNumber.Text = "010";
             }
 
             else
             {
+                txbUserPhoneNumber.Text = "010";
                 MessageBox.Show("존재하지않는 회원입니다");
             }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

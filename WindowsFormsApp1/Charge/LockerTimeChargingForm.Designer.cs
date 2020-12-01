@@ -67,10 +67,10 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(182, 2);
+            this.btnAddToCart.Location = new System.Drawing.Point(208, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(173, 66);
+            this.btnAddToCart.Size = new System.Drawing.Size(199, 85);
             this.btnAddToCart.TabIndex = 17;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
             this.btnPayMent.Location = new System.Drawing.Point(3, 2);
             this.btnPayMent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayMent.Name = "btnPayMent";
-            this.btnPayMent.Size = new System.Drawing.Size(173, 66);
+            this.btnPayMent.Size = new System.Drawing.Size(199, 85);
             this.btnPayMent.TabIndex = 18;
             this.btnPayMent.Text = "결제";
             this.btnPayMent.UseVisualStyleBackColor = false;
@@ -96,19 +96,19 @@ namespace WindowsFormsApp1
             // txbPrice
             // 
             this.txbPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbPrice.Location = new System.Drawing.Point(134, 143);
+            this.txbPrice.Location = new System.Drawing.Point(153, 185);
             this.txbPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(97, 21);
+            this.txbPrice.Size = new System.Drawing.Size(112, 25);
             this.txbPrice.TabIndex = 13;
             // 
             // txbUserNumber
             // 
             this.txbUserNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbUserNumber.Location = new System.Drawing.Point(134, 22);
+            this.txbUserNumber.Location = new System.Drawing.Point(153, 28);
             this.txbUserNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserNumber.Name = "txbUserNumber";
-            this.txbUserNumber.Size = new System.Drawing.Size(97, 21);
+            this.txbUserNumber.Size = new System.Drawing.Size(112, 25);
             this.txbUserNumber.TabIndex = 15;
             // 
             // btn1Month
@@ -119,10 +119,10 @@ namespace WindowsFormsApp1
             this.btn1Month.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1Month.FlatAppearance.BorderSize = 0;
             this.btn1Month.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1Month.Location = new System.Drawing.Point(3, 168);
+            this.btn1Month.Location = new System.Drawing.Point(3, 212);
             this.btn1Month.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Month.Name = "btn1Month";
-            this.btn1Month.Size = new System.Drawing.Size(125, 81);
+            this.btn1Month.Size = new System.Drawing.Size(145, 102);
             this.btn1Month.TabIndex = 6;
             this.btn1Month.Tag = "11";
             this.btn1Month.Text = "한달";
@@ -137,10 +137,10 @@ namespace WindowsFormsApp1
             this.btn3Week.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3Week.FlatAppearance.BorderSize = 0;
             this.btn3Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3Week.Location = new System.Drawing.Point(3, 85);
+            this.btn3Week.Location = new System.Drawing.Point(3, 107);
             this.btn3Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3Week.Name = "btn3Week";
-            this.btn3Week.Size = new System.Drawing.Size(125, 79);
+            this.btn3Week.Size = new System.Drawing.Size(145, 101);
             this.btn3Week.TabIndex = 8;
             this.btn3Week.Tag = "12";
             this.btn3Week.Text = "3주";
@@ -158,7 +158,7 @@ namespace WindowsFormsApp1
             this.btn1Week.Location = new System.Drawing.Point(3, 2);
             this.btn1Week.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1Week.Name = "btn1Week";
-            this.btn1Week.Size = new System.Drawing.Size(125, 79);
+            this.btn1Week.Size = new System.Drawing.Size(145, 101);
             this.btn1Week.TabIndex = 9;
             this.btn1Week.Tag = "10";
             this.btn1Week.Text = "1주일";
@@ -178,17 +178,17 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 360);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // uscItem
             // 
             this.uscItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscItem.Location = new System.Drawing.Point(3, 261);
+            this.uscItem.Location = new System.Drawing.Point(3, 326);
             this.uscItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscItem.Name = "uscItem";
-            this.uscItem.Size = new System.Drawing.Size(694, 97);
+            this.uscItem.Size = new System.Drawing.Size(794, 122);
             this.uscItem.TabIndex = 20;
             // 
             // tableLayoutPanel2
@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(694, 255);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 320);
             this.tableLayoutPanel2.TabIndex = 21;
             // 
             // tableLayoutPanel3
@@ -223,7 +223,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(139, 251);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(161, 316);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -233,13 +233,13 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(148, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(170, 2);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.8502F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.1498F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(543, 251);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(621, 316);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -248,17 +248,17 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel5.Controls.Add(this.btnCancel, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnPayMent, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAddToCart, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 179);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 225);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(537, 70);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(615, 89);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // btnCancel
@@ -269,10 +269,10 @@ namespace WindowsFormsApp1
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(361, 2);
+            this.btnCancel.Location = new System.Drawing.Point(413, 2);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(173, 66);
+            this.btnCancel.Size = new System.Drawing.Size(199, 85);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -306,69 +306,69 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.20118F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.7929F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97633F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(537, 173);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(615, 219);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // txbRemainTime
             // 
             this.txbRemainTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbRemainTime.Location = new System.Drawing.Point(134, 96);
+            this.txbRemainTime.Location = new System.Drawing.Point(153, 124);
             this.txbRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbRemainTime.Name = "txbRemainTime";
-            this.txbRemainTime.Size = new System.Drawing.Size(97, 21);
+            this.txbRemainTime.Size = new System.Drawing.Size(112, 25);
             this.txbRemainTime.TabIndex = 14;
             // 
             // txbLockerRemainTime
             // 
             this.txbLockerRemainTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbLockerRemainTime.Location = new System.Drawing.Point(134, 59);
+            this.txbLockerRemainTime.Location = new System.Drawing.Point(153, 76);
             this.txbLockerRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbLockerRemainTime.Name = "txbLockerRemainTime";
-            this.txbLockerRemainTime.Size = new System.Drawing.Size(97, 21);
+            this.txbLockerRemainTime.Size = new System.Drawing.Size(112, 25);
             this.txbLockerRemainTime.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 20);
+            this.label1.Location = new System.Drawing.Point(3, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 12);
+            this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 17;
             this.label1.Text = "UserNumber";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 57);
+            this.label2.Location = new System.Drawing.Point(3, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 12);
+            this.label2.Size = new System.Drawing.Size(129, 15);
             this.label2.TabIndex = 18;
             this.label2.Text = "LockerRemainTime";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 94);
+            this.label3.Location = new System.Drawing.Point(3, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 12);
+            this.label3.Size = new System.Drawing.Size(85, 15);
             this.label3.TabIndex = 19;
             this.label3.Text = "RemainTime";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 141);
+            this.label4.Location = new System.Drawing.Point(3, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 12);
+            this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 20;
             this.label4.Text = "Price";
             // 
             // LockerTimeChargingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
