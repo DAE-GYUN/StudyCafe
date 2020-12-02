@@ -17,7 +17,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-       
+        }
+        public PurchaseForm purchaseForm;
+        public LockersForm(PurchaseForm purchase):this()
+        {
+            purchaseForm = purchase;
         }
 
         public string lockerNumber { get; set; }
@@ -31,7 +35,7 @@ namespace WindowsFormsApp1
             //    if(lockers.
             //}
             List<Locker> lockers = Dao.Locker.GetAll();
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 11; i++)
             {
                 if (lockers[i].UserID != null)
                 {
@@ -46,7 +50,7 @@ namespace WindowsFormsApp1
         {
 
             lockerNumber = ((Button)sender).Tag.ToString();
-            LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(lockerNumber);
+            LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(lockerNumber,purchaseForm);
             lockerTimeChargingForm.ShowDialog();
             Close();
             

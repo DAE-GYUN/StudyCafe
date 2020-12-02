@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "10000")
             {
                 Item item = Dao.Item.GetByPK(7);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "35000")
             {
                 Item item = Dao.Item.GetByPK(8);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "50000")
             {
                 Item item = Dao.Item.GetByPK(8);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

@@ -13,17 +13,20 @@ namespace WindowsFormsApp1
 {
     public partial class LockerTimeChargingForm : Form
     {
+        
+
         public LockerTimeChargingForm()
         {
             InitializeComponent();
         }
-        public LockerTimeChargingForm(string lockerNumber) : this()
+        public PurchaseForm purchaseForm;
+        public LockerTimeChargingForm(string lockerNumber,PurchaseForm purchase) : this()
         {
 
-
+            purchaseForm = purchase;
             _lockerNumber = lockerNumber;
         }
-
+        
 
         public string _lockerNumber { get; set; }
 
@@ -44,20 +47,21 @@ namespace WindowsFormsApp1
             Item item = Dao.Item.GetByPK(10);
            // uscItem.AddItem(item);
             txbPrice.Text = item.Price.ToString();
+            
          
         }
 
         private void btn3Week_Click(object sender, EventArgs e)
         {
             Item item = Dao.Item.GetByPK(11);
-            //uscItem.AddItem(item);
+            //purchaseForm.AddItem(item);
             txbPrice.Text = item.Price.ToString();
         }
 
         private void btn1Month_Click(object sender, EventArgs e)
         {
             Item item = Dao.Item.GetByPK(12);
-            //uscItem.AddItem(item);
+            //purchaseForm.AddItem(item);
             txbPrice.Text = item.Price.ToString();
         }
 
@@ -70,34 +74,38 @@ namespace WindowsFormsApp1
             //Item k = _item.ItemID;
 
             //uscItem.AddItem(k);
+            purchaseForm.GetLockerNumber(_lockerNumber);
+
             if (txbPrice.Text == "4000")
             {
                 Item item = Dao.Item.GetByPK(10);
-                uscItem.AddItem(item);
 
-                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+
+                if (MessageBox.Show("장바구니에 담겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
 
-                    int userCredential = Credential.Instance.User.UserID;
-                    int userKey = Dao.User.GetByUserKey(userCredential);
-                    int lockerTime = Credential.Instance.User.RemainLockerTime += 10080;
+                    //int userCredential = Credential.Instance.User.UserID;
+                    //int userKey = Dao.User.GetByUserKey(userCredential);
+                    //int lockerTime = Credential.Instance.User.RemainLockerTime += 10080;
 
-                    User user = Dao.User.GetByPK(userKey);
-                    user.RemainLockerTime = lockerTime;
-                    Dao.User.Update(user);
+                    //User user = Dao.User.GetByPK(userKey);
+                    //user.RemainLockerTime = lockerTime;
+                    //Dao.User.Update(user);
 
-                    
-                    Locker oldLocker= Dao.Locker.GetByUserId(userCredential);
-                    if (oldLocker != null)
-                    {
-                        oldLocker.UserID = null;
-                        Dao.Locker.Update(oldLocker);
-                    }
 
-                    Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
-                    newLocker.UserID = userCredential;
-                    Dao.Locker.Update(newLocker);
-                    
+                    //Locker oldLocker = Dao.Locker.GetByUserId(userCredential);
+                    //if (oldLocker != null)
+                    //{
+                    //    oldLocker.UserID = null;
+                    //    Dao.Locker.Update(oldLocker);
+                    //}
+
+                    //Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    //newLocker.UserID = userCredential;
+                    //Dao.Locker.Update(newLocker);
+
+                    purchaseForm.AddItem(item);
                     Close();
                 }
                 else
@@ -109,30 +117,34 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "8000")
             {
                 Item item = Dao.Item.GetByPK(11);
-                uscItem.AddItem(item);
-                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+
+
+                if (MessageBox.Show("장바구니에 담겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
 
-                    int userCredential = Credential.Instance.User.UserID;
-                    int userKey = Dao.User.GetByUserKey(userCredential);
+                    //int userCredential = Credential.Instance.User.UserID;
+                    //int userKey = Dao.User.GetByUserKey(userCredential);
 
 
-                    int lockerTime = Credential.Instance.User.RemainLockerTime += 30240;
+                    //int lockerTime = Credential.Instance.User.RemainLockerTime += 30240;
 
-                    User user = Dao.User.GetByPK(userKey);
-                    user.RemainLockerTime = lockerTime;
-                    Dao.User.Update(user);
+                    //User user = Dao.User.GetByPK(userKey);
+                    //user.RemainLockerTime = lockerTime;
+                    //Dao.User.Update(user);
 
-                    Locker oldLocker = Dao.Locker.GetByUserId(userCredential);
-                    if (oldLocker != null)
-                    {
-                        oldLocker.UserID = null;
-                        Dao.Locker.Update(oldLocker);
-                    }
+                    //Locker oldLocker = Dao.Locker.GetByUserId(userCredential);
+                    //if (oldLocker != null)
+                    //{
+                    //    oldLocker.UserID = null;
+                    //    Dao.Locker.Update(oldLocker);
+                    //}
 
-                    Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
-                    newLocker.UserID = userCredential;
-                    Dao.Locker.Update(newLocker);
+                    //Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    //newLocker.UserID = userCredential;
+                    //Dao.Locker.Update(newLocker);
+
+                    purchaseForm.AddItem(item);
 
                     Close();
                 }
@@ -145,31 +157,35 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "11500")
             {
                 Item item = Dao.Item.GetByPK(12);
-                uscItem.AddItem(item);
-                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                purchaseForm.AddItem(item);
+
+                if (MessageBox.Show("장바구니에 담겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    int userCredential = Credential.Instance.User.UserID;
-                    int userKey = Dao.User.GetByUserKey(userCredential);
+                    //int userCredential = Credential.Instance.User.UserID;
+                    //int userKey = Dao.User.GetByUserKey(userCredential);
 
 
-                    int lockerTime = Credential.Instance.User.RemainLockerTime += 50040;
+                    //int lockerTime = Credential.Instance.User.RemainLockerTime += 50040;
 
-                    User user = Dao.User.GetByPK(userKey);
-                    user.RemainLockerTime = lockerTime;
-                    Dao.User.Update(user);
+                    //User user = Dao.User.GetByPK(userKey);
+                    //user.RemainLockerTime = lockerTime;
+                    //Dao.User.Update(user);
 
-                    Locker oldLocker = Dao.Locker.GetByUserId(userCredential);
-                    if (oldLocker != null)
-                    {
-                        oldLocker.UserID = null;
-                        Dao.Locker.Update(oldLocker);
-                    }
+                    //Locker oldLocker = Dao.Locker.GetByUserId(userCredential);
+                    //if (oldLocker != null)
+                    //{
+                    //    oldLocker.UserID = null;
+                    //    Dao.Locker.Update(oldLocker);
+                    //}
 
-                    Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
-                    newLocker.UserID = userCredential;
-                    Dao.Locker.Update(newLocker);
+                    //Locker newLocker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                    //newLocker.UserID = userCredential;
+                    //Dao.Locker.Update(newLocker);
+
+                    purchaseForm.AddItem(item);
 
                     Close();
+
                 }
                 else
                 {

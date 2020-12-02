@@ -52,7 +52,6 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.uscItem = new WindowsFormsApp1.PaymentControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -70,7 +69,7 @@ namespace WindowsFormsApp1
             this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPurchase.FlatAppearance.BorderSize = 0;
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Location = new System.Drawing.Point(576, 2);
+            this.btnPurchase.Location = new System.Drawing.Point(574, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(177, 36);
@@ -87,10 +86,10 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(391, 2);
+            this.btnAddToCart.Location = new System.Drawing.Point(390, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(179, 36);
+            this.btnAddToCart.Size = new System.Drawing.Size(178, 36);
             this.btnAddToCart.TabIndex = 11;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -104,7 +103,7 @@ namespace WindowsFormsApp1
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(208, 2);
+            this.btnBack.Location = new System.Drawing.Point(207, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(177, 36);
@@ -348,7 +347,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.41521F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel5.Controls.Add(this.btnBack, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnPurchase, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAddToCart, 2, 0);
@@ -366,7 +365,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.uscItem, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -379,14 +377,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel6.TabIndex = 17;
-            // 
-            // uscItem
-            // 
-            this.uscItem.Location = new System.Drawing.Point(3, 283);
-            this.uscItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uscItem.Name = "uscItem";
-            this.uscItem.Size = new System.Drawing.Size(793, 88);
-            this.uscItem.TabIndex = 17;
             // 
             // StudyRoomTimeChargingForm
             // 
@@ -430,7 +420,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private PaymentControl uscItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn2Hour;
         private System.Windows.Forms.Button btn6Hour;

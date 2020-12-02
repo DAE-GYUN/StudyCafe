@@ -31,14 +31,13 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LockerTimeChargingForm));
             this.btnAddToCart = new System.Windows.Forms.Button();
-            this.btnPayMent = new System.Windows.Forms.Button();
+            this.btnToCart = new System.Windows.Forms.Button();
             this.txbPrice = new System.Windows.Forms.TextBox();
             this.txbUserNumber = new System.Windows.Forms.TextBox();
             this.btn1Month = new System.Windows.Forms.Button();
             this.btn3Week = new System.Windows.Forms.Button();
             this.btn1Week = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.uscItem = new WindowsFormsApp1.PaymentControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,22 +75,22 @@ namespace WindowsFormsApp1
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
-            // btnPayMent
+            // btnToCart
             // 
-            this.btnPayMent.BackColor = System.Drawing.Color.Transparent;
-            this.btnPayMent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPayMent.BackgroundImage")));
-            this.btnPayMent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPayMent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPayMent.FlatAppearance.BorderSize = 0;
-            this.btnPayMent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayMent.Location = new System.Drawing.Point(3, 2);
-            this.btnPayMent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPayMent.Name = "btnPayMent";
-            this.btnPayMent.Size = new System.Drawing.Size(199, 85);
-            this.btnPayMent.TabIndex = 18;
-            this.btnPayMent.Text = "결제";
-            this.btnPayMent.UseVisualStyleBackColor = false;
-            this.btnPayMent.Click += new System.EventHandler(this.btnPayMent_Click);
+            this.btnToCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnToCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnToCart.BackgroundImage")));
+            this.btnToCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnToCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnToCart.FlatAppearance.BorderSize = 0;
+            this.btnToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToCart.Location = new System.Drawing.Point(3, 2);
+            this.btnToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnToCart.Name = "btnToCart";
+            this.btnToCart.Size = new System.Drawing.Size(199, 85);
+            this.btnToCart.TabIndex = 18;
+            this.btnToCart.Text = "담기";
+            this.btnToCart.UseVisualStyleBackColor = false;
+            this.btnToCart.Click += new System.EventHandler(this.btnPayMent_Click);
             // 
             // txbPrice
             // 
@@ -170,7 +169,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.uscItem, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -181,15 +179,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 20;
-            // 
-            // uscItem
-            // 
-            this.uscItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscItem.Location = new System.Drawing.Point(3, 326);
-            this.uscItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uscItem.Name = "uscItem";
-            this.uscItem.Size = new System.Drawing.Size(794, 122);
-            this.uscItem.TabIndex = 20;
             // 
             // tableLayoutPanel2
             // 
@@ -250,7 +239,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel5.Controls.Add(this.btnCancel, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnPayMent, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnToCart, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAddToCart, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 225);
@@ -387,14 +376,13 @@ namespace WindowsFormsApp1
 
         #endregion
         private System.Windows.Forms.Button btnAddToCart;
-        private System.Windows.Forms.Button btnPayMent;
+        private System.Windows.Forms.Button btnToCart;
         private System.Windows.Forms.TextBox txbPrice;
         private System.Windows.Forms.TextBox txbUserNumber;
         private System.Windows.Forms.Button btn1Month;
         private System.Windows.Forms.Button btn3Week;
         private System.Windows.Forms.Button btn1Week;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private PaymentControl uscItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;

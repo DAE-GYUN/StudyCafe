@@ -22,6 +22,8 @@ namespace StudyCafe.Data
 
         public static LockerDao Locker = new LockerDao();
 
+        public static InvoiceLineDao InvoiceLine = new InvoiceLineDao();
+
         
        
     }
