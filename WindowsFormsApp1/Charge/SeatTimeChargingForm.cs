@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "4000")
             {
                 Item item = Dao.Item.GetByPK(1);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "8000")
             {
                 Item item = Dao.Item.GetByPK(2);
-                uscItem.AddItem(item);
+                //purch.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "15000")
             {
                 Item item = Dao.Item.GetByPK(3);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "60000")
             {
                 Item item = Dao.Item.GetByPK(4);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -151,7 +151,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "80000")
             {
                 Item item = Dao.Item.GetByPK(5);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -177,7 +177,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "100000")
             {
                 Item item = Dao.Item.GetByPK(6);
-                uscItem.AddItem(item);
+                //uscItem.AddItem(item);
 
                 if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

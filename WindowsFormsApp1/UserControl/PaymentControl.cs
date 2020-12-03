@@ -9,18 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudyCafe.Data;
 
+
 namespace WindowsFormsApp1
 {
     public partial class PaymentControl : UserControl
     {
+
+   
         public PaymentControl()
         {
             InitializeComponent();
+           
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+           
             bdsItem.DataSource = _items;
         }
         private List<Item> _items = new List<Item>();

@@ -7,26 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Main;
+using StudyCafe.Data;
 
 namespace WindowsFormsApp1
 {
     public partial class PurchaseForm : Form
     {
-        LockerTimeChargingForm lockerTimeChargingForm;
+        public MainCart maincart;
         public PurchaseForm()
         {
             InitializeComponent();
-            
+            maincart = new MainCart();
         }
    
-        public PurchaseForm(LockerTimeChargingForm form):this()
-        {
-            lockerTimeChargingForm = form;
-        }
+      
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+
+            bdsItem.DataSource = _items;
         }
 
         private void btnSeetTimeCharnging_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace WindowsFormsApp1
 
         private void btnLockers_Click(object sender, EventArgs e)
         {
-            LockersForm lockersForm = new LockersForm();
+            LockersForm lockersForm = new LockersForm(this );
             lockersForm.ShowDialog();
 
         }
@@ -64,9 +65,41 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void paymentControl1_Load(object sender, EventArgs e)
+      
+
+        private List<Item> _items = new List<Item>();
+
+        public void AddItem(Item item)
         {
-          
+
+            _items.Add(item);
+
+            bdsItem.ResetBindings(false);
+            ////bdsItem.DataSource = _items;  
+            //// 다시 바인딩
+            txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
+        }
+
+        private string _lockerNumber;
+        public void GetLockerNumber(string lockerNumber)
+        {
+            _lockerNumber = lockerNumber;
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+           if( MessageBox.Show($"{txbTotalPrice:c}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+  
+
+
+                dgvItem.Columns.Clear();
+            }
+           else
+            {
+
+            }
+
         }
     }
 }

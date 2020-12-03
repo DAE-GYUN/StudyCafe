@@ -29,20 +29,34 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseForm));
             this.btnSeetTimeCharnging = new System.Windows.Forms.Button();
             this.btnStudyRoom = new System.Windows.Forms.Button();
             this.btnLockers = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.paymentControl1 = new WindowsFormsApp1.PaymentControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPayment = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txbTotalPrice = new System.Windows.Forms.TextBox();
+            this.dgvItem = new System.Windows.Forms.DataGridView();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsItem = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsItem)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSeetTimeCharnging
@@ -53,10 +67,10 @@ namespace WindowsFormsApp1
             this.btnSeetTimeCharnging.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSeetTimeCharnging.FlatAppearance.BorderSize = 0;
             this.btnSeetTimeCharnging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeetTimeCharnging.Location = new System.Drawing.Point(3, 82);
+            this.btnSeetTimeCharnging.Location = new System.Drawing.Point(3, 102);
             this.btnSeetTimeCharnging.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeetTimeCharnging.Name = "btnSeetTimeCharnging";
-            this.btnSeetTimeCharnging.Size = new System.Drawing.Size(167, 64);
+            this.btnSeetTimeCharnging.Size = new System.Drawing.Size(192, 81);
             this.btnSeetTimeCharnging.TabIndex = 1;
             this.btnSeetTimeCharnging.Text = "시간설정";
             this.btnSeetTimeCharnging.UseVisualStyleBackColor = false;
@@ -70,10 +84,10 @@ namespace WindowsFormsApp1
             this.btnStudyRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStudyRoom.FlatAppearance.BorderSize = 0;
             this.btnStudyRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudyRoom.Location = new System.Drawing.Point(176, 82);
+            this.btnStudyRoom.Location = new System.Drawing.Point(201, 102);
             this.btnStudyRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStudyRoom.Name = "btnStudyRoom";
-            this.btnStudyRoom.Size = new System.Drawing.Size(167, 64);
+            this.btnStudyRoom.Size = new System.Drawing.Size(192, 81);
             this.btnStudyRoom.TabIndex = 1;
             this.btnStudyRoom.Text = "스터디룸";
             this.btnStudyRoom.UseVisualStyleBackColor = false;
@@ -87,10 +101,10 @@ namespace WindowsFormsApp1
             this.btnLockers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLockers.FlatAppearance.BorderSize = 0;
             this.btnLockers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLockers.Location = new System.Drawing.Point(349, 82);
+            this.btnLockers.Location = new System.Drawing.Point(399, 102);
             this.btnLockers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLockers.Name = "btnLockers";
-            this.btnLockers.Size = new System.Drawing.Size(167, 64);
+            this.btnLockers.Size = new System.Drawing.Size(192, 81);
             this.btnLockers.TabIndex = 1;
             this.btnLockers.Text = "사물함";
             this.btnLockers.UseVisualStyleBackColor = false;
@@ -104,10 +118,10 @@ namespace WindowsFormsApp1
             this.btnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMain.FlatAppearance.BorderSize = 0;
             this.btnMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain.Location = new System.Drawing.Point(522, 82);
+            this.btnMain.Location = new System.Drawing.Point(597, 102);
             this.btnMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(169, 64);
+            this.btnMain.Size = new System.Drawing.Size(194, 81);
             this.btnMain.TabIndex = 1;
             this.btnMain.Text = "메인화면";
             this.btnMain.UseVisualStyleBackColor = false;
@@ -118,7 +132,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.paymentControl1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -130,18 +144,8 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.77778F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.94444F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 360);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 3;
-            // 
-            // paymentControl1
-            // 
-            this.paymentControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paymentControl1.Location = new System.Drawing.Point(3, 271);
-            this.paymentControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.paymentControl1.Name = "paymentControl1";
-            this.paymentControl1.Size = new System.Drawing.Size(694, 87);
-            this.paymentControl1.TabIndex = 3;
-            this.paymentControl1.Load += new System.EventHandler(this.paymentControl1_Load);
             // 
             // tableLayoutPanel2
             // 
@@ -155,12 +159,13 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.Controls.Add(this.btnLockers, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnStudyRoom, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 75);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 94);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(694, 148);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 185);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // tableLayoutPanel3
@@ -171,30 +176,127 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel3.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(694, 66);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(794, 82);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Title;
-            this.pictureBox1.Location = new System.Drawing.Point(107, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(122, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(479, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(549, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnPayment
+            // 
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnPayment.Location = new System.Drawing.Point(0, 6);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(220, 96);
+            this.btnPayment.TabIndex = 0;
+            this.btnPayment.Text = "최종결제";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
+            this.tableLayoutPanel4.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dgvItem, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 339);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(794, 108);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txbTotalPrice);
+            this.panel1.Controls.Add(this.btnPayment);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(571, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 102);
+            this.panel1.TabIndex = 0;
+            // 
+            // txbTotalPrice
+            // 
+            this.txbTotalPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txbTotalPrice.Location = new System.Drawing.Point(0, 0);
+            this.txbTotalPrice.Name = "txbTotalPrice";
+            this.txbTotalPrice.Size = new System.Drawing.Size(220, 25);
+            this.txbTotalPrice.TabIndex = 1;
+            // 
+            // dgvItem
+            // 
+            this.dgvItem.AutoGenerateColumns = false;
+            this.dgvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID,
+            this.nameDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn});
+            this.dgvItem.DataSource = this.bdsItem;
+            this.dgvItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvItem.Location = new System.Drawing.Point(3, 3);
+            this.dgvItem.Name = "dgvItem";
+            this.dgvItem.RowHeadersWidth = 51;
+            this.dgvItem.RowTemplate.Height = 27;
+            this.dgvItem.Size = new System.Drawing.Size(562, 102);
+            this.dgvItem.TabIndex = 1;
+            // 
+            // ItemID
+            // 
+            this.ItemID.DataPropertyName = "ItemID";
+            this.ItemID.HeaderText = "ItemID";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // bdsItem
+            // 
+            this.bdsItem.DataSource = typeof(StudyCafe.Data.Item);
+            // 
             // PurchaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -205,6 +307,11 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsItem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,9 +322,18 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnLockers;
         private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private PaymentControl paymentControl1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txbTotalPrice;
+        private System.Windows.Forms.Button btnPayment;
+        private System.Windows.Forms.DataGridView dgvItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bdsItem;
     }
 }

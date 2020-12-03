@@ -51,7 +51,6 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.uscItem = new WindowsFormsApp1.PaymentControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -403,7 +402,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.uscItem, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -413,14 +411,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.66667F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel6.TabIndex = 7;
-            // 
-            // uscItem
-            // 
-            this.uscItem.Location = new System.Drawing.Point(3, 349);
-            this.uscItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uscItem.Name = "uscItem";
-            this.uscItem.Size = new System.Drawing.Size(793, 96);
-            this.uscItem.TabIndex = 7;
             // 
             // SeatTimeChargingForm
             // 
@@ -465,7 +455,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private PaymentControl uscItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
