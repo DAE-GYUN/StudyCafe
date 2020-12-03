@@ -83,8 +83,6 @@ namespace WindowsFormsApp1
             {
                 Item item = Dao.Item.GetByPK(10);
 
-
-
                 if (MessageBox.Show("장바구니에 담겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
 
@@ -120,8 +118,6 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "8000")
             {
                 Item item = Dao.Item.GetByPK(11);
-
-
 
                 if (MessageBox.Show("장바구니에 담겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -160,7 +156,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "11500")
             {
                 Item item = Dao.Item.GetByPK(12);
-                //purchaseForm.AddItem(item);
+          
 
                 if (MessageBox.Show("장바구니에 담겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

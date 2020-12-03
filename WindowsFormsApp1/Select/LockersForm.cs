@@ -28,12 +28,7 @@ namespace WindowsFormsApp1
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            //List<Locker> lockers = new List<Locker>();
-            //lockers.AddRange(Dao.Locker.GetAll());
-            //foreach (var lockcer in lockers)
-            //{
-            //    if(lockers.
-            //}
+            
             List<Locker> lockers = Dao.Locker.GetAll();
             for (int i = 0; i < 11; i++)
             {

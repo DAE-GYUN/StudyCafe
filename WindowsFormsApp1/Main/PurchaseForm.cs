@@ -131,7 +131,7 @@ namespace WindowsFormsApp1
                 foreach (var itemNumber in _items)
                 {
                     int userId = Credential.Instance.User.UserID;
-
+                     
                     if(itemNumber.Kind=="Seat")
                     {
 
@@ -144,12 +144,31 @@ namespace WindowsFormsApp1
 
                     else
                     {
-                        int lockerTime = Credential.Instance.User.RemainLockerTime += itemNumber.Time;
-                        MessageBox.Show($"{Credential.Instance.User.RemainLockerTime.ToString()}");
+                        if(_lockerNumber!=null)
+                        {
+                            int lockerTime = Credential.Instance.User.RemainLockerTime += itemNumber.Time;
+                            MessageBox.Show($"{Credential.Instance.User.RemainLockerTime.ToString()}");
 
-                        User user = Dao.User.GetByPK(userId);
-                        user.RemainLockerTime = lockerTime;
-                        Dao.User.Update(user);
+                            User user = Dao.User.GetByPK(userId);
+                            user.RemainLockerTime = lockerTime;
+                            Dao.User.Update(user);
+                            Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
+                            locker.UserID = userId;
+                            Dao.Locker.Update(locker);
+                        }
+                        
+                        else
+                        {
+                            int lockerTime = Credential.Instance.User.RemainLockerTime += itemNumber.Time;
+                            MessageBox.Show($"{Credential.Instance.User.RemainLockerTime.ToString()}");
+
+                            User user = Dao.User.GetByPK(userId);
+                            user.RemainLockerTime = lockerTime;
+                            Dao.User.Update(user);
+                        }
+
+
+                       
                     }
 
                     
