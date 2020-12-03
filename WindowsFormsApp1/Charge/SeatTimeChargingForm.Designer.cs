@@ -34,8 +34,7 @@ namespace WindowsFormsApp1
             this.txbItemName = new System.Windows.Forms.TextBox();
             this.txbPrice = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnAddToCart = new System.Windows.Forms.Button();
-            this.btnPurchase = new System.Windows.Forms.Button();
+            this.btnSeattimeCart = new System.Windows.Forms.Button();
             this.rbtn2Hours = new System.Windows.Forms.RadioButton();
             this.rbtn5Hours = new System.Windows.Forms.RadioButton();
             this.rbtn12Hours = new System.Windows.Forms.RadioButton();
@@ -93,46 +92,29 @@ namespace WindowsFormsApp1
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(220, 2);
+            this.btnBack.Location = new System.Drawing.Point(409, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(170, 41);
+            this.btnBack.Size = new System.Drawing.Size(167, 41);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
-            // btnAddToCart
+            // btnSeattimeCart
             // 
-            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddToCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.BackgroundImage")));
-            this.btnAddToCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddToCart.FlatAppearance.BorderSize = 0;
-            this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(409, 2);
-            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(166, 41);
-            this.btnAddToCart.TabIndex = 3;
-            this.btnAddToCart.Text = "추가선택";
-            this.btnAddToCart.UseVisualStyleBackColor = false;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
-            // 
-            // btnPurchase
-            // 
-            this.btnPurchase.BackColor = System.Drawing.Color.Transparent;
-            this.btnPurchase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPurchase.BackgroundImage")));
-            this.btnPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPurchase.FlatAppearance.BorderSize = 0;
-            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Location = new System.Drawing.Point(593, 2);
-            this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(159, 41);
-            this.btnPurchase.TabIndex = 3;
-            this.btnPurchase.Text = "결제";
-            this.btnPurchase.UseVisualStyleBackColor = false;
-            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
+            this.btnSeattimeCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeattimeCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSeattimeCart.BackgroundImage")));
+            this.btnSeattimeCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSeattimeCart.FlatAppearance.BorderSize = 0;
+            this.btnSeattimeCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeattimeCart.Location = new System.Drawing.Point(593, 2);
+            this.btnSeattimeCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSeattimeCart.Name = "btnSeattimeCart";
+            this.btnSeattimeCart.Size = new System.Drawing.Size(159, 41);
+            this.btnSeattimeCart.TabIndex = 3;
+            this.btnSeattimeCart.Text = "담기";
+            this.btnSeattimeCart.UseVisualStyleBackColor = false;
+            this.btnSeattimeCart.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // rbtn2Hours
             // 
@@ -150,10 +132,10 @@ namespace WindowsFormsApp1
             this.rbtn2Hours.Size = new System.Drawing.Size(124, 65);
             this.rbtn2Hours.TabIndex = 4;
             this.rbtn2Hours.TabStop = true;
-            this.rbtn2Hours.Tag = "4000";
+            this.rbtn2Hours.Tag = "1";
             this.rbtn2Hours.Text = "2시간";
             this.rbtn2Hours.UseVisualStyleBackColor = false;
-            this.rbtn2Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
+            this.rbtn2Hours.Click += new System.EventHandler(this.btn_Click);
             // 
             // rbtn5Hours
             // 
@@ -171,10 +153,10 @@ namespace WindowsFormsApp1
             this.rbtn5Hours.Size = new System.Drawing.Size(121, 65);
             this.rbtn5Hours.TabIndex = 4;
             this.rbtn5Hours.TabStop = true;
-            this.rbtn5Hours.Tag = "8000";
+            this.rbtn5Hours.Tag = "2";
             this.rbtn5Hours.Text = "5시간";
             this.rbtn5Hours.UseVisualStyleBackColor = false;
-            this.rbtn5Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
+            this.rbtn5Hours.Click += new System.EventHandler(this.btn_Click);
             // 
             // rbtn12Hours
             // 
@@ -192,10 +174,10 @@ namespace WindowsFormsApp1
             this.rbtn12Hours.Size = new System.Drawing.Size(124, 65);
             this.rbtn12Hours.TabIndex = 4;
             this.rbtn12Hours.TabStop = true;
-            this.rbtn12Hours.Tag = "15000";
+            this.rbtn12Hours.Tag = "3";
             this.rbtn12Hours.Text = "12시간";
             this.rbtn12Hours.UseVisualStyleBackColor = false;
-            this.rbtn12Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
+            this.rbtn12Hours.Click += new System.EventHandler(this.btn_Click);
             // 
             // rbtn30Hours
             // 
@@ -213,10 +195,10 @@ namespace WindowsFormsApp1
             this.rbtn30Hours.Size = new System.Drawing.Size(121, 65);
             this.rbtn30Hours.TabIndex = 4;
             this.rbtn30Hours.TabStop = true;
-            this.rbtn30Hours.Tag = "60000";
+            this.rbtn30Hours.Tag = "4";
             this.rbtn30Hours.Text = "30시간";
             this.rbtn30Hours.UseVisualStyleBackColor = false;
-            this.rbtn30Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
+            this.rbtn30Hours.Click += new System.EventHandler(this.btn_Click);
             // 
             // rbtn60Hours
             // 
@@ -234,10 +216,10 @@ namespace WindowsFormsApp1
             this.rbtn60Hours.Size = new System.Drawing.Size(124, 66);
             this.rbtn60Hours.TabIndex = 4;
             this.rbtn60Hours.TabStop = true;
-            this.rbtn60Hours.Tag = "80000";
+            this.rbtn60Hours.Tag = "5";
             this.rbtn60Hours.Text = "60시간";
             this.rbtn60Hours.UseVisualStyleBackColor = false;
-            this.rbtn60Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
+            this.rbtn60Hours.Click += new System.EventHandler(this.btn_Click);
             // 
             // rbtn100Hours
             // 
@@ -255,10 +237,10 @@ namespace WindowsFormsApp1
             this.rbtn100Hours.Size = new System.Drawing.Size(121, 66);
             this.rbtn100Hours.TabIndex = 4;
             this.rbtn100Hours.TabStop = true;
-            this.rbtn100Hours.Tag = "100000";
+            this.rbtn100Hours.Tag = "6";
             this.rbtn100Hours.Text = "100시간";
             this.rbtn100Hours.UseVisualStyleBackColor = false;
-            this.rbtn100Hours.Click += new System.EventHandler(this.btnSeatTime_Click);
+            this.rbtn100Hours.Click += new System.EventHandler(this.btn_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -291,9 +273,8 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.440922F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.18156F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.478261F));
-            this.tableLayoutPanel2.Controls.Add(this.btnPurchase, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnAddToCart, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnBack, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSeattimeCart, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnBack, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 268);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -441,8 +422,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbItemName;
         private System.Windows.Forms.TextBox txbPrice;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnAddToCart;
-        private System.Windows.Forms.Button btnPurchase;
+        private System.Windows.Forms.Button btnSeattimeCart;
         private System.Windows.Forms.RadioButton rbtn2Hours;
         private System.Windows.Forms.RadioButton rbtn5Hours;
         private System.Windows.Forms.RadioButton rbtn12Hours;

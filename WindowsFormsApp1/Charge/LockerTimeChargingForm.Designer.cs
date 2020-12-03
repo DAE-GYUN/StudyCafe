@@ -48,8 +48,8 @@ namespace WindowsFormsApp1
             this.txbLockerRemainTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -123,10 +123,10 @@ namespace WindowsFormsApp1
             this.btn1Month.Name = "btn1Month";
             this.btn1Month.Size = new System.Drawing.Size(145, 102);
             this.btn1Month.TabIndex = 6;
-            this.btn1Month.Tag = "11";
+            this.btn1Month.Tag = "12";
             this.btn1Month.Text = "한달";
             this.btn1Month.UseVisualStyleBackColor = false;
-            this.btn1Month.Click += new System.EventHandler(this.btn1Month_Click);
+            this.btn1Month.Click += new System.EventHandler(this.btn1Week_Click);
             // 
             // btn3Week
             // 
@@ -141,10 +141,10 @@ namespace WindowsFormsApp1
             this.btn3Week.Name = "btn3Week";
             this.btn3Week.Size = new System.Drawing.Size(145, 101);
             this.btn3Week.TabIndex = 8;
-            this.btn3Week.Tag = "12";
-            this.btn3Week.Text = "3주";
+            this.btn3Week.Tag = "11";
+            this.btn3Week.Text = "3주일";
             this.btn3Week.UseVisualStyleBackColor = false;
-            this.btn3Week.Click += new System.EventHandler(this.btn3Week_Click);
+            this.btn3Week.Click += new System.EventHandler(this.btn1Week_Click);
             // 
             // btn1Week
             // 
@@ -306,7 +306,6 @@ namespace WindowsFormsApp1
             this.txbItemName.Name = "txbItemName";
             this.txbItemName.Size = new System.Drawing.Size(112, 25);
             this.txbItemName.TabIndex = 14;
-       
             // 
             // txbLockerRemainTime
             // 
@@ -335,15 +334,6 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 18;
             this.label2.Text = "LockerRemainTime";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "상품명";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -352,6 +342,15 @@ namespace WindowsFormsApp1
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 20;
             this.label4.Text = "Price";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "상품명";
             // 
             // LockerTimeChargingForm
             // 
