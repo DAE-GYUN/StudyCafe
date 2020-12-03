@@ -1,14 +1,9 @@
-﻿using System;
+﻿using StudyCafe.Data;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Main;
-using StudyCafe.Data;
 
 namespace WindowsFormsApp1
 {
@@ -20,8 +15,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
           //  maincart = new MainCart();
         }
-   
-      
 
         protected override void OnLoad(EventArgs e)
         {
@@ -67,17 +60,11 @@ namespace WindowsFormsApp1
             else
             {
                 if (MessageBox.Show("이미 사물함이 있습니다. 시간을 구매하시겠습니까?", "구매여부", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                   
-                    
+                {   
                     LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(this);
                     lockerTimeChargingForm.ShowDialog();
-                }
-                
+                }   
             }
-            
-           
-
         }
 
         private void btnMain_Click(object sender, EventArgs e)
@@ -86,10 +73,8 @@ namespace WindowsFormsApp1
             Close();
         }
 
-      
         //아이템을 담을 리스트 생성 =>  장바구니
         private List<Item> _items = new List<Item>();
-
 
         // 아이템 추가
         public void AddItem(Item item)
@@ -115,8 +100,6 @@ namespace WindowsFormsApp1
             txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
         }
 
-      
-
         private string _lockerNumber;
         public void GetLockerNumber(string lockerNumber)
         {
@@ -126,7 +109,7 @@ namespace WindowsFormsApp1
         
         private void btnPayment_Click(object sender, EventArgs e)
         {
-           if( MessageBox.Show($"{txbTotalPrice.Text:c}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+           if( MessageBox.Show($"{int.Parse(txbTotalPrice.Text):c0}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 
                 foreach (var itemNumber in _items)
@@ -148,7 +131,7 @@ namespace WindowsFormsApp1
                         if(_lockerNumber!=null)
                         {
                             int lockerTime = Credential.Instance.User.RemainLockerTime += itemNumber.Time;
-                            MessageBox.Show($"{Credential.Instance.User.RemainLockerTime.ToString()}");
+                            MessageBox.Show($"{Credential.Instance.User.RemainLockerTime}");
 
                             User user = Dao.User.GetByPK(userId);
                             user.RemainLockerTime = lockerTime;
@@ -161,24 +144,19 @@ namespace WindowsFormsApp1
                         else
                         {
                             int lockerTime = Credential.Instance.User.RemainLockerTime += itemNumber.Time;
-                            MessageBox.Show($"{Credential.Instance.User.RemainLockerTime.ToString()}");
+                            MessageBox.Show($"{Credential.Instance.User.RemainLockerTime}");
 
                             User user = Dao.User.GetByPK(userId);
                             user.RemainLockerTime = lockerTime;
                             Dao.User.Update(user);
-                        }
-
-
-                       
+                        }  
                     }
-
-                    
                 }
-                dgvItem.Columns.Clear();
-                _items.Clear();            
+
+                dgvItem.Rows.Clear();
+                _items.Clear();
+                txbTotalPrice.Clear();
             }
-
-
         }
 
         private void dgvItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -199,11 +177,8 @@ namespace WindowsFormsApp1
 
                 //행 삭제
                 int rw = dgvItem.CurrentCell.RowIndex;
-                dgvItem.Rows.RemoveAt(rw);
-               
+                dgvItem.Rows.RemoveAt(rw);  
             }
-
         }
- 
     }
 }
