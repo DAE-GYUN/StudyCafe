@@ -43,15 +43,11 @@ namespace WindowsFormsApp1
 
         private void btnLocker1_Click(object sender, EventArgs e)
         {
-
             lockerNumber = ((Button)sender).Tag.ToString();
             LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(lockerNumber,purchaseForm);
             lockerTimeChargingForm.ShowDialog();
-            Close();
-            
+            Close();         
         }
-        
-
 
         private void btnLockersCancel_Click(object sender, EventArgs e)
         {

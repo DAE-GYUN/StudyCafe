@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.txbRemainTime = new System.Windows.Forms.TextBox();
+            this.txbItemName = new System.Windows.Forms.TextBox();
             this.txbLockerRemainTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -275,13 +275,13 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.54478F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.79851F));
             this.tableLayoutPanel6.Controls.Add(this.txbPrice, 1, 7);
-            this.tableLayoutPanel6.Controls.Add(this.txbRemainTime, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.txbItemName, 1, 5);
             this.tableLayoutPanel6.Controls.Add(this.txbLockerRemainTime, 1, 3);
             this.tableLayoutPanel6.Controls.Add(this.txbUserNumber, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.label3, 0, 5);
             this.tableLayoutPanel6.Controls.Add(this.label4, 0, 7);
+            this.tableLayoutPanel6.Controls.Add(this.label3, 0, 5);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 2);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -298,14 +298,15 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel6.Size = new System.Drawing.Size(615, 219);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
-            // txbRemainTime
+            // txbItemName
             // 
-            this.txbRemainTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbRemainTime.Location = new System.Drawing.Point(153, 124);
-            this.txbRemainTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txbRemainTime.Name = "txbRemainTime";
-            this.txbRemainTime.Size = new System.Drawing.Size(112, 25);
-            this.txbRemainTime.TabIndex = 14;
+            this.txbItemName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbItemName.Location = new System.Drawing.Point(153, 124);
+            this.txbItemName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbItemName.Name = "txbItemName";
+            this.txbItemName.Size = new System.Drawing.Size(112, 25);
+            this.txbItemName.TabIndex = 14;
+       
             // 
             // txbLockerRemainTime
             // 
@@ -339,9 +340,9 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 15);
+            this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 19;
-            this.label3.Text = "RemainTime";
+            this.label3.Text = "상품명";
             // 
             // label4
             // 
@@ -389,7 +390,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.TextBox txbRemainTime;
+        private System.Windows.Forms.TextBox txbItemName;
         private System.Windows.Forms.TextBox txbLockerRemainTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
