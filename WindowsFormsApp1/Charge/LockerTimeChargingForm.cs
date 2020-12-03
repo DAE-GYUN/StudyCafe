@@ -26,8 +26,11 @@ namespace WindowsFormsApp1
             purchaseForm = purchase;
             _lockerNumber = lockerNumber;
         }
-        
 
+        public LockerTimeChargingForm(PurchaseForm purchase) : this()
+        {
+            purchaseForm = purchase;
+        }
         public string _lockerNumber { get; set; }
 
         protected override void OnLoad(EventArgs e)
@@ -157,7 +160,7 @@ namespace WindowsFormsApp1
             if (txbPrice.Text == "11500")
             {
                 Item item = Dao.Item.GetByPK(12);
-                purchaseForm.AddItem(item);
+                //purchaseForm.AddItem(item);
 
                 if (MessageBox.Show("장바구니에 담겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

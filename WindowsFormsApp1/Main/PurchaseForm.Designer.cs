@@ -36,27 +36,28 @@ namespace WindowsFormsApp1
             this.btnLockers = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPayment = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txbTotalPrice = new System.Windows.Forms.TextBox();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.dgvItem = new System.Windows.Forms.DataGridView();
             this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bdsItem = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsItem)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSeetTimeCharnging
@@ -147,6 +148,114 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
+            this.tableLayoutPanel4.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dgvItem, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 339);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(794, 108);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txbTotalPrice);
+            this.panel1.Controls.Add(this.btnPayment);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(571, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 102);
+            this.panel1.TabIndex = 0;
+            // 
+            // txbTotalPrice
+            // 
+            this.txbTotalPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txbTotalPrice.Location = new System.Drawing.Point(0, 0);
+            this.txbTotalPrice.Name = "txbTotalPrice";
+            this.txbTotalPrice.ReadOnly = true;
+            this.txbTotalPrice.Size = new System.Drawing.Size(220, 25);
+            this.txbTotalPrice.TabIndex = 1;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnPayment.Location = new System.Drawing.Point(0, 6);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(220, 96);
+            this.btnPayment.TabIndex = 0;
+            this.btnPayment.Text = "최종결제";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // dgvItem
+            // 
+            this.dgvItem.AllowUserToAddRows = false;
+            this.dgvItem.AutoGenerateColumns = false;
+            this.dgvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID,
+            this.nameDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.dataGridViewButtonColumn1});
+            this.dgvItem.DataSource = this.bdsItem;
+            this.dgvItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvItem.Location = new System.Drawing.Point(3, 3);
+            this.dgvItem.Name = "dgvItem";
+            this.dgvItem.RowHeadersWidth = 51;
+            this.dgvItem.RowTemplate.Height = 27;
+            this.dgvItem.Size = new System.Drawing.Size(562, 102);
+            this.dgvItem.TabIndex = 1;
+            this.dgvItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellContentClick);
+            // 
+            // ItemID
+            // 
+            this.ItemID.DataPropertyName = "ItemID";
+            this.ItemID.HeaderText = "고유번호";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "상품이름";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "이용시간";
+            this.timeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "가격";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.DataPropertyName = "ItemID";
+            this.dataGridViewButtonColumn1.HeaderText = "삭제";
+            this.dataGridViewButtonColumn1.MinimumWidth = 6;
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            // 
+            // bdsItem
+            // 
+            this.bdsItem.DataSource = typeof(StudyCafe.Data.Item);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
@@ -196,101 +305,6 @@ namespace WindowsFormsApp1
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnPayment
-            // 
-            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnPayment.Location = new System.Drawing.Point(0, 6);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(220, 96);
-            this.btnPayment.TabIndex = 0;
-            this.btnPayment.Text = "최종결제";
-            this.btnPayment.UseVisualStyleBackColor = true;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
-            this.tableLayoutPanel4.Controls.Add(this.panel1, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.dgvItem, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 339);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(794, 108);
-            this.tableLayoutPanel4.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txbTotalPrice);
-            this.panel1.Controls.Add(this.btnPayment);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(571, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 102);
-            this.panel1.TabIndex = 0;
-            // 
-            // txbTotalPrice
-            // 
-            this.txbTotalPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txbTotalPrice.Location = new System.Drawing.Point(0, 0);
-            this.txbTotalPrice.Name = "txbTotalPrice";
-            this.txbTotalPrice.Size = new System.Drawing.Size(220, 25);
-            this.txbTotalPrice.TabIndex = 1;
-            // 
-            // dgvItem
-            // 
-            this.dgvItem.AutoGenerateColumns = false;
-            this.dgvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemID,
-            this.nameDataGridViewTextBoxColumn,
-            this.timeDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn});
-            this.dgvItem.DataSource = this.bdsItem;
-            this.dgvItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvItem.Location = new System.Drawing.Point(3, 3);
-            this.dgvItem.Name = "dgvItem";
-            this.dgvItem.RowHeadersWidth = 51;
-            this.dgvItem.RowTemplate.Height = 27;
-            this.dgvItem.Size = new System.Drawing.Size(562, 102);
-            this.dgvItem.TabIndex = 1;
-            // 
-            // ItemID
-            // 
-            this.ItemID.DataPropertyName = "ItemID";
-            this.ItemID.HeaderText = "ItemID";
-            this.ItemID.MinimumWidth = 6;
-            this.ItemID.Name = "ItemID";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // bdsItem
-            // 
-            this.bdsItem.DataSource = typeof(StudyCafe.Data.Item);
-            // 
             // PurchaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -304,14 +318,14 @@ namespace WindowsFormsApp1
             this.Text = "PurchaseForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsItem)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,10 +344,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txbTotalPrice;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.DataGridView dgvItem;
+        private System.Windows.Forms.BindingSource bdsItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bdsItem;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
     }
 }
