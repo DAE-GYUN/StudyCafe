@@ -123,6 +123,7 @@ namespace WindowsFormsApp1
             _lockerNumber = lockerNumber;
         }
 
+        
         private void btnPayment_Click(object sender, EventArgs e)
         {
            if( MessageBox.Show($"{txbTotalPrice.Text:c}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)

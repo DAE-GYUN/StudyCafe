@@ -69,7 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Credential.cs" />
-    <Compile Include="Main\Cart.cs" />
     <Compile Include="Popup\SnapshotForm.cs">
       <SubType>Form</SubType>
     </Compile>
