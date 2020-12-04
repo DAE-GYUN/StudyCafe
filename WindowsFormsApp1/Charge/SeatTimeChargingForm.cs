@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
             base.OnLoad(e);
 
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
-
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -40,6 +39,7 @@ namespace WindowsFormsApp1
             txbPrice.Text = item.Price.ToString();
             txbItemName.Text = item.Name;
         }
+
         private void btnPurchase_Click(object sender, EventArgs e)
         {
             List<Item> items = Dao.Item.GetAll();
@@ -50,10 +50,12 @@ namespace WindowsFormsApp1
                     purchaseForm.AddItem(price);
                 }
             }
-
             Close();
-
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

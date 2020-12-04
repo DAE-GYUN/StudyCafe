@@ -99,6 +99,7 @@ namespace WindowsFormsApp1
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSeattimeCart
             // 

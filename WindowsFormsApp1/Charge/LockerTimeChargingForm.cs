@@ -23,7 +23,6 @@ namespace WindowsFormsApp1
         {
             purchaseForm = purchase;
             _lockerNumber = lockerNumber;
-            btnToCart.Enabled = true;
         }
 
         public LockerTimeChargingForm(PurchaseForm purchase) : this()
@@ -39,13 +38,12 @@ namespace WindowsFormsApp1
             txbLockerRemainTime.Text = Credential.Instance.User.RemainLockerTime.ToString();
         }     
    
-        private void btn1Week_Click(object sender, EventArgs e)
+        private void btnTime_Click(object sender, EventArgs e)
         {
             string num = ((Button)sender).Tag.ToString();
             Item item = Dao.Item.GetByPK(int.Parse(num));
             txbPrice.Text = item.Price.ToString();
             txbItemName.Text = item.Name;
-            btnToCart.Enabled = false;
         }
 
         private void btnPayMent_Click(object sender, EventArgs e)
@@ -60,7 +58,6 @@ namespace WindowsFormsApp1
                     purchaseForm.AddItem(price);
                 }
             }
-
             Close();    
         }
 
@@ -73,6 +70,5 @@ namespace WindowsFormsApp1
         {
             Close();
         }
-
     }
 }
