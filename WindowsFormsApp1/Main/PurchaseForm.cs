@@ -17,7 +17,8 @@ namespace WindowsFormsApp1
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e); 
-            bdsItem.DataSource = _items; 
+            bdsItem.DataSource = _items;
+          
         }
 
         private void btnSeetTimeCharnging_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                CheckInForm checkInForm = new CheckInForm("StudyRoom");
+                CheckInForm checkInForm = new CheckInForm("StudyRoom",this);
                 checkInForm.ShowDialog();
             }
         }
@@ -76,6 +77,7 @@ namespace WindowsFormsApp1
             _items.Add(item);
             bdsItem.ResetBindings(false);
             txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
+            btnPayment.Enabled = true;
         }  
 
         public void DeleteItem(Item item)
@@ -93,14 +95,26 @@ namespace WindowsFormsApp1
         }
 
         private string _lockerNumber;
+        private string _studyRoomNumber;
+    
         public void GetLockerNumber(string lockerNumber)
         {
             _lockerNumber = lockerNumber;
+        } 
+        public void GetStudyRoomNumber(string studyRoomNumber)
+        {
+            _studyRoomNumber = studyRoomNumber;
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-           if( MessageBox.Show($"{int.Parse(txbTotalPrice.Text):c0}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (_items.Count == 0)
+            {
+                MessageBox.Show("결제할 품목이 없습니다.");
+            }
+
+
+            else if (MessageBox.Show($"{int.Parse(txbTotalPrice.Text):c0}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 
                 foreach (var itemNumber in _items)
@@ -118,8 +132,16 @@ namespace WindowsFormsApp1
 
                     else if (itemNumber.Kind=="StudyRoom")
                     {
-
+                        int strudyRoomTime = Credential.Instance.User.RemainStudyRoomTime += itemNumber.Time;
+                        MessageBox.Show($"{Credential.Instance.User.RemainStudyRoomTime}");
+                        User user = Dao.User.GetByPK(userId);
+                        user.RemainStudyRoomTime = strudyRoomTime;
+                        Dao.User.Update(user);
+                        StudyRoom studyRoom = Dao.StudyRoom.GetByPK(int.Parse(_studyRoomNumber));
+                        studyRoom.UserID = userId;
+                        Dao.StudyRoom.Update(studyRoom);
                     }
+                
 
                     else
                     {
