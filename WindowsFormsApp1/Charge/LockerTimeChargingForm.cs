@@ -36,25 +36,12 @@ namespace WindowsFormsApp1
             base.OnLoad(e);
             txbUserNumber.Text = Credential.Instance.PhoneNumber;
             txbLockerRemainTime.Text = Credential.Instance.User.RemainLockerTime.ToString();
-        }
-        
+        }     
+   
         private void btn1Week_Click(object sender, EventArgs e)
         {
-            Item item = Dao.Item.GetByPK(10);
-            txbPrice.Text = item.Price.ToString();
-            txbItemName.Text = item.Name;
-        }
-
-        private void btn3Week_Click(object sender, EventArgs e)
-        {
-            Item item = Dao.Item.GetByPK(11);
-            txbPrice.Text = item.Price.ToString();
-            txbItemName.Text = item.Name;
-        }
-
-        private void btn1Month_Click(object sender, EventArgs e)
-        {
-            Item item = Dao.Item.GetByPK(12);
+            string num = ((Button)sender).Tag.ToString();
+            Item item = Dao.Item.GetByPK(int.Parse(num));
             txbPrice.Text = item.Price.ToString();
             txbItemName.Text = item.Name;
         }

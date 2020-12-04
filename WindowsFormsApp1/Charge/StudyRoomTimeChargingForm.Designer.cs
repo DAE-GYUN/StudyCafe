@@ -69,10 +69,10 @@ namespace WindowsFormsApp1
             this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPurchase.FlatAppearance.BorderSize = 0;
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Location = new System.Drawing.Point(574, 2);
+            this.btnPurchase.Location = new System.Drawing.Point(571, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(177, 36);
+            this.btnPurchase.Size = new System.Drawing.Size(176, 36);
             this.btnPurchase.TabIndex = 10;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = false;
@@ -86,10 +86,10 @@ namespace WindowsFormsApp1
             this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(390, 2);
+            this.btnAddToCart.Location = new System.Drawing.Point(388, 2);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(178, 36);
+            this.btnAddToCart.Size = new System.Drawing.Size(177, 36);
             this.btnAddToCart.TabIndex = 11;
             this.btnAddToCart.Text = "추가선택";
             this.btnAddToCart.UseVisualStyleBackColor = false;
@@ -103,10 +103,10 @@ namespace WindowsFormsApp1
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(207, 2);
+            this.btnBack.Location = new System.Drawing.Point(206, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(177, 36);
+            this.btnBack.Size = new System.Drawing.Size(176, 36);
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -347,7 +347,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.41521F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel5.Controls.Add(this.btnBack, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnPurchase, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAddToCart, 2, 0);
