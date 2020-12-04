@@ -18,17 +18,17 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
         }
-        public PurchaseForm purchaseForm;
-        public LockersForm(PurchaseForm purchase):this()
+        private PurchaseForm purchaseForm;
+        public LockersForm(PurchaseForm purchase) : this()
         {
             purchaseForm = purchase;
         }
-
-        public string lockerNumber { get; set; }
+        
+        private string lockerNumber { get; set; }
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            
+
             List<Locker> lockers = Dao.Locker.GetAll();
             for (int i = 0; i < 11; i++)
             {
@@ -44,9 +44,9 @@ namespace WindowsFormsApp1
         private void btnLocker1_Click(object sender, EventArgs e)
         {
             lockerNumber = ((Button)sender).Tag.ToString();
-            LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(lockerNumber,purchaseForm);
+            LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(lockerNumber, purchaseForm);
             lockerTimeChargingForm.ShowDialog();
-            Close();         
+            Close();
         }
 
         private void btnLockersCancel_Click(object sender, EventArgs e)

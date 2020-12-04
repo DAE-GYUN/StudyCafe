@@ -13,13 +13,13 @@ namespace WindowsFormsApp1
 {
     public partial class LockerTimeChargingForm : Form
     {
-        
+
         public LockerTimeChargingForm()
         {
             InitializeComponent();
         }
         public PurchaseForm purchaseForm;
-        public LockerTimeChargingForm(string lockerNumber,PurchaseForm purchase) : this()
+        public LockerTimeChargingForm(string lockerNumber, PurchaseForm purchase) : this()
         {
             purchaseForm = purchase;
             _lockerNumber = lockerNumber;
@@ -36,8 +36,8 @@ namespace WindowsFormsApp1
             base.OnLoad(e);
             txbUserNumber.Text = Credential.Instance.PhoneNumber;
             txbLockerRemainTime.Text = Credential.Instance.User.RemainLockerTime.ToString();
-        }     
-   
+        }
+
         private void btnTime_Click(object sender, EventArgs e)
         {
             string num = ((Button)sender).Tag.ToString();
@@ -53,12 +53,12 @@ namespace WindowsFormsApp1
             List<Item> items = Dao.Item.GetAll();
             foreach (var price in items)
             {
-                if(txbPrice.Text==price.Price.ToString()&&txbItemName.Text == price.Name.ToString())
+                if (txbPrice.Text == price.Price.ToString() && txbItemName.Text == price.Name.ToString())
                 {
                     purchaseForm.AddItem(price);
                 }
             }
-            Close();    
+            Close();
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)

@@ -16,9 +16,9 @@ namespace WindowsFormsApp1
 
         protected override void OnLoad(EventArgs e)
         {
-            base.OnLoad(e); 
+            base.OnLoad(e);
             bdsItem.DataSource = _items;
-          
+
         }
 
         private void btnSeetTimeCharnging_Click(object sender, EventArgs e)
@@ -37,16 +37,16 @@ namespace WindowsFormsApp1
 
             else
             {
-                CheckInForm checkInForm = new CheckInForm("StudyRoom",this);
+                CheckInForm checkInForm = new CheckInForm("StudyRoom", this);
                 checkInForm.ShowDialog();
             }
         }
 
         private void btnLockers_Click(object sender, EventArgs e)
         {
-            int userId = Credential.Instance.User.UserID;         
+            int userId = Credential.Instance.User.UserID;
             Locker locker = Dao.Locker.GetByUserId(userId);
-            if(locker == null)
+            if (locker == null)
             {
                 LockersForm lockersForm = new LockersForm(this);
                 lockersForm.ShowDialog();
@@ -55,10 +55,10 @@ namespace WindowsFormsApp1
             else
             {
                 if (MessageBox.Show("이미 사물함이 있습니다. 시간을 구매하시겠습니까?", "구매여부", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {   
+                {
                     LockerTimeChargingForm lockerTimeChargingForm = new LockerTimeChargingForm(this);
                     lockerTimeChargingForm.ShowDialog();
-                }   
+                }
             }
         }
 
@@ -78,14 +78,14 @@ namespace WindowsFormsApp1
             bdsItem.ResetBindings(false);
             txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
             btnPayment.Enabled = true;
-        }  
+        }
 
         public void DeleteItem(Item item)
         {
 
             for (int i = 0; i < _items.Count; i++)
             {
-                if(_items[i]==item)
+                if (_items[i] == item)
                 {
                     _items.RemoveAt(i);
                 }
@@ -96,11 +96,11 @@ namespace WindowsFormsApp1
 
         private string _lockerNumber;
         private string _studyRoomNumber;
-    
+
         public void GetLockerNumber(string lockerNumber)
         {
             _lockerNumber = lockerNumber;
-        } 
+        }
         public void GetStudyRoomNumber(string studyRoomNumber)
         {
             _studyRoomNumber = studyRoomNumber;
@@ -116,12 +116,12 @@ namespace WindowsFormsApp1
 
             else if (MessageBox.Show($"{int.Parse(txbTotalPrice.Text):c0}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                
+
                 foreach (var itemNumber in _items)
                 {
                     int userId = Credential.Instance.User.UserID;
-                     
-                    if(itemNumber.Kind=="Seat")
+
+                    if (itemNumber.Kind == "Seat")
                     {
                         int seatTime = Credential.Instance.User.RemainSeatTime += itemNumber.Time;
                         MessageBox.Show($"{Credential.Instance.User.RemainSeatTime}");
@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
                         Dao.User.Update(user);
                     }
 
-                    else if (itemNumber.Kind=="StudyRoom")
+                    else if (itemNumber.Kind == "StudyRoom")
                     {
                         int strudyRoomTime = Credential.Instance.User.RemainStudyRoomTime += itemNumber.Time;
                         MessageBox.Show($"{Credential.Instance.User.RemainStudyRoomTime}");
@@ -141,11 +141,11 @@ namespace WindowsFormsApp1
                         studyRoom.UserID = userId;
                         Dao.StudyRoom.Update(studyRoom);
                     }
-                
+
 
                     else
                     {
-                        if(_lockerNumber!=null)
+                        if (_lockerNumber != null)
                         {
                             int lockerTime = Credential.Instance.User.RemainLockerTime += itemNumber.Time;
                             MessageBox.Show($"{Credential.Instance.User.RemainLockerTime}");
@@ -157,7 +157,7 @@ namespace WindowsFormsApp1
                             locker.UserID = userId;
                             Dao.Locker.Update(locker);
                         }
-                        
+
                         else
                         {
                             int lockerTime = Credential.Instance.User.RemainLockerTime += itemNumber.Time;
@@ -166,7 +166,7 @@ namespace WindowsFormsApp1
                             User user = Dao.User.GetByPK(userId);
                             user.RemainLockerTime = lockerTime;
                             Dao.User.Update(user);
-                        }  
+                        }
                     }
                 }
 
@@ -178,7 +178,7 @@ namespace WindowsFormsApp1
 
         private void dgvItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(MessageBox.Show("삭제 하시겠습니까","네Or아니요",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            if (MessageBox.Show("삭제 하시겠습니까", "네Or아니요", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 //현재 토탈 가격 - 삭제할 가격
                 int oldTxbTotalPrice = int.Parse(txbTotalPrice.Text);
@@ -194,7 +194,7 @@ namespace WindowsFormsApp1
 
                 //행 삭제
                 int rw = dgvItem.CurrentCell.RowIndex;
-                dgvItem.Rows.RemoveAt(rw);  
+                dgvItem.Rows.RemoveAt(rw);
             }
         }
     }

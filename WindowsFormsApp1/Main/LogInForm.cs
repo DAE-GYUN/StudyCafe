@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-    
+
             bgwLogin.RunWorkerAsync();
         }
 

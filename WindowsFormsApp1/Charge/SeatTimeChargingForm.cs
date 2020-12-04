@@ -13,14 +13,14 @@ namespace WindowsFormsApp1
 {
     public partial class SeatTimeChargingForm : Form
     {
-        public PurchaseForm purchaseForm;
+        private PurchaseForm purchaseForm;
 
         public SeatTimeChargingForm()
         {
             InitializeComponent();
         }
 
-        public SeatTimeChargingForm(PurchaseForm purchase):this()
+        public SeatTimeChargingForm(PurchaseForm purchase) : this()
         {
             purchaseForm = purchase;
         }

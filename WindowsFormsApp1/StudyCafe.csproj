@@ -75,12 +75,6 @@
     <Compile Include="Popup\SnapshotForm.Designer.cs">
       <DependentUpon>SnapshotForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\PaymentControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\PaymentControl.Designer.cs">
-      <DependentUpon>PaymentControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Select\CheckInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,12 +111,6 @@
     <Compile Include="Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Popup\PaymentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Popup\PaymentForm.Designer.cs">
-      <DependentUpon>PaymentForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main\PurchaseForm.cs">
@@ -155,12 +143,8 @@
     <Compile Include="Charge\StudyRoomTimeChargingForm.Designer.cs">
       <DependentUpon>StudyRoomTimeChargingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowSeatName.cs" />
     <EmbeddedResource Include="Popup\SnapshotForm.resx">
       <DependentUpon>SnapshotForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\PaymentControl.resx">
-      <DependentUpon>PaymentControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Popup\CheckShiftSeatForm.resx">
       <DependentUpon>CheckShiftSeatForm.cs</DependentUpon>
@@ -179,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Popup\PaymentForm.resx">
-      <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

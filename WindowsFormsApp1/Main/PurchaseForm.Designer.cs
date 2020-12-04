@@ -209,6 +209,7 @@ namespace WindowsFormsApp1
             this.dgvItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvItem.Location = new System.Drawing.Point(3, 3);
             this.dgvItem.Name = "dgvItem";
+            this.dgvItem.ReadOnly = true;
             this.dgvItem.RowHeadersWidth = 51;
             this.dgvItem.RowTemplate.Height = 27;
             this.dgvItem.Size = new System.Drawing.Size(562, 102);
@@ -221,6 +222,7 @@ namespace WindowsFormsApp1
             this.ItemID.HeaderText = "고유번호";
             this.ItemID.MinimumWidth = 6;
             this.ItemID.Name = "ItemID";
+            this.ItemID.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -228,6 +230,7 @@ namespace WindowsFormsApp1
             this.nameDataGridViewTextBoxColumn.HeaderText = "상품이름";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // timeDataGridViewTextBoxColumn
             // 
@@ -235,6 +238,7 @@ namespace WindowsFormsApp1
             this.timeDataGridViewTextBoxColumn.HeaderText = "이용시간";
             this.timeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // priceDataGridViewTextBoxColumn
             // 
@@ -242,6 +246,7 @@ namespace WindowsFormsApp1
             this.priceDataGridViewTextBoxColumn.HeaderText = "가격";
             this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataGridViewButtonColumn1
             // 
@@ -249,6 +254,7 @@ namespace WindowsFormsApp1
             this.dataGridViewButtonColumn1.HeaderText = "삭제";
             this.dataGridViewButtonColumn1.MinimumWidth = 6;
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.ReadOnly = true;
             this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
             // 

@@ -25,9 +25,9 @@ namespace WindowsFormsApp1
 
         private string _select, selectStudyRoom;
 
-        public PurchaseForm purchaseForm;
+        private PurchaseForm purchaseForm;
 
-        public CheckInForm(string select, PurchaseForm purchase):this()
+        public CheckInForm(string select, PurchaseForm purchase) : this()
         {
             _select = select;
             purchaseForm = purchase;
@@ -49,14 +49,14 @@ namespace WindowsFormsApp1
                 {
                     Seat seat = Dao.Seat.GetByUserID((int)(seats[i].UserID));
 
-                    gbSeatNumber.Controls[int.Parse(seat.Name)-1].Enabled = false;
+                    gbSeatNumber.Controls[int.Parse(seat.Name) - 1].Enabled = false;
                 }
             }
 
             List<StudyRoom> studyRooms = Dao.StudyRoom.GetAll();
             for (int i = 0; i < 4; i++)
             {
-                if(studyRooms[i].UserID != null)
+                if (studyRooms[i].UserID != null)
                 {
                     StudyRoom studyRoom = Dao.StudyRoom.GetByUserID((int)(studyRooms[i].UserID));
 
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
             }
             else if (_select == "StudyRoom")
             {
-                StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm(selectStudyRoom,purchaseForm);
+                StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm(selectStudyRoom, purchaseForm);
                 studyRoomTimeCharging.ShowDialog();
                 if (studyRoomTimeCharging.DialogResult == DialogResult.Yes)
                 {

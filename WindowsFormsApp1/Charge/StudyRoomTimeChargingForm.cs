@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public StudyRoomTimeChargingForm(string str,PurchaseForm purchase) : this()
+        public StudyRoomTimeChargingForm(string str, PurchaseForm purchase) : this()
         {
             _str = str;
             purchaseForm = purchase;
@@ -33,15 +33,15 @@ namespace WindowsFormsApp1
             txbRoomNumber.Text = _str;
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
             btnPurchase.Enabled = false;
-           
-            
-           
+
+
+
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
             purchaseForm.GetStudyRoomNumber(_str);
-        
+
             List<Item> items = Dao.Item.GetAll();
             foreach (var price in items)
             {
@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
         {
             txbChargingTime.Text = ((RadioButton)sender).Text.ToString();
             txbPrice.Text = ((RadioButton)sender).Tag.ToString();
-      
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)

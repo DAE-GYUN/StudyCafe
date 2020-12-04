@@ -24,10 +24,9 @@ namespace WindowsFormsApp1
             base.OnLoad(e);
             int phoneNumber = int.Parse(Credential.Instance.User.PhoneNumber);
             string firstNumber = String.Format("{0:D3}", phoneNumber / 100000000);
-            string secondNumber = String.Format("{0:D4}", (phoneNumber % 100000000)/10000);
+            string secondNumber = String.Format("{0:D4}", (phoneNumber % 100000000) / 10000);
             string thirdNumber = String.Format("{0:D4}", phoneNumber % 1000);
             txbUserNumber.Text = $"{firstNumber}-{secondNumber}-{thirdNumber}";
-        
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -47,7 +46,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("스터디룸을 사용중인 고객은 좌석을 이용할 수 없습니다");
             }
 
-            else if(Credential.Instance.User.RemainSeatTime == 0)
+            else if (Credential.Instance.User.RemainSeatTime == 0)
             {
                 MessageBox.Show("좌석 이용시간을 충전해 주세요");
             }
@@ -58,7 +57,9 @@ namespace WindowsFormsApp1
                 checkInForm.ShowDialog();
 
                 if (checkInForm.DialogResult == DialogResult.OK)
+                {
                     Close();
+                }
             }
         }
 
@@ -97,8 +98,11 @@ namespace WindowsFormsApp1
                     Close();
                 }
             }
+
             else
+            {
                 MessageBox.Show("현재 사용중인 좌석이 없습니다");
+            }
         }
 
         private void btnShiftSeat_Click(object sender, EventArgs e)
@@ -109,7 +113,9 @@ namespace WindowsFormsApp1
                 checkInForm.ShowDialog();
 
                 if (checkInForm.DialogResult == DialogResult.OK)
+                {
                     Close();
+                }
             }
 
             else

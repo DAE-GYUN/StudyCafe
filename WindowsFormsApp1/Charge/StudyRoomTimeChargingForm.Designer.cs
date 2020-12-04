@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPurchase.FlatAppearance.BorderSize = 0;
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Location = new System.Drawing.Point(565, 2);
+            this.btnPurchase.Location = new System.Drawing.Point(564, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(174, 36);
@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(204, 2);
+            this.btnBack.Location = new System.Drawing.Point(203, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(174, 36);
@@ -366,7 +366,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.41521F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel5.Controls.Add(this.btnBack, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnPurchase, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
