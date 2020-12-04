@@ -19,10 +19,12 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public StudyRoomTimeChargingForm(string str) : this()
+        public StudyRoomTimeChargingForm(string str,PurchaseForm purchase) : this()
         {
             _str = str;
+            purchaseForm = purchase;
         }
+        private PurchaseForm purchaseForm;
         private string _str;
         protected override void OnLoad(EventArgs e)
         {
@@ -30,100 +32,26 @@ namespace WindowsFormsApp1
 
             txbRoomNumber.Text = _str;
             txbUserNumber.Text = Credential.Instance.User.PhoneNumber;
+            btnPurchase.Enabled = false;
            
-
-
-        }
-
-        private void btnAddToCart_Click(object sender, EventArgs e)
-        {
-            Close();
+            
+           
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-            if (txbPrice.Text == "10000")
+            purchaseForm.GetStudyRoomNumber(_str);
+        
+            List<Item> items = Dao.Item.GetAll();
+            foreach (var price in items)
             {
-                Item item = Dao.Item.GetByPK(7);
-                //uscItem.AddItem(item);
-
-                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (txbPrice.Text == price.Price.ToString() && txbItemName.Text == price.Name.ToString())
                 {
-
-                    int userCredential = Credential.Instance.User.UserID;
-                    int userKey = Dao.User.GetByUserKey(userCredential);
-
-
-                    int lockerTime = Credential.Instance.User.RemainStudyRoomTime+= 120;
-
-                    User user = Dao.User.GetByPK(userKey);
-                    user.RemainStudyRoomTime = lockerTime;
-                    Dao.User.Update(user);
-
-                    DialogResult = DialogResult.Yes;
-                    Close();
-                    
-                }
-                else
-                {
-                    
+                    purchaseForm.AddItem(price);
                 }
             }
-
-            if (txbPrice.Text == "35000")
-            {
-                Item item = Dao.Item.GetByPK(8);
-                //uscItem.AddItem(item);
-
-                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-
-                    int userCredential = Credential.Instance.User.UserID;
-                    int userKey = Dao.User.GetByUserKey(userCredential);
-
-
-                    int lockerTime = Credential.Instance.User.RemainStudyRoomTime += 240;
-
-                    User user = Dao.User.GetByPK(userKey);
-                    user.RemainStudyRoomTime = lockerTime;
-                    Dao.User.Update(user);
-
-                    DialogResult = DialogResult.Yes;
-                    Close();
-                }
-                else
-                {
-                    
-                }
-            }
-
-            if (txbPrice.Text == "50000")
-            {
-                Item item = Dao.Item.GetByPK(8);
-                //uscItem.AddItem(item);
-
-                if (MessageBox.Show("결제하시겠습니까?", "YesorNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-
-                    int userCredential = Credential.Instance.User.UserID;
-                    int userKey = Dao.User.GetByUserKey(userCredential);
-
-
-                    int lockerTime = Credential.Instance.User.RemainStudyRoomTime += 360;
-
-                    User user = Dao.User.GetByPK(userKey);
-                    user.RemainStudyRoomTime = lockerTime;
-                    Dao.User.Update(user);
-
-                    DialogResult = DialogResult.Yes;
-                    Close();
-                }
-                else
-                {
-                    
-                }
-                
-            }
+            DialogResult = DialogResult.Yes;
+            Close();
         }
 
         private void btnSelectItem_Click(object sender, EventArgs e)
@@ -138,38 +66,16 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void rbtn2Hours_CheckedChanged(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Item item = Dao.Item.GetByPK(7);
-            // uscItem.AddItem(item);
+            string num = ((Button)sender).Tag.ToString();
+            Item item = Dao.Item.GetByPK(int.Parse(num));
             txbPrice.Text = item.Price.ToString();
-            txbChargingTime.Text = item.Name.ToString();
+            txbItemName.Text = item.Name;
+            txbChargingTime.Text = item.Time.ToString();
+            btnPurchase.Enabled = true;
         }
 
-        private void btn4Hour_Click(object sender, EventArgs e)
-        {
-            Item item = Dao.Item.GetByPK(8);
-            // uscItem.AddItem(item);
-            txbPrice.Text = item.Price.ToString();
-            txbChargingTime.Text = item.Name.ToString();
-        }
 
-        private void btn6Hour_Click(object sender, EventArgs e)
-        {
-            Item item = Dao.Item.GetByPK(9);
-            // uscItem.AddItem(item);
-            txbPrice.Text = item.Price.ToString();
-            txbChargingTime.Text = item.Name.ToString();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

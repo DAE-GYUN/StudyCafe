@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LockerTimeChargingForm));
-            this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnToCart = new System.Windows.Forms.Button();
             this.txbPrice = new System.Windows.Forms.TextBox();
             this.txbUserNumber = new System.Windows.Forms.TextBox();
@@ -57,23 +56,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddToCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.BackgroundImage")));
-            this.btnAddToCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddToCart.FlatAppearance.BorderSize = 0;
-            this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(208, 2);
-            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(199, 85);
-            this.btnAddToCart.TabIndex = 17;
-            this.btnAddToCart.Text = "추가선택";
-            this.btnAddToCart.UseVisualStyleBackColor = false;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // btnToCart
             // 
@@ -240,7 +222,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel5.Controls.Add(this.btnCancel, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnToCart, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnAddToCart, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 225);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -375,7 +356,6 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnToCart;
         private System.Windows.Forms.TextBox txbPrice;
         private System.Windows.Forms.TextBox txbUserNumber;

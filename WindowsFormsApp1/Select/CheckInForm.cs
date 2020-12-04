@@ -23,7 +23,15 @@ namespace WindowsFormsApp1
             _select = select;
         }
 
-        private string _select, _str;
+        private string _select, selectStudyRoom;
+
+        public PurchaseForm purchaseForm;
+
+        public CheckInForm(string select, PurchaseForm purchase):this()
+        {
+            _select = select;
+            purchaseForm = purchase;
+        }
 
         protected override void OnLoad(EventArgs e)
         {
@@ -68,7 +76,7 @@ namespace WindowsFormsApp1
         {
             if (_select == "Shift")
             {
-                CheckShiftSeatForm checkShiftSeatForm = new CheckShiftSeatForm(_str);
+                CheckShiftSeatForm checkShiftSeatForm = new CheckShiftSeatForm(selectStudyRoom);
                 checkShiftSeatForm.ShowDialog();
                 if (checkShiftSeatForm.DialogResult == DialogResult.OK)
                 {
@@ -78,7 +86,7 @@ namespace WindowsFormsApp1
             }
             else if (_select == "StudyRoom")
             {
-                StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm(_str);
+                StudyRoomTimeChargingForm studyRoomTimeCharging = new StudyRoomTimeChargingForm(selectStudyRoom,purchaseForm);
                 studyRoomTimeCharging.ShowDialog();
                 if (studyRoomTimeCharging.DialogResult == DialogResult.Yes)
                 {
@@ -88,7 +96,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                SeatNumberCheckForm seatNumberCheck = new SeatNumberCheckForm(_str);
+                SeatNumberCheckForm seatNumberCheck = new SeatNumberCheckForm(selectStudyRoom);
                 seatNumberCheck.ShowDialog();
                 if (seatNumberCheck.DialogResult == DialogResult.OK)
                 {
@@ -107,7 +115,7 @@ namespace WindowsFormsApp1
         private void btnSelectSeat_Click(object sender, EventArgs e)
         {
             txbSeatNumber.Text = ((Button)sender).Text.ToString();
-            _str = ((Button)sender).Tag.ToString();
+            selectStudyRoom = ((Button)sender).Tag.ToString();
         }
     }
 }

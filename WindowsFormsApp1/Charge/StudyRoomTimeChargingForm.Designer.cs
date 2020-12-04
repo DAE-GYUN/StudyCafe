@@ -31,7 +31,6 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudyRoomTimeChargingForm));
             this.btnPurchase = new System.Windows.Forms.Button();
-            this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.txbPrice = new System.Windows.Forms.TextBox();
             this.txbChargingTime = new System.Windows.Forms.TextBox();
@@ -50,6 +49,9 @@ namespace WindowsFormsApp1
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txbItemName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -57,6 +59,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
@@ -69,31 +72,14 @@ namespace WindowsFormsApp1
             this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPurchase.FlatAppearance.BorderSize = 0;
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Location = new System.Drawing.Point(571, 2);
+            this.btnPurchase.Location = new System.Drawing.Point(565, 2);
             this.btnPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(176, 36);
+            this.btnPurchase.Size = new System.Drawing.Size(174, 36);
             this.btnPurchase.TabIndex = 10;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = false;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
-            // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddToCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.BackgroundImage")));
-            this.btnAddToCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddToCart.FlatAppearance.BorderSize = 0;
-            this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToCart.Location = new System.Drawing.Point(388, 2);
-            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(177, 36);
-            this.btnAddToCart.TabIndex = 11;
-            this.btnAddToCart.Text = "추가선택";
-            this.btnAddToCart.UseVisualStyleBackColor = false;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // btnBack
             // 
@@ -103,10 +89,10 @@ namespace WindowsFormsApp1
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(206, 2);
+            this.btnBack.Location = new System.Drawing.Point(204, 2);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(176, 36);
+            this.btnBack.Size = new System.Drawing.Size(174, 36);
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "뒤로가기";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -189,6 +175,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 21);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -248,9 +235,10 @@ namespace WindowsFormsApp1
             this.btn6Hour.Name = "btn6Hour";
             this.btn6Hour.Size = new System.Drawing.Size(75, 22);
             this.btn6Hour.TabIndex = 0;
+            this.btn6Hour.Tag = "9";
             this.btn6Hour.Text = "6시간";
             this.btn6Hour.UseVisualStyleBackColor = true;
-            this.btn6Hour.Click += new System.EventHandler(this.btn6Hour_Click);
+            this.btn6Hour.Click += new System.EventHandler(this.button_Click);
             // 
             // btn4Hour
             // 
@@ -260,9 +248,10 @@ namespace WindowsFormsApp1
             this.btn4Hour.Name = "btn4Hour";
             this.btn4Hour.Size = new System.Drawing.Size(75, 22);
             this.btn4Hour.TabIndex = 0;
+            this.btn4Hour.Tag = "8";
             this.btn4Hour.Text = "4시간";
             this.btn4Hour.UseVisualStyleBackColor = true;
-            this.btn4Hour.Click += new System.EventHandler(this.btn4Hour_Click);
+            this.btn4Hour.Click += new System.EventHandler(this.button_Click);
             // 
             // btn2Hour
             // 
@@ -272,9 +261,10 @@ namespace WindowsFormsApp1
             this.btn2Hour.Name = "btn2Hour";
             this.btn2Hour.Size = new System.Drawing.Size(75, 22);
             this.btn2Hour.TabIndex = 0;
+            this.btn2Hour.Tag = "7";
             this.btn2Hour.Text = "2시간";
             this.btn2Hour.UseVisualStyleBackColor = true;
-            this.btn2Hour.Click += new System.EventHandler(this.button1_Click);
+            this.btn2Hour.Click += new System.EventHandler(this.button_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -320,7 +310,6 @@ namespace WindowsFormsApp1
             this.label2.Size = new System.Drawing.Size(94, 15);
             this.label2.TabIndex = 24;
             this.label2.Text = "ChargingTime";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -340,6 +329,36 @@ namespace WindowsFormsApp1
             this.label5.TabIndex = 26;
             this.label5.Text = "Price";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txbItemName);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(487, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(298, 220);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // txbItemName
+            // 
+            this.txbItemName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbItemName.Location = new System.Drawing.Point(116, 55);
+            this.txbItemName.Name = "txbItemName";
+            this.txbItemName.Size = new System.Drawing.Size(157, 25);
+            this.txbItemName.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "ItemName";
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 5;
@@ -347,10 +366,9 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.41521F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.26901F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel5.Controls.Add(this.btnBack, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnPurchase, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnAddToCart, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 212);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -399,6 +417,8 @@ namespace WindowsFormsApp1
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -408,7 +428,6 @@ namespace WindowsFormsApp1
 
         #endregion
         private System.Windows.Forms.Button btnPurchase;
-        private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txbPrice;
         private System.Windows.Forms.TextBox txbChargingTime;
@@ -429,5 +448,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txbItemName;
+        private System.Windows.Forms.Label label6;
     }
 }
