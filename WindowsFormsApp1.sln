@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.Admin", "StudyCafe.Admin\StudyCafe.Admin.csproj", "{87C56448-D9A1-4E0E-9573-21FAEFF09E68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B19BC9D-48F3-4243-9DE1-817FE1E4BEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87C56448-D9A1-4E0E-9573-21FAEFF09E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C56448-D9A1-4E0E-9573-21FAEFF09E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C56448-D9A1-4E0E-9573-21FAEFF09E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C56448-D9A1-4E0E-9573-21FAEFF09E68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
