@@ -18,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyCafe.Admin", "StudyCafe.Admin\StudyCafe.Admin.csproj", "{87C56448-D9A1-4E0E-9573-21FAEFF09E68}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp1ML.Model", "WindowsFormsApp1ML.Model\WindowsFormsApp1ML.Model.csproj", "{25BC7959-75FD-4588-98D1-C1D34B08A3CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp1ML.ConsoleApp", "WindowsFormsApp1ML.ConsoleApp\WindowsFormsApp1ML.ConsoleApp.csproj", "{106BBB21-EBE0-4BF6-8AAA-A0C3B5504A67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{87C56448-D9A1-4E0E-9573-21FAEFF09E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87C56448-D9A1-4E0E-9573-21FAEFF09E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87C56448-D9A1-4E0E-9573-21FAEFF09E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25BC7959-75FD-4588-98D1-C1D34B08A3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25BC7959-75FD-4588-98D1-C1D34B08A3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25BC7959-75FD-4588-98D1-C1D34B08A3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25BC7959-75FD-4588-98D1-C1D34B08A3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106BBB21-EBE0-4BF6-8AAA-A0C3B5504A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106BBB21-EBE0-4BF6-8AAA-A0C3B5504A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106BBB21-EBE0-4BF6-8AAA-A0C3B5504A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106BBB21-EBE0-4BF6-8AAA-A0C3B5504A67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
