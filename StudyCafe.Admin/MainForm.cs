@@ -17,8 +17,13 @@ namespace StudyCafe.Admin
             InitializeComponent();
         }
 
-        private void accordionControlElement2_Click(object sender, EventArgs e)
+        
+
+        private void aceCustomer_Click(object sender, EventArgs e)
         {
+            CustomerManagementForm customerManagementForm = new CustomerManagementForm();
+            customerManagementForm.MdiParent = this;
+            customerManagementForm.Show();
 
         }
     }
