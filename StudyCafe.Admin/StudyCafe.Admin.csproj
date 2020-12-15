@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.ML.FastTree.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.FastTree.props" Condition="Exists('..\packages\Microsoft.ML.FastTree.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.FastTree.props')" />
+  <Import Project="..\packages\LightGBM.2.2.3\build\LightGBM.props" Condition="Exists('..\packages\LightGBM.2.2.3\build\LightGBM.props')" />
+  <Import Project="..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.props" Condition="Exists('..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.props')" />
+  <Import Project="..\packages\Microsoft.ML.CpuMath.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.CpuMath.props" Condition="Exists('..\packages\Microsoft.ML.CpuMath.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.CpuMath.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -13,6 +17,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +38,46 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v20.2" />
@@ -57,9 +103,64 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ML.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.CpuMath, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.CpuMath.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.CpuMath.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.DataView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.DataView.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.DataView.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.FastTree, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.FastTree.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.FastTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.KMeansClustering, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.KMeansClustering.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.LightGbm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.LightGbm.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.LightGbm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.PCA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.PCA.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.StandardTrainers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.StandardTrainers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Transforms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.1.5.0-preview2\lib\netstandard2.0\Microsoft.ML.Transforms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.4.4.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Dataflow.4.8.0\lib\netstandard2.0\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -128,8 +229,25 @@
       <Project>{ad51e628-6053-4f07-b02c-6ff3c0d5577a}</Project>
       <Name>StudyCafe.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WindowsFormsApp1ML.Model\WindowsFormsApp1ML.Model.csproj">
+      <Project>{25bc7959-75fd-4588-98d1-c1d34b08a3cc}</Project>
+      <Name>WindowsFormsApp1ML.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.ML.CpuMath.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.CpuMath.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.CpuMath.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.CpuMath.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.targets'))" />
+    <Error Condition="!Exists('..\packages\LightGBM.2.2.3\build\LightGBM.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LightGBM.2.2.3\build\LightGBM.props'))" />
+    <Error Condition="!Exists('..\packages\LightGBM.2.2.3\build\LightGBM.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LightGBM.2.2.3\build\LightGBM.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.FastTree.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.FastTree.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.FastTree.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.FastTree.props'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.targets" Condition="Exists('..\packages\Microsoft.ML.1.5.0-preview2\build\netstandard2.0\Microsoft.ML.targets')" />
+  <Import Project="..\packages\LightGBM.2.2.3\build\LightGBM.targets" Condition="Exists('..\packages\LightGBM.2.2.3\build\LightGBM.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

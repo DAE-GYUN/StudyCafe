@@ -4,17 +4,21 @@ using System.Text;
 
 namespace WindowsFormsApp1ML.Model
 {
-    public class Predictor
+    public class Predict
     {
-        //public static ModelOutput Predictor(int beverageId, string dayQuater, int userCount)
-        //{
-        //    ModelInput mo = new ModelInput()
-        //    {
-        //        BeverageID = 1F,
-        //        DayQuater = @"00시~06시",
-        //        UserCount = 24F,
-        //        DayOfTheWeek = @"월",
-        //    };
-        //}
+        public static double Predictor(int beverageId, string dayQuater, int userCount, string dayOfTheWeek)
+        {
+            ModelInput input = new ModelInput()
+            {
+                BeverageID = beverageId,
+                DayQuater = dayQuater,
+                UserCount = userCount,
+                DayOfTheWeek = dayOfTheWeek,
+            };
+
+            ModelOutput result = ConsumeModel.Predict(input);
+
+            return result.Score;
+        }
     }
 }
