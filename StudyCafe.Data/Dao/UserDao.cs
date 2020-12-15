@@ -2,6 +2,7 @@
 #region using
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using EFLibrary;
@@ -45,5 +46,6 @@ namespace StudyCafe.Data
                 return query.FirstOrDefault();
             }
         }
+  
     }
 }

@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beverage.cs">
+      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
+    </Compile>
     <Compile Include="Dao\Dao.cs" />
     <Compile Include="Dao\PictureDao.cs" />
     <Compile Include="EFLibrary\BaseDao.cs" />
@@ -86,6 +89,9 @@
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="Log.cs">
+      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MachineLearningTemp.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="Picture.cs">
