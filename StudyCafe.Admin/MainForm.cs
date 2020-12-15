@@ -1,12 +1,6 @@
-﻿using DevExpress.XtraBars;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApp1ML.Model;
 
 namespace StudyCafe.Admin
 {
@@ -15,6 +9,17 @@ namespace StudyCafe.Admin
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            if (DesignMode)
+                return;
+
+            //double test = Predict.Predictor(1, "00시~06시", 24, "월");
+            //MessageBox.Show(test.ToString());
         }
 
         private void accordionControlElement1_Click(object sender, EventArgs e)
