@@ -32,13 +32,13 @@ namespace StudyCafe.Admin
             this.components = new System.ComponentModel.Container();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.fdfcAdminForm = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlSeparator2 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fdfcAdminForm = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fdfcAdminForm)).BeginInit();
@@ -51,7 +51,7 @@ namespace StudyCafe.Admin
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(231, 39);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(383, 409);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(857, 513);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // accordionControl1
@@ -66,37 +66,17 @@ namespace StudyCafe.Admin
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(231, 409);
+            this.accordionControl1.Size = new System.Drawing.Size(231, 513);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
-            // 
-            // fdfcAdminForm
-            // 
-            this.fdfcAdminForm.FluentDesignForm = this;
-            this.fdfcAdminForm.Location = new System.Drawing.Point(0, 0);
-            this.fdfcAdminForm.Manager = this.fluentFormDefaultManager1;
-            this.fdfcAdminForm.Name = "fdfcAdminForm";
-            this.fdfcAdminForm.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemTextEdit1});
-            this.fdfcAdminForm.Size = new System.Drawing.Size(614, 39);
-            this.fdfcAdminForm.TabIndex = 2;
-            this.fdfcAdminForm.TabStop = false;
-            // 
-            // fluentFormDefaultManager1
-            // 
-            this.fluentFormDefaultManager1.DockingEnabled = false;
-            this.fluentFormDefaultManager1.Form = this;
-            this.fluentFormDefaultManager1.MaxItemId = 3;
-            this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemTextEdit1});
-            // 
-            // accordionControlSeparator1
-            // 
-            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
             // 
             // accordionControlSeparator2
             // 
             this.accordionControlSeparator2.Name = "accordionControlSeparator2";
+            // 
+            // accordionControlSeparator1
+            // 
+            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
             // 
             // accordionControlElement1
             // 
@@ -109,6 +89,7 @@ namespace StudyCafe.Admin
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement2.Text = "재고관리";
+            this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click);
             // 
             // accordionControlElement3
             // 
@@ -116,21 +97,41 @@ namespace StudyCafe.Admin
             this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement3.Text = "매출관리";
             // 
+            // fdfcAdminForm
+            // 
+            this.fdfcAdminForm.FluentDesignForm = this;
+            this.fdfcAdminForm.Location = new System.Drawing.Point(0, 0);
+            this.fdfcAdminForm.Manager = this.fluentFormDefaultManager1;
+            this.fdfcAdminForm.Name = "fdfcAdminForm";
+            this.fdfcAdminForm.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
+            this.fdfcAdminForm.Size = new System.Drawing.Size(1088, 39);
+            this.fdfcAdminForm.TabIndex = 2;
+            this.fdfcAdminForm.TabStop = false;
+            // 
+            // fluentFormDefaultManager1
+            // 
+            this.fluentFormDefaultManager1.DockingEnabled = false;
+            this.fluentFormDefaultManager1.Form = this;
+            this.fluentFormDefaultManager1.MaxItemId = 3;
+            this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
+            // 
             // repositoryItemTextEdit1
             // 
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 448);
+            this.ClientSize = new System.Drawing.Size(1088, 552);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fdfcAdminForm);
             this.FluentDesignFormControl = this.fdfcAdminForm;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.NavigationControl = this.accordionControl1;
             this.Text = "Admin";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();

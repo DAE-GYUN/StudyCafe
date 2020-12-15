@@ -16,5 +16,10 @@ namespace StudyCafe.Admin
         {
             InitializeComponent();
         }
+
+        private void accordionControlElement2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
