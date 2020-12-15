@@ -16,6 +16,7 @@ namespace StudyCafe.Admin
         {
             InitializeComponent();
         }
+
         
 
         private void aceCustomer_Click(object sender, EventArgs e)
@@ -23,6 +24,7 @@ namespace StudyCafe.Admin
             CustomerManagementForm customerManagementForm = new CustomerManagementForm();
             customerManagementForm.MdiParent = this;
             customerManagementForm.Show();
+
         }
     }
 }
