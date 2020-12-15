@@ -157,6 +157,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsFormsApp1ML.Model\WindowsFormsApp1ML.Model.csproj">
+      <Project>{25BC7959-75FD-4588-98D1-C1D34B08A3CC}</Project>
+      <Name>WindowsFormsApp1ML.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
