@@ -42,19 +42,6 @@ namespace StudyCafe.Admin
             this.colUserID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRemainLockerTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRemainStudyRoomTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRemainSeatTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAdmin = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCheckInStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPictureID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoices = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLockers = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLogs = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPicture = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colReports = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSeats = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStudyRooms = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -96,16 +83,18 @@ namespace StudyCafe.Admin
             this.layoutControl1.Controls.Add(this.grdUser);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsView.UseSkinIndents = false;
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(800, 450);
+            this.layoutControl1.Size = new System.Drawing.Size(800, 540);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // simpleButton1
             // 
             this.simpleButton1.Location = new System.Drawing.Point(681, 34);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(111, 27);
             this.simpleButton1.StyleController = this.layoutControl1;
@@ -116,6 +105,7 @@ namespace StudyCafe.Admin
             // 
             this.checkEdit3.EditValue = true;
             this.checkEdit3.Location = new System.Drawing.Point(487, 34);
+            this.checkEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkEdit3.Name = "checkEdit3";
             this.checkEdit3.Properties.Caption = "전화번호 검색";
             this.checkEdit3.Size = new System.Drawing.Size(111, 24);
@@ -126,6 +116,7 @@ namespace StudyCafe.Admin
             // 
             this.checkEdit2.EditValue = true;
             this.checkEdit2.Location = new System.Drawing.Point(392, 34);
+            this.checkEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "이름 검색";
             this.checkEdit2.Size = new System.Drawing.Size(85, 24);
@@ -136,6 +127,7 @@ namespace StudyCafe.Admin
             // 
             this.checkEdit1.EditValue = true;
             this.checkEdit1.Location = new System.Drawing.Point(305, 34);
+            this.checkEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "ID 검색";
             this.checkEdit1.Size = new System.Drawing.Size(77, 24);
@@ -145,6 +137,7 @@ namespace StudyCafe.Admin
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(52, 34);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(243, 24);
             this.textEdit1.StyleController = this.layoutControl1;
@@ -153,10 +146,12 @@ namespace StudyCafe.Admin
             // grdUser
             // 
             this.grdUser.DataSource = this.bdsUser;
+            this.grdUser.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grdUser.Location = new System.Drawing.Point(5, 74);
             this.grdUser.MainView = this.gridView1;
+            this.grdUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdUser.Name = "grdUser";
-            this.grdUser.Size = new System.Drawing.Size(790, 371);
+            this.grdUser.Size = new System.Drawing.Size(790, 461);
             this.grdUser.TabIndex = 4;
             this.grdUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -170,20 +165,8 @@ namespace StudyCafe.Admin
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colUserID,
             this.colPhoneNumber,
-            this.colName,
-            this.colRemainLockerTime,
-            this.colRemainStudyRoomTime,
-            this.colRemainSeatTime,
-            this.colAdmin,
-            this.colCheckInStatus,
-            this.colPictureID,
-            this.colInvoices,
-            this.colLockers,
-            this.colLogs,
-            this.colPicture,
-            this.colReports,
-            this.colSeats,
-            this.colStudyRooms});
+            this.colName});
+            this.gridView1.DetailHeight = 420;
             this.gridView1.GridControl = this.grdUser;
             this.gridView1.Name = "gridView1";
             // 
@@ -214,123 +197,6 @@ namespace StudyCafe.Admin
             this.colName.VisibleIndex = 2;
             this.colName.Width = 94;
             // 
-            // colRemainLockerTime
-            // 
-            this.colRemainLockerTime.FieldName = "RemainLockerTime";
-            this.colRemainLockerTime.MinWidth = 25;
-            this.colRemainLockerTime.Name = "colRemainLockerTime";
-            this.colRemainLockerTime.Visible = true;
-            this.colRemainLockerTime.VisibleIndex = 3;
-            this.colRemainLockerTime.Width = 94;
-            // 
-            // colRemainStudyRoomTime
-            // 
-            this.colRemainStudyRoomTime.FieldName = "RemainStudyRoomTime";
-            this.colRemainStudyRoomTime.MinWidth = 25;
-            this.colRemainStudyRoomTime.Name = "colRemainStudyRoomTime";
-            this.colRemainStudyRoomTime.Visible = true;
-            this.colRemainStudyRoomTime.VisibleIndex = 4;
-            this.colRemainStudyRoomTime.Width = 94;
-            // 
-            // colRemainSeatTime
-            // 
-            this.colRemainSeatTime.FieldName = "RemainSeatTime";
-            this.colRemainSeatTime.MinWidth = 25;
-            this.colRemainSeatTime.Name = "colRemainSeatTime";
-            this.colRemainSeatTime.Visible = true;
-            this.colRemainSeatTime.VisibleIndex = 5;
-            this.colRemainSeatTime.Width = 94;
-            // 
-            // colAdmin
-            // 
-            this.colAdmin.FieldName = "Admin";
-            this.colAdmin.MinWidth = 25;
-            this.colAdmin.Name = "colAdmin";
-            this.colAdmin.Visible = true;
-            this.colAdmin.VisibleIndex = 6;
-            this.colAdmin.Width = 94;
-            // 
-            // colCheckInStatus
-            // 
-            this.colCheckInStatus.FieldName = "CheckInStatus";
-            this.colCheckInStatus.MinWidth = 25;
-            this.colCheckInStatus.Name = "colCheckInStatus";
-            this.colCheckInStatus.Visible = true;
-            this.colCheckInStatus.VisibleIndex = 7;
-            this.colCheckInStatus.Width = 94;
-            // 
-            // colPictureID
-            // 
-            this.colPictureID.FieldName = "PictureID";
-            this.colPictureID.MinWidth = 25;
-            this.colPictureID.Name = "colPictureID";
-            this.colPictureID.Visible = true;
-            this.colPictureID.VisibleIndex = 8;
-            this.colPictureID.Width = 94;
-            // 
-            // colInvoices
-            // 
-            this.colInvoices.FieldName = "Invoices";
-            this.colInvoices.MinWidth = 25;
-            this.colInvoices.Name = "colInvoices";
-            this.colInvoices.Visible = true;
-            this.colInvoices.VisibleIndex = 9;
-            this.colInvoices.Width = 94;
-            // 
-            // colLockers
-            // 
-            this.colLockers.FieldName = "Lockers";
-            this.colLockers.MinWidth = 25;
-            this.colLockers.Name = "colLockers";
-            this.colLockers.Visible = true;
-            this.colLockers.VisibleIndex = 10;
-            this.colLockers.Width = 94;
-            // 
-            // colLogs
-            // 
-            this.colLogs.FieldName = "Logs";
-            this.colLogs.MinWidth = 25;
-            this.colLogs.Name = "colLogs";
-            this.colLogs.Visible = true;
-            this.colLogs.VisibleIndex = 11;
-            this.colLogs.Width = 94;
-            // 
-            // colPicture
-            // 
-            this.colPicture.FieldName = "Picture";
-            this.colPicture.MinWidth = 25;
-            this.colPicture.Name = "colPicture";
-            this.colPicture.Visible = true;
-            this.colPicture.VisibleIndex = 12;
-            this.colPicture.Width = 94;
-            // 
-            // colReports
-            // 
-            this.colReports.FieldName = "Reports";
-            this.colReports.MinWidth = 25;
-            this.colReports.Name = "colReports";
-            this.colReports.Visible = true;
-            this.colReports.VisibleIndex = 13;
-            this.colReports.Width = 94;
-            // 
-            // colSeats
-            // 
-            this.colSeats.FieldName = "Seats";
-            this.colSeats.MinWidth = 25;
-            this.colSeats.Name = "colSeats";
-            this.colSeats.Visible = true;
-            this.colSeats.VisibleIndex = 14;
-            this.colSeats.Width = 94;
-            // 
-            // colStudyRooms
-            // 
-            this.colStudyRooms.FieldName = "StudyRooms";
-            this.colStudyRooms.MinWidth = 25;
-            this.colStudyRooms.Name = "colStudyRooms";
-            this.colStudyRooms.Visible = true;
-            this.colStudyRooms.VisibleIndex = 15;
-            this.colStudyRooms.Width = 94;
-            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -339,7 +205,7 @@ namespace StudyCafe.Admin
             this.layoutControlItem1,
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(800, 450);
+            this.Root.Size = new System.Drawing.Size(800, 540);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -347,7 +213,7 @@ namespace StudyCafe.Admin
             this.layoutControlItem1.Control = this.grdUser;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 69);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(800, 381);
+            this.layoutControlItem1.Size = new System.Drawing.Size(800, 471);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -424,10 +290,11 @@ namespace StudyCafe.Admin
             // 
             // CustomerManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.layoutControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CustomerManagementForm";
             this.Text = "Customer Management";
             this.Load += new System.EventHandler(this.CustomerManagementForm_Load);
@@ -477,19 +344,6 @@ namespace StudyCafe.Admin
         private DevExpress.XtraGrid.Columns.GridColumn colUserID;
         private DevExpress.XtraGrid.Columns.GridColumn colPhoneNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
-        private DevExpress.XtraGrid.Columns.GridColumn colRemainLockerTime;
-        private DevExpress.XtraGrid.Columns.GridColumn colRemainStudyRoomTime;
-        private DevExpress.XtraGrid.Columns.GridColumn colRemainSeatTime;
-        private DevExpress.XtraGrid.Columns.GridColumn colAdmin;
-        private DevExpress.XtraGrid.Columns.GridColumn colCheckInStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colPictureID;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoices;
-        private DevExpress.XtraGrid.Columns.GridColumn colLockers;
-        private DevExpress.XtraGrid.Columns.GridColumn colLogs;
-        private DevExpress.XtraGrid.Columns.GridColumn colPicture;
-        private DevExpress.XtraGrid.Columns.GridColumn colReports;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeats;
-        private DevExpress.XtraGrid.Columns.GridColumn colStudyRooms;
         private DevExpress.XtraBars.PopupMenu ppmMenu;
     }
 }

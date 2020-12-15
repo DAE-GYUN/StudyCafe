@@ -12,13 +12,13 @@ namespace StudyCafe.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Report
+    public partial class MachineLearningTemp
     {
-        public int ReportID { get; set; }
-        public int UserID { get; set; }
-        public string Title { get; set; }
-        public string Contents { get; set; }
-    
-        public virtual User User { get; set; }
+        public int MachineLearningTempID { get; set; }
+        public int BeverageID { get; set; }
+        public string DayQuater { get; set; }
+        public int Usage { get; set; }
+        public int UserCount { get; set; }
+        public string DayOfTheWeek { get; set; }
     }
 }

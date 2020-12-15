@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace StudyCafe.Admin
 {
-    public partial class CustomerManagementForm : XtraForm
+    public partial class CustomerManagementForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         public CustomerManagementForm()
         {
@@ -26,8 +26,9 @@ namespace StudyCafe.Admin
 
             if (DesignMode)
                 return;
+            bdsUser.DataSource = Dao.User.GetAll();
 
-     
+
 
         }
 
@@ -35,5 +36,7 @@ namespace StudyCafe.Admin
         {
             bdsUser.DataSource = Dao.User.GetAll();
         }
+
+  
     }
 }

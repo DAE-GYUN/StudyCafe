@@ -1,5 +1,7 @@
 ﻿using DevExpress.Skins;
 using DevExpress.UserSkins;
+using EFLibrary;
+using StudyCafe.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,9 @@ namespace StudyCafe.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            DbContextCreator.Context = () => new KoreanStudyCafeEntities();
+
             Application.Run(new MainForm());
         }
     }

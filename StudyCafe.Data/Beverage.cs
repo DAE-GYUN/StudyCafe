@@ -12,21 +12,11 @@ namespace StudyCafe.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Item
+    public partial class Beverage
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Item()
-        {
-            this.InvoiceLines = new HashSet<InvoiceLine>();
-        }
-    
-        public int ItemID { get; set; }
+        public int BeverageID { get; set; }
         public string Name { get; set; }
-        public int Time { get; set; }
-        public int Price { get; set; }
-        public string Kind { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InvoiceLine> InvoiceLines { get; set; }
+        public int Numbers { get; set; }
+        public int Weight { get; set; }
     }
 }
