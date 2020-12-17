@@ -29,14 +29,14 @@ namespace StudyCafe.Admin
             BeverageChart.MdiParent = this;
             BeverageChart.Show();
 
-          //  machineLearningTempBindingSource.DataSource = // 리턴받은 리스트 대입
+            //  machineLearningTempBindingSource.DataSource = // 리턴받은 리스트 대입
         }
 
         private void StockControlForm_Load(object sender, EventArgs e)
         {
             StockControlForm coffeUseage = new StockControlForm();
-            
-            
+
+
             stockControlModelsBindingSource.DataSource = UserDao.GetCoffeModel();
 
             StockControlForm cocoaUseage = new StockControlForm();
