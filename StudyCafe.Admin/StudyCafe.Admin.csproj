@@ -171,11 +171,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="BeverageChartActualForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BeverageChartActualForm.Designer.cs">
       <DependentUpon>BeverageChartActualForm.cs</DependentUpon>
+
     </Compile>
     <Compile Include="CustomerManagementForm.cs">
       <SubType>Form</SubType>
@@ -197,8 +199,10 @@
     <Compile Include="StockControlForm.Designer.cs">
       <DependentUpon>StockControlForm.cs</DependentUpon>
     </Compile>
+
     <EmbeddedResource Include="BeverageChartActualForm.resx">
       <DependentUpon>BeverageChartActualForm.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagementForm.resx">
       <DependentUpon>CustomerManagementForm.cs</DependentUpon>

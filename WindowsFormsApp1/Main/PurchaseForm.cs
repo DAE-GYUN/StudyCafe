@@ -70,15 +70,32 @@ namespace WindowsFormsApp1
 
         //아이템을 담을 리스트 생성 =>  장바구니
         private List<Item> _items = new List<Item>();
-
+        private List<int> _itemsID = new List<int>();
         // 아이템 추가
+
         public void AddItem(Item item)
         {
-            _items.Add(item);
-            bdsItem.ResetBindings(false);
-            txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
-            btnPayment.Enabled = true;
+            foreach (var itemid in _items)
+            {
+                _itemsID.Add(itemid.ItemID);
+            }
+
+            if(_itemsID.Contains(item.ItemID))
+            {
+                MessageBox.Show("중복구매안됨");
+            }
+            else
+            {
+                _items.Add(item);
+                bdsItem.ResetBindings(false);
+                txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
+                btnPayment.Enabled = true;
+            }
+    
+            
         }
+
+ 
 
         public void DeleteItem(Item item)
         {
@@ -108,15 +125,25 @@ namespace WindowsFormsApp1
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
+            Invoice invoice = new Invoice()
+            {
+                InvoiceDatetime = DateTime.Now,
+                UserID = Credential.Instance.User.UserID,
+                InvoicePlace = "1"
+            };
+
+            Dao.Invoice.Insert(invoice);
+
+            int maxInvoiceKey = Dao.Invoice.GetCount();
+
             if (_items.Count == 0)
             {
                 MessageBox.Show("결제할 품목이 없습니다.");
             }
 
-
             else if (MessageBox.Show($"{int.Parse(txbTotalPrice.Text):c0}을 결제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
+                int totalPrice = 0;
                 foreach (var itemNumber in _items)
                 {
                     int userId = Credential.Instance.User.UserID;
@@ -128,6 +155,7 @@ namespace WindowsFormsApp1
                         User user = Dao.User.GetByPK(userId);
                         user.RemainSeatTime = seatTime;
                         Dao.User.Update(user);
+                        totalPrice += itemNumber.Price;
                     }
 
                     else if (itemNumber.Kind == "StudyRoom")
@@ -140,8 +168,8 @@ namespace WindowsFormsApp1
                         StudyRoom studyRoom = Dao.StudyRoom.GetByPK(int.Parse(_studyRoomNumber));
                         studyRoom.UserID = userId;
                         Dao.StudyRoom.Update(studyRoom);
+                        totalPrice += itemNumber.Price;
                     }
-
 
                     else
                     {
@@ -156,6 +184,7 @@ namespace WindowsFormsApp1
                             Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
                             locker.UserID = userId;
                             Dao.Locker.Update(locker);
+                            totalPrice += itemNumber.Price;
                         }
 
                         else
@@ -166,10 +195,31 @@ namespace WindowsFormsApp1
                             User user = Dao.User.GetByPK(userId);
                             user.RemainLockerTime = lockerTime;
                             Dao.User.Update(user);
+                            totalPrice += itemNumber.Price;
                         }
                     }
-                }
 
+                    InvoiceLine invoiceLine = new InvoiceLine()
+                    {
+                        InvoiceID = maxInvoiceKey,
+                        ItemID = itemNumber.ItemID,
+                        ItemPrice = totalPrice,
+                        NumberOfItem = 1
+                    };
+
+                    Dao.InvoiceLine.Insert(invoiceLine);
+
+                    //InvoiceLine invoiceLine1 = Dao.InvoiceLine.GetByPK(maxInvoiceKey, itemNumber.ItemID);
+                    //if (invoiceLine1.ItemID == itemNumber.ItemID && invoiceLine1.InvoiceID == maxInvoiceKey)
+                    //{
+                    //    invoiceLine.NumberOfItem += 1;
+                    //    Dao.InvoiceLine.Update(invoiceLine);
+                    //}
+
+                    //else
+                    //    Dao.InvoiceLine.Insert(invoiceLine);
+
+                }
                 dgvItem.Rows.Clear();
                 _items.Clear();
                 txbTotalPrice.Clear();

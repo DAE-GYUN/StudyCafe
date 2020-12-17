@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         public PurchaseForm purchaseForm;
+       
         public LockerTimeChargingForm(string lockerNumber, PurchaseForm purchase) : this()
         {
             purchaseForm = purchase;
@@ -28,6 +29,8 @@ namespace WindowsFormsApp1
         public LockerTimeChargingForm(PurchaseForm purchase) : this()
         {
             purchaseForm = purchase;
+          
+
         }
         public string _lockerNumber { get; set; }
 
@@ -51,11 +54,36 @@ namespace WindowsFormsApp1
             purchaseForm.GetLockerNumber(_lockerNumber);
 
             List<Item> items = Dao.Item.GetAll();
-            foreach (var price in items)
+           
+           
+            
+            foreach (var item in items)
             {
-                if (txbPrice.Text == price.Price.ToString() && txbItemName.Text == price.Name.ToString())
+                if (txbPrice.Text == item.Price.ToString() && txbItemName.Text == item.Name.ToString())
                 {
-                    purchaseForm.AddItem(price);
+
+                   
+                    purchaseForm.AddItem(item);
+
+                    //InvoiceLine invoiceLine = new InvoiceLine()
+                    //{
+                    //    InvoiceID = maxInvoiceKey,
+                    //    ItemID = price.ItemID,
+                    //};
+
+                    //if (_ItemsList.Contains(item))
+                    //{
+                    //    MessageBox.Show("중복구매x");
+                    //}
+                    //else
+                    //{
+                    //    purchaseForm.AddItem(item);
+                    //    //Dao.InvoiceLine.Insert(invoiceLine);
+                    //}             
+
+
+                    //아이템 아이디 저장하는 함수
+
                 }
             }
             Close();

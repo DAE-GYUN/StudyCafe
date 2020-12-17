@@ -31,11 +31,9 @@ namespace StudyCafe.Admin
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.cbeSearch = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.sbnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.txeSearch = new DevExpress.XtraEditors.TextEdit();
             this.grdUser = new DevExpress.XtraGrid.GridControl();
             this.bdsUser = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -45,103 +43,80 @@ namespace StudyCafe.Admin
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lCLSSearch = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lCLSSearch = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ppmMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeSearch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lCLSSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCLSSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ppmMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.simpleButton1);
-            this.layoutControl1.Controls.Add(this.checkEdit3);
-            this.layoutControl1.Controls.Add(this.checkEdit2);
-            this.layoutControl1.Controls.Add(this.checkEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.cbeSearch);
+            this.layoutControl1.Controls.Add(this.sbnSearch);
+            this.layoutControl1.Controls.Add(this.txeSearch);
             this.layoutControl1.Controls.Add(this.grdUser);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 174, 812, 500);
             this.layoutControl1.OptionsView.UseSkinIndents = false;
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(800, 540);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // simpleButton1
+            // cbeSearch
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(681, 34);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(111, 27);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 7;
-            this.simpleButton1.Text = "검색";
+            this.cbeSearch.EditValue = "";
+            this.cbeSearch.Location = new System.Drawing.Point(65, 34);
+            this.cbeSearch.Name = "cbeSearch";
+            this.cbeSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbeSearch.Properties.Items.AddRange(new object[] {
+            "이름",
+            "전화번호",
+            "회원번호"});
+            this.cbeSearch.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbeSearch.Size = new System.Drawing.Size(62, 24);
+            this.cbeSearch.StyleController = this.layoutControl1;
+            this.cbeSearch.TabIndex = 8;
             // 
-            // checkEdit3
+            // sbnSearch
             // 
-            this.checkEdit3.EditValue = true;
-            this.checkEdit3.Location = new System.Drawing.Point(487, 34);
-            this.checkEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkEdit3.Name = "checkEdit3";
-            this.checkEdit3.Properties.Caption = "전화번호 검색";
-            this.checkEdit3.Size = new System.Drawing.Size(111, 24);
-            this.checkEdit3.StyleController = this.layoutControl1;
-            this.checkEdit3.TabIndex = 6;
+            this.sbnSearch.Location = new System.Drawing.Point(721, 34);
+            this.sbnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sbnSearch.Name = "sbnSearch";
+            this.sbnSearch.Size = new System.Drawing.Size(71, 27);
+            this.sbnSearch.StyleController = this.layoutControl1;
+            this.sbnSearch.TabIndex = 7;
+            this.sbnSearch.Text = "검색";
+            this.sbnSearch.Click += new System.EventHandler(this.sbnSearch_Click);
             // 
-            // checkEdit2
+            // txeSearch
             // 
-            this.checkEdit2.EditValue = true;
-            this.checkEdit2.Location = new System.Drawing.Point(392, 34);
-            this.checkEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkEdit2.Name = "checkEdit2";
-            this.checkEdit2.Properties.Caption = "이름 검색";
-            this.checkEdit2.Size = new System.Drawing.Size(85, 24);
-            this.checkEdit2.StyleController = this.layoutControl1;
-            this.checkEdit2.TabIndex = 6;
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.EditValue = true;
-            this.checkEdit1.Location = new System.Drawing.Point(305, 34);
-            this.checkEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "ID 검색";
-            this.checkEdit1.Size = new System.Drawing.Size(77, 24);
-            this.checkEdit1.StyleController = this.layoutControl1;
-            this.checkEdit1.TabIndex = 6;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(52, 34);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(243, 24);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 5;
+            this.txeSearch.Location = new System.Drawing.Point(194, 34);
+            this.txeSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txeSearch.Name = "txeSearch";
+            this.txeSearch.Size = new System.Drawing.Size(157, 24);
+            this.txeSearch.StyleController = this.layoutControl1;
+            this.txeSearch.TabIndex = 5;
             // 
             // grdUser
             // 
@@ -155,6 +130,7 @@ namespace StudyCafe.Admin
             this.grdUser.TabIndex = 4;
             this.grdUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+        
             // 
             // bdsUser
             // 
@@ -220,69 +196,49 @@ namespace StudyCafe.Admin
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lCLSSearch,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem2,
             this.layoutControlItem5,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.lCLSSearch,
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(800, 69);
             this.layoutControlGroup1.Text = "검색";
             // 
-            // lCLSSearch
-            // 
-            this.lCLSSearch.Control = this.textEdit1;
-            this.lCLSSearch.Location = new System.Drawing.Point(0, 0);
-            this.lCLSSearch.Name = "lCLSSearch";
-            this.lCLSSearch.Size = new System.Drawing.Size(297, 37);
-            this.lCLSSearch.Text = "검색명";
-            this.lCLSSearch.TextSize = new System.Drawing.Size(39, 18);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.checkEdit1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(297, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(87, 37);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.checkEdit2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(384, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(95, 37);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.checkEdit3;
-            this.layoutControlItem2.Location = new System.Drawing.Point(479, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(121, 37);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.simpleButton1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(673, 0);
+            this.layoutControlItem5.Control = this.sbnSearch;
+            this.layoutControlItem5.Location = new System.Drawing.Point(713, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(121, 37);
+            this.layoutControlItem5.Size = new System.Drawing.Size(81, 37);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(600, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(353, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(73, 37);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(360, 37);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lCLSSearch
+            // 
+            this.lCLSSearch.Control = this.txeSearch;
+            this.lCLSSearch.Location = new System.Drawing.Point(129, 0);
+            this.lCLSSearch.Name = "lCLSSearch";
+            this.lCLSSearch.Size = new System.Drawing.Size(224, 37);
+            this.lCLSSearch.Text = "검색명";
+            this.lCLSSearch.TextSize = new System.Drawing.Size(52, 18);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.cbeSearch;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(129, 37);
+            this.layoutControlItem2.Text = "검색조건";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(52, 18);
             // 
             // ppmMenu
             // 
@@ -300,22 +256,18 @@ namespace StudyCafe.Admin
             this.Load += new System.EventHandler(this.CustomerManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeSearch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lCLSSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCLSSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ppmMenu)).EndInit();
             this.ResumeLayout(false);
 
@@ -325,19 +277,13 @@ namespace StudyCafe.Admin
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txeSearch;
         private DevExpress.XtraGrid.GridControl grdUser;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem lCLSSearch;
-        private DevExpress.XtraEditors.CheckEdit checkEdit2;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.CheckEdit checkEdit3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.SimpleButton sbnSearch;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private System.Windows.Forms.BindingSource bdsUser;
@@ -345,5 +291,7 @@ namespace StudyCafe.Admin
         private DevExpress.XtraGrid.Columns.GridColumn colPhoneNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraBars.PopupMenu ppmMenu;
+        private DevExpress.XtraEditors.ComboBoxEdit cbeSearch;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }
