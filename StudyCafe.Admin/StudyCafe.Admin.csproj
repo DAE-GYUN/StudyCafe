@@ -171,6 +171,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeverageChartActualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeverageChartActualForm.Designer.cs">
+      <DependentUpon>BeverageChartActualForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     <Compile Include="StockControlForm.Designer.cs">
       <DependentUpon>StockControlForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BeverageChartActualForm.resx">
+      <DependentUpon>BeverageChartActualForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagementForm.resx">
       <DependentUpon>CustomerManagementForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +222,8 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\StudyCafe.Data.MachineLearningTemp.datasource" />
+    <None Include="Properties\DataSources\StudyCafe.Data.Models.StockControlModels.datasource" />
     <None Include="Properties\DataSources\StudyCafe.Data.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
