@@ -14,16 +14,20 @@
           <Property Name="Numbers" Type="int" Nullable="false" />
           <Property Name="Weight" Type="int" Nullable="false" />
         </EntityType>
-        <!--생성 중 오류 발생:
-경고 6013: 테이블/뷰 'KoreanStudyCafe.dbo.BeverageRecord'에 기본 키가 정의되어 있지 않고 올바른 기본 키를 유추할 수 없습니다. 이 테이블/뷰가 제외되었습니다. 엔터티를 사용하려면 스키마를 검토하고 올바른 키를 추가하고 주석 처리를 제거하십시오.
+
         <EntityType Name="BeverageRecord">
-          <Property Name="Date" Type="date" />
-          <Property Name="DayOfTheWeek" Type="nvarchar" MaxLength="50" />
-          <Property Name="DayQuarter" Type="nvarchar(max)" />
-          <Property Name="BeverageID" Type="int" />
-          <Property Name="Usage" Type="int" />
-          <Property Name="UserCount" Type="int" />
-        </EntityType>-->
+          <Key>
+            <PropertyRef Name="BeverageRecordId" />
+          </Key>
+          <Property Name="BeverageRecordId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="DayOfTheWeek" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DayQuarter" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BeverageID" Type="int" Nullable="false" />
+          <Property Name="Usage" Type="int" Nullable="false" />
+          <Property Name="UserCount" Type="int" Nullable="false" />
+        </EntityType>
+
         <!--생성 중 오류 발생:
 경고 6013: 테이블/뷰 'KoreanStudyCafe.dbo.Investment'에 기본 키가 정의되어 있지 않고 올바른 기본 키를 유추할 수 없습니다. 이 테이블/뷰가 제외되었습니다. 엔터티를 사용하려면 스키마를 검토하고 올바른 키를 추가하고 주석 처리를 제거하십시오.
         <EntityType Name="Investment">
@@ -253,6 +257,7 @@
         </Association>
         <EntityContainer Name="KoreanStudyCafeModelStoreContainer">
           <EntitySet Name="Beverage" EntityType="Self.Beverage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BeverageRecord" EntityType="Self.BeverageRecord" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InvoiceLine" EntityType="Self.InvoiceLine" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
@@ -303,6 +308,7 @@
       <Schema Namespace="KoreanStudyCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="KoreanStudyCafeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Beverages" EntityType="KoreanStudyCafeModel.Beverage" />
+          <EntitySet Name="BeverageRecords" EntityType="KoreanStudyCafeModel.BeverageRecord" />
           <EntitySet Name="Invoices" EntityType="KoreanStudyCafeModel.Invoice" />
           <EntitySet Name="InvoiceLines" EntityType="KoreanStudyCafeModel.InvoiceLine" />
           <EntitySet Name="Items" EntityType="KoreanStudyCafeModel.Item" />
@@ -355,6 +361,18 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Numbers" Type="Int32" Nullable="false" />
           <Property Name="Weight" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BeverageRecord">
+          <Key>
+            <PropertyRef Name="BeverageRecordId" />
+          </Key>
+          <Property Name="BeverageRecordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DayOfTheWeek" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DayQuarter" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BeverageID" Type="Int32" Nullable="false" />
+          <Property Name="Usage" Type="Int32" Nullable="false" />
+          <Property Name="UserCount" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Invoice">
           <Key>
@@ -597,6 +615,19 @@
                 <ScalarProperty Name="Numbers" ColumnName="Numbers" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="BeverageID" ColumnName="BeverageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BeverageRecords">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.BeverageRecord">
+              <MappingFragment StoreEntitySet="BeverageRecord">
+                <ScalarProperty Name="UserCount" ColumnName="UserCount" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+                <ScalarProperty Name="BeverageID" ColumnName="BeverageID" />
+                <ScalarProperty Name="DayQuarter" ColumnName="DayQuarter" />
+                <ScalarProperty Name="DayOfTheWeek" ColumnName="DayOfTheWeek" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BeverageRecordId" ColumnName="BeverageRecordId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
