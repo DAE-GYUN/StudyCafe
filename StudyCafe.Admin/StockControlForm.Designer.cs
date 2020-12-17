@@ -38,12 +38,12 @@ namespace StudyCafe.Admin
             DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
-            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView4 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView3 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView4 = new DevExpress.XtraCharts.SplineSeriesView();
             this.tileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroupTables = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.employeesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -58,14 +58,14 @@ namespace StudyCafe.Admin
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.chartControl4 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.chartControl4 = new DevExpress.XtraCharts.ChartControl();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
@@ -85,17 +85,17 @@ namespace StudyCafe.Admin
             this.customersNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -280,24 +280,6 @@ namespace StudyCafe.Admin
             this.customersNavigationPage.Name = "customersNavigationPage";
             this.customersNavigationPage.Size = new System.Drawing.Size(1003, 360);
             // 
-            // customersLabelControl
-            // 
-            this.customersLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.customersLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.customersLabelControl.Appearance.Options.UseFont = true;
-            this.customersLabelControl.Appearance.Options.UseForeColor = true;
-            this.customersLabelControl.Appearance.Options.UseTextOptions = true;
-            this.customersLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.customersLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.customersLabelControl.Margin = new System.Windows.Forms.Padding(4);
-            this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(1003, 360);
-            this.customersLabelControl.TabIndex = 2;
-            this.customersLabelControl.Text = "Customers";
-            // 
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.chartControl4);
@@ -310,17 +292,20 @@ namespace StudyCafe.Admin
             this.layoutControl2.TabIndex = 3;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // layoutControlGroup1
+            // chartControl4
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3,
-            this.emptySpaceItem1,
-            this.layoutControlItem4});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1003, 360);
-            this.layoutControlGroup1.TextVisible = false;
+            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl4.Diagram = xyDiagram3;
+            this.chartControl4.Legend.Name = "Default Legend";
+            this.chartControl4.Location = new System.Drawing.Point(12, 12);
+            this.chartControl4.Name = "chartControl4";
+            series3.Name = "Series 1";
+            series3.View = splineSeriesView3;
+            this.chartControl4.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series3};
+            this.chartControl4.Size = new System.Drawing.Size(487, 313);
+            this.chartControl4.TabIndex = 5;
             // 
             // chartControl3
             // 
@@ -336,6 +321,18 @@ namespace StudyCafe.Admin
         series4};
             this.chartControl3.Size = new System.Drawing.Size(488, 313);
             this.chartControl3.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.emptySpaceItem1,
+            this.layoutControlItem4});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1003, 360);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem3
             // 
@@ -354,21 +351,6 @@ namespace StudyCafe.Admin
             this.emptySpaceItem1.Size = new System.Drawing.Size(983, 23);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // chartControl4
-            // 
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl4.Diagram = xyDiagram3;
-            this.chartControl4.Legend.Name = "Default Legend";
-            this.chartControl4.Location = new System.Drawing.Point(12, 12);
-            this.chartControl4.Name = "chartControl4";
-            series3.Name = "Series 1";
-            series3.View = splineSeriesView3;
-            this.chartControl4.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3};
-            this.chartControl4.Size = new System.Drawing.Size(487, 313);
-            this.chartControl4.TabIndex = 5;
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.chartControl4;
@@ -377,6 +359,24 @@ namespace StudyCafe.Admin
             this.layoutControlItem4.Size = new System.Drawing.Size(491, 317);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // customersLabelControl
+            // 
+            this.customersLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
+            this.customersLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.customersLabelControl.Appearance.Options.UseFont = true;
+            this.customersLabelControl.Appearance.Options.UseForeColor = true;
+            this.customersLabelControl.Appearance.Options.UseTextOptions = true;
+            this.customersLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.customersLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
+            this.customersLabelControl.Margin = new System.Windows.Forms.Padding(4);
+            this.customersLabelControl.Name = "customersLabelControl";
+            this.customersLabelControl.Size = new System.Drawing.Size(1003, 360);
+            this.customersLabelControl.TabIndex = 2;
+            this.customersLabelControl.Text = "Customers";
             // 
             // StockControlForm
             // 
@@ -408,17 +408,17 @@ namespace StudyCafe.Admin
             this.customersNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 

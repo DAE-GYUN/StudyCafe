@@ -14,13 +14,32 @@
           <Property Name="Numbers" Type="int" Nullable="false" />
           <Property Name="Weight" Type="int" Nullable="false" />
         </EntityType>
+        <!--생성 중 오류 발생:
+경고 6013: 테이블/뷰 'KoreanStudyCafe.dbo.BeverageRecord'에 기본 키가 정의되어 있지 않고 올바른 기본 키를 유추할 수 없습니다. 이 테이블/뷰가 제외되었습니다. 엔터티를 사용하려면 스키마를 검토하고 올바른 키를 추가하고 주석 처리를 제거하십시오.
+        <EntityType Name="BeverageRecord">
+          <Property Name="Date" Type="date" />
+          <Property Name="DayOfTheWeek" Type="nvarchar" MaxLength="50" />
+          <Property Name="DayQuarter" Type="nvarchar(max)" />
+          <Property Name="BeverageID" Type="int" />
+          <Property Name="Usage" Type="int" />
+          <Property Name="UserCount" Type="int" />
+        </EntityType>-->
+        <!--생성 중 오류 발생:
+경고 6013: 테이블/뷰 'KoreanStudyCafe.dbo.Investment'에 기본 키가 정의되어 있지 않고 올바른 기본 키를 유추할 수 없습니다. 이 테이블/뷰가 제외되었습니다. 엔터티를 사용하려면 스키마를 검토하고 올바른 키를 추가하고 주석 처리를 제거하십시오.
+        <EntityType Name="Investment">
+          <Property Name="ItemId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Sales" Type="int" />
+          <Property Name="Totalsales" Type="int" StoreGeneratedPattern="Computed" />
+        </EntityType>-->
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="InvoiceID" />
           </Key>
           <Property Name="InvoiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="InvoiceDatetime" Type="datetime" Nullable="false" />
-          <Property Name="InvoicePlace" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InvoicePlace" Type="nvarchar" MaxLength="50" />
           <Property Name="UserID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="InvoiceLine">
@@ -43,6 +62,12 @@
           <Property Name="Price" Type="int" Nullable="false" />
           <Property Name="Kind" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--생성 중 오류 발생:
+경고 6013: 테이블/뷰 'KoreanStudyCafe.dbo.LastDayInMonth'에 기본 키가 정의되어 있지 않고 올바른 기본 키를 유추할 수 없습니다. 이 테이블/뷰가 제외되었습니다. 엔터티를 사용하려면 스키마를 검토하고 올바른 키를 추가하고 주석 처리를 제거하십시오.
+        <EntityType Name="LastDayInMonth">
+          <Property Name="Month" Type="int" />
+          <Property Name="LastDay" Type="int" />
+        </EntityType>-->
         <EntityType Name="Locker">
           <Key>
             <PropertyRef Name="LockerID" />
@@ -337,7 +362,7 @@
           </Key>
           <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="InvoiceDatetime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="InvoicePlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InvoicePlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="User" Relationship="KoreanStudyCafeModel.FK_Invoice_User" FromRole="Invoice" ToRole="User" />
           <NavigationProperty Name="InvoiceLines" Relationship="KoreanStudyCafeModel.FK_InvoiceLine_Invoice" FromRole="Invoice" ToRole="InvoiceLine" />

@@ -26,9 +26,7 @@ namespace StudyCafe.Admin
 
             if (DesignMode)
                 return;
-            bdsUser.DataSource = Dao.User.GetAll();
-
-
+            bdsUser.DataSource = _users;
 
         }
 
@@ -37,6 +35,22 @@ namespace StudyCafe.Admin
             bdsUser.DataSource = Dao.User.GetAll();
         }
 
-  
+        private List<User> _users = new List<User>();
+
+        public void AddUser(User user)
+        {
+            _users.Add(user);
+            bdsUser.ResetBindings(false);
+        }
+
+        private void sbnSearch_Click(object sender, EventArgs e)
+        {
+
+            
+            
+
+        } 
+
+
     }
 }

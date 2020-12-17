@@ -171,6 +171,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerManagementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerManagementDetail.Designer.cs">
+      <DependentUpon>CustomerManagementDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     <Compile Include="StockControlForm.Designer.cs">
       <DependentUpon>StockControlForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerManagementDetail.resx">
+      <DependentUpon>CustomerManagementDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagementForm.resx">
       <DependentUpon>CustomerManagementForm.cs</DependentUpon>
     </EmbeddedResource>
