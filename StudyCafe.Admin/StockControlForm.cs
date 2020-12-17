@@ -23,14 +23,6 @@ namespace StudyCafe.Admin
             navigationFrame.SelectedPageIndex = tileBarGroupTables.Items.IndexOf(e.Item);
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            BeverageChartActualForm BeverageChart = new BeverageChartActualForm();
-            BeverageChart.MdiParent = this;
-            BeverageChart.Show();
-
-            //  machineLearningTempBindingSource.DataSource = // 리턴받은 리스트 대입
-        }
 
         private void StockControlForm_Load(object sender, EventArgs e)
         {
@@ -42,6 +34,11 @@ namespace StudyCafe.Admin
             StockControlForm cocoaUseage = new StockControlForm();
 
             stockControlModelsBindingSource.DataSource = UserDao.GetCocoaModel();
+        }
+
+        private void stockControlModelsCocoaBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

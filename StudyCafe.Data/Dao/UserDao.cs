@@ -54,7 +54,7 @@ namespace StudyCafe.Data
 
             using (KoreanStudyCafeEntities context = new KoreanStudyCafeEntities())
             {
-                var query = from x in context.BeverageRecord
+                var query = from x in context.BeverageRecords
                             select new
                             {
                                 UserCount = x.UserCount,
@@ -96,38 +96,45 @@ namespace StudyCafe.Data
             }
         }
 
-        public static List<StockControlModels> GetCocoaModel()
+        public static List<StockControlModelsCocoa> GetCocoaModel()
         {
             using(KoreanStudyCafeEntities context = new KoreanStudyCafeEntities())
             {
-                var quary = from x in context.BeverageRecord
+                var query = from x in context.BeverageRecords
                             select new
                             {
                                 UserCount = x.UserCount,
                                 Useage = x.Usage,
                                 BeverageId = x.BeverageID,
-                                DayQuarter = x.DayQuarter
+                                DayQuarter = x.DayQuarter,
+
                             };
 
-                var list = quary.ToList();
+                var list = query.ToList();
 
-                List<StockControlModels> models = new List<StockControlModels>();
+                List<StockControlModelsCocoa> models = new List<StockControlModelsCocoa>();
+                List<StockControlModelsCocoa> beverages = new List<StockControlModelsCocoa>();
 
                 foreach (var item in list)
                 {
-                    StockControlModels model = models.Find(x => x.BeverageId == 2 && x.Usage == item.Useage && x.UserCount == item.UserCount);
+                    StockControlModelsCocoa model = models.Find(x => x.BeverageId == 2 && x.Usage == item.Useage && x.UserCount == item.UserCount);
 
-                    if(model == null)
+                    if (model != null)
                     {
-                        model = new StockControlModels();
-                        model.Usage = item.Useage;
+                        // model.Quantity += item.Quantity;
+                    }
+                    else
+                    {
+                        model = new StockControlModelsCocoa();
+
                         model.UserCount = item.UserCount;
+                        model.Usage = item.Useage;
                         model.DayQuater = item.DayQuarter;
 
                         models.Add(model);
+
                     }
 
-                 
                 }
                 return models;
             }
