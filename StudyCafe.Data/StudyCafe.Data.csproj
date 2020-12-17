@@ -53,6 +53,9 @@
     <Compile Include="Beverage.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
+    <Compile Include="BeverageRecord.cs">
+      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
+    </Compile>
     <Compile Include="Dao\Dao.cs" />
     <Compile Include="Dao\PictureDao.cs" />
     <Compile Include="EFLibrary\BaseDao.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="MachineLearningTemp.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\StockControlModels.cs" />
     <Compile Include="Picture.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
