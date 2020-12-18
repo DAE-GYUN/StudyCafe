@@ -142,6 +142,7 @@ namespace StudyCafe.Admin
             this.textEdit1.Size = new System.Drawing.Size(243, 24);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 5;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // grdUser
             // 
@@ -155,6 +156,7 @@ namespace StudyCafe.Admin
             this.grdUser.TabIndex = 4;
             this.grdUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grdUser.Click += new System.EventHandler(this.grdUser_Click);
             // 
             // bdsUser
             // 

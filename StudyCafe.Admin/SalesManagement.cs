@@ -11,25 +11,15 @@ using System.Windows.Forms;
 
 namespace StudyCafe.Admin
 {
-    public partial class StockControlForm : DevExpress.XtraEditors.XtraForm
+    public partial class SalesManagement : DevExpress.XtraEditors.XtraForm
     {
-        public StockControlForm()
+        public SalesManagement()
         {
             InitializeComponent();
         }
         private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
         {
             navigationFrame.SelectedPageIndex = tileBarGroupTables.Items.IndexOf(e.Item);
-        }
-
-        private void tileBar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StockControlForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

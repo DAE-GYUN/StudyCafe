@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace StudyCafe.Admin
 {
     public partial class CustomerManagementForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -37,6 +38,14 @@ namespace StudyCafe.Admin
             bdsUser.DataSource = Dao.User.GetAll();
         }
 
-  
+        private void grdUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

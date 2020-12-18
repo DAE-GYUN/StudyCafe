@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace StudyCafe.Admin
 {
-    public partial class StockControlForm : DevExpress.XtraEditors.XtraForm
+    public partial class SalesManagementForm : DevExpress.XtraEditors.XtraForm
     {
-        public StockControlForm()
+        public SalesManagementForm()
         {
             InitializeComponent();
         }
@@ -27,9 +27,24 @@ namespace StudyCafe.Admin
 
         }
 
-        private void StockControlForm_Load(object sender, EventArgs e)
+        private void tileBar_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void chartControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void XtraForm1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartControl2_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }

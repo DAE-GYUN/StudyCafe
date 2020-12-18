@@ -35,5 +35,16 @@ namespace StudyCafe.Admin
             stockControlForm.MdiParent = this;
             stockControlForm.Show();
         }
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+            SalesManagementForm xtraForm1 = new SalesManagementForm();
+            xtraForm1.MdiParent = this;
+            xtraForm1.Show();
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
