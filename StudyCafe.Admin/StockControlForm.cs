@@ -28,12 +28,9 @@ namespace StudyCafe.Admin
         {
             scmBdsCoffee.DataSource = UserDao.GetCoffeModel();
             scmBdsCocoa.DataSource = UserDao.GetCocoaModel();
-            scmBdsPredictCoffee.DataSource = UserDao.GetPredictCoffeModel();
-        }
 
-        private void stockControlModelsCocoaBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
+            scmBdsPredictCoffee.DataSource = UserDao.GetPredictModel(1);
+            scmBdsPredictCocoa.DataSource = UserDao.GetPredictModel(2);
         }
     }
 }

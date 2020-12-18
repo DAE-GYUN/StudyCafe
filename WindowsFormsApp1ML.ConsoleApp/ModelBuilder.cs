@@ -7,13 +7,13 @@ using System.Linq;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using WindowsFormsApp1ML.Model;
-using Microsoft.ML.Trainers.LightGbm;
+using Microsoft.ML.Trainers.FastTree;
 
 namespace WindowsFormsApp1ML.ConsoleApp
 {
     public static class ModelBuilder
     {
-        private static string TRAIN_DATA_FILEPATH = @"C:\Users\kccistc\AppData\Local\Temp\ba41d696-4416-46e1-b1df-baf08e925957.tsv";
+        private static string TRAIN_DATA_FILEPATH = @"C:\Users\kccistc\AppData\Local\Temp\3c5e040f-3d3a-4a54-bd11-287442884e74.tsv";
         private static string MODEL_FILEPATH = @"C:\Users\kccistc\AppData\Local\Temp\MLVSTools\WindowsFormsApp1ML\WindowsFormsApp1ML.Model\MLModel.zip";
         // Create MLContext to be shared across the model creation workflow objects 
         // Set a random seed for repeatable/deterministic results across multiple trainings.
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1ML.ConsoleApp
             var dataProcessPipeline = mlContext.Transforms.Categorical.OneHotEncoding(new[] { new InputOutputColumnPair("DayQuater", "DayQuater"), new InputOutputColumnPair("DayOfTheWeek", "DayOfTheWeek") })
                                       .Append(mlContext.Transforms.Concatenate("Features", new[] { "DayQuater", "DayOfTheWeek", "BeverageID", "UserCount" }));
             // Set the training algorithm 
-            var trainer = mlContext.Regression.Trainers.LightGbm(new LightGbmRegressionTrainer.Options() { NumberOfIterations = 100, LearningRate = 0.1413153f, NumberOfLeaves = 5, MinimumExampleCountPerLeaf = 50, UseCategoricalSplit = true, HandleMissingValue = false, UseZeroAsMissingValue = false, MinimumExampleCountPerGroup = 100, MaximumCategoricalSplitPointCount = 16, CategoricalSmoothing = 10, L2CategoricalRegularization = 5, Booster = new GradientBooster.Options() { L2Regularization = 0, L1Regularization = 0.5 }, LabelColumnName = "Usage", FeatureColumnName = "Features" });
+            var trainer = mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 5, MinimumExampleCountPerLeaf = 10, NumberOfTrees = 500, LearningRate = 0.1133417f, Shrinkage = 0.496402f, LabelColumnName = "Usage", FeatureColumnName = "Features" });
 
             var trainingPipeline = dataProcessPipeline.Append(trainer);
 

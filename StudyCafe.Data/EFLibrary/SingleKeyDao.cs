@@ -33,7 +33,7 @@ namespace EFLibrary
         {
             using (var context = DbContextCreator.Context())
             {
-                var query = context.Set<T>()
+                IQueryable<K> query = context.Set<T>()
                     .OrderByDescending(KeySelector)
                     .Select(KeySelector);
 

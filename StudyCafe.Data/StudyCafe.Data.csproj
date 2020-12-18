@@ -97,7 +97,7 @@
     <Compile Include="MachineLearningTemp.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StockConreolModelPredictCoffee.cs" />
+    <Compile Include="Models\StockControlModelPredict.cs" />
     <Compile Include="Models\StockControlModelCocoa.cs" />
     <Compile Include="Models\StockControlModels.cs" />
     <Compile Include="Picture.cs">

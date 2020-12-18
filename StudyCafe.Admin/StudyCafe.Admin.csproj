@@ -214,6 +214,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\StudyCafe.Data.MachineLearningTemp.datasource" />
+    <None Include="Properties\DataSources\StudyCafe.Data.Models.StockConreolModelPredict.datasource" />
+    <None Include="Properties\DataSources\StudyCafe.Data.Models.StockControlModelPredict.datasource" />
+    <None Include="Properties\DataSources\StudyCafe.Data.Models.StockControlModelPredictCocoa.datasource" />
+    <None Include="Properties\DataSources\StudyCafe.Data.Models.StockControlModelPredictCoffee.datasource" />
     <None Include="Properties\DataSources\StudyCafe.Data.Models.StockControlModels.datasource" />
     <None Include="Properties\DataSources\StudyCafe.Data.Models.StockControlModelsCocoa.datasource" />
     <None Include="Properties\DataSources\StudyCafe.Data.User.datasource" />
