@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using WindowsFormsApp1ML.Model;
 
@@ -22,18 +23,36 @@ namespace StudyCafe.Admin
             //MessageBox.Show(test.ToString());
         }
 
+
+        private void ShowChild(Form form)
+        {
+            var childform = MdiChildren.FirstOrDefault(x => x.GetType() == form.GetType());
+
+            if (childform == null)
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+            else
+            {
+                childform.Focus();
+            }
+        }
+
         private void accordionControlElement1_Click(object sender, EventArgs e)
         {
-            CustomerManagementForm customerManagementForm = new CustomerManagementForm();
-            customerManagementForm.MdiParent = this;
-            customerManagementForm.Show();
+            ShowChild(new CustomerManagementForm());
+
         }
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
-            StockControlForm stockControlForm = new StockControlForm();
-            stockControlForm.MdiParent = this;
-            stockControlForm.Show();
+            ShowChild(new StockControlForm());
+        }
+
+        private void accordionControlElement4_Click(object sender, EventArgs e)
+        {
+            ShowChild(new LogForm());
         }
     }
 }

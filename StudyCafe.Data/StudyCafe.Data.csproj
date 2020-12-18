@@ -64,6 +64,9 @@
     <Compile Include="EFLibrary\QuadKeyDao.cs" />
     <Compile Include="EFLibrary\SingleKeyDao.cs" />
     <Compile Include="EFLibrary\TripleKeyDao.cs" />
+    <Compile Include="Investment.cs">
+      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
+    </Compile>
     <Compile Include="Invoice.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>

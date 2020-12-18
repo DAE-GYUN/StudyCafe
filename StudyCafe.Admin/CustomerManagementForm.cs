@@ -100,6 +100,6 @@ private void sbnSearch_Click(object sender, EventArgs e)
             bdsUser.ResetBindings(false);
         }
 
-
+  
     }
 }

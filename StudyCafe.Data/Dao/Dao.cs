@@ -24,6 +24,8 @@ namespace StudyCafe.Data
 
         public static InvoiceLineDao InvoiceLine = new InvoiceLineDao();
 
+        public static LogDao Log = new LogDao();
+
         
        
     }
