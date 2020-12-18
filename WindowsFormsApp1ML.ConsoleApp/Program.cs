@@ -14,8 +14,8 @@ namespace WindowsFormsApp1ML.ConsoleApp
             {
                 BeverageID = 1,
                 DayQuater = @"00시~06시",
-                UserCount = 24,
-                DayOfTheWeek = @"월",
+                UserCount = 47,
+                DayOfTheWeek = @"금",
             };
 
             // Make a single prediction on the sample data and print results

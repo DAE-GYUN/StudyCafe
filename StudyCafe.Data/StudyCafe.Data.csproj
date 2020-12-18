@@ -97,6 +97,7 @@
     <Compile Include="MachineLearningTemp.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\StockConreolModelPredictCoffee.cs" />
     <Compile Include="Models\StockControlModelCocoa.cs" />
     <Compile Include="Models\StockControlModels.cs" />
     <Compile Include="Picture.cs">
@@ -146,6 +147,7 @@
       <DependentUpon>KoreanStudyCafe.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\StudyCafe.Data.Models.StockConreolModelPredictCoffee.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="KoreanStudyCafe.Context.tt">

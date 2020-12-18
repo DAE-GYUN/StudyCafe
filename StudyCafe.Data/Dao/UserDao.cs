@@ -89,7 +89,7 @@ namespace StudyCafe.Data
         }
         
 
-        public static List<StockControlModels> GetPredictCoffeModel()
+        public static List<StockConreolModelPredictCoffee> GetPredictCoffeModel()
         {
             DateTime lastWeek = DateTime.Today.AddDays(-7);
             using (var context = new KoreanStudyCafeEntities())
@@ -97,12 +97,26 @@ namespace StudyCafe.Data
                 var query = from x in context.BeverageRecords
                             orderby x.DayQuarter
                             where x.BeverageID == 1 && x.Date == lastWeek
-                            select new StockControlModels
-                            {
-                                UserCount = x.UserCount,
-                                DayQuater = x.DayQuarter,
-                                Usage = Predict.Predictor(1, x.DayQuarter, x.UserCount, GetDay(DateTime.Now)),
-                            };
+                            select x;
+
+                List<BeverageRecord> list = query.ToList();
+
+                var query2 = from x in list
+                             select new StockConreolModelPredictCoffee
+                             {
+                                 UserCount = x.UserCount,
+                                 DayQuater = x.DayQuarter,
+                                 Usage = Predict.Predictor(1, x.DayQuarter, x.UserCount, GetDay(DateTime.Now))
+                             };
+
+                return query2.ToList();
+
+                //return list.ConvertAll(x => new StockConreolModelPredictCoffee
+                //{
+                //    UserCount = x.UserCount,
+                //    DayQuater = x.DayQuarter,
+                //    Usage = Predict.Predictor(1, x.DayQuarter, x.UserCount, GetDay(DateTime.Now))
+                //});
             }
         }
         private static string GetDay(DateTime dateTime)

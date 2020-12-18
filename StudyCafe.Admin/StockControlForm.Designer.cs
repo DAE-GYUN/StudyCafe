@@ -70,8 +70,9 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.stockControlModelsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockControlModelsCocoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scmBdsPredictCoffee = new System.Windows.Forms.BindingSource(this.components);
+            this.scmBdsCoffee = new System.Windows.Forms.BindingSource(this.components);
+            this.scmBdsCocoa = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
@@ -105,8 +106,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockControlModelsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockControlModelsCocoaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scmBdsPredictCoffee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scmBdsCoffee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scmBdsCocoa)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar
@@ -207,13 +209,16 @@
             // 
             // chartControl2
             // 
+            this.chartControl2.DataSource = this.scmBdsPredictCoffee;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl2.Diagram = xyDiagram1;
             this.chartControl2.Legend.Name = "Default Legend";
             this.chartControl2.Location = new System.Drawing.Point(490, 12);
             this.chartControl2.Name = "chartControl2";
+            series1.ArgumentDataMember = "DayQuater";
             series1.Name = "예상 커피 소진량";
+            series1.ValueDataMembersSerializable = "Usage";
             series1.View = splineSeriesView1;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
@@ -222,7 +227,7 @@
             // 
             // chartControl1
             // 
-            this.chartControl1.DataSource = this.stockControlModelsBindingSource;
+            this.chartControl1.DataSource = this.scmBdsCoffee;
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram2;
@@ -312,7 +317,7 @@
             // 
             // chartControl4
             // 
-            this.chartControl4.DataSource = this.stockControlModelsCocoaBindingSource;
+            this.chartControl4.DataSource = this.scmBdsCocoa;
             xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl4.Diagram = xyDiagram3;
@@ -411,14 +416,18 @@
             this.customersLabelControl.TabIndex = 2;
             this.customersLabelControl.Text = "Customers";
             // 
-            // stockControlModelsBindingSource
+            // scmBdsPredictCoffee
             // 
-            this.stockControlModelsBindingSource.DataSource = typeof(StudyCafe.Data.Models.StockControlModels);
+            this.scmBdsPredictCoffee.DataSource = typeof(StudyCafe.Data.Models.StockConreolModelPredictCoffee);
             // 
-            // stockControlModelsCocoaBindingSource
+            // scmBdsCoffee
             // 
-            this.stockControlModelsCocoaBindingSource.DataSource = typeof(StudyCafe.Data.Models.StockControlModelsCocoa);
-            this.stockControlModelsCocoaBindingSource.CurrentChanged += new System.EventHandler(this.stockControlModelsCocoaBindingSource_CurrentChanged);
+            this.scmBdsCoffee.DataSource = typeof(StudyCafe.Data.Models.StockControlModels);
+            // 
+            // scmBdsCocoa
+            // 
+            this.scmBdsCocoa.DataSource = typeof(StudyCafe.Data.Models.StockControlModelsCocoa);
+            this.scmBdsCocoa.CurrentChanged += new System.EventHandler(this.stockControlModelsCocoaBindingSource_CurrentChanged);
             // 
             // StockControlForm
             // 
@@ -465,8 +474,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockControlModelsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockControlModelsCocoaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scmBdsPredictCoffee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scmBdsCoffee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scmBdsCocoa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,9 +503,10 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraCharts.ChartControl chartControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private System.Windows.Forms.BindingSource stockControlModelsBindingSource;
+        private System.Windows.Forms.BindingSource scmBdsCoffee;
         private DevExpress.XtraCharts.ChartControl chartControl2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private System.Windows.Forms.BindingSource stockControlModelsCocoaBindingSource;
+        private System.Windows.Forms.BindingSource scmBdsCocoa;
+        private System.Windows.Forms.BindingSource scmBdsPredictCoffee;
     }
 }
