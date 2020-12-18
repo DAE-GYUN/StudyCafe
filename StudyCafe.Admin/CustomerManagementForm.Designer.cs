@@ -132,7 +132,6 @@ namespace StudyCafe.Admin
             this.txeSearch.Size = new System.Drawing.Size(157, 24);
             this.txeSearch.StyleController = this.layoutControl1;
             this.txeSearch.TabIndex = 5;
- 
             // 
             // grdUser
             // 
@@ -150,6 +149,7 @@ namespace StudyCafe.Admin
             // bdsUser
             // 
             this.bdsUser.DataSource = typeof(StudyCafe.Data.User);
+            
             // 
             // gridView1
             // 

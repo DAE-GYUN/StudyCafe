@@ -19,12 +19,23 @@
             <PropertyRef Name="BeverageRecordId" />
           </Key>
           <Property Name="BeverageRecordId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="DayOfTheWeek" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="DayQuarter" Type="nvarchar(max)" Nullable="false" />
           <Property Name="BeverageID" Type="int" Nullable="false" />
           <Property Name="Usage" Type="int" Nullable="false" />
           <Property Name="UserCount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Investment">
+          <Key>
+            <PropertyRef Name="InvestmentID" />
+          </Key>
+          <Property Name="InvestmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Sales" Type="int" />
+          <Property Name="Totalsales" Type="int" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="Invoice">
           <Key>
@@ -241,6 +252,7 @@
         <EntityContainer Name="KoreanStudyCafeModelStoreContainer">
           <EntitySet Name="Beverage" EntityType="Self.Beverage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BeverageRecord" EntityType="Self.BeverageRecord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Investment" EntityType="Self.Investment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InvoiceLine" EntityType="Self.InvoiceLine" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
@@ -292,6 +304,7 @@
         <EntityContainer Name="KoreanStudyCafeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Beverages" EntityType="KoreanStudyCafeModel.Beverage" />
           <EntitySet Name="BeverageRecords" EntityType="KoreanStudyCafeModel.BeverageRecord" />
+          <EntitySet Name="Investments" EntityType="KoreanStudyCafeModel.Investment" />
           <EntitySet Name="Invoices" EntityType="KoreanStudyCafeModel.Invoice" />
           <EntitySet Name="InvoiceLines" EntityType="KoreanStudyCafeModel.InvoiceLine" />
           <EntitySet Name="Items" EntityType="KoreanStudyCafeModel.Item" />
@@ -350,12 +363,23 @@
             <PropertyRef Name="BeverageRecordId" />
           </Key>
           <Property Name="BeverageRecordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="DayOfTheWeek" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DayQuarter" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="BeverageID" Type="Int32" Nullable="false" />
           <Property Name="Usage" Type="Int32" Nullable="false" />
           <Property Name="UserCount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Investment">
+          <Key>
+            <PropertyRef Name="InvestmentID" />
+          </Key>
+          <Property Name="InvestmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Sales" Type="Int32" />
+          <Property Name="Totalsales" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="Invoice">
           <Key>
@@ -611,6 +635,18 @@
                 <ScalarProperty Name="DayOfTheWeek" ColumnName="DayOfTheWeek" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="BeverageRecordId" ColumnName="BeverageRecordId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Investments">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.Investment">
+              <MappingFragment StoreEntitySet="Investment">
+                <ScalarProperty Name="Totalsales" ColumnName="Totalsales" />
+                <ScalarProperty Name="Sales" ColumnName="Sales" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="InvestmentID" ColumnName="InvestmentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
