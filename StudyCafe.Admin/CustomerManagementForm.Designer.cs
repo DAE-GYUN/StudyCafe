@@ -31,6 +31,7 @@ namespace StudyCafe.Admin
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.sbnShowAll = new DevExpress.XtraEditors.SimpleButton();
             this.cbeSearch = new DevExpress.XtraEditors.ComboBoxEdit();
             this.sbnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.txeSearch = new DevExpress.XtraEditors.TextEdit();
@@ -47,6 +48,7 @@ namespace StudyCafe.Admin
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lCLSSearch = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ppmMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -62,11 +64,13 @@ namespace StudyCafe.Admin
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lCLSSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ppmMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.sbnShowAll);
             this.layoutControl1.Controls.Add(this.cbeSearch);
             this.layoutControl1.Controls.Add(this.sbnSearch);
             this.layoutControl1.Controls.Add(this.txeSearch);
@@ -81,6 +85,16 @@ namespace StudyCafe.Admin
             this.layoutControl1.Size = new System.Drawing.Size(800, 540);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // sbnShowAll
+            // 
+            this.sbnShowAll.Location = new System.Drawing.Point(564, 34);
+            this.sbnShowAll.Name = "sbnShowAll";
+            this.sbnShowAll.Size = new System.Drawing.Size(101, 27);
+            this.sbnShowAll.StyleController = this.layoutControl1;
+            this.sbnShowAll.TabIndex = 9;
+            this.sbnShowAll.Text = "전체보기";
+            this.sbnShowAll.Click += new System.EventHandler(this.sbnShowAll_Click);
             // 
             // cbeSearch
             // 
@@ -100,10 +114,10 @@ namespace StudyCafe.Admin
             // 
             // sbnSearch
             // 
-            this.sbnSearch.Location = new System.Drawing.Point(721, 34);
+            this.sbnSearch.Location = new System.Drawing.Point(675, 34);
             this.sbnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sbnSearch.Name = "sbnSearch";
-            this.sbnSearch.Size = new System.Drawing.Size(71, 27);
+            this.sbnSearch.Size = new System.Drawing.Size(117, 27);
             this.sbnSearch.StyleController = this.layoutControl1;
             this.sbnSearch.TabIndex = 7;
             this.sbnSearch.Text = "검색";
@@ -114,9 +128,11 @@ namespace StudyCafe.Admin
             this.txeSearch.Location = new System.Drawing.Point(194, 34);
             this.txeSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeSearch.Name = "txeSearch";
+            this.txeSearch.Properties.MaxLength = 11;
             this.txeSearch.Size = new System.Drawing.Size(157, 24);
             this.txeSearch.StyleController = this.layoutControl1;
             this.txeSearch.TabIndex = 5;
+ 
             // 
             // grdUser
             // 
@@ -130,7 +146,6 @@ namespace StudyCafe.Admin
             this.grdUser.TabIndex = 4;
             this.grdUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-        
             // 
             // bdsUser
             // 
@@ -199,7 +214,8 @@ namespace StudyCafe.Admin
             this.layoutControlItem5,
             this.emptySpaceItem1,
             this.lCLSSearch,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(800, 69);
@@ -208,9 +224,9 @@ namespace StudyCafe.Admin
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.sbnSearch;
-            this.layoutControlItem5.Location = new System.Drawing.Point(713, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(667, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(81, 37);
+            this.layoutControlItem5.Size = new System.Drawing.Size(127, 37);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -219,7 +235,7 @@ namespace StudyCafe.Admin
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(353, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(360, 37);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(203, 37);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lCLSSearch
@@ -240,6 +256,15 @@ namespace StudyCafe.Admin
             this.layoutControlItem2.Text = "검색조건";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(52, 18);
             // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.sbnShowAll;
+            this.layoutControlItem3.Location = new System.Drawing.Point(556, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(111, 37);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
             // ppmMenu
             // 
             this.ppmMenu.Name = "ppmMenu";
@@ -253,7 +278,6 @@ namespace StudyCafe.Admin
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CustomerManagementForm";
             this.Text = "Customer Management";
-            this.Load += new System.EventHandler(this.CustomerManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cbeSearch.Properties)).EndInit();
@@ -268,6 +292,7 @@ namespace StudyCafe.Admin
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lCLSSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ppmMenu)).EndInit();
             this.ResumeLayout(false);
 
@@ -293,5 +318,7 @@ namespace StudyCafe.Admin
         private DevExpress.XtraBars.PopupMenu ppmMenu;
         private DevExpress.XtraEditors.ComboBoxEdit cbeSearch;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.SimpleButton sbnShowAll;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }
