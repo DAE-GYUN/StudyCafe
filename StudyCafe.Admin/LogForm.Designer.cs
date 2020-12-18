@@ -81,6 +81,8 @@ namespace StudyCafe.Admin
             "User",
             "Login",
             "Logout",
+            "CheckIn",
+            "ChecOut",
             "DisplayedItem"});
             this.cbeSearch.Size = new System.Drawing.Size(331, 24);
             this.cbeSearch.StyleController = this.layoutControl1;
