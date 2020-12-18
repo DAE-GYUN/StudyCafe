@@ -12,10 +12,10 @@ namespace WindowsFormsApp1ML.ConsoleApp
             // Create single instance of sample data from first line of dataset for model input
             ModelInput sampleData = new ModelInput()
             {
-                BeverageID = 1,
-                DayQuater = @"00시~06시",
-                UserCount = 47,
-                DayOfTheWeek = @"금",
+                BeverageID = 1F,
+                DayQuater = @"00시~04시",
+                UserCount = 25F,
+                DayOfTheWeek = @"월",
             };
 
             // Make a single prediction on the sample data and print results

@@ -50,7 +50,7 @@ namespace StudyCafe.Data
         }
         public static List<StockControlModels> GetCoffeModel()
         {
-            DateTime yesterday = DateTime.Today.AddDays(-1);
+            DateTime yesterday = DateTime.Today.AddDays(-2);
             using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.BeverageRecords
@@ -87,28 +87,27 @@ namespace StudyCafe.Data
                 return query.ToList();
             }
         }
-        
-
-        public static List<StockConreolModelPredictCoffee> GetPredictCoffeModel()
+        public static List<StockControlModelPredict> GetPredictModel(int beverageId)
         {
             DateTime lastWeek = DateTime.Today.AddDays(-7);
             using (var context = new KoreanStudyCafeEntities())
             {
+                
                 var query = from x in context.BeverageRecords
                             orderby x.DayQuarter
-                            where x.BeverageID == 1 && x.Date == lastWeek
+                            where x.BeverageID == beverageId && x.Date == lastWeek
                             select x;
 
                 List<BeverageRecord> list = query.ToList();
 
                 var query2 = from x in list
-                             select new StockConreolModelPredictCoffee
+                             select new StockControlModelPredict
                              {
                                  UserCount = x.UserCount,
                                  DayQuater = x.DayQuarter,
-                                 Usage = Predict.Predictor(1, x.DayQuarter, x.UserCount, GetDay(DateTime.Now))
+                                 Usage = Predict.Predictor(beverageId, x.DayQuarter, x.UserCount, GetDay(DateTime.Now))
                              };
-
+                
                 return query2.ToList();
 
                 //return list.ConvertAll(x => new StockConreolModelPredictCoffee
@@ -119,6 +118,7 @@ namespace StudyCafe.Data
                 //});
             }
         }
+
         private static string GetDay(DateTime dateTime)
         {
             string strDay = "";

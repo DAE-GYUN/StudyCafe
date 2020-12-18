@@ -27,7 +27,8 @@ namespace WindowsFormsApp1ML.Model
             MLContext mlContext = new MLContext();
 
             // Load model & create prediction engine
-            string modelPath = @"C:\Git\StudyCafe\WindowsFormsApp1ML.Model\MLModel.zip";
+            string modelPath = @"C:\git\StudyCafe\WindowsFormsApp1ML.Model\MLModel.zip";
+
             ITransformer mlModel = mlContext.Model.Load(modelPath, out var modelInputSchema);
             var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 

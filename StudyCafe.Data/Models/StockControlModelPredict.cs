@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyCafe.Data.Models
 {
-    public class StockConreolModelPredictCoffee
+    public class StockControlModelPredict
     {
         public int UserCount { get; set; }
         public int Usage { get; set; }

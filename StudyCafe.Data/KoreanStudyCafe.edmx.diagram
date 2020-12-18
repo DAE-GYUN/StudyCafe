@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ebc89fefe80c440c88a3124d1bce73b4" Name="Diagram1" ZoomLevel="79">
         <EntityTypeShape EntityType="KoreanStudyCafeModel.Beverage" Width="1.5" PointX="0.75" PointY="0.75" />
+
         <EntityTypeShape EntityType="KoreanStudyCafeModel.BeverageRecord" Width="1.5" PointX="7.75" PointY="4.75" />
         <EntityTypeShape EntityType="KoreanStudyCafeModel.Investment" Width="1.5" PointX="7.75" PointY="8.75" />
         <EntityTypeShape EntityType="KoreanStudyCafeModel.Invoice" Width="1.5" PointX="5.25" PointY="1.5" />
@@ -27,6 +28,8 @@
         <AssociationConnector Association="KoreanStudyCafeModel.FK_Report_User" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_Seat_User1" />
         <AssociationConnector Association="KoreanStudyCafeModel.FK_StudyRoom_User" />
+        <EntityTypeShape EntityType="KoreanStudyCafeModel.MachineLearningTemp" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="KoreanStudyCafeModel.BeverageRecord" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

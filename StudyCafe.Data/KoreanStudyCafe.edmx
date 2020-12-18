@@ -303,6 +303,7 @@
       <Schema Namespace="KoreanStudyCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="KoreanStudyCafeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Beverages" EntityType="KoreanStudyCafeModel.Beverage" />
+
           <EntitySet Name="BeverageRecords" EntityType="KoreanStudyCafeModel.BeverageRecord" />
           <EntitySet Name="Investments" EntityType="KoreanStudyCafeModel.Investment" />
           <EntitySet Name="Invoices" EntityType="KoreanStudyCafeModel.Invoice" />
@@ -310,7 +311,6 @@
           <EntitySet Name="Items" EntityType="KoreanStudyCafeModel.Item" />
           <EntitySet Name="Lockers" EntityType="KoreanStudyCafeModel.Locker" />
           <EntitySet Name="Logs" EntityType="KoreanStudyCafeModel.Log" />
-          <EntitySet Name="MachineLearningTemps" EntityType="KoreanStudyCafeModel.MachineLearningTemp" />
           <EntitySet Name="Pictures" EntityType="KoreanStudyCafeModel.Picture" />
           <EntitySet Name="Reports" EntityType="KoreanStudyCafeModel.Report" />
           <EntitySet Name="Seats" EntityType="KoreanStudyCafeModel.Seat" />
@@ -348,6 +348,8 @@
             <End Role="User" EntitySet="Users" />
             <End Role="StudyRoom" EntitySet="StudyRooms" />
           </AssociationSet>
+          <EntitySet Name="MachineLearningTemps" EntityType="KoreanStudyCafeModel.MachineLearningTemp" />
+          <EntitySet Name="BeverageRecords" EntityType="KoreanStudyCafeModel.BeverageRecord" />
         </EntityContainer>
         <EntityType Name="Beverage">
           <Key>
@@ -358,6 +360,7 @@
           <Property Name="Numbers" Type="Int32" Nullable="false" />
           <Property Name="Weight" Type="Int32" Nullable="false" />
         </EntityType>
+
         <EntityType Name="BeverageRecord">
           <Key>
             <PropertyRef Name="BeverageRecordId" />
@@ -381,6 +384,7 @@
           <Property Name="Sales" Type="Int32" />
           <Property Name="Totalsales" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
+
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="InvoiceID" />
@@ -435,17 +439,6 @@
           <Property Name="Who" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Something" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Do" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="MachineLearningTemp">
-          <Key>
-            <PropertyRef Name="MachineLearningTempID" />
-          </Key>
-          <Property Name="MachineLearningTempID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BeverageID" Type="Int32" Nullable="false" />
-          <Property Name="DayQuater" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Usage" Type="Int32" Nullable="false" />
-          <Property Name="UserCount" Type="Int32" Nullable="false" />
-          <Property Name="DayOfTheWeek" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Picture">
           <Key>
@@ -609,6 +602,29 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="MachineLearningTemp">
+          <Key>
+            <PropertyRef Name="MachineLearningTempID" />
+          </Key>
+          <Property Name="MachineLearningTempID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BeverageID" Type="Int32" Nullable="false" />
+          <Property Name="DayQuater" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Usage" Type="Int32" Nullable="false" />
+          <Property Name="UserCount" Type="Int32" Nullable="false" />
+          <Property Name="DayOfTheWeek" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BeverageRecord">
+          <Key>
+            <PropertyRef Name="BeverageRecordId" />
+          </Key>
+          <Property Name="BeverageRecordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DayOfTheWeek" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DayQuarter" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BeverageID" Type="Int32" Nullable="false" />
+          <Property Name="Usage" Type="Int32" Nullable="false" />
+          <Property Name="UserCount" Type="Int32" Nullable="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -625,6 +641,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+
           <EntitySetMapping Name="BeverageRecords">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.BeverageRecord">
               <MappingFragment StoreEntitySet="BeverageRecord">
@@ -703,18 +720,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="MachineLearningTemps">
-            <EntityTypeMapping TypeName="KoreanStudyCafeModel.MachineLearningTemp">
-              <MappingFragment StoreEntitySet="MachineLearningTemp">
-                <ScalarProperty Name="DayOfTheWeek" ColumnName="DayOfTheWeek" />
-                <ScalarProperty Name="UserCount" ColumnName="UserCount" />
-                <ScalarProperty Name="Usage" ColumnName="Usage" />
-                <ScalarProperty Name="DayQuater" ColumnName="DayQuater" />
-                <ScalarProperty Name="BeverageID" ColumnName="BeverageID" />
-                <ScalarProperty Name="MachineLearningTempID" ColumnName="MachineLearningTempID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Pictures">
             <EntityTypeMapping TypeName="KoreanStudyCafeModel.Picture">
               <MappingFragment StoreEntitySet="Picture">
@@ -763,6 +768,31 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MachineLearningTemps">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.MachineLearningTemp">
+              <MappingFragment StoreEntitySet="MachineLearningTemp">
+                <ScalarProperty Name="DayOfTheWeek" ColumnName="DayOfTheWeek" />
+                <ScalarProperty Name="UserCount" ColumnName="UserCount" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+                <ScalarProperty Name="DayQuater" ColumnName="DayQuater" />
+                <ScalarProperty Name="BeverageID" ColumnName="BeverageID" />
+                <ScalarProperty Name="MachineLearningTempID" ColumnName="MachineLearningTempID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BeverageRecords">
+            <EntityTypeMapping TypeName="KoreanStudyCafeModel.BeverageRecord">
+              <MappingFragment StoreEntitySet="BeverageRecord">
+                <ScalarProperty Name="UserCount" ColumnName="UserCount" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+                <ScalarProperty Name="BeverageID" ColumnName="BeverageID" />
+                <ScalarProperty Name="DayQuarter" ColumnName="DayQuarter" />
+                <ScalarProperty Name="DayOfTheWeek" ColumnName="DayOfTheWeek" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BeverageRecordId" ColumnName="BeverageRecordId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
