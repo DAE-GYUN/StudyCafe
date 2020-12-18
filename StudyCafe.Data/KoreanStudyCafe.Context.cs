@@ -26,6 +26,7 @@ namespace StudyCafe.Data
         }
     
         public virtual DbSet<Beverage> Beverages { get; set; }
+        public virtual DbSet<BeverageRecord> BeverageRecords { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<InvoiceLine> InvoiceLines { get; set; }
         public virtual DbSet<Item> Items { get; set; }
@@ -37,6 +38,5 @@ namespace StudyCafe.Data
         public virtual DbSet<Seat> Seats { get; set; }
         public virtual DbSet<StudyRoom> StudyRooms { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<BeverageRecord> BeverageRecords { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace WindowsFormsApp1ML.Model
 {
     public class Predict
     {
-        public static double Predictor(int beverageId, string dayQuater, int userCount, string dayOfTheWeek)
+        public static int Predictor(int beverageId, string dayQuater, int userCount, string dayOfTheWeek)
         {
             ModelInput input = new ModelInput()
             {
@@ -18,7 +18,7 @@ namespace WindowsFormsApp1ML.Model
 
             ModelOutput result = ConsumeModel.Predict(input);
 
-            return result.Score;
+            return (int)result.Score;
         }
     }
 }
