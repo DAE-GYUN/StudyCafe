@@ -15,5 +15,7 @@ namespace StudyCafe.Data.Models
 
         public int BeverageId { get; set; }
 
+        public DateTime Date { get; set; }
+
     }
 }

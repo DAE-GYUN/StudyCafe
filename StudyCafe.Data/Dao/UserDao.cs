@@ -52,91 +52,39 @@ namespace StudyCafe.Data
         public static List<StockControlModels> GetCoffeModel()
         {
 
-            using (KoreanStudyCafeEntities context = new KoreanStudyCafeEntities())
+            using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.BeverageRecords
-                            select new
+                            select new StockControlModels
                             {
                                 UserCount = x.UserCount,
-                                DayQuarter = x.DayQuarter,
+                                DayQuater = x.DayQuarter,
                                 Usage = x.Usage,
-                                BeverageId = x.BeverageID,
-                               
+                                BeverageId = 1,
+                               // Date = DateTime.Now.AddDays(-1), 
                             };
 
-                var list = query.ToList();
-
-                List<StockControlModels> models = new List<StockControlModels>();
-                List<StockControlModels> beverages = new List<StockControlModels>();
-               
-                
-                foreach (var item in list)
-                {
-                   // StockControlModels beverage = beverages.Find(x => x.BeverageId == 1);
-                    StockControlModels model = models.Find(x => x.BeverageId == 1 && x.UserCount == item.UserCount && x.Usage == item.Usage);
-                        
-                    if (model != null)
-                    {
-                       // model.Quantity += item.Quantity;
-                    }
-                    else
-                    {
-                        model = new StockControlModels();
-                        
-                        model.UserCount = item.UserCount;
-                        model.Usage = item.Usage;
-                        model.DayQuater = item.DayQuarter;
-                      
-                        models.Add(model);
-
-                    }
-                }
-
-                return models;
+                return query.ToList();
             }
+
+          
         }
 
         public static List<StockControlModelsCocoa> GetCocoaModel()
         {
-            using(KoreanStudyCafeEntities context = new KoreanStudyCafeEntities())
+            using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.BeverageRecords
-                            select new
+                            select new StockControlModelsCocoa
                             {
                                 UserCount = x.UserCount,
-                                Useage = x.Usage,
-                                BeverageId = x.BeverageID,
-                                DayQuarter = x.DayQuarter,
-
+                                DayQuater = x.DayQuarter,
+                                Usage = x.Usage,
+                                BeverageId = 2,
+                                Date = DateTime.Now.AddDays(-1), 
                             };
 
-                var list = query.ToList();
-
-                List<StockControlModelsCocoa> models = new List<StockControlModelsCocoa>();
-                List<StockControlModelsCocoa> beverages = new List<StockControlModelsCocoa>();
-
-                foreach (var item in list)
-                {
-                    StockControlModelsCocoa model = models.Find(x => x.BeverageId == 2 && x.Usage == item.Useage && x.UserCount == item.UserCount);
-
-                    if (model != null)
-                    {
-                        // model.Quantity += item.Quantity;
-                    }
-                    else
-                    {
-                        model = new StockControlModelsCocoa();
-
-                        model.UserCount = item.UserCount;
-                        model.Usage = item.Useage;
-                        model.DayQuater = item.DayQuarter;
-
-                        models.Add(model);
-
-                    }
-
-                }
-                return models;
+                return query.ToList();
             }
         }
     }

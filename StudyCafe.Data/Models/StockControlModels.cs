@@ -14,6 +14,6 @@ namespace StudyCafe.Data.Models
         public string DayQuater { get; set; }
 
         public int BeverageId { get; set; }
-
+        public DateTime Date { get; set; }
     }
 }

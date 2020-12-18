@@ -33,7 +33,7 @@ namespace StudyCafe.Admin
 
             StockControlForm cocoaUseage = new StockControlForm();
 
-            stockControlModelsBindingSource.DataSource = UserDao.GetCocoaModel();
+            stockControlModelsCocoaBindingSource.DataSource = UserDao.GetCocoaModel();
         }
 
         private void stockControlModelsCocoaBindingSource_CurrentChanged(object sender, EventArgs e)
