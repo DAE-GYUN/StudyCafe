@@ -14,7 +14,7 @@ namespace StudyCafe.Data
     
     public partial class BeverageRecord
     {
-        public int BeverageRecordId { get; set; }
+        public int BeverageRecordID { get; set; }
         public System.DateTime Date { get; set; }
         public string DayOfTheWeek { get; set; }
         public string DayQuarter { get; set; }
