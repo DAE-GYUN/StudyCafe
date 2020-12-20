@@ -51,6 +51,11 @@ namespace WindowsFormsApp1
             Dao.Seat.Update(movedSeat);
 
             MessageBox.Show($"{movedSeat.Name}번 자리로 이동되었습니다");
+            
+            int userId = Dao.User.GetByUserKey(userCredential);
+            User user = Dao.User.GetByPK(userId);
+            user.IsLogin = false;
+            Dao.User.Update(user);
 
             DialogResult = DialogResult.OK;
             Close();
@@ -59,11 +64,6 @@ namespace WindowsFormsApp1
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void txbRemainTime_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

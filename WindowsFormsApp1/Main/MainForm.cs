@@ -31,6 +31,12 @@ namespace WindowsFormsApp1
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            int userCredential = Credential.Instance.User.UserID;
+            int userId = Dao.User.GetByUserKey(userCredential);
+
+            User user = Dao.User.GetByPK(userId);
+            user.IsLogin = false;
+            Dao.User.Update(user);
             Close();
         }
 
@@ -78,6 +84,7 @@ namespace WindowsFormsApp1
 
                     User user = Dao.User.GetByPK(userId);
                     user.CheckInStatus = false;
+                    user.IsLogin = false;
                     Dao.User.Update(user);
                     Close();
                 }
@@ -94,6 +101,7 @@ namespace WindowsFormsApp1
 
                     User user = Dao.User.GetByPK(userId);
                     user.RemainStudyRoomTime = 0;
+                    user.IsLogin = false;
                     Dao.User.Update(user);
                     Close();
                 }

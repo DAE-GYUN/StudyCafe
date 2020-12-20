@@ -67,6 +67,8 @@ namespace WindowsFormsApp1
 
             if (user != null)
             {
+                user.IsLogin = true;
+                Dao.User.Update(user);
                 MainForm mainform = new MainForm();
                 mainform.ShowDialog();
                 txbUserPhoneNumber.Text = "010";
