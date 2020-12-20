@@ -18,7 +18,7 @@ namespace StudyCafe.Data
         public int ItemId { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
-        public int Sales { get; set; }
+        public Nullable<int> Sales { get; set; }
         public Nullable<int> Totalsales { get; set; }
     }
 }

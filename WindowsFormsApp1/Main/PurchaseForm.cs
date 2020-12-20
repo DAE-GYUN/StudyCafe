@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
                 _itemsID.Add(itemid.ItemID);
             }
 
-            if(_itemsID.Contains(item.ItemID))
+            if (_itemsID.Contains(item.ItemID))
             {
                 MessageBox.Show("중복구매안됨");
             }
@@ -91,11 +91,10 @@ namespace WindowsFormsApp1
                 txbTotalPrice.Text = _items.Select(x => x.Price).Sum().ToString();
                 btnPayment.Enabled = true;
             }
-    
-            
+
         }
 
- 
+
 
         public void DeleteItem(Item item)
         {
@@ -134,7 +133,7 @@ namespace WindowsFormsApp1
 
             Dao.Invoice.Insert(invoice);
 
-            int maxInvoiceKey = Dao.Invoice.GetCount();
+            int maxInvoiceKey = Dao.Invoice.GetMaxKey();
 
             if (_items.Count == 0)
             {
@@ -181,6 +180,7 @@ namespace WindowsFormsApp1
                             User user = Dao.User.GetByPK(userId);
                             user.RemainLockerTime = lockerTime;
                             Dao.User.Update(user);
+
                             Locker locker = Dao.Locker.GetByPK(int.Parse(_lockerNumber));
                             locker.UserID = userId;
                             Dao.Locker.Update(locker);
@@ -223,6 +223,8 @@ namespace WindowsFormsApp1
                 dgvItem.Rows.Clear();
                 _items.Clear();
                 txbTotalPrice.Clear();
+
+
             }
         }
 
