@@ -69,7 +69,6 @@ namespace WindowsFormsApp1
             this.txbRemainTime.ReadOnly = true;
             this.txbRemainTime.Size = new System.Drawing.Size(177, 25);
             this.txbRemainTime.TabIndex = 7;
-            this.txbRemainTime.TextChanged += new System.EventHandler(this.txbRemainTime_TextChanged);
             // 
             // txbMovedSeatNumber
             // 
