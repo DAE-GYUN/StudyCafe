@@ -5,21 +5,15 @@
 
 ## ■ 참여인원
 
->### 구성원
->
->| 구성원 | 역할 |
->| :----: | :--: |
->| 강동진 |      |
->| 이대균 |      |
->| 이성혁 |      |
->| 이민균 |      |
->| 김성동 |      |
+### 구성원
+* 강동진
+* 김성동
+* 이대균
+* 이민균
+* 이성혁
 
 
-
-## ■ 개요
-
- 한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
+## ■ 개요 한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
 
 ## ■ 주요 기능
 ### 1. 좌석 기능
@@ -313,4 +307,165 @@
         }
 ```
 
-### 코드매트릭 작성할것 2020-12-04
+## 2차 프로젝트(2020-12-14 ~ 2020-12-20)
+### 저장프로시저 dbo.RecordTheBeverageRecord 작성
+### 내용
+- MachineLearning 을 위한 데이터 자동 측정 및 Insert
+---
+```MS-SQL
+USE [KoreanStudyCafe]
+GO
+/****** Object:  StoredProcedure [dbo].[RecordTheBeverageRecord]    Script Date: 2020-12-20 오후 2:15:52 ******/
+
+declare
+@date datetime, @dOW nvarchar(Max),@dQ nvarchar(max),@bID int,@usage int,@uC int,@realTime time,@j int,@i int,@dQ1 time,@dQ2 time,@dQ3 time,@dQ4 time,@rB int,@k int,@l int
+,@TMP int,@MAXUc int
+
+set	@usage=0
+set @mAXUc=24
+
+set @dQ1 = '00:00'
+set @dQ2 = '06:00'
+set @dQ3 = '12:00'
+set @dQ4 = '18:00'
+
+
+set @date = GETDATE() -- 현재 날짜를 넣는다
+set @dOW = DATENAME(WEEKDAY,GETDATE()) -- 현재 요일을 넣는다
+set @realTime = CONVERT(time,GETDATE()) -- 현재 시간을 넣는다
+
+set @i=1
+set @j= (select BeverageID from Beverage Where BeverageID=(select Max(BeverageID)from Beverage))
+set @k=1
+set @l=4
+------------------------분기를 구분해줍니다.-------------------ㄱ
+if(@realTime >= @dq4) -- 현재 분기를 구한다---------------------|
+begin-----------------------------------------------------------|
+set @dq= '18:00~24:00'
+end-------------------------------------------------------------|
+else if(@realTime >= @dQ3)
+begin-----------------------------------------------------------|
+set @dq= '12:00~18:00'
+end-------------------------------------------------------------|
+else if(@realTime >= @dQ2)
+begin-----------------------------------------------------------|
+set @dq= '06:00~12:00'
+end-------------------------------------------------------------|
+else if(@realTime >= @dQ1)
+begin-----------------------------------------------------------|
+set @dq= '00:00~06:00'
+end-------------------------------------------------------------|
+----------------------------------------------------------------
+
+while(@i<=@j)
+begin
+--------------------------------Uc구합니다---------------------
+if(@dq = '06:00~12:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='화요일') set @Uc = 1.5*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='수요일') set @Uc = 1*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='수요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='수요일') set @Uc = 1.5*@MAXuc
+if(@dq = '18:00~24:00' and @dOW='수요일') set @Uc = 1*@MAXuc
+if(@dq = '00:00~06:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '12:00~18:00' and @dOW='목요일') set @Uc = 1.5*@MAXuc
+if(@dq = '18:00~24:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '00:00~06:00' and @dOW='금요일') set @Uc = 1*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='금요일') set @Uc = 0.5*@MAXuc
+if(@dq = '12:00~18:00' and @dOW='금요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='금요일') set @Uc = 2*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='토요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='일요일') set @Uc = 1*@MAXUc
+----------------------------------------------------------------
+
+-------------------------Usage 구하기------------------
+set @Usage =(@Uc - FLOOR(rand(checksum(NEWID()))*(10-1)+1))*2 
+-------------------------------------------------------------
+
+
+insert into BeverageRecord select @date,@Dow, @dQ,@i,@usage,@uC -- Item 으로 부터 이름과 가격 불러와서 넣기
+set @i= @i+1
+end
+END
+```
+### 트리거 IfdeleteUserAtUser,IfInsertUserinsertLog,IfLoginUserAtuser 등 6종 작성
+#### 내용
+- User Table 변동사항 Log Table 기록
+---
+```MS-SQL
+ALTER TRIGGER [dbo].[IfDeleteUserAtUser]
+   ON  [dbo].[User] 
+   AFTER DELETE
+AS 
+BEGIN
+declare
+@kind nvarchar(max),
+@date date,
+@time time,
+@who nvarchar(max),
+@something nvarchar(max),
+@do nvarchar(max)
+
+	SET NOCOUNT ON;
+ set @kind = 'User'
+ set @date = GETDATE()
+ set @time = GETDATE()
+ set @who= (select Name from deleted)
+ set @something = '회원'
+ set @do = '삭제 하셨습니다.'
+ 
+
+insert into [dbo].[Log] values(@kind,@date ,@time,@who,@something,@do)
+	SET NOCOUNT ON;
+
+END
+```
+
+### 머신러닝을 위한 Predict 메서스  LinQ 사용불가 해결
+
+#### 증상
+- 머신러닝 데이터를 사용하기위해 Predict 메서드를 만들었는데 LINQ에서 사용할 수 없음
+#### 문제
+- LINQ에서 바로 사용할때는 DB에서 사용을 하기때문에 Predict라는 메서드가 존재하지않음
+#### 해결
+- 필요한 데이터를 받아와 query2라는 메모리에 저장을 한 후 그 안에서 Predict메서드를 사용
+- 같은 방식으로 날짜를 계산할 때도 AddDays를 사용하기 위해 LINQ밖에서 사용
+
+```C#
+public static List<StockControlModelPredict> GetPredictModel(int beverageId)
+        {
+            DateTime lastWeek = DateTime.Today.AddDays(-7);
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                
+                var query = from x in context.BeverageRecords
+                            orderby x.DayQuarter
+                            where x.BeverageID == beverageId && x.Date == lastWeek
+                            select x;
+
+                List<BeverageRecord> list = query.ToList();
+
+                var query2 = from x in list
+                             select new StockControlModelPredict
+                             {
+                                 UserCount = x.UserCount,
+                                 DayQuater = x.DayQuarter,
+                                 Usage = Predict.Predictor(beverageId, x.DayQuarter, x.UserCount, GetDay(DateTime.Now))
+                             };
+                
+                return query2.ToList();
+            }
+        }
+```
