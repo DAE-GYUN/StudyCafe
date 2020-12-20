@@ -313,4 +313,130 @@
         }
 ```
 
-### 코드매트릭 작성할것 2020-12-04
+## 2차 프로젝트(2020-12-14 ~ 2020-12-20)
+### 저장프로시저 dbo.RecordTheBeverageRecord 작성
+#### 목적: MachineLearning 을 위한 데이터 자동 측정 및 Insert
+---
+```MS-SQL
+USE [KoreanStudyCafe]
+GO
+/****** Object:  StoredProcedure [dbo].[RecordTheBeverageRecord]    Script Date: 2020-12-20 오후 2:15:52 ******/
+
+declare
+@date datetime, @dOW nvarchar(Max),@dQ nvarchar(max),@bID int,@usage int,@uC int,@realTime time,@j int,@i int,@dQ1 time,@dQ2 time,@dQ3 time,@dQ4 time,@rB int,@k int,@l int
+,@TMP int,@MAXUc int
+
+set	@usage=0
+set @mAXUc=24
+
+set @dQ1 = '00:00'
+set @dQ2 = '06:00'
+set @dQ3 = '12:00'
+set @dQ4 = '18:00'
+
+
+set @date = GETDATE() -- 현재 날짜를 넣는다
+set @dOW = DATENAME(WEEKDAY,GETDATE()) -- 현재 요일을 넣는다
+set @realTime = CONVERT(time,GETDATE()) -- 현재 시간을 넣는다
+
+set @i=1
+set @j= (select BeverageID from Beverage Where BeverageID=(select Max(BeverageID)from Beverage))
+set @k=1
+set @l=4
+------------------------분기를 구분해줍니다.-------------------ㄱ
+if(@realTime >= @dq4) -- 현재 분기를 구한다---------------------|
+begin-----------------------------------------------------------|
+set @dq= '18:00~24:00'
+end-------------------------------------------------------------|
+else if(@realTime >= @dQ3)
+begin-----------------------------------------------------------|
+set @dq= '12:00~18:00'
+end-------------------------------------------------------------|
+else if(@realTime >= @dQ2)
+begin-----------------------------------------------------------|
+set @dq= '06:00~12:00'
+end-------------------------------------------------------------|
+else if(@realTime >= @dQ1)
+begin-----------------------------------------------------------|
+set @dq= '00:00~06:00'
+end-------------------------------------------------------------|
+----------------------------------------------------------------
+
+while(@i<=@j)
+begin
+--------------------------------Uc구합니다---------------------
+if(@dq = '06:00~12:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='화요일') set @Uc = 1.5*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='수요일') set @Uc = 1*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='수요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='수요일') set @Uc = 1.5*@MAXuc
+if(@dq = '18:00~24:00' and @dOW='수요일') set @Uc = 1*@MAXuc
+if(@dq = '00:00~06:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '12:00~18:00' and @dOW='목요일') set @Uc = 1.5*@MAXuc
+if(@dq = '18:00~24:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '00:00~06:00' and @dOW='금요일') set @Uc = 1*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='금요일') set @Uc = 0.5*@MAXuc
+if(@dq = '12:00~18:00' and @dOW='금요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='금요일') set @Uc = 2*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='토요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='일요일') set @Uc = 1*@MAXUc
+----------------------------------------------------------------
+
+-------------------------Usage 구하기------------------
+set @Usage =(@Uc - FLOOR(rand(checksum(NEWID()))*(10-1)+1))*2 
+-------------------------------------------------------------
+
+
+insert into BeverageRecord select @date,@Dow, @dQ,@i,@usage,@uC -- Item 으로 부터 이름과 가격 불러와서 넣기
+set @i= @i+1
+end
+END
+```
+### 트리거 IfdeleteUserAtUser,IfInsertUserinsertLog,IfLoginUserAtuser 등 6종 작성
+#### 목적: User Table 변동사항 Log Table 기록
+---
+```MS-SQL
+-- =============================================
+-- Author:		이민균
+-- Create date: 2020-12-18
+-- Description:	회원삭제 로그 남기기
+-- =============================================
+ALTER TRIGGER [dbo].[IfDeleteUserAtUser]
+   ON  [dbo].[User] 
+   AFTER DELETE
+AS 
+BEGIN
+declare
+@kind nvarchar(max),
+@date date,
+@time time,
+@who nvarchar(max),
+@something nvarchar(max),
+@do nvarchar(max)
+
+	SET NOCOUNT ON;
+ set @kind = 'User'
+ set @date = GETDATE()
+ set @time = GETDATE()
+ set @who= (select Name from deleted)
+ set @something = '회원'
+ set @do = '삭제 하셨습니다.'
+ 
+
+insert into [dbo].[Log] values(@kind,@date ,@time,@who,@something,@do)
+	SET NOCOUNT ON;
+
+END
