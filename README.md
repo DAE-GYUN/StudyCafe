@@ -5,21 +5,15 @@
 
 ## ■ 참여인원
 
->### 구성원
->
->| 구성원 | 역할 |
->| :----: | :--: |
->| 강동진 |      |
->| 이대균 |      |
->| 이성혁 |      |
->| 이민균 |      |
->| 김성동 |      |
+### 구성원
+* 강동진
+* 김성동
+* 이대균
+* 이민균
+* 이성혁
 
 
-
-## ■ 개요
-
- 한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
+## ■ 개요 한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
 
 ## ■ 주요 기능
 ### 1. 좌석 기능
@@ -314,8 +308,10 @@
 ```
 
 ## 2차 프로젝트(2020-12-14 ~ 2020-12-20)
-### 저장프로시저 dbo.RecordTheBeverageRecord 작성
-#### 목적: MachineLearning 을 위한 데이터 자동 측정 및 Insert
+### 주제
+저장프로시저 dbo.RecordTheBeverageRecord 작성
+#### 내용
+MachineLearning 을 위한 데이터 자동 측정 및 Insert
 ---
 ```MS-SQL
 USE [KoreanStudyCafe]
@@ -405,15 +401,12 @@ set @i= @i+1
 end
 END
 ```
-### 트리거 IfdeleteUserAtUser,IfInsertUserinsertLog,IfLoginUserAtuser 등 6종 작성
-#### 목적: User Table 변동사항 Log Table 기록
+### 주제
+트리거 IfdeleteUserAtUser,IfInsertUserinsertLog,IfLoginUserAtuser 등 6종 작성
+#### 내용
+User Table 변동사항 Log Table 기록
 ---
 ```MS-SQL
--- =============================================
--- Author:		이민균
--- Create date: 2020-12-18
--- Description:	회원삭제 로그 남기기
--- =============================================
 ALTER TRIGGER [dbo].[IfDeleteUserAtUser]
    ON  [dbo].[User] 
    AFTER DELETE
@@ -440,3 +433,40 @@ insert into [dbo].[Log] values(@kind,@date ,@time,@who,@something,@do)
 	SET NOCOUNT ON;
 
 END
+```
+
+### 주제
+머신러닝 데이터를 사용하기위해 Predict 메서드를 만들었는데 LINQ에서 사용할 수 없음 수정
+
+#### 내용
+LINQ에서 바로 사용할때는 DB에서 사용을 하기때문에 Predict라는 메서드가 존재하지않음
+그래서 먼저 필요한 데이터를 받아와 query2라는 메모리에 저장을 한 후 그 안에서 
+Predict메서드를 사용
+같은 방식으로 날짜를 계산할 때도 AddDays를 사용하기 위해 LINQ밖에서 사용
+
+```C#
+public static List<StockControlModelPredict> GetPredictModel(int beverageId)
+        {
+            DateTime lastWeek = DateTime.Today.AddDays(-7);
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                
+                var query = from x in context.BeverageRecords
+                            orderby x.DayQuarter
+                            where x.BeverageID == beverageId && x.Date == lastWeek
+                            select x;
+
+                List<BeverageRecord> list = query.ToList();
+
+                var query2 = from x in list
+                             select new StockControlModelPredict
+                             {
+                                 UserCount = x.UserCount,
+                                 DayQuater = x.DayQuarter,
+                                 Usage = Predict.Predictor(beverageId, x.DayQuarter, x.UserCount, GetDay(DateTime.Now))
+                             };
+                
+                return query2.ToList();
+            }
+        }
+```
