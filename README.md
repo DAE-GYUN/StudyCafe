@@ -1,11 +1,10 @@
 미니 프로젝트 Korean StudyCafe
 ===========================
 
-《2020-11-23 ~ 2020-11-29》
+1차 《2020-11-23 ~ 2020-11-29》
+2차 《2020-12-14 ~ 2020-12-20》
 
 ## ■ 참여인원
-
-### 구성원
 * 강동진
 * 김성동
 * 이대균
@@ -13,7 +12,8 @@
 * 이성혁
 
 
-## ■ 개요 한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
+## ■ 개요 
+한국형 독서실인 스터디 카페 관리시스템을 키오스크 기기를 기반으로 하여 창의적인 기술을 추가하여 개발하는 것이 목표. 
 
 ## ■ 주요 기능
 ### 1. 좌석 기능
@@ -307,7 +307,7 @@
         }
 ```
 
-# 2차 프로젝트(2020-12-14 ~ 2020-12-20)
+# 2차 프로젝트
 ## ■ 저장프로시저 dbo.RecordTheBeverageRecord 작성
 ## ■ 내용
 - MachineLearning 을 위한 데이터 자동 측정 및 Insert
@@ -469,3 +469,32 @@ public static List<StockControlModelPredict> GetPredictModel(int beverageId)
             }
         }
 ```
+## ■ 차트에 데이터를 삽입했을때 그래프가 꼬이는 현상 해결
+###증상
+x축에 대한 정렬이 꼬임,  차트Form에 Data를 넣고 음료ID 를 배정 해 줬어도 
+         모든 데이터가 들어가 그래프에 꼬임이 발생
+          
+###원인
+정렬 조건을 디테일 하게 주지 못함
+
+###결과
+링크문을 이용해서 x축에 데이터를 넣는 부분을 orderby로 정렬, 그 다음 where절에 정렬 조건을 집어넣음
+
+  ```C#   public static List<StockControlModels> GetModel(int beverageId)
+        {
+            DateTime yesterday = DateTime.Today.AddDays(-2);
+            using (var context = new KoreanStudyCafeEntities())
+            {
+                var query = from x in context.BeverageRecords
+                            orderby x.DayQuarter
+                            where x.BeverageID == beverageId && x.Date == yesterday
+                            select new StockControlModels
+                            {
+                                UserCount = x.UserCount,
+                                DayQuater = x.DayQuarter,
+                                Usage = x.Usage
+                            };
+
+                return query.ToList();
+            }
+```	    
