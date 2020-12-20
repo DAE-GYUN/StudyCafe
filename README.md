@@ -470,14 +470,14 @@ public static List<StockControlModelPredict> GetPredictModel(int beverageId)
         }
 ```
 ## ■ 차트에 데이터를 삽입했을때 그래프가 꼬이는 현상 해결
-###증상
+### 증상
 x축에 대한 정렬이 꼬임,  차트Form에 Data를 넣고 음료ID 를 배정 해 줬어도 
          모든 데이터가 들어가 그래프에 꼬임이 발생
           
-###원인
+### 원인
 정렬 조건을 디테일 하게 주지 못함
 
-###결과
+### 결과
 링크문을 이용해서 x축에 데이터를 넣는 부분을 orderby로 정렬, 그 다음 where절에 정렬 조건을 집어넣음
 
   ```C#   public static List<StockControlModels> GetModel(int beverageId)
