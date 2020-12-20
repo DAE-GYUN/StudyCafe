@@ -15,10 +15,10 @@ namespace StudyCafe.Data
     public partial class Investment
     {
         public int InvestmentID { get; set; }
-        public Nullable<int> ItemId { get; set; }
+        public int ItemId { get; set; }
         public string Name { get; set; }
-        public Nullable<int> Price { get; set; }
-        public Nullable<int> Sales { get; set; }
+        public int Price { get; set; }
+        public int Sales { get; set; }
         public Nullable<int> Totalsales { get; set; }
     }
 }

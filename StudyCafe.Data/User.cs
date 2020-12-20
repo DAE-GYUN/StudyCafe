@@ -33,6 +33,7 @@ namespace StudyCafe.Data
         public bool Admin { get; set; }
         public bool CheckInStatus { get; set; }
         public Nullable<int> PictureID { get; set; }
+        public bool IsLogin { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }

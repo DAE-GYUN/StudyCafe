@@ -107,15 +107,6 @@
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs">
-      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Seat.cs">
-      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudyRoom.cs">
-      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
-    </Compile>
     <Compile Include="Dao\InvoiceDao.cs" />
     <Compile Include="Dao\InvoiceLineDao.cs" />
     <Compile Include="Dao\ItemDao.cs" />
@@ -134,35 +125,30 @@
     <Compile Include="Entities\Seat.cs" />
     <Compile Include="Entities\StudyRoom.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Report.cs">
+      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Seat.cs">
+      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudyRoom.cs">
+      <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>KoreanStudyCafe.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="KoreanStudyCafe.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>KoreanStudyCafe.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="KoreanStudyCafe.edmx.diagram">
       <DependentUpon>KoreanStudyCafe.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\StudyCafe.Data.Models.StockConreolModelPredictCoffee.datasource" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="KoreanStudyCafe.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>KoreanStudyCafe.Context.cs</LastGenOutput>
-      <DependentUpon>KoreanStudyCafe.edmx</DependentUpon>
-    </Content>
-    <Content Include="KoreanStudyCafe.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KoreanStudyCafe.edmx</DependentUpon>
-      <LastGenOutput>KoreanStudyCafe.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -172,6 +158,18 @@
       <Project>{25BC7959-75FD-4588-98D1-C1D34B08A3CC}</Project>
       <Name>WindowsFormsApp1ML.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KoreanStudyCafe.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KoreanStudyCafe.edmx</DependentUpon>
+      <LastGenOutput>KoreanStudyCafe.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KoreanStudyCafe.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KoreanStudyCafe.edmx</DependentUpon>
+      <LastGenOutput>KoreanStudyCafe.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
