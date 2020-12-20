@@ -26,8 +26,10 @@ namespace StudyCafe.Admin
 
         private void StockControlForm_Load(object sender, EventArgs e)
         {
-            scmBdsCoffee.DataSource = UserDao.GetCoffeModel();
-            scmBdsCocoa.DataSource = UserDao.GetCocoaModel();
+            //scmBdsCoffee.DataSource = UserDao.GetCoffeModel();
+            //scmBdsCocoa.DataSource = UserDao.GetCocoaModel();
+            scmBdsCoffee.DataSource = UserDao.GetModel(1);
+            scmBdsCocoa.DataSource = UserDao.GetModel(2);
 
             scmBdsPredictCoffee.DataSource = UserDao.GetPredictModel(1);
             scmBdsPredictCocoa.DataSource = UserDao.GetPredictModel(2);

@@ -48,14 +48,14 @@ namespace StudyCafe.Data
                 return query.FirstOrDefault();
             }
         }
-        public static List<StockControlModels> GetCoffeModel()
+        public static List<StockControlModels> GetModel(int beverageId)
         {
             DateTime yesterday = DateTime.Today.AddDays(-2);
             using (var context = new KoreanStudyCafeEntities())
             {
                 var query = from x in context.BeverageRecords
                             orderby x.DayQuarter
-                            where x.BeverageID == 1 && x.Date == yesterday
+                            where x.BeverageID == beverageId && x.Date == yesterday
                             select new StockControlModels
                             {
                                 UserCount = x.UserCount,
@@ -69,24 +69,6 @@ namespace StudyCafe.Data
 
         }
 
-        public static List<StockControlModelsCocoa> GetCocoaModel()
-        {
-            DateTime yesterday = DateTime.Today.AddDays(-1);
-            using (var context = new KoreanStudyCafeEntities())
-            {
-                var query = from x in context.BeverageRecords
-                            orderby x.DayQuarter
-                            where x.BeverageID == 2 && x.Date == yesterday
-                            select new StockControlModelsCocoa
-                            {
-                                UserCount = x.UserCount,
-                                DayQuater = x.DayQuarter,
-                                Usage = x.Usage,
-                            };
-
-                return query.ToList();
-            }
-        }
         public static List<StockControlModelPredict> GetPredictModel(int beverageId)
         {
             DateTime lastWeek = DateTime.Today.AddDays(-7);

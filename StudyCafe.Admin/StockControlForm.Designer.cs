@@ -428,7 +428,7 @@
             // 
             // scmBdsCocoa
             // 
-            this.scmBdsCocoa.DataSource = typeof(StudyCafe.Data.Models.StockControlModelsCocoa);
+            this.scmBdsCocoa.DataSource = typeof(StudyCafe.Data.Models.StockControlModels);
             // 
             // scmBdsPredictCoffee
             // 
