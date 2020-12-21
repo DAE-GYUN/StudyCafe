@@ -363,6 +363,39 @@ set @dq= '00:00~06:00'
 end-------------------------------------------------------------|
 ----------------------------------------------------------------
 
+while(@i<=@j)
+begin
+--------------------------------Uc구합니다---------------------
+if(@dq = '06:00~12:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='월요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='화요일') set @Uc = 1.5*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='화요일') set @Uc = 1*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='수요일') set @Uc = 1*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='수요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='수요일') set @Uc = 1.5*@MAXuc
+if(@dq = '18:00~24:00' and @dOW='수요일') set @Uc = 1*@MAXuc
+if(@dq = '00:00~06:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '12:00~18:00' and @dOW='목요일') set @Uc = 1.5*@MAXuc
+if(@dq = '18:00~24:00' and @dOW='목요일') set @Uc = 1*@MAXuc
+if(@dq = '00:00~06:00' and @dOW='금요일') set @Uc = 1*@MAXuc
+if(@dq = '06:00~12:00' and @dOW='금요일') set @Uc = 0.5*@MAXuc
+if(@dq = '12:00~18:00' and @dOW='금요일') set @Uc = 1*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='금요일') set @Uc = 2*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='토요일') set @Uc = 1*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='토요일') set @Uc = 2*@MAXUc
+if(@dq = '00:00~06:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '06:00~12:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '12:00~18:00' and @dOW='일요일') set @Uc = 2*@MAXUc
+if(@dq = '18:00~24:00' and @dOW='일요일') set @Uc = 1*@MAXUc
+----------------------------------------------------------------
+
 -------------------------Usage 구하기------------------
 set @Usage =(@Uc - FLOOR(rand(checksum(NEWID()))*(10-1)+1))*2 
 -------------------------------------------------------------
