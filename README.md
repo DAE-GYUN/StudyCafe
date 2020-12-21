@@ -470,4 +470,37 @@ x축에 대한 정렬이 꼬임,  차트Form에 Data를 넣고 음료ID 를 배�
 
                 return query.ToList();
             }
-```	    
+```
+## ■ DB Nullable Exception 오류 해결
+
+### 증상
+Invoice 와 InvoiceLIne을 데이터베이스에 Insert 할때 Nullable exception 이 발생하는 문제
+          
+### 원인
+DB에 InvoiceLIne의 InvoiceID와 Invoice 의 InvoiceID의 값이 관계가 잡혀 같아야하는데 값이 달라 Nullable exception 발생
+
+### 결과
+DB에 Invoice 와 InvoiceLine의 데이터를 전부 삭제하고 코드 수정. 
+
+
+  ```C#//인보이스 생성
+Invoice invoice = new Invoice()
+{
+	InvoiceDatetime = DateTime.Now,
+	UserID = Credential.Instance.User.UserID,
+	InvoicePlace = "1"
+};
+            Dao.Invoice.Insert(invoice);
+	
+//인보이스 라인 생성  
+ int maxInvoiceKey = Dao.Invoice.GetMaxKey();       
+ InvoiceLine invoiceLine = new InvoiceLine()
+ {
+	InvoiceID = maxInvoiceKey,
+	ItemID = itemNumber.ItemID,
+	ItemPrice = totalPrice,
+	NumberOfItem = 1
+};
+
+	Dao.InvoiceLine.Insert(invoiceLine);
+  ```
